@@ -1,4 +1,5 @@
-# Feminist Bible &middot; ![Open Source Love](https://badges.frapsoft.com/os/v2/open-source.svg?v=103) [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/girlscript/feminist-bible-phase-2/blob/master/LICENSE) [![Code of Conduct](https://img.shields.io/badge/%E2%9D%A4-code%20of%20conduct-blue.svg)](https://github.com/girlscript/feminist-bible-phase-2) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-green.svg)](https://github.com/girlscript/feminist-bible-phase-2)
+# Feminist Bible &middot; ![Open Source Love](https://badges.frapsoft.com/os/v2/open-source.svg?v=103) [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/girlscript/feminist-bible-phase-2/blob/master/LICENSE) [![Code of Conduct](https://img.shields.io/badge/%E2%9D%A4-code%20of%20conduct-blue.svg)](https://github.com/girlscript/feminist-bible-phase-2) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-green.svg)](https://github.com/girlscript/feminist-bible-phase-2) [![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-v2.0%20adopted-ff69b4.svg)](code_of_conduct.md)
+
 
 ## What is Feminist Bible?
 
