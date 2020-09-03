@@ -36,7 +36,7 @@ We are glad you are reading this. <br />
 
 Read our [Contributing Guide]() to learn about the development process, how to propose bugfixes and improvements, and how to build and test your changes.
 
-This project and everyone participating in it is governed by the [Code of Conduct](). By participating, you are expected to uphold this code.
+This project and everyone participating in it is governed by the [Code of Conduct](https://github.com/girlscript/feminist-bible-phase-2/blob/master/CODEOFCONDUCT.md). By participating, you are expected to uphold this code.
 
 <br />
 
