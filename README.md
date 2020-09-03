@@ -1,4 +1,4 @@
-# Feminist Bible &middot; ![Open Source Love](https://badges.frapsoft.com/os/v2/open-source.svg?v=103) [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/girlscript/feminist-bible-phase-2/blob/master/LICENSE) [![Code of Conduct](https://img.shields.io/badge/%E2%9D%A4-code%20of%20conduct-blue.svg)](https://github.com/girlscript/feminist-bible-phase-2) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-green.svg)](https://github.com/girlscript/feminist-bible-phase-2)
+# Feminist Bible &middot; ![Open Source Love](https://badges.frapsoft.com/os/v2/open-source.svg?v=103) [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/girlscript/feminist-bible-phase-2/blob/master/LICENSE) [![Code of Conduct](https://img.shields.io/badge/%E2%9D%A4-code%20of%20conduct-blue.svg)](https://github.com/girlscript/feminist-bible-phase-2/blob/master/CODEOFCONDUCT.md) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-green.svg)](https://github.com/girlscript/feminist-bible-phase-2/blob/master/CONTRIBUTING.md)
 
 ## What is Feminist Bible?
 
@@ -34,9 +34,9 @@ Figma           | HTML          | NodeJS
 We are glad you are reading this. <br />
 👍🎉 Thanks for taking the time to contribute! 🎉👍
 
-Read our [Contributing Guide]() to learn about the development process, how to propose bugfixes and improvements, and how to build and test your changes.
+Read our [Contributing Guide](https://github.com/girlscript/feminist-bible-phase-2/blob/master/CONTRIBUTING.md) to learn about the development process, how to propose bugfixes and improvements, and how to build and test your changes.
 
-This project and everyone participating in it is governed by the [Code of Conduct](). By participating, you are expected to uphold this code.
+This project and everyone participating in it is governed by the [Code of Conduct](https://github.com/girlscript/feminist-bible-phase-2/blob/master/CODEOFCONDUCT.md). By participating, you are expected to uphold this code.
 
 <br />
 
