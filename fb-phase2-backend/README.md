@@ -41,6 +41,10 @@ issue if you find anything wrong
 4. copy `.env.example` to `.env` and fill it with appropriate details
 5. start project with `yarn dev`
 
+before making a PR, make sure test cases are not failing. to run all test cases
+from specs/ dir, just run `yarn test`. you shall see a test coverage report 
+along with passing/failing tests
+
 #### database
 
 this project uses MongoDB as primary database. you can either install mongodb
