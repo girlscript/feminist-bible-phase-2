@@ -46,3 +46,13 @@ issue if you find anything wrong
 this project uses MongoDB as primary database. you can either install mongodb
 locally, or use database-as-a-service from MLab or similar providers. choice is
 yours
+
+### using yarn
+
+- install a package: `yarn add PACKAGE_NAME`
+- install a package globally: `yarn global add PACKAGE_NAME`
+- install all packages from package.json: `yarn`
+- run a script from package.json: `yarn SCRIPT_NAME`
+- run a binary from node_modules: `yarn BINARY_NAME`
+
+... more on [yarnpkg.com](https://yarnpkg.com/)
