@@ -4,10 +4,15 @@ Hello 👋. We are glad to have you here.
 <br />
 
 ## First Steps
-1. Fork the repository [feminist-bible-phase-2](https://github.com/girlscript/feminist-bible-phase-2)
-2. Clone the repository by typing `$ git clone https://github.com/username/feminist-bible-phase-2.git` in your terminal. Make sure you replace __username__ with your username.
-3. Go to the project directory by typing `$ cd feminist-bible-phase-2` <br />
-With this, you will have all the code available on your local machine. 
+- Fork the repository [feminist-bible-phase-2](https://github.com/girlscript/feminist-bible-phase-2)
+-Go to the project directory by typing `$ cd feminist-bible-phase-2` <br />	- Clone the repository by typing `$ git clone https://github.com/username/feminist-bible-phase-2.git` in your terminal. Make sure you replace __username__ with your username.
+- Go to the project directory by typing `$ cd feminist-bible-phase-2`
+- Create a new branch for your modifications (ie. `git branch contribution-guide` and check it out `git checkout contribution-guide`) The name of the branch should signify what you are working on (ie `creating a contribution guide` -> `contribution-guide`)
+- Make changes as per requirement
+- Add your files (`git add -A`), commit (`git commit -m "addedfile"`) and push (`git push origin new-user`)
+- Create a pull request
+- Wait for Pull Request to merge<br />
+With this, you will have all the code available on your local machine. 	With this, you will have all the code available on your local machine. 
 
 <br />
 
