@@ -11,8 +11,9 @@ With this, you will have all the code available on your local machine.
 
 <br />
 
-## Running the App
-In the project directory, you can run:
+## For Front End
+Got to frontend directory by typing `$ cd frontend` in your terminal.
+In the <b>frontend</b> directory, you can run:
 
 #### `yarn start`
 
@@ -25,4 +26,11 @@ You will also see any lint errors in the console.
 <br />
 
 ## Contributing to repository
-will be added shortly.
+
+✔ For the first few weeks into the program, the issues will be raised by the project-leads only. Every issue will be assigned to the participants of GSSoC 2020 Extended working on this project. 
+
+✔ Participant are requested to give regular updates regarding their progress to the project leads.
+
+✔ If the participant is not able to contribute to the assigned issue due to any reason, kindly let the project leads know so that the issue is assigned to some other participant. 
+
+### Happy Coding 👩‍💻👩‍💻
