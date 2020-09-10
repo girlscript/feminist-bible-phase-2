@@ -22,3 +22,7 @@ const port = process.env.PORT || 7000;
 app.listen(port, () => {
     console.log(`App is running on port ${port}`);
 });
+
+
+// for testing. it would be better to keep db specific things inside database/
+exports.database = mongoose
