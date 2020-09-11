@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import logo from "../images/feminist_bible_logo.png";
+import '../css/components/header.scss';
 
 class Header extends Component {
   render() {

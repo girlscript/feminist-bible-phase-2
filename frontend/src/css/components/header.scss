@@ -1,0 +1,44 @@
+@import '../settings/global';
+@import '../components/button';
+
+// Header bar
+.header{
+  height:80px;
+  background-color:$yellow-bg;
+  border-bottom:1px solid rgba(171, 29, 121, 0.3);
+
+  &__logo{
+    height:46px; margin-top:17px;
+  }
+}
+
+.nav{
+  display:flex; 
+  justify-content: flex-end;
+
+  // ul
+  &__item-container{
+    display:flex;
+    margin:0;
+
+    // gap not supported on safari
+    // gap:20px;
+  }
+
+  &__item{
+    @extend .text;
+    list-style-type: none;
+    color:$title-color;
+    line-height:80px;
+
+    a:hover{
+      color:$purple;
+      text-decoration:underline;
+    }
+
+    // to give gap between the nav items (since gap is not supported by all browsers)
+    &:not(:last-child){
+      margin-right:20px;
+    }
+  }
+}
