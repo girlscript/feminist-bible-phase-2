@@ -18,7 +18,19 @@ class Header extends Component {
                   <li className="nav__item"><a href="">Stories</a></li>
                   <li className="nav__item"><a href="">Organizations</a></li>
                   <li className="nav__item"><a href="">About</a></li>
+                  {this.props.isSignedIn?  
+                    <>
+                      <li className="nav__item">
+                        <button className="button__big" style={{textTransform: "capitalize"}}>
+                          Write a Story
+                        </button>
+                      </li>
+                      <li className="nav__item" data-testid="user-avatar">
+                        <img src={this.props.avatarSrc} alt="signed-in user" />
+                      </li> 
+                    </>:
                   <li className="nav__item"><a href="">Login</a></li>
+                  }
                 </ul>
               </nav>
             </div>
