@@ -1,6 +1,6 @@
 import React from "react";
 import Header from "./components/Header.jsx";
-import avatar from "../images/avatar_placeholder.png";
+import avatar from "./images/avatar_placeholder.png";
 
 function App() {
   return (

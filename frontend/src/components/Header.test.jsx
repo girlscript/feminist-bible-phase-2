@@ -1,6 +1,6 @@
 import React from "react";
 import { render } from "@testing-library/react";
-import Header from "./components/Header.jsx";
+import Header from "./Header.jsx";
 
 test("'write a story'' button exists when isSignedIn prop is truthy", () => {
   const { queryByTestId } = render(<Header isSignedIn={true} />);
@@ -13,7 +13,7 @@ test("'write a story'' button does not exists when isSignedIn prop is falsy", ()
 });
 
 test("user avatar exists when isSignedIn prop is truthy", () => {
-  const { queryByTestId } = render(<Header isSignedIn={true} />);
+  const { queryByTestId } = render(<Header isSignedIn={true} avatarSrc="#" />);
   expect(queryByTestId("user-avatar")).toBeTruthy();
 });
 
