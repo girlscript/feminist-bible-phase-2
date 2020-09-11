@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import logo from "../images/feminist_bible_logo.png";
-import avatar from "../images/avatar_placeholder.png";
 import "../css/components/header.scss";
 
 class Header extends Component {
@@ -39,9 +38,9 @@ class Header extends Component {
                       </button>
                     </li>
                   )}
-                  {this.props.isSignedIn && (
+                  {this.props.isSignedIn && this.props.avatarSrc && (
                     <li className="nav__item" data-testid="user-avatar">
-                      <img src={avatar} alt="signed-in user" />
+                      <img src={this.props.avatarSrc} alt="signed-in user" />
                     </li>
                   )}
                 </ul>
