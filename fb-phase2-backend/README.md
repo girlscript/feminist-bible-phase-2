@@ -1,4 +1,4 @@
-# backend
+# Backend
 
 This sub-dir hosts the back-end part of feminist bible. Below is the current
 project structure. Most of the dirs are self-explanatory. Feel free to rise an
@@ -24,7 +24,7 @@ issue if you find anything wrong
 └── yarn.lock
 ```
 
-### contributing
+### Contributing
 
 1. Fork this repository in your own github profile
 2. clone the forked repository
@@ -33,7 +33,7 @@ issue if you find anything wrong
 
 > use yarn, because it is [faster](https://www.cubui.com/blog/javascript/why-yarn-is-better-than-npm/) then npm
 
-### usage
+### Usage
 
 1. `cd` to locally locally cloned repository
 2. `cd` to back-end dir (i.e. fb-phase2-backend)
@@ -45,13 +45,22 @@ before making a PR, make sure test cases are not failing. to run all test cases
 from specs/ dir, just run `yarn test`. you shall see a test coverage report 
 along with passing/failing tests
 
-#### database
+#### Database
 
 this project uses MongoDB as primary database. you can either install mongodb
 locally, or use database-as-a-service from MLab or similar providers. choice is
 yours
 
-### using yarn
+#### Status Code
+- 200: OK
+- 201: Created
+- 204: No Content
+- 400: Bad request
+- 401: Unauthorised
+- 404: Not found
+- 500: Internal server error
+
+### Using yarn
 
 - install a package: `yarn add PACKAGE_NAME`
 - install a package globally: `yarn global add PACKAGE_NAME`
