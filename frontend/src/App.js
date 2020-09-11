@@ -1,10 +1,11 @@
-import React from 'react';
-import Header from './components/Header.jsx';
+import React from "react";
+import Header from "./components/Header.jsx";
 
 function App() {
   return (
     <div>
-      <Header />
+      {/* make sure to pass `isSignedIn` in order to render user-specific nav items*/}
+      <Header isSignedIn={true} />
     </div>
   );
 }

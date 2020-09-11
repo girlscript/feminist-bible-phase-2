@@ -13,7 +13,7 @@
 }
 
 .nav{
-  display:flex; 
+  display:flex;
   justify-content: flex-end;
 
   // ul
@@ -40,5 +40,12 @@
     &:not(:last-child){
       margin-right:20px;
     }
+  }
+
+  .btn__write-a-story {
+    background-color: #AB1D79;
+    padding: 1rem 1.3rem;
+    color: #fff;
+    border-radius: 0.4rem;
   }
 }
