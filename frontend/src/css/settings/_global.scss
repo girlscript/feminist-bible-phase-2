@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+@import url('https://cdn.jsdelivr.net/npm/foundation-sites@6.6.3/dist/css/foundation.min.css');
+
+*{
+  box-sizing:border-box;
+}
+
+body{
+  font-family: 'Poppins', sans-serif;
+  margin:0;
+}
+
+a{color:inherit}
+
+// Theme colors
+$purple: #AB1D79;
+$lilac: #4A2343;
+$pink: #FFC7E3;
+
+// Text colors
+$title-color: #333333;
+$text-color: #6E6D7A;
+
+// Background colors
+$yellow-bg: #FFFDF6;
+$pink-bg: #FFEBF3;
+
+//font-weights
+$font-weight-regular: 400;
+$font-weight-medium: 500;
+$font-weight-semi-bold: 600;
+$font-weight-bold: 700;
+
+
+//headings 
+h1{
+  font-size:50px; 
+  font-weight: $font-weight-semi-bold;
+}
+
+h2{
+  font-size:36px; 
+  font-weight: $font-weight-semi-bold;
+}
+
+h3{
+  font-size: 18px; 
+  font-weight: $font-weight-medium;
+}
+
+
+// text style
+.text{
+  font-size:16px; 
+  font-weight: $font-weight-medium;
+  line-height:26px;
+  color:$text-color;
+}
+
+p{
+  @extend .text; //using text style
+}
