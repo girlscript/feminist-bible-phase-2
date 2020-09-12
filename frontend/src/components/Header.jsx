@@ -31,18 +31,6 @@ class Header extends Component {
                   <li className="nav__item">
                     <a href="#placeholder">Login</a>
                   </li>
-                  {this.props.isSignedIn && (
-                    <li className="nav__item" data-testid="write-a-story">
-                      <button className="btn__write-a-story">
-                        Write a Post
-                      </button>
-                    </li>
-                  )}
-                  {this.props.isSignedIn && this.props.avatarSrc && (
-                    <li className="nav__item" data-testid="user-avatar">
-                      <img src={this.props.avatarSrc} alt="signed-in user" />
-                    </li>
-                  )}
                 </ul>
               </nav>
             </div>
