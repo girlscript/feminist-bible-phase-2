@@ -18,7 +18,7 @@ class Header extends Component {
                   <li className="nav__item"><a href="">Organizations</a></li>
                   <li className="nav__item"><a href="">About</a></li>
                     {
-                      this.props.isSignedIn?  
+                      this.props.isSignedIn?
                         <> 
                           <li className="nav__item">
                             <button className="button__big" style={{textTransform: "capitalize"}}>
@@ -30,7 +30,9 @@ class Header extends Component {
                           </li> 
                         </>
                         :
-                        <li className="nav__item"><a href="">Login</a></li>
+                        <li className="nav__item">
+                          <a href="">Login</a>
+                        </li>
                     }
                 </ul>
               </nav>
