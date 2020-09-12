@@ -2,13 +2,13 @@ const mongoose = require("mongoose");
 
 const userSchema = new mongoose.Schema(
   {
-    firstname: {
+    firstName: {
       type: String,
       required: true,
       maxlength: 32,
       trim: true
     },
-    lastname: {
+    lastName: {
       type: String,
       maxlength: 32,
       trim: true
@@ -29,8 +29,6 @@ const userSchema = new mongoose.Schema(
     password: {
       type: String,
       required: true,
-      trim:true
-    }    
     },
   { timestamps: true }
 );
