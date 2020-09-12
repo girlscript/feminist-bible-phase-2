@@ -34,6 +34,8 @@ You will also see any lint errors in the console.
 
 ✔ For the first few weeks into the program, the issues will be raised by the project-leads only. Every issue will be assigned to the participants of GSSoC 2020 Extended working on this project. 
 
+✔ Kindly refrain from claiming the issues labelled as `frontend`, as these issues will be assigned to the participants by the project leads, and is <b>NOT</b> based on the first-come-first-served basis. This is done so that everyone gets a fair chance to contribute.
+
 ✔ Participant are requested to give regular updates regarding their progress to the project leads.
 
 ✔ If the participant is not able to contribute to the assigned issue due to any reason, kindly let the project leads know so that the issue is assigned to some other participant. 

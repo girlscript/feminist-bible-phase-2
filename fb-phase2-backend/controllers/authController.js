@@ -1,3 +1,4 @@
+
 const crypto = require('crypto');
 const bcrypt = require('bcryptjs');
 const nodemailer = require('nodemailer');
@@ -12,6 +13,7 @@ const transporter = nodemailer.createTransport(
     }
   })
 );
+
 
 exports.signup = async (req, res) => {
   //
