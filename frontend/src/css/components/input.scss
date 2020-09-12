@@ -1,0 +1,29 @@
+@import '../settings/global';
+
+//css starts here
+
+label {
+   color: $title-color;
+   font-size: 16px;
+   font-weight: $font-weight-medium;
+}
+
+input[type=text] {
+    border: 2px solid #828282;
+    border-radius: 5px;
+    color: $text-color;
+    font-size: 16px;
+    font-weight: $font-weight-regular;
+}
+
+input[type=text]:focus {
+    outline: none;
+}
+
+::placeholder {
+    font-size: 16px;
+    font-weight: $font-weight-regular;
+    color: #828282;
+}
+
+

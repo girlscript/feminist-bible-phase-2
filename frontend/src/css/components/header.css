@@ -1,0 +1,121 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+@import url("https://cdn.jsdelivr.net/npm/foundation-sites@6.6.3/dist/css/foundation.min.css");
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+}
+
+a {
+  color: inherit;
+}
+
+h1 {
+  font-size: 50px;
+  font-weight: 600;
+}
+
+h2 {
+  font-size: 36px;
+  font-weight: 600;
+}
+
+h3 {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.text, p, .nav__item {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 26px;
+  color: #6E6D7A;
+}
+
+.button__small {
+  padding: 8px 20px;
+}
+
+.button__big {
+  padding: 15px 25px;
+}
+
+.button__small, .button__big {
+  background-color: #AB1D79;
+  color: white;
+  border: 0;
+  display: inline;
+  text-transform: uppercase;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: 500;
+  font-family: "Poppins", sans-serif;
+  cursor: pointer;
+  -webkit-transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
+}
+
+.button__small--pink, .button__big--pink {
+  background-color: #FFC7E3;
+  color: #333333;
+}
+
+.button__small--hollow, .button__big--hollow {
+  border: 1px solid #4A2343;
+  color: #333333;
+  background-color: transparent;
+}
+
+.button__small:hover, .button__big:hover {
+  background-color: #4A2343;
+  color: white;
+  -webkit-transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
+}
+
+.header {
+  height: 80px;
+  background-color: #FFFDF6;
+  border-bottom: 1px solid rgba(171, 29, 121, 0.3);
+}
+
+.header__logo {
+  height: 46px;
+  margin-top: 17px;
+}
+
+.nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.nav__item-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0;
+}
+
+.nav__item {
+  list-style-type: none;
+  color: #333333;
+  line-height: 80px;
+}
+
+.nav__item a:hover {
+  color: #AB1D79;
+  text-decoration: underline;
+}
+
+.nav__item:not(:last-child) {
+  margin-right: 20px;
+}
+/*# sourceMappingURL=header.css.map */
