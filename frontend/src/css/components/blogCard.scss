@@ -1,0 +1,53 @@
+@import "../settings/global";
+
+.card {
+  width: 340px;
+  height: 397px;
+  border-radius: 5px;
+  background-color: #f8f6f3;
+
+  &_img {
+    width: 300px;
+    height: 200px;
+    border-radius: 5px;
+  }
+
+  &-container {
+    padding-left: 20px;
+    padding-top: 20px;
+
+    h3 {
+      color: $title-color;
+    }
+  }
+}
+
+.card-footer {
+  padding: 20px;
+  display: flex;
+  justify-content: flex-end;
+
+  &-text {
+    p {
+      margin: 0;
+      padding-right: 13px;
+      line-height: 18px;
+      text-align: right;
+    }
+    .p_1 {
+      font-size: 14px;
+      font-weight: $font-weight-medium;
+    }
+
+    .p_2 {
+      font-size: 12px;
+      font-weight: $font-weight-regular;
+    }
+  }
+
+  &-img {
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+  }
+}
