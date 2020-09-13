@@ -28,8 +28,8 @@ const adminSchema = new Schema ({
       },
       password: {
         type: String,
-        required: true,
-        trim:true
+        required: true
+        
       }    
     
     
