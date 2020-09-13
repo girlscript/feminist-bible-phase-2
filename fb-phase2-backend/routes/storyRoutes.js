@@ -17,6 +17,8 @@ router
    *           in: path
    *           required: true
    *           type: string
+   *      tags:
+   *        - Story
    *      responses:
    *        200:
    *          description: user created
@@ -51,6 +53,8 @@ router
    *          required: true
    *          schema:
    *            $ref: '#/definitions/Story'
+   *      tags:
+   *        - Story
    *      responses:
    *        200:
    *          description: Story Updated

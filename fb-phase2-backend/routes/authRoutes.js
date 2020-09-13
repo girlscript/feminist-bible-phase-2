@@ -16,6 +16,8 @@ const router = express.Router();
  *           required: true
  *           schema:
  *              $ref: '#/definitions/User'
+ *      tags:
+ *        - Auth
  *      responses:
  *        200:
  *          description: user created
@@ -40,7 +42,8 @@ router.route('/signup').post(autController.signup);
  *                type: string
  *              password:
  *                type: string
- *
+ *      tags:
+ *        - Auth
  *      responses:
  *        200:
  *          description: signed-in suggessfully
