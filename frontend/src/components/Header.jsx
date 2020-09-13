@@ -21,12 +21,12 @@ class Header extends Component {
                       this.props.isSignedIn?
                         <> 
                           <li className="nav__item">
-                            <button className="button__big" style={{textTransform: "capitalize"}}>
+                            <button className="button__small" style={{textTransform: "capitalize"}}>
                               Write a Story
                             </button>
                           </li>
                           <li className="nav__item" data-testid="user-avatar">
-                            <img src={this.props.avatarSrc} class="avatar" alt="signed-in user"/>
+                            <img src={this.props.avatarSrc} className="avatar" alt="signed-in user"/>
                           </li> 
                         </>
                         :
