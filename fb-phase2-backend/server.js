@@ -4,6 +4,7 @@ const db = require('./database')();
 
 const port = process.env.PORT || 7000;
 
+db;
 // this is useful when creating a https server 
 http
   .createServer(app)
