@@ -15,73 +15,51 @@ const transporter = nodemailer.createTransport(
   })
 );
 
-
 exports.signup = async (req, res) => {
-  
   const { firstName, lastName, email, phone, password } = req.body;
   // checking all credentials are present or not
   if (!firstName || !lastName || !email || !phone || !password)
     return res.status(400).json({ msg: 'fill up all the credentials' });
 
-  // checking existing user 
-  let user;
   try {
+    // checking existing user
+    let user;
     user = await User.findOne({ email });
+    if (user) return res.json({ msg: 'user already exist' });
+
+    // hashing password
+    let hashPassword = await bcrypt.hash(password, 10);
+
+    const newUser = await User.create({
+      firstName,
+      lastName,
+      email,
+      phone,
+      password: hashPassword,
+    });
+
+    await newUser.save();
+
+    // generating auth token
+
+    let token = jwt.sign({ id: newUser._id }, process.env.JWT_Key, {
+      expiresIn: '1h',
+    });
+
+    // returning final response
+    res.status(201).json({
+      success: true,
+      data: {
+        ...newUser._doc,
+        password: '',
+        token,
+      },
+    });
   } catch (e) {
     console.log(e.message);
     return res.status(500).json({ msg: 'server error' });
   }
-
-  if (user) return res.json({ msg: 'user already exist' });
-
-  // hashing password
-  let hashPassword;
-  try {
-    hashPassword = await bcrypt.hash(password, 10);
-  } catch (err) {
-    console.log(err.message);
-    return res.status(500).json({ msg: 'hash fail' });
-  }
-
-  const newUser = await User.create({
-    firstName,
-    lastName,
-    email,
-    phone,
-    password: hashPassword,
-  });
-
-
-
-  try {
-    await newUser.save();
-  } catch (err) {
-    console.log(err.message);
-    return res.status(500).json({ msg: 'cannot create user' });
-  }
-
-  // generating auth token
-  let token;
-  try {
-    token = jwt.sign({ id: newUser._id }, process.env.JWT_Key, {
-      expiresIn: '1h',
-    });
-  } catch (err) {
-    console.log(err.message);
-    res.status(500).json({ msg: 'could not sign up' });
-  }
-
-  // returning final response
-  res.status(201).json({
-    success: true,
-    data: {
-      ...newUser._doc,
-      password: '',
-      token,
-    },
-  });
 };
-
 
 exports.signin = async (req, res) => {
   //
