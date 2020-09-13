@@ -4,23 +4,6 @@ const router = express.Router();
 
 /**
  * @swagger
- * definitions:
- *    User:
- *     properties:
- *      firstName:
- *        type: string
- *      lastName:
- *        type: string
- *      email:
- *         type: integer
- *      phone:
- *        type: number
- *      password:
- *        type: string
- */
-
-/**
- * @swagger
  * /api/auth/signup:
  *    post:
  *      description: create a new user
@@ -38,7 +21,6 @@ const router = express.Router();
  *          description: user created
  */
 router.route('/signup').post(autController.signup);
-
 
 /**
  * @swagger
@@ -58,7 +40,7 @@ router.route('/signup').post(autController.signup);
  *                type: string
  *              password:
  *                type: string
- *                
+ *
  *      responses:
  *        200:
  *          description: signed-in suggessfully
