@@ -6,20 +6,20 @@ import author_img from '../images/author_img.png';
 class BlogCard extends Component {
     render() {
         return (
-            <div class="card">
-                <div class="card-container">
-                    <img src= {blog_img} class="card_img" />
+            <div className="card">
+                <div className="card-container">
+                    <img src= {blog_img} className="card-container__img" />
                     </div>
-                    <div class="card-container">
+                    <div className="card-container">
                         <h3>QTPOC In Comics: “Bingo Love” Depicts Black Queer Women’s Romance</h3>
                     </div>
 
-                    <div class="card-footer" >
-                        <div class="card-footer-text" >
-                       <p class="p_1">Rashmeet Kaur</p>
-                       <p class="p_2">12 Aug 2020</p>
+                    <div className="footer" >
+                        <div >
+                       <p className=" footer__text footer__text--large">Rashmeet Kaur</p>
+                       <p className=" footer__text footer__text--small">12 Aug 2020</p>
                         </div>
-                        <div  class="card-footer-img">
+                        <div  className="footer__img">
                             <img  src={author_img}/>
                         </div>
                     
