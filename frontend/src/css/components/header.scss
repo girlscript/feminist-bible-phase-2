@@ -13,12 +13,12 @@
 }
 
 .nav{
-  display:flex; 
+  display:flex;
   justify-content: flex-end;
 
   // ul
   &__item-container{
-    display:flex;
+    display:flex; 
     margin:0;
 
     // gap not supported on safari
@@ -41,4 +41,10 @@
       margin-right:20px;
     }
   }
+}
+
+.avatar{
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
 }
