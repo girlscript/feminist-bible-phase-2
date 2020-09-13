@@ -11,14 +11,29 @@ class Header extends Component {
             <div className="cell large-3">
               <img src={logo} alt="feminist bible logo" className="header__logo"/>
             </div>
-
             <div className="cell large-9">
               <nav className="nav">
                 <ul className="nav__item-container">
                   <li className="nav__item"><a href="">Stories</a></li>
                   <li className="nav__item"><a href="">Organizations</a></li>
                   <li className="nav__item"><a href="">About</a></li>
-                  <li className="nav__item"><a href="">Login</a></li>
+                    {
+                      this.props.isSignedIn?
+                        <> 
+                          <li className="nav__item">
+                            <button className="button__small" style={{textTransform: "capitalize"}}>
+                              Write a Story
+                            </button>
+                          </li>
+                          <li className="nav__item" data-testid="user-avatar">
+                            <img src={this.props.avatarSrc} className="avatar" alt="signed-in user"/>
+                          </li> 
+                        </>
+                        :
+                        <li className="nav__item">
+                          <a href="">Login</a>
+                        </li>
+                    }
                 </ul>
               </nav>
             </div>
