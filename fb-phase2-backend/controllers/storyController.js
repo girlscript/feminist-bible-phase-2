@@ -5,7 +5,7 @@ exports.getStory = async (req, res)=>{
         const _id = req.body.id
         const story = await Story.findOne({_id: _id})
         if(!story){
-            return res.status(404).json({
+            return res.status(400).json({
                 message: "Story Not found!"
             })
         }
@@ -15,7 +15,7 @@ exports.getStory = async (req, res)=>{
         })
     }
     catch(error){
-        res.status(500).json({
+        res.status(400).json({
             message: "Error!"
         })
     }
