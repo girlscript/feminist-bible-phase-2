@@ -2,8 +2,7 @@ const Story = require("../database/models/storyModel")
 
 exports.getStory = async (req, res)=>{
     try{
-        const _id = req.body.id
-        const story = await Story.findOne({_id: _id})
+        const story = await Story.findOne({_id: req.params.storyId})
         if(!story){
             return res.status(400).json({
                 message: "Story Not found!"
