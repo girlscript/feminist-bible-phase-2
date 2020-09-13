@@ -4,7 +4,7 @@ import '../css/components/input.scss';
 class Input extends Component {
   render() {
     return (
-        <form>
+        
             <div className="grid-container">
                 <div className="grid-x">
                     <div className=" cell large-4 ">
@@ -14,8 +14,7 @@ class Input extends Component {
                     </div>
                 </div>
             </div>
-        </form>
-        
+                
         
     );
   }
