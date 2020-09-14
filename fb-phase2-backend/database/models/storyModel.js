@@ -1,5 +1,19 @@
 const mongoose = require('mongoose');
 
+/**
+ * @swagger
+ * definitions:
+ *    Story:
+ *     properties:
+ *      name:
+ *        type: string
+ *      author:
+ *        type: string
+ *      image:
+ *         type: string
+ *      heading:
+ *        type: string
+ */
 const storySchema = new mongoose.Schema(
   {
     name: {
