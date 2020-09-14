@@ -1,5 +1,6 @@
 @import '../settings/global';
 @import './button';
+@import './avatar';
 
 // Header bar
 .header{
@@ -13,12 +14,12 @@
 }
 
 .nav{
-  display:flex; 
+  display:flex;
   justify-content: flex-end;
 
   // ul
   &__item-container{
-    display:flex;
+    display:flex; 
     margin:0;
 
     // gap not supported on safari
@@ -30,10 +31,16 @@
     list-style-type: none;
     color:$title-color;
     line-height:80px;
+    font-weight: $font-weight-regular;
 
     a:hover{
       color:$purple;
       text-decoration:underline;
+    }
+
+    a[class*='button']:hover{
+      text-decoration: none;
+      color:white;
     }
 
     // to give gap between the nav items (since gap is not supported by all browsers)
