@@ -1,0 +1,105 @@
+@import '../settings/global';
+
+.head_content{
+  margin-left: 180px;
+  margin-top: 60px;
+}
+
+.title__item{
+    width: 612px;
+    height: 182px;
+  }
+  .text_codeofconduct{
+    width: 572px;
+    height: 72px;
+  }
+  .title_codeofconduct{
+    width: 348px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+  }
+  .header__photo{
+   position: absolute;
+  width: 500px;
+  height: 500px;
+  margin-left:1000px;
+  top: 30px;
+  }
+  .main-content{
+    
+  position: absolute;
+  width: 348px;
+  height: 100px;
+  margin-top: 100px;
+ margin-left: 600px; 
+  }
+  .cardlayout{
+    margin-top: 130px;
+    padding: 80px;
+    margin-left: 180px;
+  }
+ 
+.card_margin{
+  margin: 30px;
+}
+  .card1{
+    
+    transition: 0.3s;
+    
+    text-align: center;
+    display: inline-block;
+    width: 432px;
+  height: 338px;
+  
+  top: 200px;
+  padding: 50px;
+  margin-left: 30px;
+  margin-right: 30px;
+  
+  background: #FFFFFF;
+  /* box-shadow */
+  
+  box-shadow: 0px 0px 14px rgba(0, 0, 0, 0.08);
+  border-radius: 5px;
+}
+  .card1__title{
+    width: 123px;
+    height: 42px;
+  }
+  .card1__head{
+  width: 335px;
+  height: 35px;
+  }
+  .card1__para{
+  width: 373px;
+  height: 173px;
+  }
+  .last_content{
+    margin-left: 600px;
+    
+  }
+  
+  .card{
+  width: 340px;
+  height: 368px; 
+  background: #FFFFFF;
+  /* box-shadow */
+  
+  box-shadow: 0px 0px 14px rgba(0, 0, 0, 0.08);
+  border-radius: 5px;   
+  
+  
+}
+  /*# sourceMappingURL=App.css.map */
+.text2{
+  width: 260px;
+  height: 72px;
+  margin-left: 60px;
+  margin-top: -20px;
+}
+.cardlayout2{
+  width: 340px;
+  height: 370px;
+  margin: 40px;
+ }
