@@ -1,105 +1,134 @@
 @import '../settings/global';
-
-.head_content{
-  margin-left: 180px;
-  margin-top: 60px;
+.CodeofConduct{
+  background-color:$yellow-bg;
+  height:100%;
+  width: 100%;
+  
 }
 
-.title__item{
-    width: 612px;
-    height: 182px;
-  }
-  .text_codeofconduct{
-    width: 572px;
-    height: 72px;
-  }
-  .title_codeofconduct{
-    width: 348px;
-    height: 100px;
-    display: flex;
-    align-items: center;
-  }
-  .header__photo{
-   position: absolute;
-  width: 500px;
-  height: 500px;
-  margin-left:1000px;
-  top: 30px;
-  }
-  .main-content{
+.head{
+&__content{
+  margin-left: 180px;
+  margin-top: 60px;
+
+}
+
+&__item{
+  width: 612px;
+  height: 182px;
+}
+
+&__text{
+  @extend .text;
+  width: 572px;
+  height: 72px;
+}
+&__photo{
+  position: absolute;
+ width: 500px;
+ height: 500px;
+ margin-left:1000px;
+ top: 30px;
+ }
+}
+.main-content_bg{
+  background-color:$pink-bg;
+  height:100%;
+  width: 100%;
+
+}
+.title_codeofconduct{
+  margin-top: -80px;
+}
+.main-content{
     
   position: absolute;
   width: 348px;
   height: 100px;
   margin-top: 100px;
  margin-left: 600px; 
-  }
-  .cardlayout{
-    margin-top: 130px;
-    padding: 80px;
-    margin-left: 180px;
-  }
- 
-.card_margin{
-  margin: 30px;
+  
+&__cardlayout{
+  margin-top: 130px;
+  padding: 80px;
+  margin-left: 180px;
 }
-  .card1{
+
+&__card1{
     
-    transition: 0.3s;
-    
-    text-align: center;
-    display: inline-block;
-    width: 432px;
-  height: 338px;
+  transition: 0.3s;
   
-  top: 200px;
-  padding: 50px;
-  margin-left: 30px;
-  margin-right: 30px;
-  
-  background: #FFFFFF;
-  /* box-shadow */
-  
-  box-shadow: 0px 0px 14px rgba(0, 0, 0, 0.08);
-  border-radius: 5px;
+  text-align: center;
+  display: inline-block;
+  width: 432px;
+height: 338px;
+
+top: 200px;
+padding: 50px;
+margin-left: 30px;
+margin-right: 30px;
+
+background: #FFFFFF;
+/* box-shadow */
+
+box-shadow: 0px 0px 14px rgba(0, 0, 0, 0.08);
+border-radius: 5px;
 }
-  .card1__title{
-    width: 123px;
-    height: 42px;
-  }
-  .card1__head{
+&__card1__title{
+  width: 123px;
+  height: 42px;
+}
+&__card1__head{
   width: 335px;
   height: 35px;
   }
-  .card1__para{
+&__card1__para{
   width: 373px;
   height: 173px;
   }
-  .last_content{
-    margin-left: 600px;
+&__card_margin{
+  margin: 30px;
+}
     
-  }
+}
   
-  .card{
+
+.codeofconduct_lastblock{
+
+&__last_content{
+  margin-left: 600px;
+  
+}
+
+&__card{
+
   width: 340px;
   height: 368px; 
   background: #FFFFFF;
   /* box-shadow */
+  display: inline-block;
   
   box-shadow: 0px 0px 14px rgba(0, 0, 0, 0.08);
   border-radius: 5px;   
   
   
 }
-  /*# sourceMappingURL=App.css.map */
-.text2{
+
+&__cardlayout2{
+  width: 340px;
+  height: 370px;
+  margin: 40px;
+ }
+&__text2{
   width: 260px;
   height: 72px;
   margin-left: 60px;
   margin-top: -20px;
 }
-.cardlayout2{
-  width: 340px;
-  height: 370px;
-  margin: 40px;
- }
+
+}
+ 
+  
+  
+  
+  /*# sourceMappingURL=App.css.map */
