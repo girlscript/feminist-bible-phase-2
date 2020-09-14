@@ -1,13 +1,11 @@
 import React from 'react';
 import Header from './components/Header.jsx';
-import Input from './components/Input.jsx';
+import avatar from "./images/avatar.png";
 
 function App() {
   return (
     <div>
-      <Header />
-
-     
+      <Header isSignedIn={true} avatarSrc={avatar}/>
     </div>
   );
 }
