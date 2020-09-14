@@ -5,7 +5,7 @@ import avatar from "./images/avatar.png";
 function App() {
   return (
     <div>
-      <Header isSignedIn={true} avatarSrc={avatar}/>
+      <Header isSignedIn={true} avatarSrc={avatar} />
     </div>
   );
 }
