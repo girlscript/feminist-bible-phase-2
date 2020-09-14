@@ -60,3 +60,9 @@ h3{
 p{
   @extend .text; //using text style
 }
+
+a{
+  color:inherit;
+  text-decoration:inherit;
+  line-height:inherit;
+}
