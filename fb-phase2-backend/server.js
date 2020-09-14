@@ -4,7 +4,7 @@ const db = require('./database')();
 
 const port = process.env.PORT || 7000;
 
-// this is useful when creating a https server 
+// this is useful when creating a https server
 http
   .createServer(app)
   .listen(port, () => console.log('HTTP server listening on ' + port));

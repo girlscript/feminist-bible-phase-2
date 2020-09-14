@@ -1,0 +1,45 @@
+@import '../settings/global';
+
+//css starts here
+
+::placeholder {
+    font-size: 16px;
+    font-weight: $font-weight-regular;
+    color:#828282;
+}
+
+%form-element-focus{
+    box-shadow: 0 0 0 4px rgba(171,29,121,0.15);
+    border-color:rgb(171, 29, 121);
+}
+
+.form{
+    &__label{
+        color: $title-color;
+        font-size: 16px;
+        font-weight: $font-weight-medium;
+        margin-bottom:4px;
+
+        // this class should be used with form elements with required attribute. 
+        &.required{
+            &::after{
+                position:relative;
+                content:' *'
+            }
+        }
+    }
+
+    &__input-field{
+        border: 1px solid #828282;
+        border-radius: 5px;
+        color: $title-color;
+        font-size: 16px;
+        font-weight: $font-weight-regular;
+        height:56px;
+        padding:0 20px;
+
+        &:focus,&:hover{
+            @extend %form-element-focus;
+        }
+    }
+}
