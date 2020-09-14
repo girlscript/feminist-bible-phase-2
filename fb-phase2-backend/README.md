@@ -42,7 +42,7 @@ issue if you find anything wrong
 5. start project with `yarn dev`
 
 before making a PR, make sure test cases are not failing. to run all test cases
-from specs/ dir, just run `yarn test`. you shall see a test coverage report 
+from specs/ dir, just run `yarn test`. you shall see a test coverage report
 along with passing/failing tests
 
 #### Database
@@ -52,6 +52,7 @@ locally, or use database-as-a-service from MLab or similar providers. choice is
 yours
 
 #### Status Code
+
 - 200: OK
 - 201: Created
 - 204: No Content

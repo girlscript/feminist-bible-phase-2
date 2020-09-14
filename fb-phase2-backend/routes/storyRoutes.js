@@ -24,14 +24,14 @@ router
    *          description: user created
    *          schema:
    *            $ref: '#/definitions/User'
-   *        400: 
+   *        400:
    *          description: Story Not Found
    *          schema:
    *            type: object
    *            properties:
    *              error:
    *                type: string
-   *          
+   *
    */
   .get(storyController.getStory)
   /**
