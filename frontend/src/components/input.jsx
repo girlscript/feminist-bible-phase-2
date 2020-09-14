@@ -4,18 +4,10 @@ import '../css/components/input.scss';
 class Input extends Component {
   render() {
     return (
-        
-            <div className="grid-container">
-                <div className="grid-x">
-                    <div className=" cell large-4 ">
-                        <label>Email Address
-                            <input type="text" placeholder="username@example.com" />
-                        </label>
-                    </div>
-                </div>
-            </div>
-                
-        
+      <div className="form__element-container">
+        <label className="form__label>Email Address</label>
+        <input className="form__input-field" type="text" placeholder="username@example.com" />
+      </div>       
     );
   }
 }
