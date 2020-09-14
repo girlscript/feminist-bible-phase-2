@@ -1,0 +1,30 @@
+name: "run frontend tests"
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [ 14.x ]
+    steps:
+      - uses: actions/checkout@v2
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node-version }}
+      - name: Install Yarn
+        run: npm i -g yarn
+      - name: Build
+        env:
+          CI: false
+        run: |
+          cd frontend
+          ls
+          yarn
+          yarn test --passWithNoTests
