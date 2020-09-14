@@ -1,5 +1,6 @@
 @import '../settings/global';
 @import './button';
+@import './avatar';
 
 // Header bar
 .header{
@@ -30,10 +31,16 @@
     list-style-type: none;
     color:$title-color;
     line-height:80px;
+    font-weight: $font-weight-regular;
 
     a:hover{
       color:$purple;
       text-decoration:underline;
+    }
+
+    a[class*='button']:hover{
+      text-decoration: none;
+      color:white;
     }
 
     // to give gap between the nav items (since gap is not supported by all browsers)
@@ -41,10 +48,4 @@
       margin-right:20px;
     }
   }
-}
-
-.avatar{
-  width: 40px;
-  height: 40px;
-  border-radius: 20px;
 }
