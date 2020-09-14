@@ -1,0 +1,54 @@
+@import "../settings/global";
+
+.card {
+  width: 340px;
+  height: 397px;
+
+  border-radius: 5px;
+  background-color: #f8f6f3;
+
+  .blog__card {
+    padding-left: 20px;
+    padding-top: 20px;
+
+    &__img {
+      width: 300px;
+      height: 200px;
+      border-radius: 5px;
+    }
+
+    &__detail {
+      color: $title-color;
+    }
+  }
+}
+
+.author__card {
+  padding: 20px;
+  display: flex;
+  justify-content: flex-end;
+
+  &__detail {
+    & > * {
+      margin: 0;
+      padding-right: 13px;
+      text-align: right;
+      line-height: 18px;
+    }
+
+    .author__name {
+      font-size: 14px;
+      font-weight: $font-weight-medium;
+    }
+
+    .author__date {
+      font-size: 12px;
+      font-weight: $font-weight-regular;
+    }
+  }
+  &__img {
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+  }
+}
