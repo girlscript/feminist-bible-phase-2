@@ -3,10 +3,11 @@
 .card {
   width: 340px;
   height: 397px;
+  margin: 30px;
   border-radius: 5px;
   background-color: #f8f6f3;
 
-  &-container {
+  .blog__card {
     padding-left: 20px;
     padding-top: 20px;
 
@@ -16,34 +17,35 @@
       border-radius: 5px;
     }
 
-    h3 {
+    &__detail {
       color: $title-color;
     }
   }
 }
 
-.footer {
+.author__card {
   padding: 20px;
   display: flex;
   justify-content: flex-end;
 
-  &__text {
-    margin: 0;
-    padding-right: 13px;
-    text-align: right;
-    line-height: 18px;
+  &__detail {
+    & > * {
+      margin: 0;
+      padding-right: 13px;
+      text-align: right;
+      line-height: 18px;
+    }
 
-    &--large {
+    .author__name {
       font-size: 14px;
       font-weight: $font-weight-medium;
     }
 
-    &--small {
+    .author__date {
       font-size: 12px;
       font-weight: $font-weight-regular;
     }
   }
-
   &__img {
     width: 40px;
     height: 40px;
