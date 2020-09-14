@@ -70,3 +70,11 @@ yours
 - run a binary from node_modules: `yarn BINARY_NAME`
 
 ... more on [yarnpkg.com](https://yarnpkg.com/)
+
+### Code Formatting
+
+This project uses Prettier for code formatting. Developers are expected to
+format their code before pushing it to remote repository.
+
+To make the process easier, a pre-commit hook has been added which would format
+messy codes for you.
