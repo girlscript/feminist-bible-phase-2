@@ -1,0 +1,22 @@
+name: Run Tests
+on: [push, pull_request]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Setup Node and NPM
+        uses: actions/setup-node@v1
+        with:
+          node-version: 14
+      - name: Install Yarn
+        run: npm install -g yarn
+      - name: Run Test Cases
+        env:
+          DATABASE_URI: ${{ secrets.DATABASE_URI }}
+        run: |
+          cd fb-phase2-backend && ls
+          yarn
+          echo "DATABASE_URI=$DATABASE_URI" > .env
+          yarn test
