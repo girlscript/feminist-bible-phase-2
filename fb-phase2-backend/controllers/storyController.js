@@ -32,6 +32,7 @@ exports.updateStory = async (req, res) => {
     const story_id = req.params.storyId;
     const story = await Story.findOneAndUpdate({ _id: story_id }, req.body, {
       new: true,
+      runValidators: true,
     });
 
     if (!story)
