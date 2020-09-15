@@ -19,7 +19,7 @@ const router = express.Router();
  *      tags:
  *        - Auth
  *      responses:
- *        200:
+ *        201:
  *          description: user created
  */
 router.route('/signup').post(autController.signup);
