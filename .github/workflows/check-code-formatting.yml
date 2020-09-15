@@ -1,0 +1,21 @@
+name: Prettier Code Format - BackEnd
+
+on:
+  pull_request:
+    branches: [master]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/setup-node@v1
+        with:
+          node-version: 14
+      - uses: actions/checkout@v2
+      - name: check formatting
+        run: |
+          npm i -g prettier
+          cd fb-phase2-backend
+          ls -lah
+          prettier --check . --ignore-unknown
