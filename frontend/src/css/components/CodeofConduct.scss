@@ -1,134 +1,147 @@
 @import '../settings/global';
-.CodeofConduct{
-  background-color:$yellow-bg;
-  height:100%;
-  width: 100%;
-  
+
+.hero-section {
+    background-image: linear-gradient(#FFFDF6, #FFEBF3);
 }
 
-.head{
-&__content{
-  margin-left: 180px;
-  margin-top: 60px;
+.head {
 
+    margin-top: 80px;
+
+    &__heading{
+        @extend h1;
+        padding-bottom: 30px;
+    }
+    
+    &__para{
+        @extend .text;
+        padding-right: 100px;
+    }
 }
 
-&__item{
-  width: 612px;
-  height: 182px;
+.photo {
+    margin-left: 30px;
 }
 
-&__text{
-  @extend .text;
-  width: 572px;
-  height: 72px;
-}
-&__photo{
-  position: absolute;
- width: 500px;
- height: 500px;
- margin-left:1000px;
- top: 30px;
- }
-}
-.main-content_bg{
-  background-color:$pink-bg;
-  height:100%;
-  width: 100%;
 
-}
-.title_codeofconduct{
-  margin-top: -80px;
-}
+/************************************************* code of conduct section ***************************************/
+
 .main-content{
-    
-  position: absolute;
-  width: 348px;
-  height: 100px;
-  margin-top: 100px;
- margin-left: 600px; 
+    background-color:$pink-bg;
   
-&__cardlayout{
-  margin-top: 130px;
-  padding: 80px;
-  margin-left: 180px;
-}
-
-&__card1{
-    
-  transition: 0.3s;
-  
-  text-align: center;
-  display: inline-block;
-  width: 432px;
-height: 338px;
-
-top: 200px;
-padding: 50px;
-margin-left: 30px;
-margin-right: 30px;
-
-background: #FFFFFF;
-/* box-shadow */
-
-box-shadow: 0px 0px 14px rgba(0, 0, 0, 0.08);
-border-radius: 5px;
-}
-&__card1__title{
-  width: 123px;
-  height: 42px;
-}
-&__card1__head{
-  width: 335px;
-  height: 35px;
-  }
-&__card1__para{
-  width: 373px;
-  height: 173px;
-  }
-&__card_margin{
-  margin: 30px;
-}
+    &__heading{
+        text-align: center;
+        @extend h2;
+    }
     
 }
-  
 
-.codeofconduct_lastblock{
+.card1 , .card2 , .card3 , .card4 {
+    width: 432px;
+    height: 338px;
+    background-color: #ffffff;
+    padding-left: 20px;
+    padding-right: 30px;
+    padding-top: 20px;
+    box-shadow: 0px 0px 14px rgba(0, 0, 0, 0.08);
+    border-radius: 5px;
+    
+    &__title, &__head {
+        @extend h2;
+    }
 
-&__last_content{
-  margin-left: 600px;
-  
+    &__para{
+        @extend .text;
+    }
+
+    &__head{
+        padding-bottom: 30px;;
+    }
 }
 
-&__card{
-
-  width: 340px;
-  height: 368px; 
-  background: #FFFFFF;
-  /* box-shadow */
-  display: inline-block;
-  
-  box-shadow: 0px 0px 14px rgba(0, 0, 0, 0.08);
-  border-radius: 5px;   
-  
-  
+.card1, .card2{
+    margin-bottom: 60px;
+    margin-top: 50px;
 }
 
-&__cardlayout2{
-  width: 340px;
-  height: 370px;
-  margin: 40px;
- }
-&__text2{
-  width: 260px;
-  height: 72px;
-  margin-left: 60px;
-  margin-top: -20px;
+.card3,.card4{
+    margin-bottom: 100px;
 }
 
+.card1, .card3{
+    float: right;
 }
- 
-  
-  
-  
-  /*# sourceMappingURL=App.css.map */
+
+.card2, .card4{
+    float: left;
+}
+
+
+/**************************************************** Guidelines section ***********************************/
+
+.guidelines-section{
+    background-image: linear-gradient(#FFEBF3 , #FFFDF6);
+
+    &__heading{
+        text-align: center;
+
+        @extend h2;
+    }
+}
+
+.block1 , .block2 , .block3 {
+    margin-top: 70px;
+    margin-bottom: 100px;
+
+    &__text{
+        text-align: center;
+
+        @extend .text;
+
+        padding-top: 30px ;
+                                            
+    }
+}
+
+.block3{
+
+    &__text{
+        padding-right: 30px;
+    }
+}
+
+.block2{
+
+    &__text{
+        padding-left: 28px;
+        padding-right: 60px;
+    }
+}
+
+.block1{
+
+    &__text{
+        padding-right: 60px;
+        padding-left: 28px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
