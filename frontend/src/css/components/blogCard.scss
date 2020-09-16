@@ -14,6 +14,7 @@
     height: 200px;
     border-radius: 5px;
     margin-bottom: 20px;
+    object-fit: cover;
   }
 
   &__title {
@@ -27,6 +28,8 @@
   margin-top: 20px;
 
   &__name-wrap {
+    padding:2px 0;
+
     & > * {
       margin: 0;
       padding-right: 13px;
