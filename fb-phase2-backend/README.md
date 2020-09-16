@@ -49,13 +49,16 @@ along with passing/failing tests
 
 this project uses MongoDB as primary database. you can either install mongodb
 locally, or use database-as-a-service from MLab or similar providers. choice is
-yours 
+yours
 
-### How to Download & Install MongoDB 
+### How to Download & Install MongoDB
+
 ## Step 1 — Download the MongoDB MSI Installer Package
+
 Head over https://www.mongodb.com/try/download/community and download the current version of MongoDB. Make sure you select MSI as the package you want to download.
 
 ## Step 2 — Install MongoDB with the Installation Wizard
+
 A. Make sure you are logged in as a user with Admin privileges. Then navigate to your downloads folder and double click on the .msi package you just downloaded. This will launch the installation wizard.
 B. Click Next to start installation.
 C. Accept the licence agreement then click Next.
@@ -64,10 +67,14 @@ E. Select “Run service as Network Service user” and make a note of the data 
 F. We won’t need Mongo Compass, so deselect it and click Next.
 G. Click Install to begin installation.
 F. Hit Finish to complete installation.
+
 ## Step 3— Create the Data Folders to Store our Databases
+
 A. Navigate to the C Drive on your computer using Explorer and create a new folder called data here.
 B. Inside the data folder you just created, create another folder called db.
+
 ## Step 4 — Setup Alias Shortcuts for Mongo and Mongod
+
 Once installation is complete, we’ll need to set up MongoDB on the local system.
 A. Open up your Hyper terminal running Git Bash.
 B. Change directory to your home directory with the following command:
@@ -85,12 +92,13 @@ alias mongo="/c/Program\ Files/MongoDB/Server/4.0/bin/mongo.exe"
 F. Hit the Escape key on your keyboard to exit the insert mode. Then type
 :wq!
 to save and exit Vim.
+
 ## Step 5 — Verify That Setup was Successful
+
 A. Close down the current Hyper terminal and quit the application.
 B. Re-launch Hyper.
 C. Type the following commands into the Hyper terminal:
 mongo --version
-
 
 #### Status Code
 
