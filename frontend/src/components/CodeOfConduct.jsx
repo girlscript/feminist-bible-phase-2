@@ -1,9 +1,9 @@
 import React, { Component } from "react";
-import photo from "../images/download 1.png";
+import hero_img from "../images/hero_img.png";
 import '../css/components/CodeofConduct.scss';
-import CodeofConduct1 from "../images/CodeofConduct1.png";
-import CodeofConduct2 from "../images/CodeofConduct2.png";
-import CodeofConduct3 from "../images/CodeofConduct3.png";
+import equity from "../images/equity.png";
+import life_choices from "../images/life_choices.png";
+import voice_matters from "../images/voice_matters.png";
 
 
 class CodeOfConduct extends Component {
@@ -24,7 +24,7 @@ class CodeOfConduct extends Component {
                           
                     </div>
 
-                    <div className="cell large-5 "><img src={photo} alt="download 1" className="photo"/></div> 
+                    <div className="cell large-5 "><img src={hero_img} alt="download 1" className="photo"/></div> 
                     
                 </div>
             </div>
@@ -37,50 +37,58 @@ class CodeOfConduct extends Component {
             <div className="grid-container">
                 <div className="grid-x grid-margin-x">
 
+                        {/* <div className="cell large-1"></div> */}
+
                    
-                        <div className="cell large-6">
+                        <div className="cell large-5 large-offset-1">
 
-                            <div className="card1">
-                                <h2 className="card1__title">01</h2>
-                                <h2 className="card1__head">Respect</h2>
-                                <p className="card1__para">Be respectful of people’s writng(s), comment(s) and or feedback. Respect people’s confidentiality. </p>
+                            <div className="card">
+                                <h2 className="card__title">01</h2>
+                                <h2 className="card__head">Respect</h2>
+                                <p className="card__para">Be respectful of people’s writng(s), comment(s) and or feedback. Respect people’s confidentiality. </p>
                             </div>
 
                         </div>
 
-                        <div className="cell large-6">
+                        <div className="cell large-5 ">
 
-                            <div className="card2">
-                                <h2 className="card2__title">02</h2>
-                                <h2 className="card2__head">Be Kind</h2>
-                                <p className="card2__para">Individuals share vulnerable thoughts and experiences. Please be kind and respectful to them. </p>
+                            <div className="card">
+                                <h2 className="card__title">02</h2>
+                                <h2 className="card__head">Be Kind</h2>
+                                <p className="card__para">Individuals share vulnerable thoughts and experiences. Please be kind and respectful to them. </p>
                             </div>
 
                         </div>
+
+                        {/* <div className="cell large-1"></div> */}
                    
                 </div>    
 
                 <div className="grid-x grid-margin-x">
+
+                            {/* <div className="cell large-1"></div> */}
                         
-                            <div className="cell large-6">
+                            <div className="cell large-5 large-offset-1 ">
 
-                                <div className="card3">
-                                    <h2 className="card3__title">03</h2>
-                                    <h2 className="card3__head">No offense</h2>
-                                    <p className="card3__para">Feminist Bible is a child-friendly and family-oriented community website. Abusive, offensive and disrespectful language in comments feedback and website content should be reported to Feminist Bible team. </p>
+                                <div className="card">
+                                    <h2 className="card__title">03</h2>
+                                    <h2 className="card__head">No offense</h2>
+                                    <p className="card__para">Feminist Bible is a child-friendly and family-oriented community website. Abusive, offensive and disrespectful language in comments feedback and website content should be reported to Feminist Bible team. </p>
                                 </div>
 
                             </div>
 
-                            <div className="cell large-6">
+                            <div className="cell large-5  ">
 
-                                <div className="card4">
-                                    <h2 className="card4__title">04</h2>
-                                    <h2 className="card4__head">Report</h2>
-                                    <p className="card4__para">If you are having a problem with another account member, please send our Feminist Bible team a message containing as much information on the issues and or incident to address the situation adequately. </p>
+                                <div className="card">
+                                    <h2 className="card__title">04</h2>
+                                    <h2 className="card__head">Report</h2>
+                                    <p className="card__para">If you are having a problem with another account member, please send our Feminist Bible team a message containing as much information on the issues and or incident to address the situation adequately. </p>
                                 </div>
 
                             </div>
+
+                            {/* <div className="cell large-1"></div> */}
                         
                 </div>
             </div>
@@ -95,31 +103,31 @@ class CodeOfConduct extends Component {
                 <div className="grid-x grid-margin-x">
 
                     <div className="cell large-4">
-                        <div class="block1">
+                        <div class="guidelines-card">
 
-                            <img src={CodeofConduct1} alt="CodeofConduct1"  className="block1__image"/>
+                            <img src={equity} alt="equity"  className="guidelines-card__image"/>
 
-                            <p className="block1__text">Equity is essential because it allows others to treat individual wants respectfully</p>
+                            <p className="guidelines-card__text">Equity is essential because it allows others to treat individual wants respectfully</p>
 
                         </div>
                     </div>
 
                     <div className="cell large-4">
-                        <div class="block2">
+                        <div class="guidelines-card">
 
-                            <img src={CodeofConduct2} alt="CodeofConduct2" className="block2__image"/>
+                            <img src={life_choices} alt="life_choices" className="guidelines-card__image"/>
 
-                            <p className="block2__text">Be empathetic to people’s life choices and maintain the sanctity of this safe place</p>
+                            <p className="guidelines-card__text">Be empathetic to people’s life choices and maintain the sanctity of this safe place</p>
                             
                         </div>
                     </div>
 
                     <div className="cell large-4">
-                        <div class="block1">
+                        <div class="guidelines-card">
                             
-                            <img src={CodeofConduct3} alt="CodeofConduct3" className="block3__image"/>
+                            <img src={voice_matters} alt="voice_matters" className="guidelines-card__image"/>
 
-                            <p className="block3__text">Every Opinion and voice matters</p>
+                            <p className="guidelines-card__text">Every Opinion and voice matters</p>
 
                         </div>
                     </div>

@@ -19,7 +19,7 @@
     }
 }
 
-.photo {
+.hero_img {
     margin-left: 30px;
 }
 
@@ -36,7 +36,7 @@
     
 }
 
-.card1 , .card2 , .card3 , .card4 {
+.card {
     width: 432px;
     height: 338px;
     background-color: #ffffff;
@@ -59,21 +59,8 @@
     }
 }
 
-.card1, .card2{
-    margin-bottom: 60px;
+.card{
     margin-top: 50px;
-}
-
-.card3,.card4{
-    margin-bottom: 100px;
-}
-
-.card1, .card3{
-    float: right;
-}
-
-.card2, .card4{
-    float: left;
 }
 
 
@@ -84,14 +71,15 @@
 
     &__heading{
         text-align: center;
-
+        padding-top: 70px;
         @extend h2;
     }
 }
 
-.block1 , .block2 , .block3 {
-    margin-top: 70px;
-    margin-bottom: 100px;
+.guidelines-card {
+    margin-top: 80px;
+    // margin-bottom: 100px;
+    text-align: center;
 
     &__text{
         text-align: center;
@@ -99,32 +87,13 @@
         @extend .text;
 
         padding-top: 30px ;
-                                            
+        padding-left: 55px;
+        padding-right: 55px;                                
     }
 }
 
-.block3{
 
-    &__text{
-        padding-right: 30px;
-    }
-}
 
-.block2{
-
-    &__text{
-        padding-left: 28px;
-        padding-right: 60px;
-    }
-}
-
-.block1{
-
-    &__text{
-        padding-right: 60px;
-        padding-left: 28px;
-    }
-}
 
 
 
