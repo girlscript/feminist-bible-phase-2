@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import "../css/components/blogCard.scss";
 import blog_img from "../images/blog_img.png";
-import author_img from "../images/avatar.png";
+import avatar from "../images/avatar.png";
 
 class BlogCard extends Component {
   render() {
@@ -19,7 +19,7 @@ class BlogCard extends Component {
             <p className="author__date">12 Aug 2020</p>
           </div>
           <div className="avatar">
-            <img src={author_img} />
+            <img src={avatar} />
           </div>
         </div>
       </div>
