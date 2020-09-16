@@ -12,13 +12,7 @@ function App() {
     <div>
       {/* <Header isSignedIn={true} avatarSrc={avatar}/> */}
       <Footer />
-// =======
-//     <div style={{background: 'pink', height:'100vh'}}>
-//       <Header isSignedIn={true} avatarSrc={avatar}/>
-
       {/* delete this */}
-   
-
     </div>
   );
 }
