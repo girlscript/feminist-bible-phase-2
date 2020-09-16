@@ -11,31 +11,32 @@ $footer-bg : #e7edf3;
     .cell{
         padding:10px 10px;
     }
-    .text__head{
+    .footer__sub-title{
         color: $title-color;
     }
 }
 
 
-li{
+.footer__nav-item{
     text-align: left;
     list-style: none;  
     line-height: 40px;  
+    @extend .text;
 }
 
 .large-2{
-ul{
+.footer__nav-item-container{
     margin: 0;
     padding:0;
 }
 }
 
-.large-5 .text__head{
+.large-5 .footer__sub-title{
     margin-bottom: 30px;
 }
 
 .large-3{
-ul{
+.footer__nav-item-container{
     margin: 0;
     padding:0;
 }
@@ -57,7 +58,7 @@ ul{
     justify-content: flex-end;
 }
 
-.vote__of__thanks{
+.footer__credits{
     p{
         padding:30px 0;
         margin: 0;

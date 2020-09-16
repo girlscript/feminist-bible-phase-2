@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import "../css/components/_footer.scss";
+import "../css/components/footer.scss";
 import FooterImg from "../images/FooterLogo.png";
 
 class Footer extends Component {
@@ -9,7 +9,7 @@ class Footer extends Component {
         <div className="grid-container">
           <div className="grid-x grid-margin-x">
             <div className="cell large-5">
-              <p className="text__head">MP & RK Company</p>
+              <p className="footer__sub-title">MP & RK Company</p>
               <p>
                 Duis aute irure dolor in reprehenderit in voluptate velit esse
                 cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
@@ -18,34 +18,34 @@ class Footer extends Component {
               </p>
             </div>
             <div className="cell large-2">
-              <p className="text__head">Navigate</p>
-              <p>
-                <ul>
-                  <li>Home</li>
-                  <li>Stories</li>
-                  <li>Organizations</li>
-                  <li>About</li>
+              <p className="footer__sub-title">Navigate</p>
+              
+                <ul className="footer__nav-item-container">
+                  <li className="footer__nav-item" >Home</li>
+                  <li className="footer__nav-item">Stories</li>
+                  <li className="footer__nav-item">Organizations</li>
+                  <li className="footer__nav-item">About</li>
                 </ul>
-              </p>
+              
             </div>
             <div className="cell large-3">
-              <p className="text__head">Resources</p>
-              <p>
-                <ul>
-                  <li>Code of Conduct</li>
-                  <li>Terms and Conditions</li>
+              <p className="footer__sub-title">Resources</p>
+              
+                <ul className="footer__nav-item-container">
+                  <li className="footer__nav-item">Code of Conduct</li>
+                  <li className="footer__nav-item">Terms and Conditions</li>
                 </ul>
-              </p>
+              
             </div>
             <div className="cell large-2">
-              <p className="text__head">Connect</p>
-              <p>
-                <ul>
-                  <li>Instagram</li>
-                  <li>Facebook</li>
-                  <li>LinkedIn</li>
+              <p className="footer__sub-title">Connect</p>
+              
+                <ul className="footer__nav-item-container">
+                  <li className="footer__nav-item">Instagram</li>
+                  <li className="footer__nav-item">Facebook</li>
+                  <li className="footer__nav-item">LinkedIn</li>
                 </ul>
-              </p>
+              
             </div>
           </div>
 
@@ -60,7 +60,7 @@ class Footer extends Component {
           </div>
 
           <div className="grid-x grid-margin-x">
-            <div className="cell large-12 vote__of__thanks">
+            <div className="cell large-12 footer__credits">
               <p>
                 Designed and built with love by the GirlScript Team with the
                 help of <span>our contributors.</span>
