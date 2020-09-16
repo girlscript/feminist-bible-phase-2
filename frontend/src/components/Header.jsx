@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import Avatar from './Avatar';
 import logo from "../images/feminist_bible_logo.png";
 import '../css/components/header.scss';
 
@@ -26,7 +27,7 @@ class Header extends Component {
                           </a>
                         </li>
                         <li className="nav__item" data-testid="user-avatar">
-                          <img src={this.props.avatarSrc} className="avatar" alt="signed-in user"/>
+                          <Avatar avatarSrc={this.props.avatarSrc}/>
                         </li> 
                       </>
                       :

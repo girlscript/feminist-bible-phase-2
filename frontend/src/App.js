@@ -1,17 +1,14 @@
 import React from 'react';
 import Footer from './components/Footer.jsx';
 import Header from './components/Header.jsx';
-import avatar from "./images/avatar.png";
-
-//delete this
-import BlogCard from "./components/BlogCard.jsx";
+import avatar_image from "./images/avatar.png";
 
 function App() {
   return (
-
     <div>
       {/* <Header isSignedIn={true} avatarSrc={avatar}/> */}
-      <Footer />
+     <Footer />
+    
       {/* delete this */}
     </div>
   );
