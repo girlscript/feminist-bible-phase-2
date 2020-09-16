@@ -1,13 +1,11 @@
 import React from 'react';
 import Header from './components/Header.jsx';
-import avatar from "./images/avatar.png";
-import { WithPasswordStrength, Input } from './components/input.jsx';
-
+import avatar_image from "./images/avatar.png";
 
 function App() {
   return (
     <div >
-      <Header isSignedIn={true} avatarSrc={avatar}/>
+      <Header isSignedIn={true} avatarSrc={avatar_image}/>
     </div>
   );
 }

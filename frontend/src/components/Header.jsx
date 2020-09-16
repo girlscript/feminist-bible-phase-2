@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Avatar from '../components/Avatar';
+import Avatar from './Avatar';
 import logo from "../images/feminist_bible_logo.png";
 import '../css/components/header.scss';
 
