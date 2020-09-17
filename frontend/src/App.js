@@ -9,6 +9,7 @@ function App() {
     <div>
       <Header isSignedIn={false} avatarSrc={avatar_image}/>
         {/* pages will come here */}
+        <Home/>
       <Footer />
     </div>
   );
