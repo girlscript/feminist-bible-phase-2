@@ -3,11 +3,15 @@
 
 *{
   box-sizing:border-box;
+  font-family: 'Poppins', sans-serif !important;
 }
 
 body{
-  font-family: 'Poppins', sans-serif;
   margin:0;
+}
+
+.grid-container {
+  max-width: 69.375em; /* making it 1080px including 15px margin on either sides */
 }
 
 a{color:inherit}
@@ -48,15 +52,25 @@ h3{
   font-weight: $font-weight-medium;
 }
 
+// h1,h2,h3,h4,h5,h6{
+//   font
+// }
+
 
 // text style
 .text{
   font-size:16px; 
-  font-weight: $font-weight-medium;
+  font-weight: $font-weight-regular;
   line-height:26px;
   color:$text-color;
 }
 
 p{
   @extend .text; //using text style
+}
+
+a{
+  color:inherit;
+  text-decoration:inherit;
+  line-height:inherit;
 }
