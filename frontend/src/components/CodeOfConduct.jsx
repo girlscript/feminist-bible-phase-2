@@ -36,61 +36,38 @@ class CodeOfConduct extends Component {
 
             <div className="grid-container">
                 <div className="grid-x grid-margin-x">
-
-                        {/* <div className="cell large-1"></div> */}
-
-                   
-                        <div className="cell large-5 large-offset-1">
-
-                            <div className="card">
-                                <h2 className="card__title">01</h2>
-                                <h2 className="card__head">Respect</h2>
-                                <p className="card__para">Be respectful of people’s writng(s), comment(s) and or feedback. Respect people’s confidentiality. </p>
-                            </div>
-
+                    <div className="cell large-5 large-offset-1">
+                        <div className="card">
+                            <h2 className="card__title">01</h2>
+                            <h2 className="card__head">Respect</h2>
+                            <p className="card__para">Be respectful of people’s writng(s), comment(s) and or feedback. Respect people’s confidentiality. </p>
                         </div>
+                    </div>
 
-                        <div className="cell large-5 ">
-
-                            <div className="card">
-                                <h2 className="card__title">02</h2>
-                                <h2 className="card__head">Be Kind</h2>
-                                <p className="card__para">Individuals share vulnerable thoughts and experiences. Please be kind and respectful to them. </p>
-                            </div>
-
+                    <div className="cell large-5">
+                        <div className="card">
+                            <h2 className="card__title">02</h2>
+                            <h2 className="card__head">Be Kind</h2>
+                            <p className="card__para">Individuals share vulnerable thoughts and experiences. Please be kind and respectful to them. </p>
                         </div>
+                    </div>
+                    
+                    <div className="cell large-5 large-offset-1">
+                        <div className="card">
+                            <h2 className="card__title">03</h2>
+                            <h2 className="card__head">No offense</h2>
+                            <p className="card__para">Feminist Bible is a child-friendly and family-oriented community website. Abusive, offensive and disrespectful language in comments feedback and website content should be reported to Feminist Bible team. </p>
+                        </div>
+                    </div>
 
-                        {/* <div className="cell large-1"></div> */}
-                   
+                    <div className="cell large-5">
+                        <div className="card">
+                            <h2 className="card__title">04</h2>
+                            <h2 className="card__head">Report</h2>
+                            <p className="card__para">If you are having a problem with another account member, please send our Feminist Bible team a message containing as much information on the issues and or incident to address the situation adequately. </p>
+                        </div>
+                    </div>
                 </div>    
-
-                <div className="grid-x grid-margin-x">
-
-                            {/* <div className="cell large-1"></div> */}
-                        
-                            <div className="cell large-5 large-offset-1 ">
-
-                                <div className="card">
-                                    <h2 className="card__title">03</h2>
-                                    <h2 className="card__head">No offense</h2>
-                                    <p className="card__para">Feminist Bible is a child-friendly and family-oriented community website. Abusive, offensive and disrespectful language in comments feedback and website content should be reported to Feminist Bible team. </p>
-                                </div>
-
-                            </div>
-
-                            <div className="cell large-5  ">
-
-                                <div className="card">
-                                    <h2 className="card__title">04</h2>
-                                    <h2 className="card__head">Report</h2>
-                                    <p className="card__para">If you are having a problem with another account member, please send our Feminist Bible team a message containing as much information on the issues and or incident to address the situation adequately. </p>
-                                </div>
-
-                            </div>
-
-                            {/* <div className="cell large-1"></div> */}
-                        
-                </div>
             </div>
         </div>
 
