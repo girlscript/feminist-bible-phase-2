@@ -1,15 +1,18 @@
 import React from 'react';
+import Footer from './components/Footer.jsx';
 import Header from './components/Header.jsx';
 import avatar_image from "./images/avatar.png";
 import Home from './pages/home.jsx';
 
 function App() {
   return (
-    <div >
+    <div>
       <Header isSignedIn={false} avatarSrc={avatar_image}/>
-      <Home/>
+        {/* pages will come here */}
+      <Footer />
     </div>
   );
 }
 
 export default App;
+
