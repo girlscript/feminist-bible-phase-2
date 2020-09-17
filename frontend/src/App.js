@@ -6,10 +6,9 @@ import avatar_image from "./images/avatar.png";
 function App() {
   return (
     <div>
-      {/* <Header isSignedIn={true} avatarSrc={avatar}/> */}
-     <Footer />
-    
-      {/* delete this */}
+      <Header isSignedIn={true} avatarSrc={avatar_image}/>
+        {/* pages will come here */}
+      <Footer />
     </div>
   );
 }
