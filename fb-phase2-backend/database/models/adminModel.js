@@ -3,22 +3,21 @@ const mongoose = require('mongoose');
 /**
  * @swagger
  * definitions:
- *    User:
+ *    Admin:
  *     properties:
  *      firstName:
  *        type: string
- *        example: Jon
  *      lastName:
  *        type: string
- *        example: Snow
  *      email:
- *        type: string
- *        example: snow@northman.org
+ *         type: string
  *      phone:
  *        type: number
- *        example: 9472645237
+ *        unique: true
+ *      password:
+ *        type: string
  */
-const userSchema = new mongoose.Schema(
+const adminSchema = new mongoose.Schema(
   {
     firstName: {
       type: String,
@@ -53,4 +52,4 @@ const userSchema = new mongoose.Schema(
   }
 );
 
-module.exports = mongoose.model('User', userSchema);
+module.exports = mongoose.model('Admin', adminSchema);
