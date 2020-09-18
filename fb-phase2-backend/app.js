@@ -25,6 +25,6 @@ app.use(
   })
 );
 app.use('/api/story', storyRouter);
-app.use('/api/organizations',orgRouter);
+app.use('/api/organizations', orgRouter);
 
 module.exports = app;
