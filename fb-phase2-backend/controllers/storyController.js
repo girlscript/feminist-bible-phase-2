@@ -50,3 +50,8 @@ exports.updateStory = async (req, res) => {
       .json({ message: err.message || 'Internal Server Error' });
   }
 };
+
+
+exports.deleteStory= async (req,res) =>{
+  
+}
