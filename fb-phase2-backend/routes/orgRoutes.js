@@ -4,7 +4,6 @@ const router = express.Router();
 
 router.route('/getorganizations').get(orgController.getOrganizations);
 
-router.route('/addorganizations')
-.post(orgController.createOrganization);
+// router.route('/addorganizations').post(orgController.createOrganization);
 
 module.exports = router;
