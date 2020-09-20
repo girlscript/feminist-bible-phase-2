@@ -107,6 +107,14 @@ class Home extends Component {
                         </ul>
                         <br/>
                         <br/>
+                        <br/>
+                            <a className="button__big button__big--hollow">
+                                SEE ALL STORIES
+                            </a>
+                        <br/>
+                        <br/>
+                        <br/>
+                        <br/>
                     </div>
                 </div>
 
@@ -149,6 +157,9 @@ class Home extends Component {
                     </div>
                     <br/>
                     <br/>
+                    <br/>
+                        <br/>
+                        <br/>
                     </div>
                 </div>
             </div>
