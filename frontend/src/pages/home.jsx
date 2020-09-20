@@ -79,7 +79,7 @@ class Home extends Component {
                             </p>
                             <br/>
                         </div> 
-                        <div className="cell large-offset-4" style={{position:"absolute", display: "flex", marginTop:"150px" }}>
+                        <div className="cell large-offset-7" style={{position:"absolute", display: "flex", marginTop:"150px" }}>
                             <img src={Triangle} alt=""/>
                         </div>
                     </div>   
