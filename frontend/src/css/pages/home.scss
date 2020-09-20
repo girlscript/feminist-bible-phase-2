@@ -11,7 +11,16 @@
 }
 .importanceOfDiversity{
     width: 1280px;
-    display: flex;
-    margin:auto;
+    display: block;
+    margin: auto;
+    justify-content: center;
     
+}
+.feature{
+    width: 1280px;
+    margin: auto;
+    display: block;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }

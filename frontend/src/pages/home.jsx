@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import '../css/pages/home.scss';
 import intro_img from '../images/pixeltrue-jogging 1.png';
+import BlogCard from '../components/BlogCard'
 
 class Home extends Component {
     render() {
@@ -41,14 +42,17 @@ class Home extends Component {
         </div>
         </div>
         <div style={{background:"linear-gradient(180deg, #FFFDF6 0%, #FFEBF3 100%)"}}>
-            <div className="importanceOfDiversity grid-container grid-x grid-margin-x">
-                <div className="cell small-7">
+            <div className="importanceOfDiversity ">
+                <div className="cell small-7 large-offset-1">
                     <h2>
                         Importance of Diversity
                     </h2>
                     <br/>
                 </div>
-                <div className="cell small-6">
+                
+                <div className="grid-x grid-margin-x">
+
+                <div className="cell large-5 medium-6 large-offset-1">
                     <p>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                         do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
@@ -65,7 +69,7 @@ class Home extends Component {
                         in culpa qui officia deserunt mollit anim id est laborum.
                     </p>
                     </div>
-                        <div className="cell small-6">
+                        <div className="cell large-5 medium-6 ">
                             <p>
                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt 
                                 ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco 
@@ -75,8 +79,28 @@ class Home extends Component {
                             </p>
                             <br/>
                         </div> 
+                </div>
                 </div>        
             </div>
+            <div style={{background:"#FFEBF3"}}>
+                <div className="feature">
+                    <div className="cell small-7">
+                    <h2>
+                            Featured Stories
+                        </h2>
+                        <h6 style={{color:"#6E6D7A"}}>
+                            Read the impact stories from around the world
+                        </h6>
+                        <div style={{display:"inline-block"}}>
+                            <BlogCard/>
+                            <BlogCard/>
+                            <BlogCard/>
+                        </div>
+                    </div>
+                        
+                    
+                </div>
+                </div>
           </>
       )
     }
