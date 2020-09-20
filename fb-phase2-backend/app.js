@@ -5,6 +5,7 @@ const swaggerUI = require('swagger-ui-express');
 
 const authRouter = require('./routes/authRoutes');
 const storyRouter = require('./routes/storyRoutes');
+const adminRouter = require('./routes/adminRoutes')
 const swaggerDefinition = require('./config/swaggerDefinition');
 
 const app = express();
@@ -24,5 +25,6 @@ app.use(
   })
 );
 app.use('/api/story', storyRouter);
+app.use('/api/admin', adminRouter)
 
 module.exports = app;
