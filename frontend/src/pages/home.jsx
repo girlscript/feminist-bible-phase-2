@@ -2,6 +2,11 @@ import React, { Component } from "react";
 import '../css/pages/home.scss';
 import intro_img from '../images/pixeltrue-jogging 1.png';
 import BlogCard from '../components/BlogCard'
+import GoogleAd from '../images/GoogleAds.png'
+import Microsoft from '../images/Microsoft.png'
+import Model from '../images/model.png'
+import Amazon from '../images/amazon.png'
+import Figma from '../images/figma.png'
 
 class Home extends Component {
     render() {
@@ -100,8 +105,51 @@ class Home extends Component {
                                 <BlogCard/>
                             </li>
                         </ul>
+                        <br/>
+                        <br/>
                     </div>
-                        
+                </div>
+
+                <div style={{background:"linear-gradient(180deg, #FFEBF3 0%, #FFFDF6 100%)"}}>
+                    <div className="feature">
+                        <div className="cell small-7">
+                        <h2>
+                            Our Partners
+                        </h2>
+                        <h6 style={{color:"#6E6D7A"}}>
+                            We thank all our wonderful partners for all the support
+                        </h6>
+                        <br/>
+                        <ul className="list__item-container large-offset-1 centreitems">
+                            <li className="list__item">
+                                <img src={GoogleAd} width="254.41px" height="80px"  alt="Google Ads"/>
+                            </li>
+                            <li className="list__item">
+                                <img src={Microsoft} width="254.41px" height="80px" alt="Microsoft"/>
+                            </li>
+                            <li className="list__item">
+                                <img src={Model} width="254.41px" height="80px"  alt="Model"/>
+                            </li>
+                            <li className="list__item">
+                                <img src={Amazon} width="254.41px" height="80px" alt="Amazon"/>
+                            </li>
+                        </ul>
+                        <br/>
+                        <ul className="list__item-container large-offset-1 centreitems">
+                            <li className="list__item">
+                                <img src={Model} width="254.41px" height="80px"  alt="Model"/>
+                            </li>
+                            <li className="list__item">
+                                <img src={Figma} width="222.61px" height="70px"  alt="Figma"/>
+                            </li>
+                            <li className="list__item">
+                                <img src={GoogleAd} width="254.41px" height="80px"  alt="Google Ads"/>
+                            </li>
+                        </ul>
+                    </div>
+                    <br/>
+                    <br/>
+                    </div>
                 </div>
             </div>
           </>

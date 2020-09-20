@@ -21,6 +21,11 @@
     margin: auto;
     text-align: center;
 }
+.centreitems{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 .list{
     display:flex;
@@ -44,7 +49,7 @@
   
       // to give gap between the nav items (since gap is not supported by all browsers)
       &:not(:last-child){
-        margin-right:20px;
+        margin-right:50px;
       }
     }
   }
