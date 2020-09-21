@@ -20,6 +20,16 @@
 //       type: String,
 //       required: true,
 //     },
+    // approved: {
+    //   type: Boolean,
+    //   required: true,
+    //   default: false,
+    // },
+    // declined: {
+    //   type: Boolean,
+    //   required: true,
+    //   default: false,
+    // },
 //   },
 //   {
 //     timestamps: true,
