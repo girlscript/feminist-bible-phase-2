@@ -4,11 +4,11 @@ import '../css/components/input.scss';
 
 class Input extends Component {
   render() {
-    const { label, error, type, placeholder, onChange } = this.props;
+    const { label, error, type, name, placeholder, onChange } = this.props;
     return (
       <div className="form__element-container">
         <label className="form__label required">{label}</label>
-        <input className={`form__input-field ${error? 'error' : ''}`} type={type} placeholder={placeholder} onChange={onChange} />
+        <input name={name} className={`form__input-field ${error? 'error' : ''}`} type={type} placeholder={placeholder} onChange={onChange} />
         {error && <span className="form__input-error">{error}</span>}
       </div>       
     );
@@ -25,7 +25,6 @@ class WithPasswordStrength extends Component {
   
   handlePasswordStrength = (e) => {
     this.setState({password: e.target.value});
-    this.props.onChange(e);
     const { password } = this.state;
     if(password.length <= 4) {
       this.setState({strength: '1'});
@@ -39,19 +38,21 @@ class WithPasswordStrength extends Component {
     } else {
       this.setState({strength: '1'});
     }
+    this.props.onChange(e);
   }
 
   render() {
     const {strength} = this.state;
     const bgcolors = ["red", "orange", "yellow", "green"];
     const strengths = ["Week", "Ok", "Medium", "Strong"]
-    const { label, type, error, placeholder } = this.props;
+    const { label, type, error, name, placeholder } = this.props;
     return (
       <div>
         <Input 
           label={label}
           type={type}
           placeholder={placeholder}
+          name={name}
           error={error}
           onChange={this.handlePasswordStrength}
         />
