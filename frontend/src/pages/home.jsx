@@ -1,7 +1,13 @@
 import React, { Component } from "react";
+
+//style
 import '../css/pages/home.scss';
-import intro_img from '../images/pixeltrue-jogging 1.png';
+
+//Components
 import BlogCard from '../components/BlogCard'
+
+//Images
+import intro_img from '../images/pixeltrue-jogging 1.png';
 import GoogleAd from '../images/GoogleAds.png'
 import Microsoft from '../images/Microsoft.png'
 import Model from '../images/model.png'
@@ -10,9 +16,12 @@ import Figma from '../images/figma.png'
 import Triangle from '../images/Graphics.svg'
 
 class Home extends Component {
+
     render() {
+
       return (
           <>
+
             <div style={{background:"#FFFDF6"}}>
                 <div className="intro">
                     <div className="grid-container grid-x grid-margin-x">
@@ -43,16 +52,16 @@ class Home extends Component {
                     </div>
                 </div>
             </div>
+
             <div style={{background:"linear-gradient(180deg, #FFFDF6 0%, #FFEBF3 100%)"}}>
                 <div className="importanceOfDiversity ">
                     <div className="grid-container grid-x grid-margin-x">
                         <div className="cell large-12">
-                        <h2>
-                            Importance of Diversity
-                        </h2>
-                        <br/>
+                            <h2>
+                                Importance of Diversity
+                            </h2>
+                            <br/>
                         </div>
-                        
                     </div>
                     <div className="grid-x grid-margin-x">
                         <div className="cell large-6">
@@ -82,12 +91,18 @@ class Home extends Component {
                             </p>
                             <br/>
                         </div> 
-                        <div className="cell large-12" style={{display: "flex", justifyContent: "flex-end", position:"absolute", paddingTop: "112.5px" }}>
+                        <div 
+                            className="cell large-12" 
+                            style={{
+                                display: "flex", 
+                                justifyContent: "flex-end", 
+                                position:"absolute", 
+                                paddingTop: "112.5px" 
+                            }}>
                             <img src={Triangle} alt=""/>
                         </div> 
                     </div>   
-                </div>
-                    
+                </div>     
             </div>   
             
             <div style={{background:"#FFEBF3"}}>
@@ -104,13 +119,13 @@ class Home extends Component {
                                     </h6>
                                 </div>
                                 <div className="cell large-4">
-                                    <BlogCard />
+                                    <BlogCard/>
                                 </div>
                                 <div className="cell large-4">
-                                    <BlogCard />
+                                    <BlogCard/>
                                 </div> 
                                 <div className="cell large-4">
-                                    <BlogCard />
+                                    <BlogCard/>
                                 </div>
                             </div>
                         </div>
@@ -123,50 +138,53 @@ class Home extends Component {
                 </div>
             </div>
                 
-                <div style={{background:"linear-gradient(180deg, #FFEBF3 0%, #FFFDF6 100%)"}}>
-                    <div className="feature" >
-                        <div className="cell small-7">
-                            <div className="grid-container">
-                                <div className="grid-x grid-margin-x">
-                                    <div className="cell large-12">
-                                        <h2>
-                                            Our Partners
-                                        </h2>
-                                        <h6 style={{color:"#6E6D7A"}}>
-                                            We thank all our wonderful partners for all the support
-                                        </h6>
-                                    </div>
-                                    <div className="cell large-3">
-                                        <img src={GoogleAd}  alt="Google Ads"/>
-                                    </div>
-                                    <div className="cell large-3">
-                                        <img src={Microsoft} alt="Microsoft"/>
-                                    </div> 
-                                    <div className="cell large-3">
-                                        <img src={Model}  alt="Model"/>
-                                    </div>
-                                    <div className="cell large-3">
-                                        <img src={Amazon} alt="Amazon"/>
-                                    </div>
-                                    <div className="cell large-4">
-                                        <img src={Model}  alt="Model"/>
-                                    </div>
-                                    <div className="cell large-4">
-                                        <img src={Figma}  alt="Figma"/>
-                                    </div> 
-                                    <div className="cell large-4">
-                                        <img src={GoogleAd} alt="Google Ads"/>
-                                    </div>
+            <div style={{background:"linear-gradient(180deg, #FFEBF3 0%, #FFFDF6 100%)"}}>
+                <div className="feature">
+                    <div className="cell small-7">
+                        <div className="grid-container">
+                            <div className="grid-x grid-margin-x">
+                                <div className="cell large-12">
+                                    <h2>
+                                        Our Partners
+                                    </h2>
+                                    <h6 style={{color:"#6E6D7A"}}>
+                                        We thank all our wonderful partners for all the support
+                                    </h6>
+                                </div>
+
+                                {/* First row */}
+                                <div className="cell large-3">
+                                    <img src={GoogleAd}  alt="Google Ads"/>
+                                </div>
+                                <div className="cell large-3">
+                                    <img src={Microsoft} alt="Microsoft"/>
+                                </div> 
+                                <div className="cell large-3">
+                                    <img src={Model}  alt="Model"/>
+                                </div>
+                                <div className="cell large-3">
+                                    <img src={Amazon} alt="Amazon"/>
+                                </div>
+                                
+                                {/* Second row */}
+                                <div className="cell large-4">
+                                    <img src={Model}  alt="Model"/>
+                                </div>
+                                <div className="cell large-4">
+                                    <img src={Figma}  alt="Figma"/>
+                                </div> 
+                                <div className="cell large-4">
+                                    <img src={GoogleAd} alt="Google Ads"/>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            
+            </div>
+
           </>
       )
     }
 }
 
 export default Home;
-
