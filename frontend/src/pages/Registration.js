@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import '../css/pages/registration.scss';
 import { Input, WithPasswordStrength } from '../components/input';
+import { Link } from 'react-router-dom';
 
 export default class Registration extends Component {
   state = {
@@ -58,7 +59,7 @@ export default class Registration extends Component {
           <div className="grid-x align-middle">
             <div className="cell large-4 medium-4">
               <h2 className="registration-page__title">Register</h2>
-              <form onSubmit={this.registerHandler}>
+              <form onSubmit={this.registerHandler} className="registration-page__form">
                 <Input
                   label="Email Address"
                   type="email"
@@ -85,6 +86,7 @@ export default class Registration extends Component {
                 />
                 <button className="button__big">Register</button>
               </form>
+              <Link>Already have an account? <span style={{color: '#2F80ED'}}>Login here</span>.</Link>
             </div>
             <div className="cell large-8">
               <div className="registration-page__illustration-wrapper">
