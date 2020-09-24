@@ -2,24 +2,21 @@
 @import '../components/_button';
 
 .intro{
-    height: 616px;
-    width: 1280px;
     margin: auto;
+    padding: 159px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 .importanceOfDiversity{
-    width: 1280px;
-    height: 491px;
+    padding: 86px;
     display: block;
     margin: auto;
     justify-content: center;
     
 }
 .feature{
-    width: 1280px;
-    height: 804px;
+    padding: 144px;
     margin: auto;
     text-align: center;
 }

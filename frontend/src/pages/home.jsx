@@ -114,7 +114,7 @@ class Home extends Component {
                     </div>
                 </div>
                 <div style={{background:"linear-gradient(180deg, #FFEBF3 0%, #FFFDF6 100%)"}}>
-                    <div className="feature" style={{height:"542px"}}>
+                    <div className="feature" style={{padding:"221px"}}>
                         <div className="cell small-7">
                             <h2>
                                 Our Partners
