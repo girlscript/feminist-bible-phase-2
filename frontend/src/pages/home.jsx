@@ -45,14 +45,17 @@ class Home extends Component {
             </div>
             <div style={{background:"linear-gradient(180deg, #FFFDF6 0%, #FFEBF3 100%)"}}>
                 <div className="importanceOfDiversity ">
-                    <div className="cell small-7 large-offset-1">
+                    <div className="grid-container grid-x grid-margin-x">
+                        <div className="cell large-12">
                         <h2>
                             Importance of Diversity
                         </h2>
                         <br/>
+                        </div>
+                        
                     </div>
                     <div className="grid-x grid-margin-x">
-                        <div className="cell large-5 medium-6 large-offset-1">
+                        <div className="cell large-6">
                             <p>
                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                                 do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
@@ -69,7 +72,7 @@ class Home extends Component {
                                 in culpa qui officia deserunt mollit anim id est laborum.
                             </p>
                         </div>
-                        <div className="cell large-5 medium-6">
+                        <div className="cell large-6">
                             <p>
                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt 
                                 ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco 
@@ -79,80 +82,87 @@ class Home extends Component {
                             </p>
                             <br/>
                         </div> 
-                        <div className="cell large-offset-7" style={{position:"absolute", display: "flex", marginTop:"150px" }}>
+                        <div className="cell large-12" style={{display: "flex", justifyContent: "flex-end", position:"absolute", paddingTop: "112.5px" }}>
                             <img src={Triangle} alt=""/>
-                        </div>
+                        </div> 
                     </div>   
-                </div>     
+                </div>
+                    
             </div>   
+            
             <div style={{background:"#FFEBF3"}}>
                 <div className="feature">
                     <div className="cell small-7">
-                        <h2>
-                            Featured Stories
-                        </h2>
-                        <h6 style={{color:"#6E6D7A"}}>
-                            Read the impact stories from around the world
-                        </h6>
-                        <br/>
-                        <ul className="list__item-container large-offset-1">
-                            <li className="list__item">
-                                <BlogCard/>
-                            </li>
-                            <li className="list__item">
-                                <BlogCard/>
-                            </li>
-                            <li className="list__item">
-                                <BlogCard/>
-                            </li>
-                        </ul>
-                        <div style={{marginTop:"82px"}}>
-                        <a className="button__big button__big--hollow">
-                            SEE ALL STORIES
-                        </a>
+                        <div className="grid-container">
+                            <div className="grid-x grid-margin-x">
+                                <div className="cell large-12">
+                                    <h2>
+                                        Featured Stories
+                                    </h2>
+                                    <h6 style={{color:"#6E6D7A"}}>
+                                        Read the impact stories from around the world
+                                    </h6>
+                                </div>
+                                <div className="cell large-4">
+                                    <BlogCard />
+                                </div>
+                                <div className="cell large-4">
+                                    <BlogCard />
+                                </div> 
+                                <div className="cell large-4">
+                                    <BlogCard />
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                </div>
-                <div style={{background:"linear-gradient(180deg, #FFEBF3 0%, #FFFDF6 100%)"}}>
-                    <div className="feature" style={{padding:"221px"}}>
-                        <div className="cell small-7">
-                            <h2>
-                                Our Partners
-                            </h2>
-                            <h6 style={{color:"#6E6D7A"}}>
-                                We thank all our wonderful partners for all the support
-                            </h6>
-                            <br/>
-                            <ul className="list__item-container large-offset-1 centreitems">
-                                <li className="list__item">
-                                    <img src={GoogleAd} width="254.41px" height="80px"  alt="Google Ads"/>
-                                </li>
-                                <li className="list__item">
-                                    <img src={Microsoft} width="254.41px" height="80px" alt="Microsoft"/>
-                                </li>
-                                <li className="list__item">
-                                    <img src={Model} width="254.41px" height="80px"  alt="Model"/>
-                                </li>
-                                <li className="list__item">
-                                    <img src={Amazon} width="254.41px" height="80px" alt="Amazon"/>
-                                </li>
-                            </ul>
-                            <br/>
-                            <ul className="list__item-container large-offset-1 centreitems">
-                                <li className="list__item">
-                                    <img src={Model} width="254.41px" height="80px"  alt="Model"/>
-                                </li>
-                                <li className="list__item">
-                                    <img src={Figma} width="222.61px" height="70px"  alt="Figma"/>
-                                </li>
-                                <li className="list__item">
-                                    <img src={GoogleAd} width="254.41px" height="80px"  alt="Google Ads"/>
-                                </li>
-                            </ul>
+                        <div style={{marginTop:"82px"}}>
+                            <a className="button__big button__big--hollow">
+                                SEE ALL STORIES
+                            </a>
                         </div>
                     </div>
                 </div>
             </div>
+                
+                <div style={{background:"linear-gradient(180deg, #FFEBF3 0%, #FFFDF6 100%)"}}>
+                    <div className="feature" >
+                        <div className="cell small-7">
+                            <div className="grid-container">
+                                <div className="grid-x grid-margin-x">
+                                    <div className="cell large-12">
+                                        <h2>
+                                            Our Partners
+                                        </h2>
+                                        <h6 style={{color:"#6E6D7A"}}>
+                                            We thank all our wonderful partners for all the support
+                                        </h6>
+                                    </div>
+                                    <div className="cell large-3">
+                                        <img src={GoogleAd}  alt="Google Ads"/>
+                                    </div>
+                                    <div className="cell large-3">
+                                        <img src={Microsoft} alt="Microsoft"/>
+                                    </div> 
+                                    <div className="cell large-3">
+                                        <img src={Model}  alt="Model"/>
+                                    </div>
+                                    <div className="cell large-3">
+                                        <img src={Amazon} alt="Amazon"/>
+                                    </div>
+                                    <div className="cell large-4">
+                                        <img src={Model}  alt="Model"/>
+                                    </div>
+                                    <div className="cell large-4">
+                                        <img src={Figma}  alt="Figma"/>
+                                    </div> 
+                                    <div className="cell large-4">
+                                        <img src={GoogleAd} alt="Google Ads"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            
           </>
       )
     }

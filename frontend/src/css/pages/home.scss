@@ -9,10 +9,11 @@
     align-items: center;
 }
 .importanceOfDiversity{
-    padding: 86px;
-    display: block;
     margin: auto;
+    padding: 86px;
     justify-content: center;
+    align-items: center;
+    
     
 }
 .feature{
@@ -26,30 +27,3 @@
     align-items: center;
 }
 
-
-.list{
-    display:flex;
-    justify-content: flex-end;
-  
-    // ul
-    &__item-container{
-      display:flex; 
-      margin:0;
-  
-      // gap not supported on safari
-      // gap:20px;
-    }
-  
-    &__item{
-      @extend .text;
-      list-style-type: none;
-      color:$title-color;
-      line-height:80px;
-      font-weight: $font-weight-regular;
-  
-      // to give gap between the nav items (since gap is not supported by all browsers)
-      &:not(:last-child){
-        margin-right:50px;
-      }
-    }
-  }
