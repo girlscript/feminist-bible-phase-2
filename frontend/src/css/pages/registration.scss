@@ -1,0 +1,26 @@
+@import '../settings/global';
+@import '../components/button';
+
+.registration-page{
+    background-color:$yellow-bg;
+
+    &__title{
+        margin-bottom:20px;
+    }
+
+    &__illustration{
+        max-width:580px;
+        text-align: right;
+    }
+
+    &__illustration-wrapper{
+        display:flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: center;
+    }
+
+    &__form{
+        margin-bottom:30px;
+    }
+}

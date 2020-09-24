@@ -1,81 +1,84 @@
-@import "../settings/global";
+@import '../settings/global';
 
 //css starts here
 
 ::placeholder {
-  font-size: 16px;
-  font-weight: $font-weight-regular;
-  color: #828282;
-}
-
-%form-element-focus {
-  box-shadow: 0 0 0 4px rgba(171, 29, 121, 0.15);
-  border-color: rgb(171, 29, 121);
-}
-
-.form {
-  &__label {
-    color: $title-color;
-    font-size: 16px;
-    font-weight: $font-weight-medium;
-    margin-bottom: 4px;
-
-    // this class should be used with form elements with required attribute.
-    &.required {
-      &::after {
-        position: relative;
-        content: " *";
-      }
-    }
-  }
-
-  &__input-field {
-    border: 1px solid #828282;
-    border-radius: 5px;
-    color: $title-color;
     font-size: 16px;
     font-weight: $font-weight-regular;
-    height: 44px;
-    padding: 0 20px;
-    margin: 0;
+    color:#828282;
+}
 
-    &:focus,
-    &:hover {
-      @extend %form-element-focus;
+%form-element-focus{
+    box-shadow: 0 0 0 4px rgba(171,29,121,0.15);
+    border-color:rgb(171, 29, 121);
+}
+
+.form{
+    &__element-container {
+        margin-bottom: 16px;
     }
 
-    &.error {
-      border: 1px solid red;
-      color: red;
-    }
-  }
+    &__label{
+        color: $title-color;
+        font-size: 16px;
+        font-weight: $font-weight-medium;
 
-  &__input-error {
-    color: red;
-    font-size: 14px;
-    margin-bottom: 6px;
-  }
-
-  &__input-strength {
-    p.result {
-      font-size: 14px;
-      padding: 0;
-      margin: 0 6px;
+        // this class should be used with form elements with required attribute. 
+        &.required{
+            &::after{
+                position:relative;
+                content:' *'
+            }
+        }
     }
 
-    .meter {
-      width: 100%;
-      height: 0.8em;
-      background-color: rgba($color: #000000, $alpha: 0.1);
-      border-radius: 5px;
-      margin: 0;
-
-      .strength {
-        height: 100%;
-        width: 100%;
-        background-color: rgba($color: #000000, $alpha: 0.1);
+    &__input-field{
+        border: 1px solid #828282;
         border-radius: 5px;
-      }
+        color: $title-color;
+        font-size: 16px;
+        font-weight: $font-weight-regular;
+        height:44px;
+        padding:0 20px;
+        margin: 0;
+
+        &:focus,&:hover{
+            @extend %form-element-focus;
+        }
+
+        &.error {
+            border: 1px solid red;
+            color: red;
+        }
     }
-  }
+
+    &__input-error {
+        color: red;
+        font-size: 14px;
+        margin-bottom: 6px;
+    }
+
+    
+    &__input-strength {
+        p.result {
+            font-size: 14px;
+            padding: 0;
+            margin: 0 6px;
+        }
+
+        .meter {
+             width: 100%;
+             height: 0.8em;
+             background-color: rgba($color: #000000, $alpha: 0.1);
+             border-radius: 5px;
+             margin: 0 0 16px 0;
+             
+             .strength {
+                 height: 100%;
+                 width: 100%;
+                 background-color: rgba($color: #000000, $alpha: 0.1);
+                 border-radius: 5px;
+             }
+         }
+    }
 }
