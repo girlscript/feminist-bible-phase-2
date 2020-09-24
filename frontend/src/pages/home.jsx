@@ -62,8 +62,7 @@ class Home extends Component {
                             </h2>
                             <br/>
                         </div>
-                    </div>
-                    <div className="grid-x grid-margin-x">
+                    
                         <div className="cell large-6">
                             <p>
                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
@@ -90,18 +89,18 @@ class Home extends Component {
                                 upidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
                             </p>
                             <br/>
-                        </div> 
-                        <div 
-                            className="cell large-12" 
-                            style={{
-                                display: "flex", 
-                                justifyContent: "flex-end", 
-                                position:"absolute", 
-                                paddingTop: "112.5px" 
-                            }}>
-                            <img src={Triangle} alt=""/>
-                        </div> 
-                    </div>   
+                        </div>
+                    </div> 
+                    <div 
+                        className="cell large-12" 
+                        style={{
+                            display: "flex", 
+                            justifyContent: "flex-end", 
+                            position:"absolute", 
+                            paddingTop: "600px" 
+                        }}>
+                        <img src={Triangle} alt=""/>
+                    </div>  
                 </div>     
             </div>   
             
@@ -153,27 +152,27 @@ class Home extends Component {
                                 </div>
 
                                 {/* First row */}
-                                <div className="cell large-3">
+                                <div className="cell large-3 feature__partnerLogo">
                                     <img src={GoogleAd}  alt="Google Ads"/>
                                 </div>
-                                <div className="cell large-3">
+                                <div className="cell large-3 feature__partnerLogo">
                                     <img src={Microsoft} alt="Microsoft"/>
                                 </div> 
-                                <div className="cell large-3">
+                                <div className="cell large-3 feature__partnerLogo">
                                     <img src={Model}  alt="Model"/>
                                 </div>
-                                <div className="cell large-3">
+                                <div className="cell large-3 feature__partnerLogo">
                                     <img src={Amazon} alt="Amazon"/>
                                 </div>
                                 
                                 {/* Second row */}
-                                <div className="cell large-4">
+                                <div className="cell large-4 feature__partnerLogo">
                                     <img src={Model}  alt="Model"/>
                                 </div>
-                                <div className="cell large-4">
+                                <div className="cell large-4 feature__partnerLogo">
                                     <img src={Figma}  alt="Figma"/>
                                 </div> 
-                                <div className="cell large-4">
+                                <div className="cell large-4 feature__partnerLogo">
                                     <img src={GoogleAd} alt="Google Ads"/>
                                 </div>
                             </div>

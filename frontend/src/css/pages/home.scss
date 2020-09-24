@@ -3,21 +3,27 @@
 
 .intro{
     margin: auto;
-    padding: 159px;
+    padding: 159px 0px 159px 0px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .importanceOfDiversity{
-    margin: auto;
-    padding: 86px;
+    display: flex;
+    padding: 86px 0px 86px 0px;
     justify-content: center;
     align-items: center;
 }
 
 .feature{
-    padding: 144px;
+    padding: 144px 0px 144px 0px;
     margin: auto;
     text-align: center;
+
+    &__partnerLogo{
+      max-width:250px;
+      display: flex;
+      justify-content: center;
+    }
 }
