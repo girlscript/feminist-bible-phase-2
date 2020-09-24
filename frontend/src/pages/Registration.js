@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import Header from '../components/Header'
 import '../css/pages/registration.scss';
 import { Input, WithPasswordStrength } from '../components/input';
 
@@ -54,12 +53,11 @@ export default class Registration extends Component {
     const { errors } = this.state;
     return (
       <>
-        <Header />
+      <div className="registration-page">
         <div className="grid-container">
-
           <div className="grid-x align-middle">
             <div className="cell large-4 medium-4">
-              <h2>Register</h2>
+              <h2 className="registration-page__title">Register</h2>
               <form onSubmit={this.registerHandler}>
                 <Input
                   label="Email Address"
@@ -88,10 +86,14 @@ export default class Registration extends Component {
                 <button className="button__big">Register</button>
               </form>
             </div>
-            <img src={require('../images/register.png')} alt="Feminist Bible" className="cell large6 medium-6 small-12 large-offset-1" />
+            <div className="cell large-8">
+              <div className="registration-page__illustration-wrapper">
+                <img src={require('../images/women.png')} className="registration-page__illustration" alt="Illustration of women"/>
+              </div>
+            </div>
           </div>
         </div>
-        <footer>Will be replaced by footer component.</footer>
+      </div>
       </>
     )
   }

@@ -43,7 +43,7 @@ class WithPasswordStrength extends Component {
 
   render() {
     const {strength} = this.state;
-    const bgcolors = ["red", "orange", "yellow", "green"];
+    const bgcolors = ["red", "orange", "#dfdf00", "green"];
     const strengths = ["Week", "Ok", "Medium", "Strong"]
     const { label, type, error, name, placeholder } = this.props;
     return (
