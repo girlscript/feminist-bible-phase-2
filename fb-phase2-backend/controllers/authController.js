@@ -1,7 +1,9 @@
 const crypto = require('crypto');
 const bcrypt = require('bcryptjs');
 const nodemailer = require('nodemailer');
+const jwt = require('jsonwebtoken');
 const sendgridTransport = require('nodemailer-sendgrid-transport');
+require('../config/dotenv');
 
 const User = require('../database/models/userModel');
 
@@ -14,7 +16,49 @@ const transporter = nodemailer.createTransport(
 );
 
 exports.signup = async (req, res) => {
-  //
+  const { firstName, lastName, email, phone, password } = req.body;
+  // checking all credentials are present or not
+  if (!firstName || !lastName || !email || !phone || !password)
+    return res.status(400).json({ msg: 'fill up all the credentials' });
+
+  try {
+    // checking existing user
+    let user;
+    user = await User.findOne({ email });
+    if (user) return res.json({ msg: 'user already exist' });
+
+    // hashing password
+    let hashPassword = await bcrypt.hash(password, 10);
+
+    const newUser = await User.create({
+      firstName,
+      lastName,
+      email,
+      phone,
+      password: hashPassword,
+    });
+
+    await newUser.save();
+
+    // generating auth token
+
+    let token = jwt.sign({ id: newUser._id }, process.env.JWT_Key, {
+      expiresIn: '1h',
+    });
+
+    // returning final response
+    res.status(201).json({
+      success: true,
+      data: {
+        ...newUser._doc,
+        password: '',
+        token,
+      },
+    });
+  } catch (e) {
+    console.log(e.message);
+    return res.status(400).json({ msg: 'cannot signup' });
+  }
 };
 
 exports.signin = async (req, res) => {
