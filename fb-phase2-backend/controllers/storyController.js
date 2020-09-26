@@ -57,7 +57,7 @@ exports.postStory=async(req,res)=>{
     return res.status(400).json({ msg: 'Field cannot be empty' });
   try{
     let story;
-    if(heading!=null){
+    if(heading!==null){
       story=new Story({
         name,
         author,
