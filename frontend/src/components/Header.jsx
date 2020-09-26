@@ -15,14 +15,14 @@ class Header extends Component {
             <div className="cell large-9">
               <nav className="nav">
                 <ul className="nav__item-container">
-                  <li className="nav__item"><a href="">Stories</a></li>
-                  <li className="nav__item"><a href="">Organizations</a></li>
-                  <li className="nav__item"><a href="">About</a></li>
+                  <li className="nav__item"><a href="#test">Stories</a></li>
+                  <li className="nav__item"><a href="#test">Organizations</a></li>
+                  <li className="nav__item"><a href="#test">About</a></li>
                   {
                     this.props.isSignedIn?
                       <> 
                         <li className="nav__item">
-                          <a className="button__small" style={{textTransform: "none"}}>
+                          <a href="#test" className="button__small" style={{textTransform: "none"}}>
                             Write a story
                           </a>
                         </li>
@@ -32,7 +32,7 @@ class Header extends Component {
                       </>
                       :
                       <li className="nav__item">
-                        <a href="">Login</a>
+                        <a href="#test">Login</a>
                       </li>
                   }
                 </ul>
