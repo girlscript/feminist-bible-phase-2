@@ -68,6 +68,8 @@ router
    *              error:
    *                type: string
    */
-  .put(storyController.updateStory);
+  .put(storyController.updateStory)
+
+  .delete(storyController.deleteStory);
 
 module.exports = router;

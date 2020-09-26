@@ -53,5 +53,28 @@ exports.updateStory = async (req, res) => {
 
 
 exports.deleteStory= async (req,res) =>{
+  try {
+    const story_id=req.params.storyId;
+    if(!story_id){
+      throw new NotFoundError(`Story with ${story_id} could not be found`);
+    }
+    await Story.remove({_id:story_id},(err,deletedStory)=>{
+      if(err){
+        return res.status(404).json({
+          message:"Unable to delete the particular Story"
+        });
+      }
+      res.json({
+        message:"Deletion of story successfull",
+        deletedStory
+
+      });
+    });
+    
+  } catch (err) {
+    res.json({
+      message:'Error !'
+    });
+  }
   
 }
