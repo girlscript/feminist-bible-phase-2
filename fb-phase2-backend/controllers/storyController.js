@@ -78,6 +78,6 @@ exports.postStory = async (req, res) => {
     });
   } catch (e) {
     console.log(e.message);
-    return res.status(501).json({ msg: 'Internal Server Error' });
+    return res.status(400).json({ msg: 'Internal Server Error' });
   }
 };
