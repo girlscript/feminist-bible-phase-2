@@ -69,3 +69,8 @@ a{
   text-decoration:inherit;
   line-height:inherit;
 }
+
+// for pages
+[class$="-page"]{
+  padding:70px 0;
+}

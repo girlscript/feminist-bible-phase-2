@@ -70,4 +70,6 @@ router
    */
   .put(storyController.updateStory);
 
+router.route('/create').post(storyController.postStory);
+
 module.exports = router;
