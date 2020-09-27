@@ -39,26 +39,25 @@ exports.createOrganization = async (req, res) => {
     },
   });
 };
-exports.updateOrganisation = async(req,res) =>{
-  try{
+exports.updateOrganisation = async (req, res) => {
+  try {
     const org_id = req.param.OrgId;
-    const org = await Org.findOneAndUpdate({_id : org_id},req.body,{
-      new: true ,
+    const org = await Org.findOneAndUpdate({ _id: org_id }, req.body, {
+      new: true,
       runValidators: true,
-
     });
-    if(!org)
+    if (!org)
       throw new NotFoundError('Organisation with ${org_id} could not be found');
 
-    return res.json({message: 'success',data: org});
-  } catch (err){
+    return res.json({ message: 'success', data: org });
+  } catch (err) {
     const err_code = err.err_code
-      ? err.code >= 100 && err.code <=599
-        ? err.code 
+      ? err.code >= 100 && err.code <= 599
+        ? err.code
         : 500
       : 500;
     res
       .status(err_code)
-      .json({message: err.message || 'Internal Server Error'});
+      .json({ message: err.message || 'Internal Server Error' });
   }
-}; 
+};

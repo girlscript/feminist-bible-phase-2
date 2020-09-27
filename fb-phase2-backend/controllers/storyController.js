@@ -51,36 +51,33 @@ exports.updateStory = async (req, res) => {
   }
 };
 
-exports.postStory=async(req,res)=>{
-  const {name,author,image,heading}=req.body;
+exports.postStory = async (req, res) => {
+  const { name, author, image, heading } = req.body;
   if (!name || !author || !image)
     return res.status(400).json({ msg: 'Field cannot be empty' });
-  try{
+  try {
     let story;
-    if(heading!==null){
-      story=new Story({
+    if (heading) {
+      story = new Story({
         name,
         author,
         image,
-        heading
-      })
-    }
-    else{
-      story=new Story({
+        heading,
+      });
+    } else {
+      story = new Story({
         name,
         author,
-        image
-      })
+        image,
+      });
     }
-    const result=await story.save();
+    const result = await story.save();
     res.status(201).json({
-          success: true,
-          data: result
-        });
-  }
-  catch (e){
+      success: true,
+      data: result,
+    });
+  } catch (e) {
     console.log(e.message);
     return res.status(501).json({ msg: 'Internal Server Error' });
   }
-
 };
