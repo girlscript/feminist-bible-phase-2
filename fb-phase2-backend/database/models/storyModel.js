@@ -34,6 +34,16 @@ const storySchema = new mongoose.Schema(
       type: String,
       trim: true,
     },
+    approved: {
+      type: Boolean,
+      default: false,
+      required: true
+    },
+    declined: {
+      type: Boolean,
+      default: false,
+      required: true
+    }
   },
   {
     timestamps: true,

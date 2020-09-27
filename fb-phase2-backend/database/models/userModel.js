@@ -47,6 +47,11 @@ const userSchema = new mongoose.Schema(
       type: String,
       required: true,
     },
+    organization: {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: 'Organization',
+      required: true
+    }
   },
   {
     timestamps: true,
