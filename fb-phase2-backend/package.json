@@ -20,7 +20,8 @@
     "nodemailer": "^6.4.11",
     "nodemailer-sendgrid-transport": "^0.2.0",
     "swagger-jsdoc": "^4.0.0",
-    "swagger-ui-express": "^4.1.4"
+    "swagger-ui-express": "^4.1.4",
+    "validator": "^13.1.17"
   },
   "devDependencies": {
     "husky": "^4.3.0",
