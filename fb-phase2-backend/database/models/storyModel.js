@@ -19,20 +19,27 @@ const storySchema = new mongoose.Schema(
     name: {
       type: String,
       trim: true,
-      required: true,
+      required: [true, 'Please provide a name'],
     },
     author: {
       type: mongoose.Schema.Types.ObjectId,
       ref: 'User',
       required: true,
     },
+    authorOrg: {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: 'Org',
+    },
     image: {
       type: String,
-      required: true,
     },
     heading: {
       type: String,
       trim: true,
+    },
+    postedOn: {
+      type: Date,
+      default: Date.now(),
     },
   },
   {
