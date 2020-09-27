@@ -71,5 +71,6 @@ router
   .put(storyController.updateStory);
 
 router.route('/create').post(storyController.postStory);
+router.route('/all').get(storyController.getAllStories)
 
 module.exports = router;

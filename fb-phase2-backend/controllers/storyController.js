@@ -8,6 +8,7 @@ class NotFoundError extends Error {
   }
 }
 
+//get story by id
 exports.getStory = async (req, res) => {
   try {
     const story = await Story.findOne({ _id: req.params.storyId });
@@ -26,6 +27,22 @@ exports.getStory = async (req, res) => {
     });
   }
 };
+
+//get all stories
+exports.getAllStories = async (req, res)=>{
+  try{
+    const stories = await Story.find({approved: true, declined: false})
+    res.status(200).json({
+      message: "Success",
+      stories: stories
+    })
+  } catch(error){
+    res.status(400).json({
+      message: "Error",
+      error: error
+    })
+  }
+}
 
 exports.updateStory = async (req, res) => {
   try {
