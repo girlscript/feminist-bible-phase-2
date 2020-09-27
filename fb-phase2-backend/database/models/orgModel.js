@@ -1,20 +1,5 @@
 const mongoose = require('mongoose');
 
-/**
- * @swagger
- * definitions:
- *    Org:
- *     properties:
- *      name:
- *        type: string
- *      email:
- *         type: string
- *        unique: true
- *      phone:
- *        type: number
- *        unique: true
- */
-
 const orgSchema = new mongoose.Schema(
   {
     name: {

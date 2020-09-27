@@ -1,24 +1,6 @@
 const mongoose = require('mongoose');
 const validator = require('validator');
 
-/**
- * @swagger
- * definitions:
- *    User:
- *     properties:
- *      firstName:
- *        type: string
- *        example: Jon
- *      lastName:
- *        type: string
- *        example: Snow
- *      email:
- *        type: string
- *        example: snow@northman.org
- *      phone:
- *        type: number
- *        example: 9472645237
- */
 const userSchema = new mongoose.Schema(
   {
     name: {

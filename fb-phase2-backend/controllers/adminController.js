@@ -1,13 +1,13 @@
-const Organization = require('../database/models/orgModel');
+const Org = require('../database/models/orgModel');
 
 //get all approval requests
-//all organizations where organization model has approved:false and declined:false
+//all Orgs where Org model has approved:false and declined:false
 exports.approvalRequests = async (req, res) => {
   try {
-    const orgs = await Organization.find({ declined: false, approved: false });
+    const orgs = await Org.find({ declined: false, approved: false });
     if (!orgs) {
       return res.status(400).json({
-        message: 'Organizations requiring approval not found!',
+        message: 'Orgs requiring approval not found!',
       });
     }
     res.status(200).json({
@@ -22,12 +22,12 @@ exports.approvalRequests = async (req, res) => {
 };
 
 //approve a request
-//update organization model for that particular organization approved:true and declined:false
+//update Org model for that particular Org approved:true and declined:false
 exports.approveRequest = async (req, res) => {
   try {
-    let org = await Organization.findById({ _id: req.params.orgid });
+    let org = await Org.findById({ _id: req.params.orgid });
     if (org.approved != true && org.declined != true) {
-      org = await Organization.findByIdAndUpdate(
+      org = await Org.findByIdAndUpdate(
         { _id: req.params.orgid },
         { approved: true },
         {
@@ -38,7 +38,7 @@ exports.approveRequest = async (req, res) => {
       res.status(200).json({
         message: 'Successfully approved!',
         data: {
-          organization: org,
+          Org: org,
         },
       });
     } else {
@@ -57,9 +57,9 @@ exports.approveRequest = async (req, res) => {
 //update org model for that particular org approved:false and declined:true
 exports.declineRequest = async (req, res) => {
   try {
-    let org = await Organization.findById({ _id: req.params.orgid });
+    let org = await Org.findById({ _id: req.params.orgid });
     if (org.approved != true && org.declined != true) {
-      org = await Organization.findByIdAndUpdate(
+      org = await Org.findByIdAndUpdate(
         { _id: req.params.orgid },
         { declined: true },
         {

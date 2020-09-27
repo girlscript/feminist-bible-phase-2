@@ -15,6 +15,29 @@ exports.getAllStories = async (req, res) => {
   }
 };
 
+exports.createStory = async (req, res) => {
+  try {
+    const { name, author, image, heading } = req.body;
+    if (!name || !author) {
+      return res.status(400).json({
+        status: 'fail',
+        message: 'Fields cannot be empty',
+      });
+    }
+
+    const newStory = await Story.create(req.body);
+    res.status(201).json({
+      success: 'success',
+      data: newStory,
+    });
+  } catch (err) {
+    res.status(400).json({
+      status: 'fail',
+      message: err,
+    });
+  }
+};
+
 exports.getStory = async (req, res) => {
   try {
     const story = await Story.findOne({ _id: req.params.storyId });
@@ -71,29 +94,6 @@ exports.deleteStory = async (req, res) => {
     res.status(200).json({
       status: 'success',
       message: 'Story deleted successfully',
-    });
-  } catch (err) {
-    res.status(400).json({
-      status: 'fail',
-      message: err,
-    });
-  }
-};
-
-exports.createStory = async (req, res) => {
-  try {
-    const { name, author, image, heading } = req.body;
-    if (!name || !author) {
-      return res.status(400).json({
-        status: 'fail',
-        message: 'Fields cannot be empty',
-      });
-    }
-
-    const newStory = await Story.create(req.body);
-    res.status(201).json({
-      success: 'success',
-      data: newStory,
     });
   } catch (err) {
     res.status(400).json({

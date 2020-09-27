@@ -2,7 +2,7 @@ const http = require('http');
 const app = require('./app');
 const db = require('./database')();
 
-const port = process.env.PORT || 7000;
+const port = process.env.PORT || 8080;
 
 // this is useful when creating a https server
 http
