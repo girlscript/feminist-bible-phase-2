@@ -11,13 +11,4 @@ router.route('/approveRequest/:orgid').patch(adminController.approveRequest);
 //decline a request
 router.route('/declineRequest/:orgid').patch(adminController.declineRequest);
 
-//approve story request
-router.route('/story/approve/:storyid').patch(adminController.approveStoryRequest);
-
-//decline story request
-router.route('/story/decline/:storyid').patch(adminController.declineStoryRequest);
-
-//get all story approval requests
-router.route('/story/approvalRequests').get(adminController.getAllStoryApprovalRequests)
-
 module.exports = router;
