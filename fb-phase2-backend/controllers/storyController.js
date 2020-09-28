@@ -115,17 +115,21 @@ exports.updateStory = async (req, res) => {
     });
   }
 };
-
 exports.deleteStory = async (req, res) => {
   try {
-    await Story.findOneAndDelete({ _id: req.params.storyId });
-    res.status(200).json({
-      status: 'success',
-      message: 'Story deleted successfully',
+    const story_id = req.params.storyId;
+    if (!story_id) {
+      throw new NotFoundError(`Story with ${story_id} could not be found`);
+    }
+    await Story.findOneAndDelete({ _id: story_id }, (err, deletedStory) => {
+     res.status(200).json({
+         status:'success',
+        message: 'Story deleted successfully',
+        });
     });
   } catch (err) {
-    res.status(400).json({
-      status: 'fail',
+    res.json({
+      status:'fail', 
       message: err,
     });
   }
