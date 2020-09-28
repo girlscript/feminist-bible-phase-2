@@ -1,34 +1,10 @@
 const mongoose = require('mongoose');
 
-/**
- * @swagger
- * definitions:
- *    Admin:
- *     properties:
- *      firstName:
- *        type: string
- *      lastName:
- *        type: string
- *      email:
- *         type: string
- *      phone:
- *        type: number
- *        unique: true
- *      password:
- *        type: string
- */
 const adminSchema = new mongoose.Schema(
   {
-    firstName: {
+    name: {
       type: String,
       required: true,
-      maxlength: 32,
-      trim: true,
-    },
-    lastName: {
-      type: String,
-      maxlength: 32,
-      trim: true,
     },
     email: {
       type: String,
@@ -39,12 +15,13 @@ const adminSchema = new mongoose.Schema(
     phone: {
       type: Number,
       unique: true,
-      maxlength: 12,
-      trim: true,
     },
     password: {
       type: String,
       required: true,
+    },
+    token: {
+      type: String,
     },
   },
   {
