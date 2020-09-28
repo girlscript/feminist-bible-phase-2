@@ -16,9 +16,10 @@ const transporter = nodemailer.createTransport(
 );
 
 exports.signup = async (req, res) => {
-  const { firstName, lastName, email, phone, password } = req.body;
+  const {name,email,phone,photo,password,passwordConfirm} = req.body;
+  console.log(req.body);
   // checking all credentials are present or not
-  if (!firstName || !lastName || !email || !phone || !password)
+  if (!name || !email || !phone || !password)
     return res.status(400).json({ msg: 'fill up all the credentials' });
 
   try {
@@ -27,21 +28,23 @@ exports.signup = async (req, res) => {
     user = await User.findOne({ email });
     if (user) return res.json({ msg: 'user already exist' });
 
+    if(password!==passwordConfirm) return res.status(400).json({msg:'password and confirm password dont match'})
     // hashing password
+    let hashPasswordConfirm=await bcrypt.hash(passwordConfirm,10);
     let hashPassword = await bcrypt.hash(password, 10);
 
     const newUser = await User.create({
-      firstName,
-      lastName,
+      name,
       email,
+      photo,
       phone,
       password: hashPassword,
+      passwordConfirm:hashPasswordConfirm
     });
 
     await newUser.save();
 
     // generating auth token
-
     let token = jwt.sign({ id: newUser._id }, process.env.JWT_Key, {
       expiresIn: '1h',
     });
