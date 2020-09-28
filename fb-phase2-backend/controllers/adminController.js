@@ -1,4 +1,7 @@
-const Org = require('../database/models/orgModel');
+const Organization = require('../database/models/orgModel');
+const Story = require('../database/models/storyModel')
+const User = require('../database/models/userModel')
+const mongoose = require('mongoose')
 
 //get all approval requests
 //all Orgs where Org model has approved:false and declined:false
@@ -82,3 +85,4 @@ exports.declineRequest = async (req, res) => {
     });
   }
 };
+
