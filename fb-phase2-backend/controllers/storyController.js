@@ -53,6 +53,7 @@ exports.getStory = async (req, res) => {
       data: story,
     });
   } catch (error) {
+    console.log(error)
     res.status(400).json({
       status: 'fail',
       message: error,
@@ -63,16 +64,25 @@ exports.getStory = async (req, res) => {
 //get all stories
 exports.getAllStories = async (req, res)=>{
   try{
-    const stories = await Story.find({approved: true, declined: false})
+    const stories = await Story.find()
+    
+    if(!stories){
+      res.status(400).json({
+        status: 'fail',
+        message: 'No stories found',
+      });
+    }
+
     res.status(200).json({
-      message: "Success",
-      stories: stories
+      status: "success",
+      message: stories
     })
+
   } catch(error){
-    console.log(error)
+    
     res.status(400).json({
-      message: "Error",
-      error: error
+      status: "fail",
+      message: error
     })
   }
 }

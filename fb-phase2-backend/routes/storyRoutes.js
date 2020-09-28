@@ -3,9 +3,8 @@ const storyController = require('../controllers/storyController');
 const router = express.Router();
 
 router
-  .route('/')
+  .route('/all')
   .get(storyController.getAllStories)
-  .post(storyController.createStory);
 
 router
   .route('/:storyId')
@@ -13,6 +12,7 @@ router
   .post(storyController.updateStory)
   .delete(storyController.deleteStory)
   
-router.route('/all').get(storyController.getAllStories);
-
+  router
+  .route('/')
+  .post(storyController.createStory);
 module.exports = router;
