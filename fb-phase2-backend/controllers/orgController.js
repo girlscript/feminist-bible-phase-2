@@ -5,18 +5,18 @@ const Org = require('../database/models/orgModel');
 //in that case, it must be updated after finding the document.
 //this should go in create org
 
-exports.getOrganizations = async (req, res) => {
+exports.getOrgs = async (req, res) => {
   let orgs;
   try {
     orgs = await Org.find();
   } catch (err) {
     console.log(err.message);
-    return res.status(400).json({ msg: 'cannot get organizations' });
+    return res.status(400).json({ msg: 'cannot get Orgs' });
   }
   return res.status(200).json({ orgs: orgs.map((e) => e.toObject()) });
 };
 
-exports.createOrganization = async (req, res) => {
+exports.createOrg = async (req, res) => {
   const { name, image, description, url } = req.body;
   let neworg;
   try {
@@ -39,26 +39,25 @@ exports.createOrganization = async (req, res) => {
     },
   });
 };
-exports.updateOrganisation = async(req,res) =>{
-  try{
+exports.updateOrganisation = async (req, res) => {
+  try {
     const org_id = req.param.OrgId;
-    const org = await Org.findOneAndUpdate({_id : org_id},req.body,{
-      new: true ,
+    const org = await Org.findOneAndUpdate({ _id: org_id }, req.body, {
+      new: true,
       runValidators: true,
-
     });
-    if(!org)
+    if (!org)
       throw new NotFoundError('Organisation with ${org_id} could not be found');
 
-    return res.json({message: 'success',data: org});
-  } catch (err){
+    return res.json({ message: 'success', data: org });
+  } catch (err) {
     const err_code = err.err_code
-      ? err.code >= 100 && err.code <=599
-        ? err.code 
+      ? err.code >= 100 && err.code <= 599
+        ? err.code
         : 500
       : 500;
     res
       .status(err_code)
-      .json({message: err.message || 'Internal Server Error'});
+      .json({ message: err.message || 'Internal Server Error' });
   }
-}; 
+};
