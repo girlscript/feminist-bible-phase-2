@@ -24,3 +24,36 @@ exports.getUserProfile = async (req, res) => {
         });
     }
 };
+
+exports.updateUser= async (req,res)=>{
+    try {
+        const user_id=req.param.userId;
+        const user = await User.findByIdAndUpdate(
+            {_id:user_id},
+            {$set:req.body},
+            {new:true,
+            useFindAndModify:false},
+            
+        );
+        if(!user){
+            throw new NotFoundError(`User with ${user_id} could not be found`);
+        }
+        return res.status(200).json({
+            status:'sucess',
+            message:'User updated successfully!',
+            data:user
+        });
+
+      
+        
+    } catch (error) {
+        const err_code = error.err_code
+      ? err.code >= 100 && err.code <= 599
+        ? err.code
+        : 500
+      : 500;
+    res.status(err_code).json({ status:'fail',message: err.message || 'Internal Server Error' });
+  }
+        
+    }
+
