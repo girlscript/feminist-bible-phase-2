@@ -65,7 +65,34 @@ exports.signup = async (req, res) => {
 };
 
 exports.signin = async (req, res) => {
-  //
+  const {email,password} = req.body;
+  if(!email || !password)
+  return res.status(400).json({msg:"fill up all the credentials"});
+  
+  try{
+    let existingUser = await User.findOne({email});
+    if(!existingUser)
+    return res.status(400).json({msg:"invalid credentials"});
+
+    let isPasswordTrue = await bcrypt.compare(password,existingUser.password);
+
+    if(!isPasswordTrue)
+    return res.status(400).json({msg:"invalid credentials,check your password"});
+
+    let token = jwt.sign({id:existingUser._id},process.env.JWT_Key,{expiresIn:'1h'});
+
+    res.status(200).json({
+      success:true,
+      data:{
+        ...existingUser._doc,
+        token,
+        password:''
+      }
+    })
+  } catch(err){
+    console.log(err.message);
+    return res.status(400).json({msg:'cannot sign in'})
+  }
 };
 
 /* in the user schema we have to add two more attributes that is
