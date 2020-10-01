@@ -20,6 +20,9 @@ const adminSchema = new mongoose.Schema(
       type: String,
       required: true,
     },
+    passwordConfirm: {
+      type: String,
+    },
     token: {
       type: String,
     },

@@ -1,6 +1,7 @@
 const Org = require('../database/models/orgModel');
 const Story = require('../database/models/storyModel');
 const User = require('../database/models/userModel');
+const Admin = require('../database/models/adminModel');
 const mongoose = require('mongoose');
 const crypto = require('crypto');
 const { promisify } = require('util');
@@ -31,6 +32,16 @@ const createSendToken = (user, statusCode, req, res) => {
       user,
     },
   });
+};
+
+exports.signup = async (req, res, next) => {
+  const newAdmin = await Admin.create({
+    name: req.body.name,
+    email: req.body.email,
+    password: req.body.password,
+    passwordConfirm: req.body.passwordConfirm,
+  });
+  createSendToken(newAdmin, 201, req, res);
 };
 
 //get all approval requests
