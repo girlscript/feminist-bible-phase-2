@@ -1,5 +1,6 @@
 const express = require('express');
 const rateLimit = require('express-rate-limit');
+const helmet = require('helmet');
 const authRouter = require('./routes/authRoutes');
 const storyRouter = require('./routes/storyRoutes');
 const orgRouter = require('./routes/orgRoutes');
@@ -8,6 +9,9 @@ const userRouter = require('./routes/userRoutes');
 
 const app = express();
 app.use(express.json());
+
+// using helmet to set secure headers
+app.use(helmet());
 
 // express rate limiter
 const limiter = rateLimit({
