@@ -44,6 +44,34 @@ exports.signup = async (req, res, next) => {
   createSendToken(newAdmin, 201, req, res);
 };
 
+exports.login = async (req, res, next) => {
+  const { email, password } = req.body;
+
+  // 1) Check if email and password exist
+  if (!email || !password) {
+    return next(new AppError('Please provide email and password!', 400));
+  }
+  // 2) Check if admin exists && password is correct
+  const admin = await Admin.findOne({ email });
+
+  if (!admin || !(await admin.correctPassword(password, admin.password))) {
+    return res.status(400).json({
+      status: 'success',
+      message: 'Error occurred',
+    });
+  }
+
+  // 3) If everything ok, send token to client
+  createSendToken(admin, 200, req, res);
+};
+
+exports.logout = (req, res) => {
+  res.cookie('jwt', 'loggedout', {
+    expires: new Date(Date.now() + 10 * 1000),
+  });
+  res.status(200).json({ status: 'success' });
+};
+
 //get all approval requests
 //all Orgs where Org model has approved:false and declined:false
 exports.approvalRequests = async (req, res) => {
