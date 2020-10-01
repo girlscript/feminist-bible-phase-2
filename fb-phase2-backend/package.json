@@ -22,7 +22,8 @@
     "mongoose": "^5.10.5",
     "nodemailer": "^6.4.11",
     "nodemailer-sendgrid-transport": "^0.2.0",
-    "validator": "^13.1.17"
+    "validator": "^13.1.17",
+    "xss-clean": "^0.1.1"
   },
   "devDependencies": {
     "mocha": "^8.1.3",
