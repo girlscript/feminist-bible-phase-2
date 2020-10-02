@@ -1,4 +1,5 @@
 const express = require('express');
+const passport = require('passport');
 const autController = require('../controllers/authController');
 const router = express.Router();
 
@@ -48,6 +49,6 @@ router.route('/signup').post(autController.signup);
  *        200:
  *          description: signed-in suggessfully
  */
-router.route('/signin').post(autController.signin);
+router.route('/signin').post(autController.signin,passport.authenticate('local',{failureRedirect:'/signin',failureFlash:true}));
 
 module.exports = router;

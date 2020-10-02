@@ -19,6 +19,7 @@
     "mongoose": "^5.10.5",
     "nodemailer": "^6.4.11",
     "nodemailer-sendgrid-transport": "^0.2.0",
+    "passport": "^0.4.1",
     "validator": "^13.1.17"
   },
   "devDependencies": {
