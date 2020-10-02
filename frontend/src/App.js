@@ -13,9 +13,9 @@ function App() {
 
       {/* pages will come here */}
       <Switch>
-        <Registration path="/register" exact />
         <Home path="/" exact/>
         <Admin path="/admin" exact />
+        <Registration path="/register" exact />
       </Switch>
 
       <Footer />
