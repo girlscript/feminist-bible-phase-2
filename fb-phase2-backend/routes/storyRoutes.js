@@ -3,14 +3,16 @@ const storyController = require('../controllers/storyController');
 const router = express.Router();
 
 router
-  .route('/')
+  .route('/all')
   .get(storyController.getAllStories)
-  .post(storyController.createStory);
 
 router
   .route('/:storyId')
   .get(storyController.getStory)
   .post(storyController.updateStory)
-  .delete(storyController.deleteStory);
-
+  .delete(storyController.deleteStory)
+  
+  router
+  .route('/')
+  .post(storyController.createStory);
 module.exports = router;
