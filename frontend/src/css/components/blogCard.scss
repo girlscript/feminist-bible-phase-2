@@ -6,6 +6,8 @@
     background-color: #f8f6f3;
     padding: 20px;
     box-shadow: 0px 0px 14px rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 1;
   }
 
   &__img {
