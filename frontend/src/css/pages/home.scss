@@ -1,29 +1,73 @@
 @import '../settings/global';
-@import '../components/_button';
+@import '../components/button';
 
-.intro{
+.hero{
     margin: auto;
-    padding: 159px 0px 159px 0px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    padding: 100px 0 150px 0;
+
+    // replaced br with this code. With this I can set the exact margin below the paragraph. This cannot be done with the help of br. 
+    &__text{
+        &:first-of-type{
+            margin-bottom:40px;
+        }
+        font-weight: $font-weight-medium;
+    }
+
+    &__button-container{
+        margin-top: 30px;
+    }
+
+    &__image{
+        background-image:url(../../images/pixeltrue-jogging.png);
+        background-position: center; 
+        background-repeat: no-repeat;
+        height:100%;
+        background-size: cover;
+    }
 }
 
-.importanceOfDiversity{
-    display: flex;
-    padding: 86px 0px 86px 0px;
-    justify-content: center;
-    align-items: center;
+.importance-of-diversity{
+    background: linear-gradient(180deg, #FFFDF6 0%, #FFEBF3 100%);
+    padding-bottom:80px;
+    position:relative;
+
+    &__title{
+        margin-bottom:30px;
+    }
+
+    &__logo-prop{
+        position:absolute; 
+        right:calc(100vw - (1280px + 50px));
+        bottom:-60%;
+        width:450px; height:auto;
+        object-fit: contain; 
+        
+    }
 }
 
-.feature{
-    padding: 144px 0px 144px 0px;
-    margin: auto;
-    text-align: center;
+// for feature and logos
+.section{
+    padding-bottom:120px;
 
-    &__partnerLogo{
-      max-width:250px;
+    &__partner-logo-container{
       display: flex;
       justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    &__partner-logo{
+        height:70px; 
+        width:200px;
+        object-fit: contain;
+        margin:20px 30px;
+    }
+
+    &__title{
+        text-align: center;
+    }
+
+    &__text{
+        text-align: center;
+        margin-bottom: 60px;
     }
 }
