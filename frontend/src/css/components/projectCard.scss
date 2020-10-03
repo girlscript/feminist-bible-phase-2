@@ -1,18 +1,22 @@
 @import "../settings/global";
 
 .project-card {
-  &__container {
+  &__textcontainer {
     border-radius: 5px;
     padding : 20px;
     background-color: #F4F4F4;
-    box-shadow: 0px 0px 14px rgba(0, 0, 0, 0.1);
     text-align: left;
   }
-
-  &__img {
+  
+  &__imgcontainer {
     border-radius: 5px;
+    padding : 20px;
+    background-color: #ffffff;
     display: flex;
     align-items: center;
     justify-content: center;
+  }
+  &__text{
+    font-weight: $font-weight-medium;
   }
 }
