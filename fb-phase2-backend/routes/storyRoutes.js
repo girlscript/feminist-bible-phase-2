@@ -3,6 +3,7 @@ const storyController = require('../controllers/storyController');
 const router = express.Router();
 
 router
+<<<<<<< HEAD
   .route('/:storyId')
   /**
    * @swagger
@@ -70,4 +71,18 @@ router
    */
   .put(storyController.updateStory);
 
+=======
+  .route('/all')
+  .get(storyController.getAllStories)
+
+router
+  .route('/:storyId')
+  .get(storyController.getStory)
+  .post(storyController.updateStory)
+  .delete(storyController.deleteStory)
+  
+  router
+  .route('/')
+  .post(storyController.createStory);
+>>>>>>> fa14df529cd0c923bc30d417847380435ee56dfa
 module.exports = router;

@@ -1,0 +1,84 @@
+@import "../settings/global";
+
+.hero-section {
+    background-image: linear-gradient(#FFFDF6, #FFEBF3);
+}
+
+
+.BlogList__img{
+    margin-top: 10px;
+}
+
+.BlogList__header{
+    
+    &__title
+    {
+        @extend h1;
+        width: 613px;
+        height: 162px;
+    }
+    
+
+    &__subtitle{
+      //  margin-top: 160px;
+        @extend h2;
+        width: 613px;
+        height: 162px;
+        
+    }   
+    &__link{
+        @extend p;
+        color:#AB1D79;
+        font-weight: bold;
+    }
+
+    
+}
+    a:hover{
+      color:black;
+      text-decoration:underline;
+    }
+
+.blog_img{
+    margin-left: 400px;
+    
+}
+
+
+.author {
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 20px;
+  
+    &__name-wrap {
+      padding:2px 0;
+  
+      & > * {
+        margin: 0;
+        padding-right: 13px;
+        text-align: left;
+        line-height: 18px;
+      }
+  
+      .author__name {
+        font-size: 14px;
+        font-weight: $font-weight-medium;
+      }
+  
+      .author__date {
+        font-size: 12px;
+        font-weight: $font-weight-regular;
+        
+      
+      }
+    }
+  }
+  
+/************************************************* BlogList footer Cards ***************************************/
+
+.BlogList__footer{
+
+margin: 100px;
+
+
+}

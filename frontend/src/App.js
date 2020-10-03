@@ -1,37 +1,35 @@
-import React from 'react';
-import CodeOfConduct from './components/CodeOfConduct.jsx';
-import Header from './components/Header.jsx';
-import avatar from "./images/avatar.png";
 
-//delete this
-import BlogCard from "./components/BlogCard.jsx";
+import React from "react";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import Home from './pages/home.jsx'
+import Footer from "./components/Footer.jsx";
+import Header from "./components/Header.jsx";
+import avatar_image from "./images/avatar.png";
+import Registration from "./pages/Registration";
+import BlogList from "./components/BlogList.jsx";
+import CodeOfConduct from "./components/CodeOfConduct.jsx";
 
 function App() {
   return (
-    <div>
-      <Header />
-      <CodeOfConduct/>
-=======
-    <div style={{background: 'pink', height:'100vh'}}>
-      <Header isSignedIn={true} avatarSrc={avatar}/>
+    <Router>
+      <Header isSignedIn={false} avatarSrc={avatar_image} />
 
-      {/* delete this */}
-      <div className="grid-container" style={{marginTop: '50px', marginBottom: '100px'}}>
-        <div className="grid-x grid-margin-x">
-          <div className="cell large-4">
-            <BlogCard />
-          </div>
-          <div className="cell large-4">
-            <BlogCard />
-          </div>
-          <div className="cell large-4">
-            <BlogCard />
-          </div>
-        </div>
-      </div>
-    </div>
-    </div>
+      {/* pages will come here */}
+          <Switch>
+        <Registration path="/register" exact />
+        <Home path="/" exact/>
+      </Switch>
+      <BlogList/>
+      <Footer />
+    </Router>
   );
 }
-
+/*
+function App() {
+  return (
+  //  <CodeOfConduct/>
+    <BlogList/>
+  
+    )
+}*/
 export default App;

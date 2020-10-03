@@ -14,11 +14,14 @@
 }
 
 .form{
+    &__element-container {
+        margin-bottom: 16px;
+    }
+
     &__label{
         color: $title-color;
         font-size: 16px;
         font-weight: $font-weight-medium;
-        margin-bottom:4px;
 
         // this class should be used with form elements with required attribute. 
         &.required{
@@ -35,11 +38,47 @@
         color: $title-color;
         font-size: 16px;
         font-weight: $font-weight-regular;
-        height:56px;
+        height:44px;
         padding:0 20px;
+        margin: 0;
 
         &:focus,&:hover{
             @extend %form-element-focus;
         }
+
+        &.error {
+            border: 1px solid red;
+            color: red;
+        }
+    }
+
+    &__input-error {
+        color: red;
+        font-size: 14px;
+        margin-bottom: 6px;
+    }
+
+    
+    &__input-strength {
+        p.result {
+            font-size: 14px;
+            padding: 0;
+            margin: 0 6px;
+        }
+
+        .meter {
+             width: 100%;
+             height: 0.8em;
+             background-color: rgba($color: #000000, $alpha: 0.1);
+             border-radius: 5px;
+             margin: 0 0 16px 0;
+             
+             .strength {
+                 height: 100%;
+                 width: 100%;
+                 background-color: rgba($color: #000000, $alpha: 0.1);
+                 border-radius: 5px;
+             }
+         }
     }
 }
