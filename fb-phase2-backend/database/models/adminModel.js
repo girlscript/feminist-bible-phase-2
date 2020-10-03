@@ -58,7 +58,13 @@ const adminSchema = new mongoose.Schema(
       required: true,
     },
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+    passwordConfirm: {
+      type: String,
+    },
+>>>>>>> a2f9da64a18585a80174f250bfe3579de46c342f
     token: {
       type: String,
     },

@@ -12,9 +12,11 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "aws-sdk": "^2.739.0",
     "bcryptjs": "^2.4.3",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
+<<<<<<< HEAD
 <<<<<<< HEAD
     "mongoose": "^5.10.5",
     "nodemailer": "^6.4.11",
@@ -22,12 +24,24 @@
     "swagger-jsdoc": "^4.0.0",
     "swagger-ui-express": "^4.1.4"
 =======
+=======
+    "express-mongo-sanitize": "^2.0.0",
+    "express-rate-limit": "^5.1.3",
+    "helmet": "^4.1.1",
+>>>>>>> a2f9da64a18585a80174f250bfe3579de46c342f
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^5.10.5",
+    "multer": "^1.4.2",
+    "multer-s3": "^2.9.0",
     "nodemailer": "^6.4.11",
     "nodemailer-sendgrid-transport": "^0.2.0",
+<<<<<<< HEAD
     "validator": "^13.1.17"
 >>>>>>> fa14df529cd0c923bc30d417847380435ee56dfa
+=======
+    "validator": "^13.1.17",
+    "xss-clean": "^0.1.1"
+>>>>>>> a2f9da64a18585a80174f250bfe3579de46c342f
   },
   "devDependencies": {
     "husky": "^4.3.0",
