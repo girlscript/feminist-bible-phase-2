@@ -1,11 +1,12 @@
 import React from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import Home from './pages/home.jsx'
+import Home from './pages/home.jsx';
+import Admin from './pages/Admin.jsx';
 import Footer from "./components/Footer.jsx";
 import Header from "./components/Header.jsx";
 import avatar_image from "./images/avatar.png";
 import Registration from "./pages/Registration";
-import Admin from "./pages/admin.jsx";
+
 function App() {
   return (
     <Router>
@@ -14,8 +15,8 @@ function App() {
       {/* pages will come here */}
       <Switch>
         <Home path="/" exact/>
-        <Admin path="/admin" exact />
         <Registration path="/register" exact />
+        <Admin path="/admin" exact />
       </Switch>
 
       <Footer />
