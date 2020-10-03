@@ -6,11 +6,10 @@
 
 .head {
 
-    margin-top: 80px;
-
-    &__heading{
+    &__wrap{
         @extend h1;
         padding-bottom: 30px;
+        margin-top: 80px;
     }
     
     &__para{
@@ -46,7 +45,7 @@
     box-shadow: 0px 0px 14px rgba(0, 0, 0, 0.08);
     border-radius: 5px;
     
-    &__title, &__head {
+    &__wrap{
         @extend h2;
     }
 
@@ -55,7 +54,8 @@
     }
 
     &__head{
-        padding-bottom: 30px;;
+        padding-bottom: 30px;
+        @extend h2;
     }
 }
 
