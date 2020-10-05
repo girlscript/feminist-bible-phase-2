@@ -1,10 +1,11 @@
 import React from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import Home from './pages/Home.jsx'
+import Home from './pages/home.jsx'
 import Footer from "./components/Footer.jsx";
 import Header from "./components/Header.jsx";
 import avatar_image from "./images/avatar.png";
 import Registration from "./pages/Registration";
+import AboutUs from "./pages/AboutUs";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
       <Switch>
         <Home path="/" exact/>
         <Registration path="/register" exact />
+        <AboutUs path="/about" exact />
       </Switch>
 
       <Footer />

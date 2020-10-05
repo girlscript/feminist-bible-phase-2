@@ -1,7 +1,7 @@
 @import "../settings/global";
 
 .about {
-  margin: auto;
+  // margin: auto;
   padding: 145px 0px 145px 0px;
   display: flex;
   justify-content: center;
@@ -41,7 +41,16 @@
       }
   }
 
+  &-details__list{
+    list-style: none;
+    margin-left: 0;
+    li {
+      @extend .text;
+      margin-bottom: 14px;
+
+    }
+   
+  }
 }
-.coFounder > p {
-  margin-bottom: 14px;
-}
+
+
