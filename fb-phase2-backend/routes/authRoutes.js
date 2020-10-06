@@ -49,6 +49,6 @@ router.route('/signup').post(autController.signup);
  *        200:
  *          description: signed-in suggessfully
  */
-router.route('/signin').post(autController.signin,passport.authenticate('local',{failureRedirect:'/signin',failureFlash:true}));
+router.route('/signin').post(autController.signin);
 
 module.exports = router;

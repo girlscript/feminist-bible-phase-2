@@ -177,3 +177,26 @@ exports.postNewPassword = async (req, res) => {
     res.status(500).json({ message: 'error!' });
   }
 };
+
+exports.isSignedIn=async (req,res,next)=>{
+  const token=req.header('Authorization').replace('Bearer ','');
+  const data=jwt.verify(token,process.env.JWT_Key);
+  try {
+    const user=User.findOne({_id:userId,token:token});
+    if(!user){
+      throw new NoUserFoundError('User is currently not logged in');
+    }
+    req.user=user;
+    req.token=token;
+    next();
+
+    
+  } catch (error) {
+    const err_code = error.err_code
+    ? err.code >= 100 && err.code <= 599 ? err.code : 500 : 500;
+  res.status(err_code).json({ status:'fail',message: err.message || 'Internal Server Error' });
+  
+  }
+
+  
+}
