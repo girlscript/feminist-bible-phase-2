@@ -15,7 +15,8 @@ class Admin extends Component {
             <>
                 <div style={{ background: "#FFFDF6" }}>
                     <div className="about">
-                        <div className="grid-container grid-x grid-margin-x">
+                        <div className="grid-container">
+                        <div className=" grid-x grid-margin-x">
 
                             <div class="cell medium-4">
                                 <h1>About us</h1>
@@ -33,6 +34,7 @@ class Admin extends Component {
                                </p>
                             </div>
                         </div>
+                        </div>
                     </div>
 
 
@@ -40,7 +42,8 @@ class Admin extends Component {
 
                 <div style={{ background: "linear-gradient(180deg, #FFFDF6 0%, #FFEBF3 100%)" }}>
                     <div className="coFounder">
-                        <div className="grid-container grid-x grid-margin-x ">
+                        <div className="grid-container">
+                        <div className=" grid-x grid-margin-x ">
                             <div className="cell ">
                                 <h1 >
                                     Co-Founders
@@ -91,6 +94,7 @@ class Admin extends Component {
                                 </ul>
 
                             </div>
+                        </div>
                         </div>
                     </div>
                 </div>
