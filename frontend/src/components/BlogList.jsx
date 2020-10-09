@@ -16,7 +16,6 @@ class BlogList extends Component {
                 <div className="BlogList__header">
                   <h1 className="BlogList__header__title">Stories</h1>
 
-                  <div className=" grid-container top">
                     <div className=" grid-x grid-margin-x">
                       <div className="cell large-5 ">
                         <div className="BlogList__header__img">
@@ -64,7 +63,7 @@ class BlogList extends Component {
                       </div>
                     </div>
                   </div>
-                </div>
+               
               </div>
             </div>
           </div>
