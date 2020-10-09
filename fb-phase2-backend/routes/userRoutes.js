@@ -8,5 +8,6 @@ module.exports = router;
 
 router
     .route('/:userId')
+    
     .get(userController.getUserProfile)
     .put(userController.updateUser);

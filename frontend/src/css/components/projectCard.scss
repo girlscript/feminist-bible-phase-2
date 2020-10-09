@@ -1,0 +1,65 @@
+@import "../settings/global";
+
+.project-card {
+  background-color: #F4F4F4;
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.15); 
+  border-radius:10px;
+  overflow:hidden;
+
+  &__text{
+    font-weight: $font-weight-medium;
+    text-align: justify;
+  }
+
+  &__title{
+    // overwriting h2's font-weight
+    font-weight: $font-weight-medium;
+  }
+
+  &__text-container {
+    border-radius: 5px;
+    padding : 20px 30px;
+    background-color: #F4F4F4;
+    text-align: left;
+  }
+  
+  &__img-container {
+    background-color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width:230px;
+    height:100%;
+
+    img{
+      width:80%; height:auto;
+    }
+  }
+
+  .link{
+    color:$purple;
+    font-weight: $font-weight-medium;
+  }
+}
+
+
+// for mobile 
+@media only screen and (max-width:640px){
+  .project-card{
+    &__img-container{
+      width:100%;
+      max-width: none;
+      padding:15px 10px;
+
+      img{
+        height:100px; 
+        object-fit: cover;
+        object-position: center;
+      }
+    }
+
+    &__text-container{
+      padding:20px;
+    }
+  }
+}
