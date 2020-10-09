@@ -5,7 +5,6 @@ import Footer from "./components/Footer.jsx";
 import Header from "./components/Header.jsx";
 import avatar_image from "./images/avatar.png";
 import Registration from "./pages/Registration";
-import BlogList from "./components/BlogList.jsx";
 
 
 function App() {
@@ -18,7 +17,7 @@ function App() {
         <Home path="/" exact/>
         <Registration path="/register" exact />
       </Switch>
-      <BlogList/>
+    
       <Footer />
     </Router>
   );
