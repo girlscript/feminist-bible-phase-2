@@ -10,6 +10,10 @@ body{
   overflow-x: hidden;
 }
 
+#root{
+  overflow-x:hidden;
+}
+
 .grid-container {
   max-width: 69.375em; /* making it 1080px including 15px margin on either sides */
 }
@@ -75,7 +79,13 @@ a{
   padding:70px 0;
 }
 
+// for small sized devices - mobile phones
+
 @media only screen and (max-width:640px){
+  .grid-container{
+    padding:0 15px; 
+  }
+  
   h1{
     font-size:36px;
   }

@@ -12,8 +12,8 @@
   &__big {
     //purple button by default. You can use modifiers to change the colors of have different variants
     background-color: $purple;
+    border:1px solid $purple;
     color: white;
-    border: 0;
     display: inline;
     text-transform: uppercase;
     border-radius: 5px;
@@ -27,6 +27,7 @@
     &--pink {
       background-color: $pink;
       color: $title-color;
+      border:1px solid $pink;
     }
 
     &--hollow {
@@ -38,9 +39,21 @@
     //hover effect
     &:hover {
       background-color: $lilac;
+      border:1px solid $lilac;
       color: white;
       transition: 0.2s ease-in-out;
       text-decoration: none;
+    }
+  }
+}
+
+@media only screen and (max-width:640px){
+  .button, a.button{
+    &__big{
+      padding:12px 20px;
+    }
+    &__small, &__big{
+      font-size:14px;
     }
   }
 }
