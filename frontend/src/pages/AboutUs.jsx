@@ -48,7 +48,7 @@ class Admin extends Component {
                                 <br />
                             </div>
 
-                            <div className="cell medium-6" style={{ paddingRight: "60px" }}>
+                            <div className="cell medium-6">
 
                                 <img src={img_1} alt="avatar" />
                                 <div className="coFounder-name ">
@@ -70,7 +70,7 @@ class Admin extends Component {
                                   </ul>
                             </div>
 
-                            <div className="cell medium-6 " style={{ paddingRight: "60px" }}>
+                            <div className="cell medium-6 " >
                                 <img src={img_2} alt="avatar" />
 
                                 <div className="coFounder-name" >
