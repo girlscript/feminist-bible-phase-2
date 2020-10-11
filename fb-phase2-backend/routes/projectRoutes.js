@@ -11,4 +11,7 @@ router.route('/').get(projectController.getAllProjects);
 //get all projects org wise
 router.route('/:orgid').get(projectController.getProjectsOrgWise)
 
+//delete a project
+router.route('/:projectid').delete(projectController.deleteProject)
+
 module.exports = router
