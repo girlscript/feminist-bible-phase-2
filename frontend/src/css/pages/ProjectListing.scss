@@ -1,0 +1,62 @@
+@import "../settings/global";
+
+.ProjectListing {
+  background-image: linear-gradient(#fffdf6, #ffebf3);
+  padding: 80px 0;
+  &__MainCard {
+    height: 230px;
+    background-color: white;
+    margin-top: 30px;
+  }
+
+  &__title {
+    @extend h1;
+    margin-top: 60px;
+  }
+  &__Card {
+    height: 230px;
+    background-color: white;
+  }
+
+  &__img1 {
+    width: 80%;
+    height: auto;
+    margin-top: 25px;
+    margin-left: 35px;
+  }
+
+  &__img2 {
+    width: 80%;
+    height: auto;
+    margin-top: 70px;
+    margin-left: 35px;
+  }
+
+  &__img3 {
+    width: 80%;
+    height: auto;
+    margin-top: 70px;
+    margin-left: 35px;
+  }
+}
+
+.content {
+  background-color: #f4f4f4;
+  height: 230px;
+  padding: 20px;
+
+  &__title {
+    @extend h2;
+  }
+  &__description {
+    @extend p;
+    margin-top: 45px;
+  }
+
+  &__link {
+    @extend p;
+    margin-top: 20px;
+    color: #ab1d79;
+    text-decoration: underline;
+  }
+}
