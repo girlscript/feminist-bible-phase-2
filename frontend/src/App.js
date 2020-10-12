@@ -11,7 +11,7 @@ function App() {
   return (
     <Router>
       <Header isSignedIn={false} avatarSrc={avatar_image} />
-      
+     
 
       {/* pages will come here */}
       <Switch>

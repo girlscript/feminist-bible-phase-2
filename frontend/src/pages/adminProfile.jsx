@@ -32,9 +32,9 @@ class AdminProfile extends Component {
                                         <h3 className="location">Location</h3>
                                     </div>
                                     <div className="links__icon-wrap">
-                                        <img src={Facebook} className="links__icon" />
-                                        <img src={Linkedin} className="links__icon" />
-                                        <img src={Twitter} className="links__icon" />
+                                        <a href="#"><img src={Facebook} className="links__icon" /></a>
+                                        <a href="#"><img src={Linkedin} className="links__icon" /></a>
+                                        <a href="#"><img src={Twitter} className="links__icon" /></a>
                                     </div>
                                 </div>
                                 <p className="hero-section__details">
