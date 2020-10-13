@@ -52,7 +52,7 @@ exports.updateUser= async (req,res)=>{
         ? err.code
         : 500
       : 500;
-    res.status(err_code).json({ status:'fail',message: err.message || 'Internal Server Error' });
+    res.status(err_code).json({ status:'fail',message: error.message || 'Internal Server Error' });
   }
         
     }
