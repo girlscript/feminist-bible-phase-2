@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 // components
 import Footer from "./components/Footer.jsx";
 import Header from "./components/Header.jsx";
-import avatar_image from "./images/avatar.png";
+import avatar_image from "./images/placeholder-images/avatar.png";
 
 // pages
 import Home from "./pages/home.jsx";
