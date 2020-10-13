@@ -57,7 +57,6 @@ class AdminProfile extends Component {
                                 <h2 className="article-section__heading">Articles By Admins</h2>
                                 <h3 className="article-section__sub-heading">Directly into your inbox every monday morning</h3>
                             </div>
-                            <>
                               <div className="cell large-4 small-12">
                                 <BlogCard />
                               </div>
@@ -67,7 +66,6 @@ class AdminProfile extends Component {
                               <div className="cell large-4 small-12">
                                 <BlogCard />
                               </div>
-                            </>
                         </div>
                     </div>
                 </div>
