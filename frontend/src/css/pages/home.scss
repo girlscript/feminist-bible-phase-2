@@ -1,73 +1,138 @@
-@import '../settings/global';
-@import '../components/button';
+@import "../settings/global";
+@import "../components/button";
 
-.hero{
-    margin: auto;
-    padding: 100px 0 150px 0;
+.hero {
+  margin: auto;
+  padding: 100px 0 150px 0;
 
-    // replaced br with this code. With this I can set the exact margin below the paragraph. This cannot be done with the help of br. 
-    &__text{
-        &:first-of-type{
-            margin-bottom:40px;
-        }
-        font-weight: $font-weight-medium;
+  // replaced br with this code. With this I can set the exact margin below the paragraph. This cannot be done with the help of br.
+  &__text {
+    &:first-of-type {
+      margin-bottom: 40px;
     }
+    font-weight: $font-weight-medium;
+  }
 
-    &__button-container{
-        margin-top: 30px;
-    }
+  &__button-container {
+    margin-top: 30px;
+  }
 
-    &__image{
-        background-image:url(../../images/pixeltrue-jogging.png);
-        background-position: center; 
-        background-repeat: no-repeat;
-        height:100%;
-        background-size: cover;
-    }
+  &__image {
+    background-image: url(../../images/pixeltrue-jogging.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100%;
+    background-size: cover;
+  }
 }
 
-.importance-of-diversity{
-    background: linear-gradient(180deg, #FFFDF6 0%, #FFEBF3 100%);
-    padding-bottom:80px;
-    position:relative;
+.importance-of-diversity {
+  background: linear-gradient(180deg, #fffdf6 0%, #ffebf3 100%);
+  padding-bottom: 80px;
+  position: relative;
 
-    &__title{
-        margin-bottom:30px;
-    }
+  &__title {
+    margin-bottom: 30px;
+  }
 
-    &__logo-prop{
-        position:absolute; 
-        right:calc(100vw - (1280px + 50px));
-        bottom:-60%;
-        width:450px; height:auto;
-        object-fit: contain; 
-        
-    }
+  &__logo-prop {
+    position: absolute;
+    right: calc((100vw - 1080px) / 2 - 200px);
+    bottom: -60%;
+    width: 450px;
+    height: auto;
+    object-fit: contain;
+  }
 }
 
 // for feature and logos
-.section{
-    padding-bottom:120px;
+.section {
+  padding-bottom: 120px;
 
-    &__partner-logo-container{
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
+  &__partner-logo-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  &__partner-logo {
+    height: 70px;
+    width: 200px;
+    object-fit: contain;
+    margin: 20px 30px;
+  }
+
+  &__title {
+    text-align: center;
+  }
+
+  &__text {
+    text-align: center;
+    margin-bottom: 60px;
+  }
+
+  &__button-container{
+      margin-top:82px;
+      text-align: center;
+  }
+}
+
+// for medium sized devices - tablets
+@media only screen and (max-width: 1024px) {
+  .blog-card {
+    &__container {
+      margin-bottom: 30px;
+    }
+  }
+
+  .importance-of-diversity {
+    &__logo-prop {
+      right: -100px;
+      bottom: -70%;
+    }
+  }
+}
+
+// for small sized devices - mobile phones
+@media only screen and (max-width: 640px) {
+  .hero {
+    padding:50px 0;
+
+    &__text {
+      text-align: justify;
+      &:first-of-type {
+        margin-bottom: 20px;
+      }
     }
 
-    &__partner-logo{
-        height:70px; 
-        width:200px;
-        object-fit: contain;
-        margin:20px 30px;
+    &__image {
+      height: 300px;
     }
+  }
 
-    &__title{
-        text-align: center;
-    }
+  .importance-of-diversity{
+      padding-bottom:50px;
+      p{
+          text-align: justify;
+      }
+  }
 
-    &__text{
-        text-align: center;
-        margin-bottom: 60px;
-    }
+  .section{
+      padding-bottom:50px;
+
+      &__text{
+          margin-bottom:30px;
+      }
+
+      &__button-container{
+          margin-top:30px;
+          margin-bottom:20px;
+      }
+
+      &__partner-logo{
+          width:150px; 
+          height:52.5px;
+          margin:20px 10px;
+      }
+  }
 }

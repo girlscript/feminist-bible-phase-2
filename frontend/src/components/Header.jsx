@@ -9,10 +9,10 @@ class Header extends Component {
       <header className="header">
         <div className="grid-container">
           <div className="grid-x grid-margin-x">
-            <div className="cell large-3">
+            <div className="cell medium-3">
               <img src={logo} alt="feminist bible logo" className="header__logo"/>
             </div>
-            <div className="cell large-9">
+            <div className="cell medium-9">
               <nav className="nav">
                 <ul className="nav__item-container">
                   <li className="nav__item"><a href="#test">Stories</a></li>
