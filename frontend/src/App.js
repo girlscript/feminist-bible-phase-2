@@ -6,11 +6,13 @@ import Header from "./components/Header.jsx";
 import avatar_image from "./images/avatar.png";
 import Registration from "./pages/Registration";
 import AboutUs from "./pages/AboutUs";
+import AdminProfile from "./pages/adminProfile";
 
 function App() {
   return (
     <Router>
       <Header isSignedIn={false} avatarSrc={avatar_image} />
+     
 
       {/* pages will come here */}
       <Switch>
