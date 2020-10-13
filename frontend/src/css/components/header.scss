@@ -32,7 +32,7 @@
     line-height:80px;
     font-weight: $font-weight-regular;
 
-    a:hover{
+    a:hover,a:focus,.active{
       color:$purple;
       text-decoration:underline;
     }
@@ -45,6 +45,63 @@
     // to give gap between the nav items (since gap is not supported by all browsers)
     &:not(:last-child){
       margin-right:20px;
+    }
+  }
+}
+
+#menu-icon{
+  display:none
+}
+
+@media only screen and (max-width:640px){
+  .header{
+    background-color:$yellow-bg;
+    min-height:80px;
+    height:auto;
+  }
+
+  .nav{
+    justify-content: center;
+    position: relative;
+
+    &__item-container{
+      flex-direction:column;
+      position:absolute;
+      background-color:$yellow-bg;
+      width:100vw;
+      z-index: 3;
+      padding:14px 0;
+      top:17px;
+      left:-15px;
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.20);
+    }
+
+    &__item{
+      text-align:center;
+      font-size:16px;
+      font-weight: $font-weight-medium;
+      height:50px;
+      line-height: 50px;
+
+      &:not(:last-child){
+        margin-right:0
+      }
+    }
+  }
+
+  #menu-icon{
+    display:block;
+    position:absolute; 
+    right:0;
+    top:-40px;
+
+    svg{
+      width:34px;
+      height:34px;
+
+      path{
+        stroke: $purple;
+      }
     }
   }
 }
