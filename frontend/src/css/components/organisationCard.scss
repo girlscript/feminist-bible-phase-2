@@ -1,0 +1,33 @@
+@import "../settings/global";
+
+.orgCard{
+
+    &__container{
+        border-radius: 10px;
+        box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.1);
+        
+    }
+
+    &__logo {
+        background-color: #ffffff;
+        padding: 28px 70px 21px 70px;
+        display: flex;
+        justify-content: center;
+    }
+
+    &__text-container {
+        background-color: #F4F4F4;
+        padding: 20px;
+    }
+
+    &__sub-text{
+        font-size:14px; 
+    }
+
+    &__heading-text{
+        font-size:16px;
+        color: rgba(0, 0, 0, 1);
+        ;
+    }
+}
+
