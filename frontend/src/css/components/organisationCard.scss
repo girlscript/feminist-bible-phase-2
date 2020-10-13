@@ -4,15 +4,22 @@
 
     &__container{
         border-radius: 10px;
-        box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.1);
-        
+        filter: drop-shadow(0px 0px 4px rgba(0, 0, 0, 0.15));
+        overflow:hidden;
+        margin-bottom:30px;
     }
 
     &__logo {
         background-color: #ffffff;
-        padding: 28px 70px 21px 70px;
+        padding:28px 0;
         display: flex;
         justify-content: center;
+        align-items: center;
+    }
+
+    &__logoimg{
+        width:200px;
+        height:auto;
     }
 
     &__text-container {
@@ -22,12 +29,23 @@
 
     &__sub-text{
         font-size:14px; 
+        // font-weight: $font-weight-medium;
+    }
+
+    &__link{
+        color:#2F80ED;
+        font-size:14px;
+        text-decoration:underline;
+
+        &:hover{
+            color:#2F80ED;
+        }
     }
 
     &__heading-text{
         font-size:16px;
-        color: rgba(0, 0, 0, 1);
-        ;
+        color: #000;
+        font-weight: $font-weight-medium;
     }
 }
 
