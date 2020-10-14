@@ -1,41 +1,65 @@
-@import "../settings/global";
+@import "./global.scss";
 .hero {
   background-color: $yellow-bg;
-  padding:80px 0; 
-    
-  
+  margin: auto;
+  padding: 100px 0 150px 0;
 
-    &__blogImage{
-        border: 10px solid black;
-    }
-    &__title{
-      @extend h1;
-      
-      
-    }
-
-    &__profile{
-      height: 50px;
-      padding: 0;
-    }
-
-    &__social__icon{
-      height: 50px;
-      width: 50px;
-
-    }
-
-  
- 
+  &__title {
+    @extend h1;
   }
+  &__details {
+    display: flex;
+    flex-direction: row;
 
-  .main{
-    padding: 100px;
-    &__para__head{
-      color:#4A2343;
-      font-weight: bolder;
-      ;
+    &__author-date {
+      @extend h3;
+      @extend p;
     }
   }
 
-  
+  &__profile {
+    height: 80px;
+    width: auto;
+  }
+}
+
+.main {
+  padding: 100px;
+  &__para__head {
+    color: #4a2343;
+    font-weight: bolder;
+  }
+}
+
+.links {
+  padding-left: 8rem;
+
+  &__icon-wrap {
+    display: flex;
+    justify-content: flex-end;
+    margin-left: auto;
+
+    .links__icon {
+      width: 40px;
+      height: 40px;
+    }
+  }
+
+  &__location-wrap {
+    display: flex;
+    justify-content: flex-start;
+
+    .links__icon {
+      width: 40px;
+      height: 40px;
+    }
+
+    .location {
+      color: $text-color;
+      line-height: 27px;
+      margin-left: 10px;
+      text-align: center;
+      padding-top: 5px;
+    }
+  }
+}
