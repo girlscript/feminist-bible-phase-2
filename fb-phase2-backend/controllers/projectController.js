@@ -91,3 +91,25 @@ exports.getProject= async(req,res)=>{
 
 }
 
+//Update a project by _id
+exports.updateProject=async (req,res)=>{
+    try{
+        const result= await Project.updateOne({_id:req.params.id},{
+            $set:{
+                title:req.body.title,
+                description:req.body.description
+            }
+        });
+        return res.status(200).json({
+            message: "success",
+            data: result
+        })
+    }
+    catch (error) {
+        return res.status(400).json({
+            message:"fail",
+            error: error.message
+        })
+    }
+}
+
