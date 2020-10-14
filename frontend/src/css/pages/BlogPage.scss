@@ -1,0 +1,41 @@
+@import "../settings/global";
+.hero {
+  background-color: $yellow-bg;
+  padding:80px 0; 
+    
+  
+
+    &__blogImage{
+        border: 10px solid black;
+    }
+    &__title{
+      @extend h1;
+      
+      
+    }
+
+    &__profile{
+      height: 50px;
+      padding: 0;
+    }
+
+    &__social__icon{
+      height: 50px;
+      width: 50px;
+
+    }
+
+  
+ 
+  }
+
+  .main{
+    padding: 100px;
+    &__para__head{
+      color:#4A2343;
+      font-weight: bolder;
+      ;
+    }
+  }
+
+  
