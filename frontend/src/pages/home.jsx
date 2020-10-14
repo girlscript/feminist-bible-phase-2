@@ -7,12 +7,12 @@ import "../css/pages/home.scss";
 import BlogCard from "../components/BlogCard";
 
 //Images
-import GoogleAd from "../images/GoogleAds.png";
-import Microsoft from "../images/Microsoft.png";
-import Model from "../images/model.png";
-import Amazon from "../images/amazon.png";
-import Figma from "../images/figma.png";
-import Triangle from "../images/Graphics.svg";
+import GoogleAd from "../images/homepage/partners-logo/GoogleAds.png";
+import Microsoft from "../images/homepage/partners-logo/Microsoft.png";
+import Model from "../images/homepage/partners-logo/model.png";
+import Amazon from "../images/homepage/partners-logo/amazon.png";
+import Figma from "../images/homepage/partners-logo/figma.png";
+import Triangle from "../images/homepage/Graphics.svg";
 
 class Home extends Component {
   render() {
