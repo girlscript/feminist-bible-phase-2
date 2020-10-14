@@ -3,13 +3,15 @@ const Project = require('../database/models/projectModel')
 //create a project
 exports.createProject = async (req, res)=>{
     try{
-        console.log(req.body)
-        const project = new Project({
-            ...req.body,
-        }) 
-        console.log(project)
-        await project.save();
-        res.status(200).json({
+        const {title, description,postedBy}=req.body;
+        if (!title || !description) {
+            return res.status(400).json({
+                status: 'fail',
+                message: 'Fields cannot be empty',
+            });
+        }
+        const project = await Project.create(req.body);
+        res.status(201).json({
             status: 'success',
             data: project,
           });
@@ -60,3 +62,32 @@ exports.getProjectsOrgWise = async (req, res) =>{
         })
       }
 } 
+
+//Get a single project b project ID
+
+exports.getProject= async(req,res)=>{
+  try {
+    const project = await Project.findOne({ _id: req.params.projectId});
+    if (!project) {
+      return res.status(400).json({
+        status: 'fail',
+        message: 'No project found',
+      });
+    }
+    res.status(200).json({
+      message: 'Success',
+      data: project,
+    });
+  } catch (error) {
+    const err_code = error.err_code
+    ? err.code >= 100 && err.code <= 599
+      ? err.code
+      : 500
+    : 500;
+  res.status(err_code).json({ status:'fail',message: error.message || 'Internal Server Error' });
+
+
+}
+
+}
+

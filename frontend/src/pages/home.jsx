@@ -7,12 +7,12 @@ import "../css/pages/home.scss";
 import BlogCard from "../components/BlogCard";
 
 //Images
-import GoogleAd from "../images/GoogleAds.png";
-import Microsoft from "../images/Microsoft.png";
-import Model from "../images/model.png";
-import Amazon from "../images/amazon.png";
-import Figma from "../images/figma.png";
-import Triangle from "../images/Graphics.svg";
+import GoogleAd from "../images/homepage/partners-logo/GoogleAds.png";
+import Microsoft from "../images/homepage/partners-logo/Microsoft.png";
+import Model from "../images/homepage/partners-logo/model.png";
+import Amazon from "../images/homepage/partners-logo/amazon.png";
+import Figma from "../images/homepage/partners-logo/figma.png";
+import Triangle from "../images/homepage/Graphics.svg";
 
 class Home extends Component {
   render() {
@@ -116,19 +116,21 @@ class Home extends Component {
                     Read the impact stories from around the world
                   </p>
                 </div>
-                <div className="cell large-4">
+                <div className="cell medium-6 large-4">
                   <BlogCard />
                 </div>
-                <div className="cell large-4">
+                <div className="cell medium-6 large-4">
                   <BlogCard />
                 </div>
-                <div className="cell large-4">
+                <div className="cell medium-6 large-4">
                   <BlogCard />
                 </div>
-                <div className="cell large-12" style={{ marginTop: "82px", textAlign:"center"}}>
-                  <a href="test" className="button__big button__big--hollow">
-                    SEE ALL STORIES
-                  </a>
+                <div className="cell large-12">
+                  <div className="section__button-container">
+                    <a href="test" className="button__big button__big--hollow">
+                      SEE ALL STORIES
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>
@@ -141,26 +143,54 @@ class Home extends Component {
           }}
         >
           <div className="section">
-              <div className="grid-container">
-                <div className="grid-x grid-margin-x">
-                  <div className="cell large-12">
-                    <h2 className="section__title">Our Partners</h2>
-                    <p className="section__text">
-                      We thank all our wonderful partners for all the support
-                    </p>
-                  </div>
+            <div className="grid-container">
+              <div className="grid-x grid-margin-x">
+                <div className="cell large-12">
+                  <h2 className="section__title">Our Partners</h2>
+                  <p className="section__text">
+                    We thank all our wonderful partners for all the support
+                  </p>
+                </div>
 
-                  <div className="section__partner-logo-container">
-                    <img className="section__partner-logo" src={GoogleAd} alt="Google Ads logo"/>
-                    <img className="section__partner-logo" src={Microsoft} alt="Microsoft logo"/>
-                    <img className="section__partner-logo" src={Model} alt="Model logo"/>
-                    <img className="section__partner-logo" src={Amazon} alt="Amazon logo"/>
-                    <img className="section__partner-logo" src={Model} alt="Model logo"/>
-                    <img className="section__partner-logo" src={Figma} alt="Figma logo"/>
-                    <img className="section__partner-logo" src={GoogleAd} alt="Google Ads logo"/>
-                  </div>
+                <div className="section__partner-logo-container">
+                  <img
+                    className="section__partner-logo"
+                    src={GoogleAd}
+                    alt="Google Ads logo"
+                  />
+                  <img
+                    className="section__partner-logo"
+                    src={Microsoft}
+                    alt="Microsoft logo"
+                  />
+                  <img
+                    className="section__partner-logo"
+                    src={Model}
+                    alt="Model logo"
+                  />
+                  <img
+                    className="section__partner-logo"
+                    src={Amazon}
+                    alt="Amazon logo"
+                  />
+                  <img
+                    className="section__partner-logo"
+                    src={Model}
+                    alt="Model logo"
+                  />
+                  <img
+                    className="section__partner-logo"
+                    src={Figma}
+                    alt="Figma logo"
+                  />
+                  <img
+                    className="section__partner-logo"
+                    src={GoogleAd}
+                    alt="Google Ads logo"
+                  />
                 </div>
               </div>
+            </div>
           </div>
         </div>
       </>

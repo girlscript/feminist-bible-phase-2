@@ -5,10 +5,12 @@ const projectSchema = new mongoose.Schema(
     title: {
       type: String,
       trim: true,
+        required: [true, 'Please provide a title'],
     },
     description: {
       type: String,
       trim: true,
+        required: [true, 'Please provide a description'],
     },
     postedBy: {
       type: mongoose.Schema.ObjectId,

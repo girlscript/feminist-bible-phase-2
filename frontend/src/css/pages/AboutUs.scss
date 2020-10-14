@@ -1,0 +1,55 @@
+@import "../settings/global";
+
+.about {
+  padding: 145px 0px 145px 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  h1 {
+    color: $title-color;
+  }
+}
+
+.coFounder {
+  margin: auto;
+  display: flex;
+  padding-bottom: 145px;
+  justify-content: center;
+  align-items: center;
+
+
+  h1 {
+    margin-bottom: 32px;
+    color: $title-color;
+  }
+
+  
+
+  &-name {
+    display: flex;
+    justify-content: space-between;
+    margin: 25px 0;
+    h3 {
+        font-size: 24px;
+        color: $title-color;
+      }
+
+      img{
+          height: 90%;
+      }
+  }
+
+  &-details__list{
+    list-style: none;
+    margin-left: 0;
+    li {
+      @extend .text;
+      margin-bottom: 14px;
+
+    }
+   
+  }
+}
+
+

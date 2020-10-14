@@ -121,12 +121,14 @@ exports.deleteStory = async (req, res) => {
     if (!story_id) {
       throw new NotFoundError(`Story with ${story_id} could not be found`);
     }
-    await Story.findOneAndDelete({ _id: story_id }, (err, deletedStory) => {
-     res.status(200).json({
-         status:'success',
-        message: 'Story deleted successfully',
-        });
+    await Story.findOneAndDelete({ _id: story_id });
+    res.json({
+      status:'success',
+      message:'Deleted Story Successfully'
+      
     });
+
+  
   } catch (err) {
     res.json({
       status:'fail', 
