@@ -1,8 +1,5 @@
 import React, { Component } from "react";
 
-//style
-import "../css/pages/org-list.scss";
-
 //Components
 import OrganizationCard from "../components/OrganisationCard.jsx";
 

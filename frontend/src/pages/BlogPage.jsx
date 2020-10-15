@@ -1,7 +1,5 @@
 import React, { Component } from "react";
 
-import "../css/pages/BlogPage.scss";
-
 import Avatar from "../components/Avatar";
 
 import Linkedin from "../images/linkedin-icon.png";

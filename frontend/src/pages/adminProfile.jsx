@@ -1,8 +1,5 @@
 import React, {Component} from "react";
 
-//style
-import "../css/pages/adminProfile.scss";
-
 //Components
 import BlogCard from "../components/BlogCard";
 

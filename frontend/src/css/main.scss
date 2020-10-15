@@ -1,3 +1,6 @@
+// For naming convention, please read the NAMING_CONVENTION.md file. 
+// The file is available here ./frontend/rules_and_conventions/
+
 @import "./settings/global";
 
 // COMPONENETS
@@ -14,3 +17,9 @@
 
 // PAGES
 @import "./pages/home";
+@import "./pages/code-of-conduct";
+@import "./pages/org-list";
+@import "./pages/about-us";
+@import "./pages/blog-article";
+@import "./pages/registration";
+

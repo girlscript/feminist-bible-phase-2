@@ -1,8 +1,5 @@
 import React, { Component } from "react";
 
-//style
-import "../css/pages/AboutUs.scss";
-
 //Images
 import linkedIn from "../images/linkedin 1.png";
 import img_1 from "../images/img-1.png";

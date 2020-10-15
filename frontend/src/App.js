@@ -7,15 +7,17 @@ import "./css/main.scss";
 // components
 import Footer from "./components/Footer.jsx";
 import Header from "./components/Header.jsx";
-import avatar_image from "./images/placeholder-images/avatar.png";
 
 // pages
 import Home from "./pages/home.jsx";
 import Registration from "./pages/Registration";
 import AboutUs from "./pages/AboutUs.jsx";
-import AdminProfile from "./pages/adminProfile.jsx";
+// import AdminProfile from "./pages/adminProfile.jsx";
 import OrganizationList from "./pages/OrganizationList.jsx";
 import CodeOfConduct from "./pages/CodeOfConduct.jsx";
+
+// images
+import avatar_image from "./images/placeholder-images/avatar.png";
 
 function App() {
   return (
@@ -28,7 +30,7 @@ function App() {
         <AboutUs path="/about" exact />
         <OrganizationList path="/organization" exact />
         <CodeOfConduct path="/code-of-conduct" exact />
-        <AdminProfile path="/admin" exact />
+        {/* <AdminProfile path="/admin" exact /> */}
       </Switch>
 
       <Footer />
