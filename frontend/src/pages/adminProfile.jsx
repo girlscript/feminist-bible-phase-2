@@ -21,7 +21,7 @@ class AdminProfile extends Component {
                     <div className="grid-container">
                         <div className="grid-x grid-margin-x">
                             <div className="cell large-4 ">
-                                <img src={ProfilePic} className="hero-section__image" />
+                                <img src={ProfilePic} className="hero-section__image" alt="Profile Pic" />
                             </div>
                             <div className="cell large-7 large-offset-1">
                                 <h3 className="hero-section__designation">Founder</h3>
