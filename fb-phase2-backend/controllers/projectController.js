@@ -100,9 +100,11 @@ exports.updateProject=async (req,res)=>{
                 description:req.body.description
             }
         });
+        const project=await Project.findById(req.params.id);
+
         return res.status(200).json({
             message: "success",
-            data: result
+            project: project
         })
     }
     catch (error) {
