@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import "../css/components/footer.scss";
+// import "../css/components/footer.scss";
 import mp_rk_logo from "../images/company-assets/mp_rk_logo.png";
 
 class Footer extends Component {

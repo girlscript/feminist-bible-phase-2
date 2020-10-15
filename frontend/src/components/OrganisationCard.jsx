@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import "../css/components/organisationCard.scss";
 import org_logo from "../images/homepage/partners-logo/amazon.png";
 
 class OrganisationCard extends Component {

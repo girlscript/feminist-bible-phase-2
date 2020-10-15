@@ -1,0 +1,16 @@
+@import "./settings/global";
+
+// COMPONENETS
+@import "./components/button";
+@import "./components/avatar";
+@import "./components/blogCard";
+@import "./components/projectCard";
+@import "./components/organisationCard";
+@import "./components/input";
+
+// MAJOR COMPONENETS
+@import "./components/header";
+@import "./components/footer";
+
+// PAGES
+@import "./pages/home";
