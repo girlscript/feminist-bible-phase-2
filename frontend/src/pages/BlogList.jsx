@@ -1,9 +1,8 @@
 import React, { Component } from "react";
-import "../css/components/BlogList.scss";
-import BlogCard from "./BlogCard";
-import blog_img from "../images/blog_img.png";
+import BlogCard from "../components/BlogCard";
+import blog_img from "../images/placeholder-images/blog_img.png";
 import avatar_image from "../images/placeholder-images/avatar.png";
-import Avatar from "./Avatar.jsx";
+import Avatar from "../components/Avatar.jsx";
 
 class BlogList extends Component {
   render() {

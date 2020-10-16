@@ -1,14 +1,13 @@
-// For naming convention, please read the NAMING_CONVENTION.md file. 
-// The file is available here ./frontend/rules_and_conventions/
+// For naming convention, please read the README.md file in the frontend folder. 
 
 @import "./settings/global";
 
 // COMPONENETS
 @import "./components/button";
 @import "./components/avatar";
-@import "./components/blogCard";
-@import "./components/projectCard";
-@import "./components/organisationCard";
+@import "./components/blog-card";
+@import "./components/project-card";
+@import "./components/organisation-card";
 @import "./components/input";
 
 // MAJOR COMPONENETS
@@ -22,4 +21,5 @@
 @import "./pages/about-us";
 @import "./pages/blog-article";
 @import "./pages/registration";
+@import "./pages/blog-list";
 
