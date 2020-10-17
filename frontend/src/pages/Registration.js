@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import '../css/pages/registration.scss';
 import { Input, WithPasswordStrength } from '../components/input';
 import { Link } from 'react-router-dom';
 

@@ -1,12 +1,14 @@
-@import "../settings/global";
-
 .hero-section {
     background-color: $yellow-bg;
-    padding:80px 0;
+    padding:70px 0;
 
     &__image {
-        width: 100%;
-        padding-top: 20px;
+        width: 300px;
+        padding-bottom:100%;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size:cover;
+        border-radius:100%;
     }
 
     &__designation {

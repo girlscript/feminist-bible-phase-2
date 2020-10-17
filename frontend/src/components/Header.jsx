@@ -2,8 +2,6 @@ import React, { Component } from "react";
 import { Link, NavLink } from "react-router-dom";
 import Avatar from "./Avatar.jsx";
 
-import "../css/components/header.scss";
-
 // images/
 import logo from "../images/company-assets/feminist_bible_logo.png";
 

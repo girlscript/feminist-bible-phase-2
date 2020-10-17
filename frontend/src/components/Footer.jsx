@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import "../css/components/footer.scss";
+// import "../css/components/footer.scss";
 import mp_rk_logo from "../images/company-assets/mp_rk_logo.png";
 
 class Footer extends Component {
@@ -47,7 +47,7 @@ class Footer extends Component {
 
             <div className="cell large-12">
               <div className="company__wrap">
-                <img src={mp_rk_logo} className="company__logo" />
+                <img src={mp_rk_logo} className="company__logo" alt="Company" />
                 <div className="company__copyright">
                   <span>Copyright 2020</span>
                   <span>MP &amp; RK Company</span>

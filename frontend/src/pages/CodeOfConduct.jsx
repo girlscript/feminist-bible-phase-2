@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import "../css/pages/CodeofConduct.scss";
 
 // images
 import hero_img from "../images/code-of-conduct/hero_img.png";
