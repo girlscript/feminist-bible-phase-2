@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import "../css/components/projectCard.scss";
 import mail_gun_logo from "../images/mailgunlogo.png";
 
 class ProjectCard extends Component {

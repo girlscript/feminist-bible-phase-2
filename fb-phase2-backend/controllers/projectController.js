@@ -44,21 +44,74 @@ exports.getProjectsOrgWise = async (req, res) =>{
         const projects = await Project.find({postedBy: req.params.orgid})
         if(projects.length === 0){
           res.status(400).json({
-            message:"fail",
+            status:"fail",
             error: "No projects found"
           })
         }
         else{
           res.status(200).json({
-            message: "success",
-            projects: projects
+            status: "success",
+            data: projects
           })
         }
         
       } catch (error) {
         res.status(400).json({
-          message:"fail",
+          status:"fail",
           error: error
         })
       }
+}
+//delete project
+exports.deleteProject =  async (req, res)=>{
+    try{
+      const project = await Project.findOneAndDelete({_id: req.params.projectid})
+      if(!project){
+          //project not found
+          res.status(400).json({
+            status: "fail",
+            message: "Project not found."
+          })
+      } else {
+        res.status(200).json({
+          status: "success",
+          message: "Project deleted successfully."
+        })
+      }
+    }catch(e) {
+        res.status(400).json({
+          status: "fail",
+          message: e
+        })
+    }
+  }
 } 
+
+//Get a single project b project ID
+
+exports.getProject= async(req,res)=>{
+  try {
+    const project = await Project.findOne({ _id: req.params.projectId});
+    if (!project) {
+      return res.status(400).json({
+        status: 'fail',
+        message: 'No project found',
+      });
+    }
+    res.status(200).json({
+      message: 'Success',
+      data: project,
+    });
+  } catch (error) {
+    const err_code = error.err_code
+    ? err.code >= 100 && err.code <= 599
+      ? err.code
+      : 500
+    : 500;
+  res.status(err_code).json({ status:'fail',message: error.message || 'Internal Server Error' });
+
+
+}
+
+}
+

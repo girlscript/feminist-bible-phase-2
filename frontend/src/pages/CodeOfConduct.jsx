@@ -1,9 +1,10 @@
 import React, { Component } from "react";
-import hero_img from "../images/hero_img.png";
-import "../css/pages/CodeofConduct.scss";
-import equity from "../images/equity.png";
-import life_choices from "../images/life_choices.png";
-import voice_matters from "../images/voice_matters.png";
+
+// images
+import hero_img from "../images/code-of-conduct/hero_img.png";
+import equity from "../images/code-of-conduct/equity.png";
+import life_choices from "../images/code-of-conduct/life_choices.png";
+import voice_matters from "../images/code-of-conduct/voice_matters.png";
 
 class CodeOfConduct extends Component {
   render() {

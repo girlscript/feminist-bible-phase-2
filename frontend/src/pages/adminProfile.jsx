@@ -1,8 +1,5 @@
 import React, {Component} from "react";
 
-//style
-import "../css/pages/adminProfile.scss";
-
 //Components
 import BlogCard from "../components/BlogCard";
 
@@ -11,7 +8,7 @@ import LocationIcon from "../images/location-pin.png";
 import Linkedin from "../images/linkedin-icon.png";
 import Facebook from "../images/fb-icon.png";
 import Twitter from "../images/twitter-icon.png";
-import ProfilePic from "../images/rashmeet.png";
+import ProfilePic from "../images/placeholder-images/blog_img.png";
 
 class AdminProfile extends Component {
     render() {
@@ -21,9 +18,9 @@ class AdminProfile extends Component {
                     <div className="grid-container">
                         <div className="grid-x grid-margin-x">
                             <div className="cell large-4 ">
-                                <img src={ProfilePic} className="hero-section__image" />
+                                <div className="hero-section__image" style={{backgroundImage: `url(${ProfilePic})`}}></div>
                             </div>
-                            <div className="cell large-7 large-offset-1">
+                            <div className="cell large-8">
                                 <h3 className="hero-section__designation">Founder</h3>
                                 <h2 className="hero-section__name">Rashmeet Kaur</h2>
                                 <div className="links">
@@ -57,7 +54,6 @@ class AdminProfile extends Component {
                                 <h2 className="article-section__heading">Articles By Admins</h2>
                                 <h3 className="article-section__sub-heading">Directly into your inbox every monday morning</h3>
                             </div>
-                            <>
                               <div className="cell large-4 small-12">
                                 <BlogCard />
                               </div>
@@ -67,7 +63,6 @@ class AdminProfile extends Component {
                               <div className="cell large-4 small-12">
                                 <BlogCard />
                               </div>
-                            </>
                         </div>
                     </div>
                 </div>
