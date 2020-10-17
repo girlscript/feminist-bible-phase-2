@@ -9,17 +9,17 @@ import Footer from "./components/Footer.jsx";
 import Header from "./components/Header.jsx";
 import Notification from"./components/Notification.jsx";
 
+//images
+import avatar_image from "./images/placeholder-images/avatar.png";
+
 // pages
 import Home from "./pages/home.jsx";
 import Registration from "./pages/Registration";
-import AboutUs from "./pages/AboutUs.jsx";
-// import AdminProfile from "./pages/adminProfile.jsx";
-import OrganizationList from "./pages/OrganizationList.jsx";
-import CodeOfConduct from "./pages/CodeOfConduct.jsx";
+import AboutUs from "./pages/AboutUs";
+import AdminProfile from "./pages/adminProfile";
+import CodeOfConduct from "./pages/CodeOfConduct.jsx"
 import BlogList from "./pages/BlogList.jsx";
-
-// images
-import avatar_image from "./images/placeholder-images/avatar.png";
+import OrganizationList from "./pages/OrganizationList.jsx";
 
 function App() {
   return (
