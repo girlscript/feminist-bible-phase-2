@@ -1,0 +1,37 @@
+.notification{
+    display: flex;    
+    background-color: #E7EDF3;
+    border-radius: 10px;
+    padding: 20px 100px ;
+
+
+    &__profile-wrap{
+        display: flex;
+        justify-content: flex-start;
+    }
+
+    &__review-wrap{
+        display: flex;
+        justify-content: flex-end;
+        margin-left: auto;
+    }
+
+    &__username {
+        margin-left: 10px;
+        padding-top: 5px;
+        color: #2F80ED;
+    }
+
+    &__article{
+        margin-left: 5px;
+        padding-top: 5px;
+    }
+
+    .button__xsmall--hollow{
+        border: 2px solid $purple;
+    }
+
+    .button__xsmall{
+        color: $purple;
+    }
+}

@@ -7,6 +7,7 @@ import "./css/main.scss";
 // components
 import Footer from "./components/Footer.jsx";
 import Header from "./components/Header.jsx";
+import Notification from"./components/Notification.jsx";
 
 // pages
 import Home from "./pages/home.jsx";
@@ -24,8 +25,8 @@ function App() {
   return (
     <Router>
       <Header isSignedIn={false} avatarSrc={avatar_image} />
-     
-
+     <br/>
+      
       <Switch>
         <Home path="/" exact />
         <Registration path="/register" exact />
