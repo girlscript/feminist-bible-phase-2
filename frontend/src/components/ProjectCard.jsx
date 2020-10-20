@@ -33,8 +33,7 @@ class ProjectCard extends Component {
 export default ProjectCard;
 */
 import React, { Component } from "react";
-import "../css/components/projectCard.scss";
-import mailgunlogo from "../images/mailgunlogo.png";
+import mailgunlogo from "../images/placeholder-images/mailgunlogo.png";
 
 class ProjectCard extends Component {
   render() {
