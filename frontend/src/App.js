@@ -15,8 +15,9 @@ import AboutUs from "./pages/AboutUs.jsx";
 // import AdminProfile from "./pages/adminProfile.jsx";
 import OrganizationList from "./pages/OrganizationList.jsx";
 import CodeOfConduct from "./pages/CodeOfConduct.jsx";
-import BlogList from "./pages/BlogList.jsx";
+import ProjectListing from "./pages/ProjectListing.jsx";
 
+import BlogList from "./pages/BlogList.jsx";
 // images
 import avatar_image from "./images/placeholder-images/avatar.png";
 
@@ -34,7 +35,7 @@ function App() {
         {/* <AdminProfile path="/admin" exact /> */}
         <BlogList path="/bloglist" exact />
       </Switch>
-
+    <ProjectListing/>
       <Footer />
     </Router>
   );
