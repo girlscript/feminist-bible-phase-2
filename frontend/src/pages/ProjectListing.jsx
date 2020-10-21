@@ -1,10 +1,10 @@
 import React, { Component } from "react";
-import mailgunlogo from "../images/mailgunlogo.png";
-import firefoxlogo from "../images/firefoxlogo.png";
-import webpacklogo from "../images/webpacklogo.png";
+//import mailgunlogo from "../images/mailgunlogo.png";
+//import firefoxlogo from "../images/firefoxlogo.png";
+//import webpacklogo from "../images/webpacklogo.png";
 import ProjectCard from "../components/ProjectCard.jsx";
 
-import "../css/pages/ProjectListing.scss";
+//import "../css/pages/ProjectListing.scss";
 
 class ProjectListing extends Component {
   render() {
@@ -27,7 +27,7 @@ class ProjectListing extends Component {
     ];
 
     return (
-      <div className="ProjectListing">
+      
         <div className="grid-container">
           <div className="cell large-7">
             <h1 className="ProjectListing__title">All Projects</h1>
@@ -35,19 +35,27 @@ class ProjectListing extends Component {
 
           <div className="grid-x grid-margin-x">
             <div className="cell large-12">
-              <ProjectCard title={data[0].title} text={data[0].text} />
+              <div className="ProjectListing__card">
+                <ProjectCard title={data[0].title} text={data[0].text} />
+              </div>
             </div>
 
             <div className="cell large-12">
-              <ProjectCard title={data[1].title} text={data[1].text} />
+              <div className="ProjectListing__card">
+                <ProjectCard title={data[1].title} text={data[1].text} />
+              </div>
             </div>
 
             <div className="cell large-12">
-              <ProjectCard title={data[2].title} text={data[2].text} />
+              <div className="ProjectListing__card">
+                <ProjectCard title={data[2].title} text={data[2].text} />
+              </div>
             </div>
           </div>
+          <br/>
+          <br/>
         </div>
-      </div>
+    
     );
   }
 }
