@@ -33,7 +33,7 @@ class ProjectCard extends Component {
 export default ProjectCard;
 */
 import React, { Component } from "react";
-//import mailgunlogo from "../images/mailgunlogo.png";
+import mailgunlogo from "../images/placeholder-images/mailgunlogo.png";
 
 class ProjectCard extends Component {
   render() {
@@ -42,7 +42,7 @@ class ProjectCard extends Component {
         <div className="grid-x">
           <div className="cell medium-shrink">
             <div className="project-card__img-container">
-              <img /*src={mailgunlogo}*/ alt="MailGun" />
+              <img src={mailgunlogo} alt="MailGun" />
             </div>
           </div>
           <div className="cell medium-auto">

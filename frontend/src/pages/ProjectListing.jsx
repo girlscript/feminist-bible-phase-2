@@ -1,10 +1,5 @@
 import React, { Component } from "react";
-//import mailgunlogo from "../images/mailgunlogo.png";
-//import firefoxlogo from "../images/firefoxlogo.png";
-//import webpacklogo from "../images/webpacklogo.png";
 import ProjectCard from "../components/ProjectCard.jsx";
-
-//import "../css/pages/ProjectListing.scss";
 
 class ProjectListing extends Component {
   render() {
