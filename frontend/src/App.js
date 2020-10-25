@@ -15,7 +15,7 @@ import AboutUs from "./pages/AboutUs.jsx";
 // import AdminProfile from "./pages/adminProfile.jsx";
 import OrganizationList from "./pages/OrganizationList.jsx";
 import CodeOfConduct from "./pages/CodeOfConduct.jsx";
-import BlogList from "./pages/BlogList.jsx";
+import Stories from "./pages/Stories.jsx";
 
 // images
 import avatar_image from "./images/placeholder-images/avatar.png";
@@ -32,7 +32,7 @@ function App() {
         <OrganizationList path="/organization" exact />
         <CodeOfConduct path="/code-of-conduct" exact />
         {/* <AdminProfile path="/admin" exact /> */}
-        <BlogList path="/bloglist" exact />
+        <Stories path="/stories" exact />
       </Switch>
 
       <Footer />
