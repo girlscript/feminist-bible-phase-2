@@ -10,8 +10,8 @@
   }
 
   &__title {
-    @extend h1;
     margin-bottom:50px;
+    text-align: justify;
   }
 
   &__featured{

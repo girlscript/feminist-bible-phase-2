@@ -1,64 +1,22 @@
-.hero {
-  background-color: $yellow-bg;
-  margin: auto;
-  padding: 100px 0 150px 0;
-
-  &__title {
-    @extend h1;
-  }
-  &__details {
-    display: flex;
-    flex-direction: row;
-
-    &__author-date {
-      @extend h3;
-      @extend p;
-    }
-  }
-
-  &__profile {
-    height: 80px;
-    width: auto;
-  }
+.blog-page{
+  background-color:$yellow-bg;
 }
 
-.main {
-  padding: 100px;
-  &__para__head {
-    color: #4a2343;
-    font-weight: bolder;
-  }
-}
+.article{
+  padding: 50px;
+  background-color:$yellow-bg;
 
-.links {
-  padding-left: 8rem;
+  &__content{
+    line-height: 26px;
+    text-align: justify;
 
-  &__icon-wrap {
-    display: flex;
-    justify-content: flex-end;
-    margin-left: auto;
-
-    .links__icon {
-      width: 40px;
-      height: 40px;
+    &:not(:last-child){
+      margin-bottom:40px;
     }
-  }
-
-  &__location-wrap {
-    display: flex;
-    justify-content: flex-start;
-
-    .links__icon {
-      width: 40px;
-      height: 40px;
-    }
-
-    .location {
-      color: $text-color;
-      line-height: 27px;
-      margin-left: 10px;
-      text-align: center;
-      padding-top: 5px;
+    &.quote {
+      color: $lilac;
+      font-weight:$font-weight-semi-bold;
+      // font-style: italic;
     }
   }
 }
