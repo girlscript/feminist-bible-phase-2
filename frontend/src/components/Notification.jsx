@@ -15,7 +15,7 @@ class Notification extends Component{
                     <p className="review-notification__article">added this article</p>
                 </div>
                 <div className="review-notification__review-wrap">
-                    <a href="#" className="button__xsmall button__xsmall--hollow">Review</a>
+                    <a href="#" className="button__small button__small--hollow">Review</a>
                 </div>
             </div>
         );
