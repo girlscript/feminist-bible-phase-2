@@ -12,7 +12,7 @@ import Header from "./components/Header.jsx";
 import Home from "./pages/home.jsx";
 import Registration from "./pages/Registration";
 import AboutUs from "./pages/AboutUs.jsx";
-// import AdminProfile from "./pages/adminProfile.jsx";
+import AdminProfile from "./pages/adminProfile.jsx";
 import OrganizationList from "./pages/OrganizationList.jsx";
 import CodeOfConduct from "./pages/CodeOfConduct.jsx";
 import Stories from "./pages/Stories.jsx";
@@ -32,7 +32,7 @@ function App() {
         <AboutUs path="/about" exact />
         <OrganizationList path="/organization" exact />
         <CodeOfConduct path="/code-of-conduct" exact />
-        {/* <AdminProfile path="/admin" exact /> */}
+        <AdminProfile path="/admin" exact />
         <Stories path="/stories" exact />
         <BlogPage path="/stories/post" exact/>
       </Switch>
