@@ -20,13 +20,21 @@ class Header extends Component {
     })
   }
 
+  hideNav = () =>{
+    if(window.innerWidth <= 640){
+      this.setState({
+        navHidden: true,
+      })
+    }
+  }
+
   render() {
     return (
       <header className="header">
         <div className="grid-container">
           <div className="grid-x grid-margin-x">
             <div className="cell medium-3">
-              <Link to="/">
+              <Link to="/" onClick={this.hideNav}>
                 <img
                   src={logo}
                   alt="feminist bible logo"
@@ -37,22 +45,22 @@ class Header extends Component {
             <div className="cell medium-9">
               <nav className="nav">
                 <ul className="nav__item-container" style={{display: this.state.navHidden?'none':'flex'}}>
-                  <li className="nav__item">
+                  <li className="nav__item" onClick={this.hideNav}>
                     <NavLink to="/forum" activeClassName="active">
                       Forum
                     </NavLink>
                   </li>
-                  <li className="nav__item">
+                  <li className="nav__item" onClick={this.hideNav}>
                     <NavLink to="/stories" activeClassName="active">
                       Stories
                     </NavLink>
                   </li>
-                  <li className="nav__item">
+                  <li className="nav__item" onClick={this.hideNav}>
                     <NavLink to="/organization" activeClassName="active">
                       Organizations
                     </NavLink>
                   </li>
-                  <li className="nav__item">
+                  <li className="nav__item" onClick={this.hideNav}>
                     <NavLink to="/about" activeClassName="active">
                       About
                     </NavLink>
@@ -73,7 +81,7 @@ class Header extends Component {
                       </li>
                     </>
                   ) : (
-                    <li className="nav__item">
+                    <li className="nav__item" onClick={this.hideNav}>
                       <NavLink to="/login" activeClassName="active">
                         Login
                       </NavLink>
@@ -86,9 +94,9 @@ class Header extends Component {
                     viewBox="0 0 24 24"
                   >
                     <path
-                      stroke-linecap="round"
-                      stroke-miterlimit="10"
-                      stroke-width="2"
+                      strokeLinecap="round"
+                      strokeMiterlimit="10"
+                      strokeWidth="2"
                       d="M3 12L21 12M3 6L21 6M3 18L21 18"
                     />
                   </svg>

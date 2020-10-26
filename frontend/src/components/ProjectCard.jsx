@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import mail_gun_logo from "../images/mailgunlogo.png";
+import mail_gun_logo from "../images/placeholder-images/mailgunlogo.png";
 
 class ProjectCard extends Component {
   render() {
