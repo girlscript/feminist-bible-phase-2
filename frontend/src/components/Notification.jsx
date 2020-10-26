@@ -8,13 +8,13 @@ class Notification extends Component{
 
     render(){
         return(
-            <div className="notification">
-                <div className="notification__profile-wrap">
+            <div className="review-notification">
+                <div className="review-notification__profile-wrap">
                     <Avatar avatarSrc={avatar_image}/>
-                    <h3 className="notification__username">@Shwetal </h3>
-                    <p className="notification__article">added this article</p>
+                    <h3 className="review-notification__username">@Shwetal </h3>
+                    <p className="review-notification__article">added this article</p>
                 </div>
-                <div className="notification__review-wrap">
+                <div className="review-notification__review-wrap">
                     <a href="#" className="button__xsmall button__xsmall--hollow">Review</a>
                 </div>
             </div>
