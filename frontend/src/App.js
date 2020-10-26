@@ -26,7 +26,7 @@ function App() {
     <Router>
       <Header isSignedIn={false} avatarSrc={avatar_image} />
      <br/>
-      
+      {/* <Notification/> */}
       <Switch>
         <Home path="/" exact />
         <Registration path="/register" exact />
