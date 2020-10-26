@@ -76,6 +76,12 @@
 
 // for medium sized devices - tablets
 @media only screen and (max-width: 1024px) {
+  .hero{
+    &__image{
+      height:500px;
+      margin-top: 40px;
+    }
+  }
   .blog-card {
     &__container {
       margin-bottom: 30px;
