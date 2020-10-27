@@ -26,6 +26,7 @@
     font-family: "Poppins", sans-serif;
     cursor: pointer;
     transition: 0.2s ease-in-out;
+    box-sizing: border-box;
 
     //modifiers
     &--pink {

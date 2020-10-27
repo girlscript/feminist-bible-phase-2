@@ -5,18 +5,16 @@ import Avatar from "./Avatar.jsx";
 import avatar_image from "../images/placeholder-images/avatar.png";
 
 class Notification extends Component{
-
     render(){
         return(
             <div className="review-notification">
                 <div className="review-notification__profile-wrap">
                     <Avatar avatarSrc={avatar_image} />
-                    <p className="review-notification__username">@Shwetal </p>
-                    <p className="review-notification__article">added this article</p>
+                    <p className="review-notification__message">
+                        <a href="#linkToAuthor" className="username">@shwetal</a> added this article.
+                    </p>
                 </div>
-                <div className="review-notification__review-wrap">
-                    <a href="#" className="button__small button__small--hollow">Review</a>
-                </div>
+                <a href="#test" className="button__small button__small--hollow">Review</a>
             </div>
         );
     }
