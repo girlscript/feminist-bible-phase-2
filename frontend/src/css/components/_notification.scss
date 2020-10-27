@@ -1,0 +1,35 @@
+.review-notification{
+    display: flex;    
+    background-color: #E7EDF3;
+    border-radius: 10px;
+    padding: 20px 30px ;
+
+
+    &__profile-wrap{
+        display: flex;
+        justify-content: flex-start;
+        position: relative;
+        top: 1px;
+    }
+
+    &__review-wrap{
+        display: flex;
+        justify-content: flex-end;
+        margin-left: auto;
+    }
+
+    &__username {
+        margin-left: 10px;
+        color: #2F80ED;
+        position: relative;
+        top: 8px;
+    }
+
+    &__article{
+        margin-left: 5px;
+        position: relative;
+        top: 8px;
+    }
+
+   
+}

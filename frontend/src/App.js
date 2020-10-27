@@ -18,6 +18,7 @@ import CodeOfConduct from "./pages/CodeOfConduct.jsx";
 import Stories from "./pages/Stories.jsx";
 import BlogPage from  "./pages/BlogPage.jsx";
 
+
 // images
 import avatar_image from "./images/placeholder-images/avatar.png";
 
@@ -25,7 +26,6 @@ function App() {
   return (
     <Router>
       <Header isSignedIn={false} avatarSrc={avatar_image} />
-
       <Switch>
         <Home path="/" exact />
         <Registration path="/register" exact />
