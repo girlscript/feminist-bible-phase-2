@@ -17,6 +17,7 @@ import OrganizationList from "./pages/OrganizationList.jsx";
 import CodeOfConduct from "./pages/CodeOfConduct.jsx";
 import Stories from "./pages/Stories.jsx";
 import BlogPage from  "./pages/BlogPage.jsx";
+import ProjectListing from "./pages/ProjectListing.jsx"
 
 
 // images
@@ -35,8 +36,8 @@ function App() {
         <AdminProfile path="/admin" exact />
         <Stories path="/stories" exact />
         <BlogPage path="/stories/post" exact/>
+        <ProjectListing path="/projects" exact/>
       </Switch>
-
       <Footer />
     </Router>
   );
