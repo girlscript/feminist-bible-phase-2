@@ -10,8 +10,8 @@ class Notification extends Component{
         return(
             <div className="review-notification">
                 <div className="review-notification__profile-wrap">
-                    <Avatar avatarSrc={avatar_image}/>
-                    <h3 className="review-notification__username">@Shwetal </h3>
+                    <Avatar avatarSrc={avatar_image} />
+                    <p className="review-notification__username">@Shwetal </p>
                     <p className="review-notification__article">added this article</p>
                 </div>
                 <div className="review-notification__review-wrap">

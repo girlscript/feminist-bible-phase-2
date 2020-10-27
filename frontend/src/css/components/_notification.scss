@@ -8,6 +8,8 @@
     &__profile-wrap{
         display: flex;
         justify-content: flex-start;
+        position: relative;
+        top: 1px;
     }
 
     &__review-wrap{
@@ -18,13 +20,15 @@
 
     &__username {
         margin-left: 10px;
-        padding-top: 5px;
         color: #2F80ED;
+        position: relative;
+        top: 8px;
     }
 
     &__article{
         margin-left: 5px;
-        padding-top: 5px;
+        position: relative;
+        top: 8px;
     }
 
     .button__small--hollow{
