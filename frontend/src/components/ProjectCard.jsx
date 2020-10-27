@@ -49,9 +49,8 @@ class ProjectCard extends Component {
             <div className="project-card__text-container">
               <h2 className="project-card__title">{this.props.title}</h2>
               <p className="project-card__text">{this.props.text}</p>
-              <a href="#placeholder" className="link">
-                <a>Learn more...</a>
-              </a>
+              <a href="#placeholder" className="link">Learn more...</a>
+              
             </div>
           </div>
         </div>
