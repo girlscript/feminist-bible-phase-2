@@ -41,17 +41,15 @@ class ProjectListing extends Component {
       }, []);
 
     return (
-      <div className="grid-container">
-        <div className="cell large-7">
-          <h1 className="project-listing__title">All Projects</h1>
-        </div>
-        <div className="grid-x grid-margin-x">
-          <div className="cell large-12">
-            <div>{convertedData}</div>
+      <div className="project-listing">
+        <div className="grid-container">
+          <div className="grid-x grid-margin-x">
+            <div className="cell large-12">
+              <h1 className="project-listing__title">All Projects</h1>
+            </div>
+            <div className="cell large-12">{convertedData}</div>
           </div>
         </div>
-        <br />
-        <br />
       </div>
     );
   }
