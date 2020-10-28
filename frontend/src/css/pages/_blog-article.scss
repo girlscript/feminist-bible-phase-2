@@ -1,0 +1,22 @@
+.blog-page {
+  background-color: $yellow-bg;
+}
+
+.article {
+  padding: 50px;
+  background-color: $yellow-bg;
+
+  &__content {
+    line-height: 26px;
+    text-align: justify;
+
+    &:not(:last-child) {
+      margin-bottom: 40px;
+    }
+    &.quote {
+      color: $lilac;
+      font-weight: $font-weight-semi-bold;
+      // font-style: italic;
+    }
+  }
+}

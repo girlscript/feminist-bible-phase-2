@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import "../css/components/footer.scss";
-import mp_rk_logo from "../images/mp_rk_logo.png";
+// import "../css/components/footer.scss";
+import mp_rk_logo from "../images/company-assets/mp_rk_logo.png";
 
 class Footer extends Component {
   render() {
@@ -8,7 +8,7 @@ class Footer extends Component {
       <div className="footer">
         <div className="grid-container">
           <div className="grid-x grid-margin-x">
-            <div className="cell large-5">
+            <div className="cell large-5 medium-5">
               <h6 className="footer__sub-title">MP &amp; RK Company</h6>
               <p className="about-company">
                 Duis aute irure dolor in reprehenderit in voluptate velit esse
@@ -18,7 +18,7 @@ class Footer extends Component {
               </p>
             </div>
 
-            <div className="cell large-2">
+            <div className="cell large-2 medium-2 small-6">
               <h6 className="footer__sub-title">Navigate</h6>
               <ul className="footer__nav-item-container">
                 <li className="footer__nav-item"><a href="#">Home</a></li>
@@ -28,7 +28,7 @@ class Footer extends Component {
               </ul>
             </div>
 
-            <div className="cell large-3">
+            <div className="cell large-3 medium-3 small-6">
               <h6 className="footer__sub-title">Resources</h6>
               <ul className="footer__nav-item-container">
                 <li className="footer__nav-item"><a href="#">Code of Conduct</a></li>
@@ -36,7 +36,7 @@ class Footer extends Component {
               </ul>
             </div>
 
-            <div className="cell large-2">
+            <div className="cell large-2 medium-2 small-6">
               <h6 className="footer__sub-title">Connect</h6>
               <ul className="footer__nav-item-container">
                 <li className="footer__nav-item"><a href="#">Instagram</a></li>
@@ -45,9 +45,9 @@ class Footer extends Component {
               </ul>
             </div>
 
-            <div className="cell large-12">
+            <div className="cell large-12 small-6">
               <div className="company__wrap">
-                <img src={mp_rk_logo} className="company__logo" />
+                <img src={mp_rk_logo} className="company__logo" alt="Company" />
                 <div className="company__copyright">
                   <span>Copyright 2020</span>
                   <span>MP &amp; RK Company</span>

@@ -16,9 +16,10 @@ const transporter = nodemailer.createTransport(
 );
 
 exports.signup = async (req, res) => {
-  const { firstName, lastName, email, phone, password } = req.body;
+  const {name,email,phone,photo,password,passwordConfirm} = req.body;
+  console.log(req.body);
   // checking all credentials are present or not
-  if (!firstName || !lastName || !email || !phone || !password)
+  if (!name || !email || !phone || !password)
     return res.status(400).json({ msg: 'fill up all the credentials' });
 
   try {
@@ -27,21 +28,23 @@ exports.signup = async (req, res) => {
     user = await User.findOne({ email });
     if (user) return res.json({ msg: 'user already exist' });
 
+    if(password!==passwordConfirm) return res.status(400).json({msg:'password and confirm password dont match'})
     // hashing password
+    let hashPasswordConfirm=await bcrypt.hash(passwordConfirm,10);
     let hashPassword = await bcrypt.hash(password, 10);
 
     const newUser = await User.create({
-      firstName,
-      lastName,
+      name,
       email,
+      photo,
       phone,
       password: hashPassword,
+      passwordConfirm:hashPasswordConfirm
     });
 
     await newUser.save();
 
     // generating auth token
-
     let token = jwt.sign({ id: newUser._id }, process.env.JWT_Key, {
       expiresIn: '1h',
     });
@@ -62,7 +65,34 @@ exports.signup = async (req, res) => {
 };
 
 exports.signin = async (req, res) => {
-  //
+  const {email,password} = req.body;
+  if(!email || !password)
+  return res.status(400).json({msg:"fill up all the credentials"});
+  
+  try{
+    let existingUser = await User.findOne({email});
+    if(!existingUser)
+    return res.status(400).json({msg:"invalid credentials"});
+
+    let isPasswordTrue = await bcrypt.compare(password,existingUser.password);
+
+    if(!isPasswordTrue)
+    return res.status(400).json({msg:"invalid credentials,check your password"});
+
+    let token = jwt.sign({id:existingUser._id},process.env.JWT_Key,{expiresIn:'1h'});
+
+    res.status(200).json({
+      success:true,
+      data:{
+        ...existingUser._doc,
+        token,
+        password:''
+      }
+    })
+  } catch(err){
+    console.log(err.message);
+    return res.status(400).json({msg:'cannot sign in'})
+  }
 };
 
 /* in the user schema we have to add two more attributes that is
@@ -147,3 +177,26 @@ exports.postNewPassword = async (req, res) => {
     res.status(500).json({ message: 'error!' });
   }
 };
+
+exports.isSignedIn=async (req,res,next)=>{
+  const token=req.header('Authorization').replace('Bearer ','');
+  const data=jwt.verify(token,process.env.JWT_Key);
+  try {
+    const user=User.findOne({_id:userId,token:token});
+    if(!user){
+      throw new NoUserFoundError('User is currently not logged in');
+    }
+    req.user=user;
+    req.token=token;
+    next();
+
+    
+  } catch (error) {
+    const err_code = error.err_code
+    ? err.code >= 100 && err.code <= 599 ? err.code : 500 : 500;
+  res.status(err_code).json({ status:'fail',message: err.message || 'Internal Server Error' });
+  
+  }
+
+  
+}

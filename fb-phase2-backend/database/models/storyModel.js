@@ -1,38 +1,31 @@
 const mongoose = require('mongoose');
 
-/**
- * @swagger
- * definitions:
- *    Story:
- *     properties:
- *      name:
- *        type: string
- *      author:
- *        type: string
- *      image:
- *         type: string
- *      heading:
- *        type: string
- */
 const storySchema = new mongoose.Schema(
   {
     name: {
       type: String,
       trim: true,
-      required: true,
+      required: [true, 'Please provide a name'],
     },
     author: {
       type: mongoose.Schema.Types.ObjectId,
       ref: 'User',
       required: true,
     },
+    authorOrg: {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: 'Org',
+    },
     image: {
       type: String,
-      required: true,
     },
     heading: {
       type: String,
       trim: true,
+    },
+    postedOn: {
+      type: Date,
+      default: Date.now(),
     },
   },
   {
