@@ -106,13 +106,13 @@ class AdminProfile extends Component {
                   Directly into your inbox every monday morning
                 </h3>
               </div>
-              <div className="cell large-4 medium-6 small-12">
+              <div className="cell large-4 medium-6 ">
                 <BlogCard />
               </div>
-              <div className="cell large-4  medium-6 small-12">
+              <div className="cell large-4  medium-6">
                 <BlogCard />
               </div>
-              <div className="cell large-4  medium-6 small-12">
+              <div className="cell large-4  medium-6">
                 <BlogCard />
               </div>
             </div>
