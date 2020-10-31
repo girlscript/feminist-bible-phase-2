@@ -61,10 +61,7 @@
         height: 200px;
       }
       &__description {
-        visibility: hidden;
-      }
-      &__author {
-        margin-top: -190px;
+        display: none;
       }
     }
   }
@@ -73,18 +70,9 @@
 @media only screen and (max-width: 640px) {
   .stories {
     &__featured {
-      &__author {
-        margin-top: -160px;
+      &__description {
+        display: block;
       }
     }
   }
 }
-
-
-
-
-
-
-
-
-
