@@ -1,86 +1,118 @@
-.hero-section {
-    background-color: $yellow-bg;
-    padding:70px 0;
+.admin-profile-hero-section {
+  background-color: $yellow-bg;
+  padding: 90px 0;
 
-    &__image {
-        width: 300px;
-        padding-bottom:100%;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size:cover;
-        border-radius:100%;
-    }
+  &__image-container{
+    width:300px;
+  }
 
-    &__designation {
-        color: $purple;
-        @extend h3;
-    }
+  &__image {
+    width: 100%;
+    padding-bottom: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 100%;
+  }
 
-    &__name {
-        color: $title-color;
-        @extend h2;
-        margin-bottom: 20px;
-    }
+  &__designation {
+    color: $purple;
+  }
 
-    &__details {
-        margin-top: 70px;
-        @extend p;
-    }
+  &__name {
+    color: $title-color;
+    margin-bottom: 20px;
+  }
 
-   
-}
+  &__details {
+    margin-top: 50px;
+    text-align: justify;
+  }
 
-.links {
-
+  .admin-profile__social-media{
     display: flex;
+    flex-direction: row;
+    align-items: center;
 
-    &__icon-wrap{
-        display: flex;
-        justify-content: flex-end;
-        margin-left: auto;
+    &__icon-wrap {
+      display: flex;
+      justify-content: flex-end;
+      margin-left: auto;
+  
+      .links__icon-canvas{
+        width: 40px;
+        height: 40px;
+        border-radius:20px;
+        padding:7px;
+        margin-left:15px;
 
-        .links__icon {
-            width: 40px;
-            height: 40px;
-        }
-    }
-
-    &__location-wrap{
-        display: flex;
-        justify-content: flex-start;
-
-        .links__icon {
-            width: 40px;
-            height: 40px;
+        &.twitter{
+            background-color:#00acee;
         }
 
-        .location{
-            color: $text-color;
-            line-height: 27px;
-            margin-left: 10px;
-            text-align: center;
-            padding-top: 5px;
+        &.facebook{
+            background-color:#3b5998;
         }
+
+        &.linkedin{
+            background-color:#0e76a8;
+        }
+
+        &:hover{
+            background-color:#000;
+        }
+      }
+
+      .links__icon {
+        fill:#ffffff;
+        height:26px; 
+        height:26px;
+      }
     }
-    
-}
-
-.article-section{
-
-    background-image: linear-gradient(#fffdf6, #ffebf3);
-    padding-bottom: 200px;
-
-    &__heading{
-        color: $title-color;
-        @extend h2;
-        text-align: center;
-    }
-
-    &__sub-heading {
+  
+    &__location-wrap {
+      display: flex;
+      justify-content: flex-start;
+  
+      .links__icon {
+        width: 30px;
+        height: 30px;
+      }
+  
+      .location {
         color: $text-color;
-        @extend h3;
+        // line-height: 27px;
+        margin-left: 10px;
         text-align: center;
-        margin-bottom: 70px;
+        padding-top: 3px;
+      }
     }
+  }
 }
 
+.admin-profile-article-section {
+  background: linear-gradient(#fffdf6, #ffebf3);
+  padding-bottom:70px;
+
+  &__heading {
+    color: $title-color;
+    @extend h2;
+    text-align: center;
+  }
+
+  &__sub-heading {
+    color: $text-color;
+    @extend h3;
+    text-align: center;
+    margin-bottom: 70px;
+  }
+}
+
+.admin-profile-notification-section{
+  background: linear-gradient(180deg, #FFEBF3 6.25%, #FFFDF6 47.4%);
+  padding:10px 0 70px 0;
+
+  &__heading{
+    margin-bottom:30px;
+  }
+}
