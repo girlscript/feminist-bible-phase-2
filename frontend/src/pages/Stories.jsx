@@ -20,7 +20,7 @@ class Stories extends Component {
               </div>
 
               {/* featured blog */}
-              <div className="cell large-5">
+              <div className="cell large-5 medium-6">
                 <img
                   src={blog_img}
                   alt="blog_img"
@@ -28,7 +28,7 @@ class Stories extends Component {
                 />
               </div>
 
-              <div className="cell large-7">
+              <div className="cell large-7 medium-6">
                 <div className="stories__featured">
                   <h2 className="stories__featured__title">
                     “Bingo Love” Depicts Black Queer Women’s Romance.
@@ -62,16 +62,16 @@ class Stories extends Component {
         <div className="stories-blog-card-section">
           <div className="grid-container">
             <div className="grid-x grid-margin-x">
-              <div className="cell large-4">
+              <div className="cell large-4 medium-6">
                 <BlogCard />
               </div>
-              <div className="cell large-4">
+              <div className="cell large-4 medium-6">
                 <BlogCard />
               </div>
-              <div className="cell large-4">
+              <div className="cell large-4 medium-6">
                 <BlogCard />
               </div>
-              <div className="cell large-4">
+              <div className="cell large-4 medium-6">
                 <BlogCard />
               </div>
             </div>

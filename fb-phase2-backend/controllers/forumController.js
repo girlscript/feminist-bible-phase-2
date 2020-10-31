@@ -1,23 +1,28 @@
-const ForumPost = require('../database/models/forumPostModel')
+const ForumPost = require('../database/models/forumPostModel');
 
-// //create a post
-// exports.createPost = async (req, res) => {
-//     try{
-//         const post = await ForumPost.create(req.body);
-//         console.log(post)
-//         res.status(200).json({
-//             success: 'success',
-//             data: post
-//           });
-//     } catch(error){
-//         console.log(error)
-//         res.status(400).json({
-//             status: 'fail',
-//             error: error.message
-//         })
-//     }
-// }
+//create forum post
+exports.createForumPost = async (req, res) => {
+  try {
+    const { heading, author, description } = req.body;
+    if (!heading || !author) {
+      return res.status(400).json({
+        status: 'fail',
+        message: 'Fields cannot be empty',
+      });
+    }
 
+    const newForumPost = await ForumPost.create(req.body);
+    res.status(201).json({
+      success: 'success',
+      data: newForumPost,
+    });
+  } catch (err) {
+    res.status(400).json({
+      status: 'fail',
+      message: err,
+    });
+  }
+};
 
 //like a post
 exports.likeForumPost = async (req, res)=>{

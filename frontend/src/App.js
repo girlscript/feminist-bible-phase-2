@@ -38,6 +38,7 @@ function App() {
         <BlogPage path="/stories/post" exact/>
         <ProjectListing path="/projects" exact/>
       </Switch>
+      
       <Footer />
     </Router>
   );
