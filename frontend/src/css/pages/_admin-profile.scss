@@ -116,3 +116,25 @@
     margin-bottom: 30px;
   }
 }
+
+@media only screen and (max-width: 1024px) {
+  .admin-profile-article-section {
+    background: linear-gradient(#fffdf6, #ffebf3);
+    padding-bottom: 70px;
+
+    &__heading {
+      margin-top: -40px;
+    }
+  }
+}
+
+@media only screen and (max-width: 640px) {
+  .admin-profile-article-section {
+    background: linear-gradient(#fffdf6, #ffebf3);
+    padding-bottom: 70px;
+
+    &__heading {
+      margin-top: -30px;
+    }
+  }
+}

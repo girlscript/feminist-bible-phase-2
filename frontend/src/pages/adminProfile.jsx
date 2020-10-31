@@ -22,7 +22,7 @@ class AdminProfile extends Component {
         <div className="admin-profile-hero-section">
           <div className="grid-container">
             <div className="grid-x grid-margin-x">
-              <div className="cell large-4 medium-6">
+              <div className="cell large-4 ">
                 <div className="admin-profile-hero-section__image-container">
                   <div
                     className="admin-profile-hero-section__image"
@@ -30,7 +30,7 @@ class AdminProfile extends Component {
                   ></div>
                 </div>
               </div>
-              <div className="cell large-8 medium-6 ">
+              <div className="cell large-8">
                 <h3 className="admin-profile-hero-section__designation">
                   Founder
                 </h3>
@@ -98,7 +98,7 @@ class AdminProfile extends Component {
         <div className="admin-profile-article-section">
           <div className="grid-container">
             <div className="grid-x grid-margin-x">
-              <div className="cell large-12">
+              <div className="cell large-12 ">
                 <h2 className="admin-profile-article-section__heading">
                   Articles By Admins
                 </h2>
@@ -112,7 +112,7 @@ class AdminProfile extends Component {
               <div className="cell large-4  medium-6 small-12">
                 <BlogCard />
               </div>
-              <div className="cell large-4 medium-6 small-12">
+              <div className="cell large-4  medium-6 small-12">
                 <BlogCard />
               </div>
             </div>
