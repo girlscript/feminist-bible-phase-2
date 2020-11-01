@@ -85,7 +85,7 @@ exports.deleteProject =  async (req, res)=>{
         })
     }
   }
-} 
+
 
 //Get a single project b project ID
 
