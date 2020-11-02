@@ -37,6 +37,13 @@
   .link{
     color:$purple;
     font-weight: $font-weight-medium;
+    transition: letter-spacing 0.4s;
+
+    &:hover{
+      color:$lilac;
+      letter-spacing: 0.5px;
+      transition: letter-spacing 0.4s;
+    }
   }
 }
 
