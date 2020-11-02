@@ -1,6 +1,33 @@
-const ForumPost = require('../database/models/forumPostModel');
+const ForumPostComment = require('../database/models/forumPostCommentModel');
+require('../config/dotenv');
 
-//create forum post
+exports.createComment =async (req,res)=>{
+    try{
+     let postId = req.params.forumpostid;
+     const {userId,comment} = req.body;
+     const newComment = await ForumPostComment.create({
+         post:postId,
+         user:userId,
+         comment,
+         likes:0,
+         replies:[]
+     });
+
+     await newComment.save();
+
+     return res.status(200).json({
+         success:true,
+         data:{
+            ...newComment._doc
+         }
+     })
+  } catch(err){
+      console.log(err.message);
+      return res.status(400).json({msg:"cannot create comment"})
+  }
+}
+
+const ForumPost = require('../database/models/forumPostModel');
 exports.createForumPost = async (req, res) => {
   try {
     const { heading, author, description } = req.body;

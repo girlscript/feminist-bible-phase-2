@@ -4,5 +4,6 @@ const router = express.Router();
 
 //like a forum post
 router.route('/:forumpostid/like').post(forumController.likeForumPost)
-router.route('/new').post(forumController.createPost)
+router.route('/new').post(forumController.createForumPost)
+router.route('/:forumpostid/comment').post(forumController.createComment);
 module.exports = router;
