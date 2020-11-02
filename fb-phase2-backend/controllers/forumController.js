@@ -27,8 +27,7 @@ exports.createComment =async (req,res)=>{
   }
 }
 
-
-//create forum post
+const ForumPost = require('../database/models/forumPostModel');
 exports.createForumPost = async (req, res) => {
   try {
     const { heading, author, description } = req.body;
