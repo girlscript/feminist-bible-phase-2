@@ -1,0 +1,21 @@
+.review-notification{
+    display: flex;    
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: #E7EDF3;
+    border-radius: 10px;
+    padding: 16px 25px ;
+    margin-top:30px;
+
+    &__profile-wrap{
+        display: flex;
+        align-items: center;
+    }
+
+    &__message{
+        margin:0 0 0 16px;
+        .username{
+            color: #2F80ED;
+        }
+    }
+}

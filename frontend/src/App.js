@@ -17,6 +17,8 @@ import OrganizationList from "./pages/OrganizationList.jsx";
 import CodeOfConduct from "./pages/CodeOfConduct.jsx";
 import Stories from "./pages/Stories.jsx";
 import BlogPage from  "./pages/BlogPage.jsx";
+import ProjectListing from "./pages/ProjectListing.jsx"
+
 
 // images
 import avatar_image from "./images/placeholder-images/avatar.png";
@@ -25,7 +27,6 @@ function App() {
   return (
     <Router>
       <Header isSignedIn={false} avatarSrc={avatar_image} />
-
       <Switch>
         <Home path="/" exact />
         <Registration path="/register" exact />
@@ -35,8 +36,9 @@ function App() {
         <AdminProfile path="/admin" exact />
         <Stories path="/stories" exact />
         <BlogPage path="/stories/post" exact/>
+        <ProjectListing path="/projects" exact/>
       </Switch>
-
+      
       <Footer />
     </Router>
   );

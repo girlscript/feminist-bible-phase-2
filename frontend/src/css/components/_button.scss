@@ -1,5 +1,9 @@
 .button, a.button {
   //elements
+  &__xsmall{
+    padding: 10px 20px 5px 20px;
+  }
+
   &__small {
     padding: 8px 20px;
   }
@@ -8,7 +12,7 @@
     padding: 15px 25px;
   }
 
-  &__small,
+ &__xsmall, &__small,
   &__big {
     //purple button by default. You can use modifiers to change the colors of have different variants
     background-color: $purple;
@@ -22,6 +26,7 @@
     font-family: "Poppins", sans-serif;
     cursor: pointer;
     transition: 0.2s ease-in-out;
+    box-sizing: border-box;
 
     //modifiers
     &--pink {
