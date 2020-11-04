@@ -47,3 +47,32 @@
     }
   }
 }
+
+
+
+@media only screen and (max-width: 1024px) {
+  .stories {
+    &__title {
+      margin-bottom: 100px;
+    }
+
+    &__featured {
+      &__img {
+        height: 200px;
+      }
+      &__description {
+        display: none;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 640px) {
+  .stories {
+    &__featured {
+      &__description {
+        display: block;
+      }
+    }
+  }
+}
