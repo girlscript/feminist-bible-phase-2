@@ -1,10 +1,7 @@
 import React, { Component } from "react";
 
-//style
-import "../css/pages/AboutUs.scss";
-
 //Images
-import linkedIn from "../images/linkedin 1.png";
+// import linkedIn from "../images/linkedin 1.png";
 import img_1 from "../images/img-1.png";
 import img_2 from "../images/img-2.png";
 class Admin extends Component {
@@ -57,7 +54,7 @@ class Admin extends Component {
                   <img src={img_1} alt="avatar" />
                   <div className="coFounder-name ">
                     <h3>Maybelyn H. Plecic</h3>
-                    <img src={linkedIn} alt="linkedIn" />
+                    {/* <img src={linkedIn} alt="linkedIn" /> */}
                   </div>
                   <ul className="coFounder-details__list">
                     <li>Presidio Distinguished Engineer - 2019</li>
@@ -90,7 +87,7 @@ class Admin extends Component {
 
                   <div className="coFounder-name">
                     <h3>Rashmeet Kaur</h3>
-                    <img src={linkedIn} alt="linkedIn" />
+                    {/* <img src={linkedIn} alt="linkedIn" /> */}
                   </div>
                   <ul className="coFounder-details__list ">
                     <li>Supply Chain Professional</li>

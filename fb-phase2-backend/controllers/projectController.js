@@ -85,7 +85,7 @@ exports.deleteProject =  async (req, res)=>{
         })
     }
   }
-} 
+
 
 //Get a single project b project ID
 
@@ -113,5 +113,29 @@ exports.getProject= async(req,res)=>{
 
 }
 
+}
+
+//Update a project by _id
+exports.updateProject=async (req,res)=>{
+    try{
+        const result= await Project.updateOne({_id:req.params.id},{
+            $set:{
+                title:req.body.title,
+                description:req.body.description
+            }
+        });
+        const project=await Project.findById(req.params.id);
+
+        return res.status(200).json({
+            message: "success",
+            project: project
+        })
+    }
+    catch (error) {
+        return res.status(400).json({
+            message:"fail",
+            error: error.message
+        })
+    }
 }
 

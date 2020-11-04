@@ -1,6 +1,3 @@
-@import "../settings/global";
-@import "../components/button";
-
 .hero {
   margin: auto;
   padding: 100px 0 150px 0;
@@ -72,13 +69,19 @@
   }
 
   &__button-container{
-      margin-top:82px;
+      margin-top:52px;
       text-align: center;
   }
 }
 
 // for medium sized devices - tablets
 @media only screen and (max-width: 1024px) {
+  .hero{
+    &__image{
+      height:500px;
+      margin-top: 40px;
+    }
+  }
   .blog-card {
     &__container {
       margin-bottom: 30px;

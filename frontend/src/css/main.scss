@@ -1,0 +1,27 @@
+// For naming convention, please read the README.md file in the frontend folder. 
+
+@import "./settings/global";
+
+// COMPONENETS
+@import "./components/button";
+@import "./components/avatar";
+@import "./components/blog-card";
+@import "./components/project-card";
+@import "./components/organisation-card";
+@import "./components/input";
+@import "./components/notification";
+// MAJOR COMPONENETS
+@import "./components/header";
+@import "./components/footer";
+
+// PAGES
+@import "./pages/home";
+@import "./pages/code-of-conduct";
+@import "./pages/org-list";
+@import "./pages/about-us";
+@import "./pages/blog-article";
+@import "./pages/registration";
+@import "./pages/blog-list";
+@import "./pages/project-listing";
+@import "./pages/admin-profile";
+

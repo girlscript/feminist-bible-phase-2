@@ -1,0 +1,140 @@
+.admin-profile-hero-section {
+  background-color: $yellow-bg;
+  padding: 90px 0;
+
+  &__image-container {
+    width: 300px;
+  }
+
+  &__image {
+    width: 100%;
+    padding-bottom: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 100%;
+  }
+
+  &__designation {
+    color: $purple;
+  }
+
+  &__name {
+    color: $title-color;
+    margin-bottom: 20px;
+  }
+
+  &__details {
+    margin-top: 50px;
+    text-align: justify;
+  }
+
+  .admin-profile__social-media {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    &__icon-wrap {
+      display: flex;
+      justify-content: flex-end;
+      margin-left: auto;
+
+      .links__icon-canvas {
+        width: 40px;
+        height: 40px;
+        border-radius: 20px;
+        padding: 7px;
+        margin-left: 15px;
+
+        &.twitter {
+          background-color: #00acee;
+        }
+
+        &.facebook {
+          background-color: #3b5998;
+        }
+
+        &.linkedin {
+          background-color: #0e76a8;
+        }
+
+        &:hover {
+          background-color: #000;
+        }
+      }
+
+      .links__icon {
+        fill: #ffffff;
+        height: 26px;
+        height: 26px;
+      }
+    }
+
+    &__location-wrap {
+      display: flex;
+      justify-content: flex-start;
+
+      .links__icon {
+        width: 30px;
+        height: 30px;
+      }
+
+      .location {
+        color: $text-color;
+        // line-height: 27px;
+        margin-left: 10px;
+        text-align: center;
+        padding-top: 3px;
+      }
+    }
+  }
+}
+
+.admin-profile-article-section {
+  background: linear-gradient(#fffdf6, #ffebf3);
+  padding-bottom: 70px;
+
+  &__heading {
+    color: $title-color;
+    @extend h2;
+    text-align: center;
+  }
+
+  &__sub-heading {
+    color: $text-color;
+    @extend h3;
+    text-align: center;
+    margin-bottom: 70px;
+  }
+}
+
+.admin-profile-notification-section {
+  background: linear-gradient(180deg, #ffebf3 6.25%, #fffdf6 47.4%);
+  padding: 10px 0 70px 0;
+
+  &__heading {
+    margin-bottom: 30px;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .admin-profile-article-section {
+    background: linear-gradient(#fffdf6, #ffebf3);
+    padding-bottom: 70px;
+
+    &__heading {
+      margin-top: 0px;
+    }
+  }
+}
+
+@media only screen and (max-width: 640px) {
+  .admin-profile-article-section {
+    background: linear-gradient(#fffdf6, #ffebf3);
+    padding-bottom: 70px;
+
+    &__heading {
+      margin-top: 0px;
+    }
+  }
+}
