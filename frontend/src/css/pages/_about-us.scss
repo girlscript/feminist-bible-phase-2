@@ -51,3 +51,39 @@
 }
 
 
+@media(max-width:736px){
+  .about {
+    padding:50px 0;
+    h1{
+      margin-bottom: 10px;
+    }
+   
+  }
+
+
+  .coFounder {
+    margin: auto;
+    padding-bottom: 50px;
+  
+    h1 {
+      margin-bottom: -10px;
+     
+    }
+    &-name{
+      margin: 15px 0;
+    }
+  
+    &-div{
+      padding:  10px;
+    
+      .coFounder-avatar{
+        text-align: center;
+        img{
+       max-width: 80%;
+       margin:10px 0;
+        }
+      }
+      }
+
+  }
+}

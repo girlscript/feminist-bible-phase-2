@@ -51,7 +51,10 @@ class Admin extends Component {
                 </div>
 
                 <div className="cell medium-6">
+                  <div className="coFounder-div">
+                  <div className="coFounder-avatar">
                   <img src={img_1} alt="avatar" />
+                  </div>
                   <div className="coFounder-name ">
                     <h3>Maybelyn H. Plecic</h3>
                     {/* <img src={linkedIn} alt="linkedIn" /> */}
@@ -81,10 +84,13 @@ class Admin extends Component {
                     </li>
                   </ul>
                 </div>
+                </div>
 
                 <div className="cell medium-6 ">
+                  <div className="coFounder-div">
+                  <div className="coFounder-avatar">
                   <img src={img_2} alt="avatar" />
-
+                  </div>
                   <div className="coFounder-name">
                     <h3>Rashmeet Kaur</h3>
                     {/* <img src={linkedIn} alt="linkedIn" /> */}
@@ -106,6 +112,7 @@ class Admin extends Component {
                     <li>Podcaster- Unsolicited Supply ! and Unmuted</li>
                     <li> Google IAmRemarkable Facilitator</li>
                   </ul>
+                </div>
                 </div>
               </div>
             </div>
