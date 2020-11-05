@@ -26,13 +26,13 @@
 
     &__img-container {
         padding: 20px;
+        max-width: 100%;
+        min-width: 80px;
     }
 }
 
 .reply {
     font-weight: $font-weight-medium;
     color: rgba(74, 35, 67, 1);
-    padding: 1.5px;
     font-size: 14px;
 }
-  

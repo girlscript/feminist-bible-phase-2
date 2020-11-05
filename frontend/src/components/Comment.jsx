@@ -10,13 +10,11 @@ class Comment extends Component {
     render() {
         return(
             <>
-                <div className="grid-x">
-                    <div className="cell medium-shrink">
-                        <div className="comment__img-container">
-                            <Avatar avatarSrc={avatar_image}/>
-                        </div>
+                <div className="flex-container">
+                    <div className="comment__img-container">
+                        <Avatar avatarSrc={avatar_image}/>
                     </div>
-                    <div className="cell medium-auto">
+                    <div className="commentArea">
                         <div className="comment__text-container">
                             <p className="comment__title">
                                 Courtney Henry
@@ -33,7 +31,7 @@ class Comment extends Component {
                             </p>
                         </div>
                         <a className="reply"> 
-                                Reply
+                            Reply
                         </a>
                     </div>
                 </div>
