@@ -7,15 +7,13 @@ import "./css/main.scss";
 // components
 import Footer from "./components/Footer.jsx";
 import Header from "./components/Header.jsx";
-import Notification from"./components/Notification.jsx";
-
 
 
 // pages
 import Home from "./pages/home.jsx";
 import Registration from "./pages/Registration";
-import AboutUs from "./pages/AboutUs";
-import AdminProfile from "./pages/adminProfile";
+import AboutUs from "./pages/AboutUs.jsx";
+import AdminProfile from "./pages/adminProfile.jsx";
 import CodeOfConduct from "./pages/CodeOfConduct.jsx"
 import OrganizationList from "./pages/OrganizationList.jsx";
 import Stories from "./pages/Stories.jsx";
