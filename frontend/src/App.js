@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { BrowserRouter as Router, Switch } from "react-router-dom";
 
 // css
 import "./css/main.scss";
@@ -8,14 +8,13 @@ import "./css/main.scss";
 import Footer from "./components/Footer.jsx";
 import Header from "./components/Header.jsx";
 
-
 // pages
 import Home from "./pages/home.jsx";
 import Registration from "./pages/Registration";
 import AboutUs from "./pages/AboutUs.jsx";
 import AdminProfile from "./pages/adminProfile.jsx";
-import CodeOfConduct from "./pages/CodeOfConduct.jsx"
 import OrganizationList from "./pages/OrganizationList.jsx";
+import CodeOfConduct from "./pages/CodeOfConduct.jsx";
 import Stories from "./pages/Stories.jsx";
 import BlogPage from  "./pages/BlogPage.jsx";
 import ProjectListing from "./pages/ProjectListing.jsx"
