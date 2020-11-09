@@ -13,7 +13,7 @@
   }
 
  &__xsmall, &__small,
-  &__big {
+  &__big, &__comment {
     //purple button by default. You can use modifiers to change the colors of have different variants
     background-color: $purple;
     border:1px solid $purple;
@@ -50,6 +50,13 @@
       text-decoration: none;
     }
   }
+
+  &__comment{
+    text-transform: none;
+    padding: 4px 13px;
+    margin-left: 20px;
+  }
+
 }
 
 @media only screen and (max-width:640px){
