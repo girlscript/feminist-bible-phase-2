@@ -9,7 +9,7 @@
 
     &__text-container {
       border-radius: 4px;
-      padding :  20px 10px;
+      padding :  10px 20px;
       background-color:  rgba(255, 253, 246, 1);
       border: 1px solid rgba(0, 0, 0, 0.26);
       display: flex;
@@ -32,19 +32,4 @@
       }
     }
 
-    &__post{
-      background-color: $purple;
-      border:1px solid $purple;
-      color: white;
-      display: inline;
-      border-radius: 5px;
-      font-size: 16px;
-      font-weight: $font-weight-medium;
-      font-family: "Poppins", sans-serif;
-      cursor: pointer;
-      transition: 0.2s ease-in-out;
-      box-sizing: border-box;
-      padding: 4px 13px;
-      margin-left: 20px;
-    }
 }

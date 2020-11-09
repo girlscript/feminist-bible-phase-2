@@ -20,15 +20,17 @@ class Comment extends Component {
                     <Avatar avatarSrc={avatar_image}/>
                 </div>
                 <div className="comment-input__text-container">
-                    <input
-                        className="comment-input__input-comment"
-                        type = "text"
-                        placeholder="Write your comment here ..."
-                        onChange={this.changeHandler}
-                    />
-                    <a className="comment-input__post"> 
-                        Post
-                    </a>
+                    <form>
+                        <input
+                            className="comment-input__input-comment"
+                            type = "text"
+                            placeholder="Write your comment here ..."
+                            onChange={this.changeHandler}
+                        />
+                        <button className="button__comment"> 
+                            Post
+                        </button>
+                    </form>
                 </div>
             </div>
         )
