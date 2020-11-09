@@ -1,7 +1,5 @@
 .comment {
-
     &__text{
-      text-align: justify;
       font-size: 14px;
     }
 
@@ -13,13 +11,13 @@
     &__title{
       font-size: 16px;
       font-weight: $font-weight-medium;
-      color: rgba(51, 51, 51, 1);
+      color: $title-color;
       float: left;
     }
 
     &__text-container {
       border-radius: 6px;
-      padding :  20px 10px;
+      padding : 10px 20px;
       background-color: rgba(212, 212, 212, 0.26);
     }
 
@@ -32,6 +30,6 @@
 
 .reply {
     font-weight: $font-weight-medium;
-    color: rgba(74, 35, 67, 1);
+    color: $lilac;
     font-size: 14px;
 }
