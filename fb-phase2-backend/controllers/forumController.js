@@ -71,3 +71,24 @@ exports.likeForumPost = async (req, res)=>{
     }
 
 }
+
+// reply to comment
+exports.commentreply = async (req,res)=>{
+  try{
+      const forumcomment = req.params.forumcommentid;
+      forumcomment = await ForumPostComment.findByIdAndUpdate(
+          {_id: forumcomment},
+          {$set:
+              {reply : req.body.reply}
+          
+          });
+        return res.status(200).json({
+          status: 'success',
+          data: forumcomment
+      })
+      
+  }catch(err){
+    console.log(err.message);
+    return res.status(400).json({msg:"cannot reply to comment"})
+}
+}
