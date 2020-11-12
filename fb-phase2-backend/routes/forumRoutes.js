@@ -6,4 +6,5 @@ const router = express.Router();
 router.route('/:forumpostid/like').post(forumController.likeForumPost)
 router.route('/new').post(forumController.createForumPost)
 router.route('/:forumpostid/comment').post(forumController.createComment);
+router.route('/:forumpostid/comment').post(forumController.deleteComment);
 module.exports = router;
