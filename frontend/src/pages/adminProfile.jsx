@@ -9,42 +9,6 @@ import LocationIcon from "../images/location-pin.png";
 import ProfilePic from "../images/placeholder-images/blog_img.png";
 
 class AdminProfile extends Component {
-<<<<<<< HEAD
-    render() {
-        return(
-            <>
-                <div className="hero-section">
-                    <div className="grid-container">
-                        <div className="grid-x grid-margin-x">
-                            <div className="cell large-4 ">
-                                <img src={ProfilePic} className="hero-section__image" alt="Profile Pic" />
-                            </div>
-                            <div className="cell large-7 large-offset-1">
-                                <h3 className="hero-section__designation">Founder</h3>
-                                <h2 className="hero-section__name">Rashmeet Kaur</h2>
-                                <div className="links">
-                                    <div className="links__location-wrap">
-                                        <img src={LocationIcon} className="links__icon" />
-                                        <h3 className="location">Location</h3>
-                                    </div>
-                                    <div className="links__icon-wrap">
-                                        <a href="#"><img src={Facebook} className="links__icon" /></a>
-                                        <a href="#"><img src={Linkedin} className="links__icon" /></a>
-                                        <a href="#"><img src={Twitter} className="links__icon" /></a>
-                                    </div>
-                                </div>
-                                <p className="hero-section__details">
-                                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud 
-                                    exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
-                                    irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat 
-                                    nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa 
-                                    qui officia deserunt mollit anim id est laborum."
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-=======
   constructor(props) {
     super(props);
 
@@ -115,7 +79,6 @@ class AdminProfile extends Component {
                       </div>
                     </a>
                   </div>
->>>>>>> da668e6e5a833da92822213456148431903c974e
                 </div>
                 <p className="admin-profile-hero-section__details">
                   "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
