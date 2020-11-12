@@ -1,0 +1,35 @@
+.comment {
+    &__text{
+      font-size: 14px;
+    }
+
+    &__time{
+        float: right;
+        font-size: 14px;
+    }
+  
+    &__title{
+      font-size: 16px;
+      font-weight: $font-weight-medium;
+      color: $title-color;
+      float: left;
+    }
+
+    &__text-container {
+      border-radius: 6px;
+      padding : 10px 20px;
+      background-color: rgba(212, 212, 212, 0.26);
+    }
+
+    &__img-container {
+        padding: 20px;
+        max-width: 100%;
+        min-width: 80px;
+    }
+}
+
+.reply {
+    font-weight: $font-weight-medium;
+    color: $lilac;
+    font-size: 14px;
+}
