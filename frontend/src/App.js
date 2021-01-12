@@ -7,6 +7,7 @@ import "./css/main.scss";
 // components
 import Footer from "./components/Footer.jsx";
 import { Header } from "./components/Header/index";
+import { BlogCard } from "./components/BlogCard/index";
 
 // pages
 import Home from "./pages/home.jsx";

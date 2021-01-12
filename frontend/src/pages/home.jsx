@@ -1,7 +1,8 @@
 import React, { Component } from "react";
 
 //Components
-import BlogCard from "../components/BlogCard";
+//import BlogCard from "../components/BlogCard";
+import { BlogCard } from "../components/BlogCard/index";
 
 //Images
 import GoogleAd from "../images/homepage/partners-logo/GoogleAds.png";

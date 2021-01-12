@@ -1,3 +1,5 @@
+@import "../../css/settings/global";
+
 .blog-card {
   &__container {
     border-radius: 5px;
@@ -6,7 +8,7 @@
     box-shadow: 0px 0px 14px rgba(0, 0, 0, 0.1);
     position: relative;
     z-index: 1;
-    margin-bottom:30px;
+    margin-bottom: 30px;
   }
 
   &__img {
@@ -29,7 +31,7 @@
   margin-top: 20px;
 
   &__name-wrap {
-    padding:2px 0;
+    padding: 2px 0;
 
     & > * {
       margin: 0;
