@@ -2,6 +2,8 @@ import React, { Component } from 'react'
 import { Input, WithPasswordStrength } from '../components/input';
 import { Link } from 'react-router-dom';
 
+const womenImg = require('../images/women.png').default;
+
 export default class Registration extends Component {
   state = {
     email: '',
@@ -89,7 +91,7 @@ export default class Registration extends Component {
             </div>
             <div className="cell large-8">
               <div className="registration-page__illustration-wrapper">
-                <img src={require('../images/women.png')} className="registration-page__illustration" alt="Illustration of women"/>
+                <img src={womenImg} className="registration-page__illustration" alt="Illustration of women"/>
               </div>
             </div>
           </div>
