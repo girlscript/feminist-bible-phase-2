@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 
 // Components
-//import BlogCard from "../components/BlogCard";
 import { BlogCard } from "../components/BlogCard/index";
 
 import Avatar from "../components/Avatar.jsx";
