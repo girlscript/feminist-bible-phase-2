@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 
 //Components
-import OrganizationCard from "../components/OrganisationCard.jsx";
+import {OrganizationCard} from "../components/OrganisationCard/index.js";
 
 class OrganizationList extends Component {
   render() {
