@@ -11,6 +11,7 @@ import { Header } from "./components/Header/index";
 // pages
 import Home from "./pages/home.jsx";
 import Registration from "./pages/Registration";
+import Login from "./pages/Login";
 import AboutUs from "./pages/AboutUs.jsx";
 import AdminProfile from "./pages/adminProfile.jsx";
 import OrganizationList from "./pages/OrganizationList.jsx";
@@ -30,6 +31,7 @@ function App() {
       <Switch>
         <Home path="/" exact />
         <Registration path="/register" exact />
+        <Login path="/login" exact />
         <AboutUs path="/about" exact />
         <OrganizationList path="/organization" exact />
         <CodeOfConduct path="/code-of-conduct" exact />
