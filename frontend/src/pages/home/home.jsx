@@ -1,10 +1,10 @@
 import React, { Component } from "react";
 
 //Components
-import BlogCard from "../../components/BlogCard.jsx"
+import { BlogCard } from "../../components/BlogCard/index";
 
-//Styling
-import style from './_home.scss'
+// Styling
+import style from "./_home.scss"
 
 //Images
 import GoogleAd from "../../images/homepage/partners-logo/GoogleAds.png";

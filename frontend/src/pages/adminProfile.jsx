@@ -1,7 +1,9 @@
 import React, { Component } from "react";
 
 //Components
-import BlogCard from "../components/BlogCard.jsx";
+//import BlogCard from "../components/BlogCard.jsx";
+import { BlogCard } from "../components/BlogCard/index";
+
 import Notification from "../components/Notification.jsx";
 
 //Images

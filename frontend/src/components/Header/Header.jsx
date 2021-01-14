@@ -1,12 +1,14 @@
 import React, { Component } from "react";
 import { Link, NavLink } from "react-router-dom";
-import Avatar from "./Avatar.jsx";
+import Avatar from "../Avatar.jsx";
 
 // images/
-import logo from "../images/company-assets/feminist_bible_logo.png";
+import logo from "../../images/company-assets/feminist_bible_logo.png";
 
+// css
+import style from "./header.module.scss";
 
-class Header extends Component {
+export class Header extends Component {
   constructor(props){
     super(props);
     this.state = {
@@ -30,7 +32,7 @@ class Header extends Component {
 
   render() {
     return (
-      <header className="header">
+      <header className={style.header}>
         <div className="grid-container">
           <div className="grid-x grid-margin-x">
             <div className="cell medium-3">
@@ -38,36 +40,36 @@ class Header extends Component {
                 <img
                   src={logo}
                   alt="feminist bible logo"
-                  className="header__logo"
+                  className={style["header__logo"]}
                 />
               </Link>
             </div>
             <div className="cell medium-9">
-              <nav className="nav">
-                <ul className="nav__item-container" style={{display: this.state.navHidden?'none':'flex'}}>
-                  <li className="nav__item" onClick={this.hideNav}>
+              <nav className={style.nav}>
+                <ul className={style["nav__item-container"]} style={{display: this.state.navHidden?'none':'flex'}}>
+                  <li className={style["nav__item"]} onClick={this.hideNav}>
                     <NavLink to="/forum" activeClassName="active">
                       Forum
                     </NavLink>
                   </li>
-                  <li className="nav__item" onClick={this.hideNav}>
+                  <li className={style["nav__item"]} onClick={this.hideNav}>
                     <NavLink to="/stories" activeClassName="active">
                       Stories
                     </NavLink>
                   </li>
-                  <li className="nav__item" onClick={this.hideNav}>
+                  <li className={style["nav__item"]} onClick={this.hideNav}>
                     <NavLink to="/organization" activeClassName="active">
                       Organizations
                     </NavLink>
                   </li>
-                  <li className="nav__item" onClick={this.hideNav}>
+                  <li className={style["nav__item"]} onClick={this.hideNav}>
                     <NavLink to="/about" activeClassName="active">
                       About
                     </NavLink>
                   </li>
                   {this.props.isSignedIn ? (
                     <>
-                      <li className="nav__item">
+                      <li className={style["nav__item"]}>
                         <a
                           href="#test"
                           className="button__small"
@@ -76,19 +78,19 @@ class Header extends Component {
                           Write a story
                         </a>
                       </li>
-                      <li className="nav__item" data-testid="user-avatar">
+                      <li className={style["nav__item"]} data-testid="user-avatar">
                         <Avatar avatarSrc={this.props.avatarSrc} />
                       </li>
                     </>
                   ) : (
-                    <li className="nav__item" onClick={this.hideNav}>
+                    <li className={style["nav__item"]} onClick={this.hideNav}>
                       <NavLink to="/login" activeClassName="active">
                         Login
                       </NavLink>
                     </li>
                   )}
                 </ul>
-                <button id="menu-icon" aria-label="menu icon" onClick={this.showHideNav}>
+                <button id={style["menu-icon"]} aria-label="menu icon" onClick={this.showHideNav}>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 24 24"
@@ -109,5 +111,3 @@ class Header extends Component {
     );
   }
 }
-
-export default Header;
