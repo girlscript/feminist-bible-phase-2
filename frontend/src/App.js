@@ -5,8 +5,8 @@ import { BrowserRouter as Router, Switch } from "react-router-dom";
 import "./css/main.scss";
 
 // components
-import Footer from "./components/Footer.jsx";
-import Header from "./components/Header.jsx";
+import {Footer} from "./components/Footer/index";
+import { Header } from "./components/Header/index";
 
 // pages
 import Home from "./pages/home.jsx";

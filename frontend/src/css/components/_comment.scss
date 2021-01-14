@@ -1,7 +1,11 @@
 .comment {
+<<<<<<< HEAD
 
     &__text{
       text-align: justify;
+=======
+    &__text{
+>>>>>>> 46382c323bf756a6b1d9648bd8a0cf0a686f9cb7
       font-size: 14px;
     }
 
@@ -13,13 +17,21 @@
     &__title{
       font-size: 16px;
       font-weight: $font-weight-medium;
+<<<<<<< HEAD
       color: rgba(51, 51, 51, 1);
+=======
+      color: $title-color;
+>>>>>>> 46382c323bf756a6b1d9648bd8a0cf0a686f9cb7
       float: left;
     }
 
     &__text-container {
       border-radius: 6px;
+<<<<<<< HEAD
       padding :  20px 10px;
+=======
+      padding : 10px 20px;
+>>>>>>> 46382c323bf756a6b1d9648bd8a0cf0a686f9cb7
       background-color: rgba(212, 212, 212, 0.26);
     }
 
@@ -32,6 +44,10 @@
 
 .reply {
     font-weight: $font-weight-medium;
+<<<<<<< HEAD
     color: rgba(74, 35, 67, 1);
+=======
+    color: $lilac;
+>>>>>>> 46382c323bf756a6b1d9648bd8a0cf0a686f9cb7
     font-size: 14px;
 }

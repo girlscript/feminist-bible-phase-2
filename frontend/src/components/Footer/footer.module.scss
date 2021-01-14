@@ -1,0 +1,91 @@
+//import global settings
+@import "../../css/settings/global";
+
+$footer-bg: #e7edf3;
+
+//overwriting text color to match the contrast ratio with footer-bg
+.text {
+  color: #6b6872;
+}
+
+.footer {
+  background-color: $footer-bg;
+  padding: 60px 0 0 0;
+
+  &__sub-title {
+    color: $title-color;
+    font-weight: $font-weight-medium;
+    font-size: 16px;
+    margin-bottom: 16px;
+  }
+
+  &__nav-item-container {
+    margin: 0;
+    padding: 0;
+  }
+
+  //for nav items in the footer.
+  &__nav-item {
+    list-style-type: none;
+    @extend .text;
+    line-height: auto;
+
+    &:not(:last-child) {
+      margin-bottom: 10px;
+    }
+
+    a:hover {
+      color: $purple;
+      text-decoration: underline;
+      // font-weight: $font-weight-medium;
+    }
+  }
+
+  .about-company {
+    max-width: 340px;
+  }
+
+  &__credits {
+    padding: 30px 0;
+    border-top: 1px solid #bdbdbd;
+    margin: 0;
+
+    a {
+      color: #2f80ed;
+      font-weight: $font-weight-medium;
+    }
+  }
+}
+
+.company {
+  &__wrap {
+    padding: 35px 0 50px 0;
+  }
+
+  &__logo {
+    width: 70px;
+    height: 70px;
+    margin-right: 22px;
+  }
+
+  &__copyright {
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    @extend .text;
+    font-size: 14px;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .footer {
+    padding: 30px 0 0 0;
+    &__sub-title {
+      margin-top: 30px;
+    }
+  }
+
+  .about-company {
+    margin: 0;
+  }
+}
