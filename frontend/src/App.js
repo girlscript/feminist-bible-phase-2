@@ -9,7 +9,7 @@ import {Footer} from "./components/Footer/index";
 import { Header } from "./components/Header/index";
 
 // pages
-import Home from "./pages/home.jsx";
+import {Home} from "./pages/home/index";
 import Registration from "./pages/Registration";
 import Login from "./pages/Login";
 import AboutUs from "./pages/AboutUs.jsx";
@@ -19,6 +19,8 @@ import CodeOfConduct from "./pages/CodeOfConduct.jsx";
 import Stories from "./pages/Stories.jsx";
 import BlogPage from  "./pages/BlogPage.jsx";
 import ProjectListing from "./pages/ProjectListing.jsx"
+
+import Test from "./pages/Test"
 
 
 // images

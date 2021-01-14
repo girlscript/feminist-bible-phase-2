@@ -1,63 +1,66 @@
 import React, { Component } from "react";
 
 //Components
-import { BlogCard } from "../components/BlogCard/index";
+import { BlogCard } from "../../components/BlogCard/index";
+
+// Styling
+import style from "./home.module.scss"
 
 //Images
-import GoogleAd from "../images/homepage/partners-logo/GoogleAds.png";
-import Microsoft from "../images/homepage/partners-logo/Microsoft.png";
-import Model from "../images/homepage/partners-logo/model.png";
-import Amazon from "../images/homepage/partners-logo/amazon.png";
-import Figma from "../images/homepage/partners-logo/figma.png";
-import Triangle from "../images/homepage/Graphics.svg";
+import GoogleAd from "../../images/homepage/partners-logo/GoogleAds.png";
+import Microsoft from "../../images/homepage/partners-logo/Microsoft.png";
+import Model from "../../images/homepage/partners-logo/model.png";
+import Amazon from "../../images/homepage/partners-logo/amazon.png";
+import Figma from "../../images/homepage/partners-logo/figma.png";
+import Triangle from "../../images/homepage/Graphics.svg";
 
-class Home extends Component {
+export class Home extends Component {
   render() {
     return (
       <>
         <div style={{ background: "#FFFDF6" }}>
-          <div className="hero">
+          <div className={style["hero"]}>
             <div className="grid-container">
               <div className="grid-x grid-margin-x">
                 <div className="cell large-7">
-                  <h1 className="hero__title">Made for all, by women.</h1>
-                  <p className="hero__text">
+                  <h1 className={style["hero__title"]}>Made for all, by women.</h1>
+                  <p className={style["hero__text"]}>
                     An inclusive space for all. A place where we understand,
                     acknowledge and leverage diversity by creating an inclusive
                     ecosystem powered by content, culture and community.
                   </p>
 
-                  <p className="hero__text">
+                  <p className={style["hero__text"]}>
                     Do you have a diversity centric organization or special
                     interest group?
                   </p>
 
-                  <div className="hero__button-container">
+                  <div className={style["hero__button-container"]}>
                     <a
                       href="test"
-                      className="button__big"
+                      className={style["button__big"]}
                       style={{ marginRight: "20px" }}
                     >
                       Login Now
                     </a>
-                    <a href="test" className="button__big button__big--hollow">
+                    <a href="test" className={style["button__big button__big--hollow"]}>
                       Register
                     </a>
                   </div>
                 </div>
                 <div className="cell large-5">
-                  <div className="hero__image"></div>
+                  <div className={style["hero__image"]}></div>
                 </div>
               </div>
             </div>
           </div>
         </div>
 
-        <div className="importance-of-diversity">
+        <div className={style["importance-of-diversity"]}>
           <div className="grid-container">
             <div className="grid-x grid-margin-x">
               <div className="cell large-12">
-                <h2 className="importance-of-diversity__title">
+                <h2 className={style["importance-of-diversity__title"]}>
                   Importance of Diversity
                 </h2>
               </div>
@@ -98,18 +101,18 @@ class Home extends Component {
             <img
               src={Triangle}
               alt="mp &amp; rk logo"
-              className="importance-of-diversity__logo-prop"
+              className={style["importance-of-diversity__logo-prop"]}
             />
           </div>
         </div>
 
         <div style={{ background: "#FFEBF3" }}>
-          <div className="section">
+          <div className={style["section"]}>
             <div className="grid-container">
               <div className="grid-x grid-margin-x">
                 <div className="cell large-12">
-                  <h2 className="section__title">Featured Stories</h2>
-                  <p className="section__text">
+                  <h2 className={style["section__title"]}>Featured Stories</h2>
+                  <p className={style["section__text"]}>
                     Read the impact stories from around the world
                   </p>
                 </div>
@@ -123,8 +126,8 @@ class Home extends Component {
                   <BlogCard />
                 </div>
                 <div className="cell large-12">
-                  <div className="section__button-container">
-                    <a href="test" className="button__big button__big--hollow">
+                  <div className={style["section__button-container"]}>
+                    <a href="test" className={style["button__big button__big--hollow"]}>
                       SEE ALL STORIES
                     </a>
                   </div>
@@ -139,49 +142,49 @@ class Home extends Component {
             background: "linear-gradient(180deg, #FFEBF3 0%, #FFFDF6 100%)",
           }}
         >
-          <div className="section">
+          <div className={style["section"]}>
             <div className="grid-container">
               <div className="grid-x grid-margin-x">
                 <div className="cell large-12">
-                  <h2 className="section__title">Our Partners</h2>
-                  <p className="section__text">
+                  <h2 className={style["section__title"]}>Our Partners</h2>
+                  <p className={style["section__text"]}>
                     We thank all our wonderful partners for all the support
                   </p>
                 </div>
 
-                <div className="section__partner-logo-container">
+                <div className={style["section__partner-logo-container"]}>
                   <img
-                    className="section__partner-logo"
+                    className={style["section__partner-logo"]}
                     src={GoogleAd}
                     alt="Google Ads logo"
                   />
                   <img
-                    className="section__partner-logo"
+                    className={style["section__partner-logo"]}
                     src={Microsoft}
                     alt="Microsoft logo"
                   />
                   <img
-                    className="section__partner-logo"
+                    className={style["section__partner-logo"]}
                     src={Model}
                     alt="Model logo"
                   />
                   <img
-                    className="section__partner-logo"
+                    className={style["section__partner-logo"]}
                     src={Amazon}
                     alt="Amazon logo"
                   />
                   <img
-                    className="section__partner-logo"
+                    className={style["section__partner-logo"]}
                     src={Model}
                     alt="Model logo"
                   />
                   <img
-                    className="section__partner-logo"
+                    className={style["section__partner-logo"]}
                     src={Figma}
                     alt="Figma logo"
                   />
                   <img
-                    className="section__partner-logo"
+                    className={style["section__partner-logo"]}
                     src={GoogleAd}
                     alt="Google Ads logo"
                   />
@@ -194,5 +197,3 @@ class Home extends Component {
     );
   }
 }
-
-export default Home;
