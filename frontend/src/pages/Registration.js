@@ -1,14 +1,21 @@
 import React, { Component } from 'react'
 import { Input, WithPasswordStrength } from '../components/input';
 import { Link } from 'react-router-dom';
+import Axios from "axios";
+
+const womenImg = require('../images/women.png').default;
 
 export default class Registration extends Component {
   state = {
+    name: '',
     email: '',
+    phone: '',
     password: '',
     cpassword: '',
     errors: {
+      name: '',
       email: '',
+      phone: '',
       password: '',
       cpassword: ''
     }
@@ -19,11 +26,20 @@ export default class Registration extends Component {
     e.preventDefault();
     this.setState(prevState => ({ ...prevState, errors: { email: '', password: '', cpassword: '' } }))
     // validation
-    const { email, password, cpassword } = this.state;
+    const { name, email, phone, password, cpassword } = this.state;
+    //name
+    if (!name) {
+      this.setState(prevState => ({ ...prevState, errors: { ...prevState.errors, name: 'Name cannot be empty' } }));
+      return;
+    }
     // email
     const emailTest = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
     if (!emailTest.test(email)) {
       this.setState(prevState => ({ ...prevState, errors: { ...prevState.errors, email: 'Email is not valid.' } }));
+      return;
+    }
+    if(!phone || phone.length < 10) {
+      this.setState(prevState => ({ ...prevState, errors: { ...prevState.errors, phone: 'Mobile No. cannot be empty or less than 10 digits.' } }));
       return;
     }
     // password
@@ -40,12 +56,33 @@ export default class Registration extends Component {
       return;
     }
     // registeration logic
-    alert('registered.')
+    this.registerUser();
   }
 
   changeHandler = e => {
     e.persist();
     this.setState(prevState => ({ ...prevState, [e.target.name]: e.target.value }));
+  }
+
+  registerUser = async (user) => {
+    // add user to backend
+    try {
+      const { name, email, phone, password, cpassword: passwordConfirm} = this.state;
+      const res = await Axios({
+        url: "/api/auth/signup",
+        method: "POST",
+        data:  {
+          name,
+          email,
+          phone,
+          password,
+          passwordConfirm
+        }
+      });
+      alert("Registered...")
+    } catch (error) {
+      alert(`Something went wrong! \n ${error.response.data.msg}`)
+    }
   }
 
 
@@ -60,12 +97,28 @@ export default class Registration extends Component {
               <h2 className="registration-page__title">Register</h2>
               <form onSubmit={this.registerHandler} className="registration-page__form">
                 <Input
+                  label="Name"
+                  type="text"
+                  name="name"
+                  placeholder="John Doe"
+                  onChange={this.changeHandler}
+                  error={errors.name}
+                />
+                <Input
                   label="Email Address"
                   type="email"
                   name="email"
                   placeholder="username@example.com"
                   onChange={this.changeHandler}
                   error={errors.email}
+                />
+                <Input
+                  label="Mpbile Number"
+                  type="tel"
+                  name="phone"
+                  placeholder="+91 8563214752"
+                  onChange={this.changeHandler}
+                  error={errors.phone}
                 />
                 <WithPasswordStrength
                   label="Create Password"
@@ -89,7 +142,7 @@ export default class Registration extends Component {
             </div>
             <div className="cell large-8">
               <div className="registration-page__illustration-wrapper">
-                <img src={require('../images/women.png')} className="registration-page__illustration" alt="Illustration of women"/>
+                <img src={womenImg} className="registration-page__illustration" alt="Illustration of women"/>
               </div>
             </div>
           </div>
