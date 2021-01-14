@@ -20,8 +20,6 @@ import { Stories } from "./pages/Stories/index";
 import BlogPage from "./pages/BlogPage.jsx";
 import ProjectListing from "./pages/ProjectListing.jsx";
 
-import Test from "./pages/Test";
-
 // images
 import avatar_image from "./images/placeholder-images/avatar.png";
 
