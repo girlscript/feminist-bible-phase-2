@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Link, NavLink } from "react-router-dom";
-import Avatar from "../Avatar.jsx";
+import {Avatar} from "../Avatar/index.js";
 
 // images/
 import logo from "../../images/company-assets/feminist_bible_logo.png";

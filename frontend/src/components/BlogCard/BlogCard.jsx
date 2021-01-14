@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Avatar from ".././Avatar.jsx";
+import {Avatar} from ".././Avatar/index.js";
 
 // images
 import blog_img from "../../images/placeholder-images/blog_img.png";

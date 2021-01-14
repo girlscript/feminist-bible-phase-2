@@ -2,8 +2,7 @@ import React, { Component } from "react";
 
 // Components
 import { BlogCard } from "../../components/BlogCard/index.js";
-
-import Avatar from "../../components/Avatar.jsx";
+import {Avatar} from "../../components/Avatar/index.js";
 
 //styling
 import style from "./stories.module.scss";

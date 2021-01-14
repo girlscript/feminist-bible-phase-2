@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-import Avatar from "../components/Avatar";
+import {Avatar} from "../components/Avatar/index";
 
 // images
 import avatar_image from "../images/rashmeet.png";
