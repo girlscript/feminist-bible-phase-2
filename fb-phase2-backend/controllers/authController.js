@@ -26,7 +26,7 @@ exports.signup = async (req, res) => {
     // checking existing user
     let user;
     user = await User.findOne({ email });
-    if (user) return res.json({ msg: 'user already exist' });
+    if (user) return res.status(400).json({ msg: 'user already exist' });
 
     if(password!==passwordConfirm) return res.status(400).json({msg:'password and confirm password dont match'})
     // hashing password
