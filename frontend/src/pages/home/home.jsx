@@ -4,7 +4,7 @@ import React, { Component } from "react";
 import { BlogCard } from "../../components/BlogCard/index";
 
 // Styling
-import style from "./_home.scss"
+import style from "./home.module.scss"
 
 //Images
 import GoogleAd from "../../images/homepage/partners-logo/GoogleAds.png";
@@ -14,7 +14,7 @@ import Amazon from "../../images/homepage/partners-logo/amazon.png";
 import Figma from "../../images/homepage/partners-logo/figma.png";
 import Triangle from "../../images/homepage/Graphics.svg";
 
-class Home extends Component {
+export class Home extends Component {
   render() {
     return (
       <>
@@ -43,7 +43,7 @@ class Home extends Component {
                     >
                       Login Now
                     </a>
-                    <a href="test" className="button__big button__big--hollow">
+                    <a href="test" className={style["button__big button__big--hollow"]}>
                       Register
                     </a>
                   </div>
@@ -197,5 +197,3 @@ class Home extends Component {
     );
   }
 }
-
-export default Home;

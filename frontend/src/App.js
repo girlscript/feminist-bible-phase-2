@@ -9,7 +9,7 @@ import {Footer} from "./components/Footer/index";
 import { Header } from "./components/Header/index";
 
 // pages
-import Home from "./pages/home/home.jsx";
+import {Home} from "./pages/home/index";
 import Registration from "./pages/Registration";
 import AboutUs from "./pages/AboutUs.jsx";
 import AdminProfile from "./pages/adminProfile.jsx";
@@ -39,7 +39,6 @@ function App() {
         <Stories path="/stories" exact />
         <BlogPage path="/stories/post" exact/>
         <ProjectListing path="/projects" exact/>
-        <Test path="/test" exact/>
       </Switch>
       
       <Footer />
