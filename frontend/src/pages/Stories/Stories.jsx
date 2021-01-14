@@ -6,7 +6,7 @@ import { BlogCard } from "../../components/BlogCard/index.js";
 import Avatar from "../../components/Avatar.jsx";
 
 //styling
-import style from "./stories.module.scss"
+import style from "./stories.module.scss";
 
 // Images
 import blog_img from "../../images/placeholder-images/blog_img.png";

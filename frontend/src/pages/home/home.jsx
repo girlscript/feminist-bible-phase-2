@@ -4,7 +4,7 @@ import React, { Component } from "react";
 import { BlogCard } from "../../components/BlogCard/index";
 
 // Styling
-import style from "./home.module.scss"
+import style from "./home.module.scss";
 
 //Images
 import GoogleAd from "../../images/homepage/partners-logo/GoogleAds.png";
@@ -23,7 +23,9 @@ export class Home extends Component {
             <div className="grid-container">
               <div className="grid-x grid-margin-x">
                 <div className="cell large-7">
-                  <h1 className={style["hero__title"]}>Made for all, by women.</h1>
+                  <h1 className={style["hero__title"]}>
+                    Made for all, by women.
+                  </h1>
                   <p className={style["hero__text"]}>
                     An inclusive space for all. A place where we understand,
                     acknowledge and leverage diversity by creating an inclusive
@@ -43,7 +45,10 @@ export class Home extends Component {
                     >
                       Login Now
                     </a>
-                    <a href="test" className={style["button__big button__big--hollow"]}>
+                    <a
+                      href="test"
+                      className={style["button__big button__big--hollow"]}
+                    >
                       Register
                     </a>
                   </div>
@@ -127,7 +132,10 @@ export class Home extends Component {
                 </div>
                 <div className="cell large-12">
                   <div className={style["section__button-container"]}>
-                    <a href="test" className={style["button__big button__big--hollow"]}>
+                    <a
+                      href="test"
+                      className={style["button__big button__big--hollow"]}
+                    >
                       SEE ALL STORIES
                     </a>
                   </div>
