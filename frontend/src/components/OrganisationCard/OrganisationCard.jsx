@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import org_logo from "../../images/homepage/partners-logo/amazon.png";
 
 //styling
-import style from './organisation-card.module.scss'
+import style from "./organisation-card.module.scss";
 
 export class OrganizationCard extends Component {
   render() {
@@ -17,9 +17,7 @@ export class OrganizationCard extends Component {
             Authorization library that supports access control models like ACL,
             RBAC, ABAC.
           </p>
-          <a className={style["orgCard__link"]}>
-            Learn more
-          </a>
+          <a className={style["orgCard__link"]}>Learn more</a>
         </div>
       </div>
     );
