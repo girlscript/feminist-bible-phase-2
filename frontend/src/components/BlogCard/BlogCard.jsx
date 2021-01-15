@@ -1,5 +1,9 @@
 import React, { Component } from "react";
+<<<<<<< HEAD
 import {Avatar} from ".././Avatar/index.js";
+=======
+import { Avatar } from "../Avatar/index.js";
+>>>>>>> 00de82f4283b5a322a94dcc1ee8fdd877d4307a7
 
 // images
 import blog_img from "../../images/placeholder-images/blog_img.png";

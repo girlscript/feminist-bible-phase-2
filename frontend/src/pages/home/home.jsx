@@ -47,7 +47,7 @@ export class Home extends Component {
                     </a>
                     <a
                       href="test"
-                      className={style["button__big button__big--hollow"]}
+                      className={`${style["button__big"]} ${style["button__big--hollow"]}`}
                     >
                       Register
                     </a>
@@ -134,7 +134,7 @@ export class Home extends Component {
                   <div className={style["section__button-container"]}>
                     <a
                       href="test"
-                      className={style["button__big button__big--hollow"]}
+                      className={`${style["button__big"]} ${style["button__big--hollow"]}`}
                     >
                       SEE ALL STORIES
                     </a>
