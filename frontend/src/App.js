@@ -9,7 +9,7 @@ import { Footer } from "./components/Footer/index";
 import { Header } from "./components/Header/index";
 
 // pages
-import  {Home}  from "./pages/home/index";
+import { Home } from "./pages/Home/index";
 import Registration from "./pages/Registration";
 import Login from "./pages/Login";
 import AboutUs from "./pages/AboutUs.jsx";
