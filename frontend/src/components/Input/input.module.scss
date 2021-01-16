@@ -1,3 +1,6 @@
+// importing global from the settings folder
+@import "../../css/settings/global";
+
 ::placeholder {
     font-size: 16px;
     font-weight: $font-weight-regular;
