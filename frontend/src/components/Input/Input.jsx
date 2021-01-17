@@ -1,13 +1,15 @@
 import React, { Component } from "react";
 
+import style from './input.module.scss'
+
 class Input extends Component {
   render() {
     const { label, error, type, name, placeholder, onChange } = this.props;
     return (
-      <div className="form__element-container">
-        <label className="form__label required">{label}</label>
-        <input name={name} className={`form__input-field ${error? 'error' : ''}`} type={type} placeholder={placeholder} onChange={onChange} />
-        {error && <span className="form__input-error">{error}</span>}
+      <div className={style["form__element-container"]}>
+        <label className={style["form__label required"]}>{label}</label>
+        <input name={name} className={`${style["form__input-field"]} ${error? 'error' : ''}`} type={type} placeholder={placeholder} onChange={onChange} />
+        {error && <span className={style["form__input-error"]}>{error}</span>}
       </div>       
     );
   }
@@ -55,9 +57,9 @@ class WithPasswordStrength extends Component {
           onChange={this.handlePasswordStrength}
         />
         { strength > 0  ? (<div className="form__input-strength">
-          <p className="result" style={{color: bgcolors[strength - 1]}}>{strengths[strength - 1]}</p>
-          <div className="meter">
-            <div className="strength" style={{ width: `${25*strength}%`, backgroundColor: bgcolors[strength - 1]}}>
+          <p className={style["result"]} style={{color: bgcolors[strength - 1]}}>{strengths[strength - 1]}</p>
+          <div className={style["meter"]}>
+            <div className={style["strength"]} style={{ width: `${25*strength}%`, backgroundColor: bgcolors[strength - 1]}}>
             </div>
           </div>
         </div>) : null }
