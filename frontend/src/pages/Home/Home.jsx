@@ -39,14 +39,14 @@ export class Home extends Component {
 
                   <div className={style["hero__button-container"]}>
                     <a
-                      href="test"
+                      href="login"
                       className={style["button__big"]}
                       style={{ marginRight: "20px" }}
                     >
                       Login Now
                     </a>
                     <a
-                      href="test"
+                      href="register"
                       className={`${style["button__big"]} ${style["button__big--hollow"]}`}
                     >
                       Register

@@ -1,17 +1,20 @@
 import React, { Component } from "react";
 
 //Components
-import {OrganizationCard} from "../components/OrganisationCard/index";
+import {OrganizationCard} from "../../components/OrganisationCard/index";
 
-class OrganizationList extends Component {
+//Style
+import style from "./organization-list.module.scss"
+
+export class OrganizationList extends Component {
   render() {
     return (
       <>
-        <div className="org-list-page">
+        <div className={style["org-list-page"]}>
           <div className="grid-container">
             <div className="grid-x grid-margin-x">
               <div className="cell large-12">
-                <h1 className="org-list-page__heading">
+                <h1 className={style["org-list-page__heading"]}>
                   Organization
                 </h1>
               </div>
@@ -42,5 +45,3 @@ class OrganizationList extends Component {
     );
   }
 }
-
-export default OrganizationList;
