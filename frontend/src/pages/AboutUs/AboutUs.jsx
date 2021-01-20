@@ -2,14 +2,18 @@ import React, { Component } from "react";
 
 //Images
 // import linkedIn from "../images/linkedin 1.png";
-import img_1 from "../images/img-1.png";
-import img_2 from "../images/img-2.png";
-class Admin extends Component {
+import img_1 from "../../images/img-1.png";
+import img_2 from "../../images/img-2.png";
+
+//css
+import style from "./aboutUs.module.scss";
+
+export class AboutUs extends Component {
   render() {
     return (
       <>
         <div style={{ background: "#FFFDF6" }}>
-          <div className="about">
+          <div className={style["about"]}>
             <div className="grid-container">
               <div className=" grid-x grid-margin-x">
                 <div class="cell medium-4">
@@ -42,7 +46,7 @@ class Admin extends Component {
             background: "linear-gradient(180deg, #FFFDF6 0%, #FFEBF3 100%)",
           }}
         >
-          <div className="coFounder">
+          <div className={style["coFounder"]}>
             <div className="grid-container">
               <div className=" grid-x grid-margin-x ">
                 <div className="cell ">
@@ -51,15 +55,15 @@ class Admin extends Component {
                 </div>
 
                 <div className="cell medium-6">
-                  <div className="coFounder-div">
-                  <div className="coFounder-avatar">
+                  <div className={style["coFounder-div"]}>
+                  <div className={style["coFounder-avatar"]}>
                   <img src={img_1} alt="avatar" />
                   </div>
-                  <div className="coFounder-name ">
+                  <div className={style["coFounder-name"]}>
                     <h3>Maybelyn H. Plecic</h3>
                     {/* <img src={linkedIn} alt="linkedIn" /> */}
                   </div>
-                  <ul className="coFounder-details__list">
+                  <ul className={style["coFounder-details__list"]}>
                     <li>Presidio Distinguished Engineer - 2019</li>
                     <li>
                       Professional Services Manager - 10 Reporting Engineers
@@ -87,15 +91,15 @@ class Admin extends Component {
                 </div>
 
                 <div className="cell medium-6 ">
-                  <div className="coFounder-div">
-                  <div className="coFounder-avatar">
+                  <div className={style["coFounder-div"]}>
+                  <div className={style["coFounder-avatar"]}>
                   <img src={img_2} alt="avatar" />
                   </div>
-                  <div className="coFounder-name">
+                  <div className={style["coFounder-name"]}>
                     <h3>Rashmeet Kaur</h3>
                     {/* <img src={linkedIn} alt="linkedIn" /> */}
                   </div>
-                  <ul className="coFounder-details__list ">
+                  <ul className={style["coFounder-details__list"]}>
                     <li>Supply Chain Professional</li>
                     <li>Mechanical and Manufacturing Systems Engineer</li>
                     <li>Graduate Researcher at Cranfield University, UK</li>
@@ -123,4 +127,4 @@ class Admin extends Component {
   }
 }
 
-export default Admin;
+
