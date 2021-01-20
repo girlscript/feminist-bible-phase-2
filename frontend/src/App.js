@@ -12,7 +12,7 @@ import { Header } from "./components/Header/index";
 import { Home } from "./pages/Home/index";
 import Registration from "./pages/Registration";
 import Login from "./pages/Login";
-import AboutUs from "./pages/AboutUs.jsx";
+import {AboutUs} from "./pages/AboutUs/index";
 import AdminProfile from "./pages/adminProfile.jsx";
 import { OrganizationList } from "./pages/OrganizationList/index";
 import { Stories } from "./pages/Stories/index";
