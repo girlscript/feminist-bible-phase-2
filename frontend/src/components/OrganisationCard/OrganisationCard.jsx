@@ -9,7 +9,7 @@ export class OrganizationCard extends Component {
     return (
       <div className={style["orgCard__container"]}>
         <div className={style["orgCard__logo"]}>
-          <img src={org_logo} className={style["orgCard__logoimg"]} />
+          <img src={org_logo} className={style["orgCard__logoimg"]} alt="organization logo"/>
         </div>
         <div className={style["orgCard__text-container"]}>
           <p className={style["orgCard__heading-text"]}>Amazon Open Source</p>
@@ -17,7 +17,7 @@ export class OrganizationCard extends Component {
             Authorization library that supports access control models like ACL,
             RBAC, ABAC.
           </p>
-          <a className={style["orgCard__link"]}>Learn more</a>
+          <a className={style["orgCard__link"]} href="placeholder">Learn more</a>
         </div>
       </div>
     );

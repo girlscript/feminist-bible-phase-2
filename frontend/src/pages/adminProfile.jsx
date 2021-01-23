@@ -41,7 +41,7 @@ class AdminProfile extends Component {
                 </h2>
                 <div className="admin-profile__social-media">
                   <div className="admin-profile__social-media__location-wrap">
-                    <img src={LocationIcon} className="links__icon" />
+                    <img src={LocationIcon} className="links__icon" alt="location icon"/>
                     <h3 className="location">Goa, India</h3>
                   </div>
                   <div className="admin-profile__social-media__icon-wrap">
