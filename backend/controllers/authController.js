@@ -16,7 +16,7 @@ const transporter = nodemailer.createTransport(
 );
 
 exports.signup = async (req, res) => {
-  const {name,email,phone,photo,password,passwordConfirm} = req.body;
+  const { name, email, phone, photo, password, passwordConfirm } = req.body;
   console.log(req.body);
   // checking all credentials are present or not
   if (!name || !email || !phone || !password)
@@ -28,9 +28,12 @@ exports.signup = async (req, res) => {
     user = await User.findOne({ email });
     if (user) return res.json({ msg: 'user already exist' });
 
-    if(password!==passwordConfirm) return res.status(400).json({msg:'password and confirm password dont match'})
+    if (password !== passwordConfirm)
+      return res
+        .status(400)
+        .json({ msg: 'password and confirm password dont match' });
     // hashing password
-    let hashPasswordConfirm=await bcrypt.hash(passwordConfirm,10);
+    let hashPasswordConfirm = await bcrypt.hash(passwordConfirm, 10);
     let hashPassword = await bcrypt.hash(password, 10);
 
     const newUser = await User.create({
@@ -39,13 +42,13 @@ exports.signup = async (req, res) => {
       photo,
       phone,
       password: hashPassword,
-      passwordConfirm:hashPasswordConfirm
+      passwordConfirm: hashPasswordConfirm,
     });
 
     await newUser.save();
 
     // generating auth token
-    let token = jwt.sign({ id: newUser._id }, process.env.JWT_Key, {
+    let token = jwt.sign({ id: newUser._id }, process.env.JWT_SECRET, {
       expiresIn: '1h',
     });
 
@@ -65,33 +68,37 @@ exports.signup = async (req, res) => {
 };
 
 exports.signin = async (req, res) => {
-  const {email,password} = req.body;
-  if(!email || !password)
-  return res.status(400).json({msg:"fill up all the credentials"});
-  
-  try{
-    let existingUser = await User.findOne({email});
-    if(!existingUser)
-    return res.status(400).json({msg:"invalid credentials"});
+  const { email, password } = req.body;
+  if (!email || !password)
+    return res.status(400).json({ msg: 'fill up all the credentials' });
 
-    let isPasswordTrue = await bcrypt.compare(password,existingUser.password);
+  try {
+    let existingUser = await User.findOne({ email });
+    if (!existingUser)
+      return res.status(400).json({ msg: 'invalid credentials' });
 
-    if(!isPasswordTrue)
-    return res.status(400).json({msg:"invalid credentials,check your password"});
+    let isPasswordTrue = await bcrypt.compare(password, existingUser.password);
 
-    let token = jwt.sign({id:existingUser._id},process.env.JWT_Key,{expiresIn:'1h'});
+    if (!isPasswordTrue)
+      return res
+        .status(400)
+        .json({ msg: 'invalid credentials,check your password' });
+
+    let token = jwt.sign({ id: existingUser._id }, process.env.JWT_SECRET, {
+      expiresIn: '1h',
+    });
 
     res.status(200).json({
-      success:true,
-      data:{
+      success: true,
+      data: {
         ...existingUser._doc,
         token,
-        password:''
-      }
-    })
-  } catch(err){
+        password: '',
+      },
+    });
+  } catch (err) {
     console.log(err.message);
-    return res.status(400).json({msg:'cannot sign in'})
+    return res.status(400).json({ msg: 'cannot sign in' });
   }
 };
 
@@ -178,25 +185,26 @@ exports.postNewPassword = async (req, res) => {
   }
 };
 
-exports.isSignedIn=async (req,res,next)=>{
-  const token=req.header('Authorization').replace('Bearer ','');
-  const data=jwt.verify(token,process.env.JWT_Key);
+exports.isSignedIn = async (req, res, next) => {
+  const token = req.header('Authorization').replace('Bearer ', '');
+  const data = jwt.verify(token, process.env.JWT_SECRET);
   try {
-    const user=User.findOne({_id:userId,token:token});
-    if(!user){
+    const user = User.findOne({ _id: userId, token: token });
+    if (!user) {
       throw new NoUserFoundError('User is currently not logged in');
     }
-    req.user=user;
-    req.token=token;
+    req.user = user;
+    req.token = token;
     next();
-
-    
   } catch (error) {
     const err_code = error.err_code
-    ? err.code >= 100 && err.code <= 599 ? err.code : 500 : 500;
-  res.status(err_code).json({ status:'fail',message: err.message || 'Internal Server Error' });
-  
+      ? err.code >= 100 && err.code <= 599
+        ? err.code
+        : 500
+      : 500;
+    res.status(err_code).json({
+      status: 'fail',
+      message: err.message || 'Internal Server Error',
+    });
   }
-
-  
-}
+};

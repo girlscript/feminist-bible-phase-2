@@ -15,10 +15,11 @@ import Login from "./pages/Login";
 import AboutUs from "./pages/AboutUs.jsx";
 import AdminProfile from "./pages/adminProfile.jsx";
 import { OrganizationList } from "./pages/OrganizationList/index";
-import CodeOfConduct from "./pages/CodeOfConduct.jsx";
 import { Stories } from "./pages/Stories/index";
-import BlogPage from "./pages/BlogPage.jsx";
+import { BlogPage } from "./pages/BlogPage/index";
 import ProjectListing from "./pages/ProjectListing.jsx";
+
+import { CodeOfConduct } from "./pages/CodeOfConduct/index";
 
 // images
 import avatar_image from "./images/placeholder-images/avatar.png";

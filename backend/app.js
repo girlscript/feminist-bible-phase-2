@@ -34,6 +34,10 @@ const limiter = rateLimit({
 // using express rate limit to every request that hit "/"
 app.use('/', limiter);
 
+app.get('/', (req, res) => {
+  res.send('Welcome');
+});
+
 // routes
 app.use('/api/auth', authRouter);
 app.use('/api/story', storyRouter);
