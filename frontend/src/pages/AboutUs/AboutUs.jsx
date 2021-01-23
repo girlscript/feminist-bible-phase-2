@@ -16,10 +16,10 @@ export class AboutUs extends Component {
           <div className={style["about"]}>
             <div className="grid-container">
               <div className=" grid-x grid-margin-x">
-                <div class="cell medium-4">
+                <div className="cell medium-4">
                   <h1>About us</h1>
                 </div>
-                <div class="cell medium-8">
+                <div className="cell medium-8">
                   <p>
                     Maybelyn Plecic and Rashmeet Kaur are the founders of the
                     Feminist Bible. It began in January 2020, where they decided
