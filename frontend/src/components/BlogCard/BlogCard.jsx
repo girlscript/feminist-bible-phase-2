@@ -11,7 +11,7 @@ export class BlogCard extends Component {
   render() {
     return (
       <div className={style["blog-card__container"]}>
-        <img src={blog_img} className={style["blog-card__img"]} />
+        <img src={blog_img} className={style["blog-card__img"]} alt="blog cover"/>
 
         <h3 className={style["blog-card__title"]}>
           QTPOC In Comics: “Bingo Love” Depicts Black Queer Women’s Romance

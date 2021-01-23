@@ -29,7 +29,7 @@ class Comment extends Component {
                             sunt nostrud amet.
                         </p>
                     </div>
-                    <a className="reply"> 
+                    <a className="reply" href="placeholder"> 
                         Reply
                     </a>
                 </div>
