@@ -68,17 +68,17 @@ export default class Registration extends Component {
     // add user to backend
     try {
      // const { name, email, phone, password, cpassword: passwordConfirm} = this.state;
-     /* const res = await Axios({
-        url: "/api/auth/signup",
-        method: "POST",
-        data:  {
-          name,
-          email,
-          phone,
-          password,
-          passwordConfirm
-        }
-      });*/
+      // const res = await Axios({
+      //   url: "/api/auth/signup",
+      //   method: "POST",
+      //   data:  {
+      //     name,
+      //     email,
+      //     phone,
+      //     password,
+      //     passwordConfirm
+      //   }
+      // });
       alert("Registered...")
     } catch (error) {
       alert(`Something went wrong! \n ${error.response.data.msg}`)

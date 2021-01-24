@@ -1,6 +1,5 @@
 import React, { Component } from "react";
-import { Input } from "../components/Input/index.js";
-//import {  WithPasswordStrength } from "../components/Input/index.js";
+import { Input, /*WithPasswordStrength*/ } from "../components/Input/index.js";
 import { Link } from "react-router-dom";
 //import Axios from "axios";
 
@@ -67,18 +66,18 @@ export default class Registration extends Component {
   loginUser = async (user) => {
     // add user to backend
     try {
-     // const {
-     //   email,
-     //   password,
-  //    } = this.state;
-      /*const res = await Axios({
-        url: "/api/auth/signin",
-        method: "POST",
-        data: {
-          email,
-          password,
-        },
-      });*/
+      // const {
+      //   email,
+      //   password,
+      // } = this.state;
+      // const res = await Axios({
+      //   url: "/api/auth/signin",
+      //   method: "POST",
+      //   data: {
+      //     email,
+      //     password,
+      //   },
+      // });
       alert("LoggedIN...");
     } catch (error) {
       alert(`Something went wrong! \n ${error.response.data.msg}`);

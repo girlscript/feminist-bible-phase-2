@@ -1,0 +1,103 @@
+@import "../../css/settings/global";
+
+.about {
+    padding: 145px 0px 145px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+    h1 {
+      color: $title-color;
+    }
+  }
+  
+  .coFounder {
+    margin: auto;
+    display: flex;
+    padding-bottom: 145px;
+    justify-content: center;
+    align-items: center;
+  
+    h1 {
+      margin-bottom: 32px;
+      color: $title-color;
+    }
+  
+    &-name {
+      display: flex;
+      justify-content: space-between;
+      margin: 25px 0;
+      h3 {
+        font-size: 24px;
+        color: $title-color;
+      }
+  
+      img {
+        height: 90%;
+      }
+    }
+  
+    &-details__list {
+      list-style: none;
+      margin-left: 0;
+      li {
+        @extend .text;
+        margin-bottom: 14px;
+      }
+    }
+  }
+  
+  @media only screen and (max-width: 1024px) {
+    .about {
+      padding: 100px 50px;
+    }
+  
+    .coFounder {
+      padding: 0 50px 100px 50px;
+      h1 {
+        margin-bottom: 20px;
+      }
+      &-div {
+        .coFounder-avatar {
+          img {
+            max-width: 90%;
+            margin: 10px 0;
+          }
+        }
+      }
+    }
+  }
+  
+  @media only screen and (max-width: 640px) {
+    .about {
+      padding: 50px 0;
+      h1 {
+        margin-bottom: 10px;
+      }
+    }
+  
+    .coFounder {
+      margin: auto;
+      padding-bottom: 50px;
+  
+      h1 {
+        margin-bottom: -10px;
+      }
+      &-name {
+        margin: 15px 0;
+      }
+  
+      &-div {
+        padding: 10px;
+  
+        .coFounder-avatar {
+          text-align: center;
+          img {
+            max-width: 80%;
+            margin: 10px 0;
+          }
+        }
+      }
+    }
+  }
+  
