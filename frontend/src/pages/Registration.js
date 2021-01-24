@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { Input, WithPasswordStrength } from '../components/Input/index';
 import { Link } from 'react-router-dom';
-import Axios from "axios";
+//import Axios from "axios";
 
 const womenImg = require('../images/women.png').default;
 
@@ -67,18 +67,18 @@ export default class Registration extends Component {
   registerUser = async (user) => {
     // add user to backend
     try {
-      const { name, email, phone, password, cpassword: passwordConfirm} = this.state;
-      const res = await Axios({
-        url: "/api/auth/signup",
-        method: "POST",
-        data:  {
-          name,
-          email,
-          phone,
-          password,
-          passwordConfirm
-        }
-      });
+     // const { name, email, phone, password, cpassword: passwordConfirm} = this.state;
+      // const res = await Axios({
+      //   url: "/api/auth/signup",
+      //   method: "POST",
+      //   data:  {
+      //     name,
+      //     email,
+      //     phone,
+      //     password,
+      //     passwordConfirm
+      //   }
+      // });
       alert("Registered...")
     } catch (error) {
       alert(`Something went wrong! \n ${error.response.data.msg}`)
