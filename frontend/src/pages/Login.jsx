@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Input } from "../components/Input/index.js";
+import { Input, /*WithPasswordStrength*/ } from "../components/Input/index.js";
 import { Link } from "react-router-dom";
 //import Axios from "axios";
 
