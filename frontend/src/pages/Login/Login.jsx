@@ -1,11 +1,13 @@
 import React, { Component } from "react";
-import { Input, /*WithPasswordStrength*/ } from "../components/Input/index.js";
+import { Input, /*WithPasswordStrength*/ } from "../../components/Input/index.js";
 import { Link } from "react-router-dom";
 //import Axios from "axios";
 
-const womenImg = require("../images/women.png").default;
+import style from './login.module.scss'
 
-export default class Registration extends Component {
+const womenImg = require("../../images/women.png").default;
+
+export class Login extends Component {
   state = {
     email: "",
     password: "",
@@ -88,14 +90,14 @@ export default class Registration extends Component {
     const { errors } = this.state;
     return (
       <>
-        <div className="registration-page">
+        <div className={style["login-page"]}>
           <div className="grid-container">
             <div className="grid-x align-middle">
               <div className="cell large-4 medium-4">
-                <h2 className="registration-page__title">Login</h2>
+                <h2 className={style["login-page__title"]}>Login</h2>
                 <form
                   onSubmit={this.registerHandler}
-                  className="registration-page__form"
+                  className={style["login-page__form"]}
                 >
                   <Input
                     label="Email Address"
@@ -113,7 +115,7 @@ export default class Registration extends Component {
                     onChange={this.changeHandler}
                     error={errors.password}
                   />
-                  <button className="button__big">Login</button>
+                  <button className={style["button__big"]}>Login</button>
                 </form>
                 <Link>
                   Don't have an account?{" "}
@@ -121,10 +123,10 @@ export default class Registration extends Component {
                 </Link>
               </div>
               <div className="cell large-8">
-                <div className="registration-page__illustration-wrapper">
+                <div className={style["login-page__illustration-wrapper"]}>
                   <img
                     src={womenImg}
-                    className="registration-page__illustration"
+                    className={style["login-page__illustration"]}
                     alt="Illustration of women"
                   />
                 </div>

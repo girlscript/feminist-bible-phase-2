@@ -1,11 +1,13 @@
 import React, { Component } from 'react'
-import { Input, WithPasswordStrength } from '../components/Input/index';
+import { Input, WithPasswordStrength } from '../../components/Input/index';
 import { Link } from 'react-router-dom';
 //import Axios from "axios";
 
-const womenImg = require('../images/women.png').default;
+import style from './registration.module.scss'
 
-export default class Registration extends Component {
+const womenImg = require('../../images/women.png').default;
+
+export class Registration extends Component {
   state = {
     name: '',
     email: '',
@@ -90,12 +92,12 @@ export default class Registration extends Component {
     const { errors } = this.state;
     return (
       <>
-      <div className="registration-page">
+      <div className={style["registration-page"]}>
         <div className="grid-container">
           <div className="grid-x align-middle">
             <div className="cell large-4 medium-4">
-              <h2 className="registration-page__title">Register</h2>
-              <form onSubmit={this.registerHandler} className="registration-page__form">
+              <h2 className={style["registration-page__title"]}>Register</h2>
+              <form onSubmit={this.registerHandler} className={style["registration-page__form"]}>
                 <Input
                   label="Name"
                   type="text"
@@ -136,12 +138,12 @@ export default class Registration extends Component {
                   onChange={this.changeHandler}
                   error={errors.cpassword}
                 />
-                <button className="button__big">Register</button>
+                <button className={style["button__big"]}>Register</button>
               </form>
               <Link>Already have an account? <span style={{color: '#2F80ED'}}><Link to="/login">Login here</Link></span>.</Link>
             </div>
             <div className="cell large-8">
-              <div className="registration-page__illustration-wrapper">
+              <div className={style["registration-page__illustration-wrapper"]}>
                 <img src={womenImg} className="registration-page__illustration" alt="Illustration of women"/>
               </div>
             </div>
