@@ -17,7 +17,7 @@ import AdminProfile from "./pages/adminProfile.jsx";
 import { OrganizationList } from "./pages/OrganizationList/index";
 import { Stories } from "./pages/Stories/index";
 import { BlogPage } from "./pages/BlogPage/index";
-import ProjectListing from "./pages/ProjectListing.jsx";
+import { ProjectListing } from "./pages/ProjectListing/index";
 
 import { CodeOfConduct } from "./pages/CodeOfConduct/index";
 
