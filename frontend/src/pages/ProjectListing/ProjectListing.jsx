@@ -1,7 +1,9 @@
 import React, { Component } from "react";
-import { ProjectCard } from "../components/ProjectCard/index.js";
+import { ProjectCard } from "../../components/ProjectCard/index.js";
 
-class ProjectListing extends Component {
+import style from './project-listing.module.scss'
+
+export class ProjectListing extends Component {
   render() {
     const data = [
       {
@@ -26,7 +28,7 @@ class ProjectListing extends Component {
         return [...Array(data[igKey])].map((_, i) => {
           return (
             <div className="cell large-12">
-              <div className="project-listing__card">
+              <div className={style["project-listing__card"]}>
                 <ProjectCard
                   title={data[igKey].title}
                   text={data[igKey].text}
@@ -41,11 +43,11 @@ class ProjectListing extends Component {
       }, []);
 
     return (
-      <div className="project-listing">
+      <div className={style["project-listing"]}>
         <div className="grid-container">
           <div className="grid-x grid-margin-x">
             <div className="cell large-12">
-              <h1 className="project-listing__title">All Projects</h1>
+              <h1 className={style["project-listing__title"]}>All Projects</h1>
             </div>
             <div className="cell large-12">{convertedData}</div>
           </div>
@@ -54,4 +56,3 @@ class ProjectListing extends Component {
     );
   }
 }
-export default ProjectListing;
