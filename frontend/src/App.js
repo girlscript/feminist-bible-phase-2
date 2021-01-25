@@ -10,8 +10,8 @@ import { Header } from "./components/Header/index";
 
 // pages
 import { Home } from "./pages/Home/index";
-import Registration from "./pages/Registration";
-import Login from "./pages/Login";
+import { Registration } from "./pages/Registration/index";
+import { Login } from "./pages/Login/index";
 import {AboutUs} from "./pages/AboutUs/index";
 import AdminProfile from "./pages/adminProfile.jsx";
 import { OrganizationList } from "./pages/OrganizationList/index";
