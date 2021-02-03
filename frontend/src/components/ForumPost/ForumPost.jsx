@@ -7,7 +7,7 @@ import Comment from "../Comment";
 import CommentInput from "../CommentInput";
 
 // images
-import avatar_image from "../../images/placeholder-images/avatar.png";
+import avatar_image from "../../images/placeholder-images/forum_post_avatar.png";
 import comment_img from "../../images/CommentIcon.png"
 import like_img from "../../images/LikeIcon.png"
 import facebook from '../../images/facebook.png'

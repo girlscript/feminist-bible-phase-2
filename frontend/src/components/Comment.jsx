@@ -4,7 +4,7 @@ import React, { Component } from "react";
 import { Avatar } from "./Avatar/index.js";
 
 //images
-import avatar_image from "../images/placeholder-images/avatar.png";
+import avatar_image from "../images/placeholder-images/comment_avatar.png";
 
 class Comment extends Component {
     render() {
