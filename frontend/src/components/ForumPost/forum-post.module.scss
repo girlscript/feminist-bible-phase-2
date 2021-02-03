@@ -1,0 +1,60 @@
+// importing global from the settings folder
+@import "../../css/settings/global";
+
+.forum-post {
+    &__container {
+        border: 1px solid #84878A;
+        border-radius: 5px;
+        background-color: #FFFDF6;;
+        padding: 20px;
+        box-shadow: 0px 0px 14px rgba(0, 0, 0, 0.08);
+    }
+
+}
+.author {
+    &__text{
+      font-size: 14px;
+    }
+
+    &__time{
+        float: right;
+        text-align: right;
+        font-size: 14px;
+    }
+  
+    &__title{
+        font-size: 18px; 
+        font-weight: $font-weight-medium;
+        padding-left:20px;
+        float: left;
+    }
+
+    &__img-container {
+        margin: 20px;
+        max-width: 100%;
+        min-width: 80px;
+        float: left;
+    }
+}
+
+.social {
+
+    &__comment_like {
+        float: left;
+        margin: 0px 8.2px;
+    }
+    
+    &__media {
+        float: right;
+        text-align: right;
+        margin-right: 15px;
+    }
+
+}
+
+
+.horizontal{
+    width: inherit;
+    margin:0;
+    border: 1px solid rgba(0, 0, 0, 0.26);
+}
