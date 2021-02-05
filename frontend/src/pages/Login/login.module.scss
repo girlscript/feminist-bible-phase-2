@@ -1,0 +1,26 @@
+@import "../../css/settings/_global";
+
+.login-page{
+    background-color:$yellow-bg;
+    padding: 60px 0;
+
+    &__title{
+        margin-bottom:20px;
+    }
+
+    &__illustration{
+        max-width:580px;
+        text-align: right;
+    }
+
+    &__illustration-wrapper{
+        display:flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: center;
+    }
+
+    &__form{
+        margin-bottom:30px;
+    }
+}

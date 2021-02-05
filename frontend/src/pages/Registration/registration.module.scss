@@ -1,5 +1,8 @@
+@import "../../css/settings/_global";
+
 .registration-page{
     background-color:$yellow-bg;
+    padding: 60px 0;
 
     &__title{
         margin-bottom:20px;
