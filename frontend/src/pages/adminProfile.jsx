@@ -4,7 +4,7 @@ import React, { Component } from "react";
 //import BlogCard from "../components/BlogCard.jsx";
 import { BlogCard } from "../components/BlogCard/index";
 
-import Notification from "../components/Notification.jsx";
+import {Notification} from "../components/Notification/index";
 
 //Images
 import LocationIcon from "../images/location-pin.png";
