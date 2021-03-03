@@ -6,8 +6,12 @@
         border: 1px solid #84878A;
         border-radius: 5px;
         background-color: #FFFDF6;;
-        padding: 20px;
         box-shadow: 0px 0px 14px rgba(0, 0, 0, 0.08);
+    }
+
+    &__post-section {
+        padding: 20px;
+        border: rgba(0, 0, 0, 0.25);
     }
 }
 
@@ -53,5 +57,9 @@
 }
 
 .comment-section > * {
-    padding: 20px 0px;
+    padding: 10px 0px;
+}
+
+.load-comment{
+    padding-left: 18px;
 }

@@ -15,7 +15,7 @@ class Comment extends Component {
 
     render() {
         return(
-            <div className="flex-container">
+            <div className="comment-input__container">
                 <div className="comment-input__img-container">
                     <Avatar avatarSrc={avatar_image}/>
                 </div>
