@@ -11,7 +11,8 @@
 
     &__post-section {
         padding: 20px;
-        border: rgba(0, 0, 0, 0.25);
+        border: 1px solid #84878A;
+        margin: 0px;
     }
 }
 
@@ -19,7 +20,7 @@
 
     &__text{
       font-size: 14px;
-      padding-left:20px;
+      padding-left: 20px;
     }
 
     &__time{
@@ -32,29 +33,26 @@
     &__title{
         font-size: 18px;
         font-weight: $font-weight-medium;
-        padding-left:20px;
+        padding-left: 20px;
     }
 }
 
 .social {
 
+    &__container {
+        display: flex;
+        justify-content: space-between;
+    }
+
     &__comment_like {
-        float: left;
         margin: 0px 8.2px;
     }
 
     &__media {
-        float: right;
-        text-align: right;
         margin-right: 15px;
     }
 }
 
-.horizontal{
-    width: inherit;
-    margin: 0px;
-    border: 1px solid rgba(0, 0, 0, 0.26);
-}
 
 .comment-section > * {
     padding: 10px 0px;

@@ -53,25 +53,24 @@ export class ForumPost extends Component {
                         dolor do  amet sint.
                     </p>
                 </div>
-                <div> {/*footer*/}
-                    <div> {/*left side*/}
+                <div className={style["social__container"]}> {/*footer*/}
+                    <div className="flex-container"> {/*left side*/}
                         <img
                             src={comment_img}
                             alt="comments"
-                            className={style["social__comment_like"]}
                         />
-                        <p className={style["social__comment_like"]}>  10  </p>
+                        <p>  10  </p>
                         <img
                             src={like_img}
                             alt="likes"
-                            className={style["social__comment_like"]}
                         />
-                        <p className={style["social__comment_like"]}>  15  </p>
+                        <p>  15  </p>
                     </div>
-                    <div> {/*icons*/}
+                    <div className="flex-container"> {/*icons*/}
+                        <p className={style["social__media"]}>Share to </p>
                         <img
-                            src={linkedin}
-                            alt="linkedin"
+                            src={facebook}
+                            alt="facebook"
                             className={style["social__media"]}
                         />
                         <img
@@ -80,11 +79,10 @@ export class ForumPost extends Component {
                             className={style["social__media"]}
                         />
                         <img
-                            src={facebook}
-                            alt="facebook"
+                            src={linkedin}
+                            alt="linkedin"
                             className={style["social__media"]}
                         />
-                        <p className={style["social__media"]}>Share to </p>
                     </div>
                 </div>
             </div>
