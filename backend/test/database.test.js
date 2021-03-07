@@ -1,9 +1,12 @@
-const assert = require('assert');
-//const db = require('../database');
+const expect = require('chai').expect;
+const User = require('../../backend/database/models/userModel');
 
-describe('TEST: database', () => {
-  it('test schema', (done) => {
-    // test mongoose schema when they are available
-    done();
+describe('TEST: user schema', () => {
+  it('should be invalid if name is empty', (done) => {
+    const schema = new User();
+    schema.validate(function (err) {
+      expect(err.errors.name).to.exist;
+      done();
+    });
   });
 });
