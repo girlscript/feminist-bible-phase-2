@@ -11,7 +11,6 @@ describe('TEST: Server', () => {
         .expect(404)
         .end((err, res) => {
           if (err) throw err;
-
           assert.strictEqual(res.status, 404);
           app.close((err) => {
             done(err);
