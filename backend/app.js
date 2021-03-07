@@ -34,17 +34,6 @@ const limiter = rateLimit({
 // using express rate limit to every request that hit "/"
 app.use('/', limiter);
 
-app.get('/', (req, res) => {
-  res.send('Welcome');
-});
-
-app.get('/', (req, res) => {
-  res.status(200).json({
-    status: 'success',
-    message: 'API is working',
-  });
-});
-
 // routes
 app.use('/api/auth', authRouter);
 app.use('/api/story', storyRouter);
