@@ -8,17 +8,38 @@ issue if you find anything wrong
 .
 ├── app.js
 ├── controllers
-│   ├── authController.js
-│   └── userController.js
+│   ├── adminController.js
+│   └── authController.js
+|   └── forumController.js
+|   └── orgController.js
+|   └── projectController.js
+|   └── storyController.js
+|   └── userController.js
+
 ├── .env
 ├── .env.example
 ├── .gitignore
-├── models
-│   └── userModel.js
+├── database
+    └── models
+    │   └── adminModel.js
+    │   └── forumPostCommentModel.js
+    │   └── forumPostModel.js
+    │   └── orgModel.js
+    │   └── postModel.js
+    │   └── projectModel.js
+    │   └── storyModel.js
+    │   └── userModel.js
+    └── index.js
+
 ├── package.json
 ├── README.md
 ├── routes
-│   ├── authRoutes.js
+│   ├── adminRoutes.js
+│   └── authRoutes.js
+│   └── forumRoutes.js
+│   └── orgRoutes.js
+│   └── projectRoutes.js
+│   └── storyRoutes.js
 │   └── userRoutes.js
 ├── server.js
 └── yarn.lock
@@ -124,6 +145,3 @@ mongo --version
 
 This project uses Prettier for code formatting. Developers are expected to
 format their code before pushing it to remote repository.
-
-To make the process easier, a pre-commit hook has been added which would format
-messy codes for you.
