@@ -1,5 +1,5 @@
 const expect = require('chai').expect;
-const User = require('../../backend/database/models/userModel');
+const User = require('../database/models/userModel');
 
 describe('TEST: user schema', () => {
   it('should be invalid if name is empty', (done) => {
