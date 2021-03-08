@@ -5,6 +5,8 @@ name = "javascript"
 enabled = true
 
   [analyzers.meta]
+  ecma_version = "2016"
+  module_system = "es-modules"
   environment = [
     "nodejs",
     "browser",
@@ -12,3 +14,8 @@ enabled = true
     "mocha"
   ]
   plugins = ["react"]
+  
+  dependency_file_paths = [
+  "frontend/package.json",
+  "backend/package.json",
+  ]
