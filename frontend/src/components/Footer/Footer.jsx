@@ -24,27 +24,27 @@ export class Footer extends Component {
             <div className="cell large-2 medium-2 small-6">
               <h6 className={style["footer__sub-title"]}>Navigate</h6>
               <ul className={style["footer__nav-item-container"]}>
-                <li className={style["footer__nav-item"]}><a href="placeholder">Home</a></li>
-                <li className={style["footer__nav-item"]}><a href="placeholder">Stories</a></li>
-                <li className={style["footer__nav-item"]}><a href="placeholder">Organizations</a></li>
-                <li className={style["footer__nav-item"]}><a href="placeholder">About</a></li>
+                <li className={style["footer__nav-item"]}><a href="/">Home</a></li>
+                <li className={style["footer__nav-item"]}><a href="stories">Stories</a></li>
+                <li className={style["footer__nav-item"]}><a href="organization">Organizations</a></li>
+                <li className={style["footer__nav-item"]}><a href="about">About</a></li>
               </ul>
             </div>
 
             <div className="cell large-3 medium-3 small-6">
               <h6 className={style["footer__sub-title"]}>Resources</h6>
               <ul className={style["footer__nav-item-container"]}>
-                <li className={style["footer__nav-item"]}><a href="placeholder">Code of Conduct</a></li>
-                <li className={style["footer__nav-item"]}><a href="placeholder">Terms and Conditions</a></li>
+                <li className={style["footer__nav-item"]}><a href="codeofconduct">Code of Conduct</a></li>  {/* after creating the code of conductpage just add the id of the same href name  */}
+                <li className={style["footer__nav-item"]}><a href="termsandconditions">Terms and Conditions</a></li>
               </ul>
             </div>
 
             <div className="cell large-2 medium-2 small-6">
               <h6 className={style["footer__sub-title"]}>Connect</h6>
               <ul className={style["footer__nav-item-container"]}>
-                <li className={style["footer__nav-item"]}><a href="placeholder">Instagram</a></li>
-                <li className={style["footer__nav-item"]}><a href="placeholder">Facebook</a></li>
-                <li className={style["footer__nav-item"]}><a href="placeholder">LinkedIn</a></li>
+                <li className={style["footer__nav-item"]}><a href="https://www.instagram.com/feminist_bible/?hl=en">Instagram</a></li>
+                <li className={style["footer__nav-item"]}><a href="facebook">Facebook</a></li>
+                <li className={style["footer__nav-item"]}><a href="linkedin">LinkedIn</a></li>
               </ul>
             </div>
 
