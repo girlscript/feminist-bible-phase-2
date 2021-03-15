@@ -1,11 +1,9 @@
-import React, { Component } from "react";
+import React from "react";
 
-import style from "./avatar.module.scss"
+import style from "./avatar.module.scss";
 
-export class Avatar extends Component {
-  render() {
-    return (
-        <img src={this.props.avatarSrc} className={style["avatar"]} alt="signed-in user"/>      
-    );
-  }
+export const Avatar = ({avatarSrc}) => {
+  return (
+        <img src={avatarSrc} className={style["avatar"]} alt="signed-in user"/>      
+  )
 }
