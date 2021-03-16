@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import mp_rk_logo from "../../images/company-assets/mp_rk_logo.png";
-
+import { Link, NavLink ,BrowserRouter } from "react-router-dom";
 
 // css
 import style from "./footer.module.scss";
@@ -24,18 +24,55 @@ export class Footer extends Component {
             <div className="cell large-2 medium-2 small-6">
               <h6 className={style["footer__sub-title"]}>Navigate</h6>
               <ul className={style["footer__nav-item-container"]}>
-                <li className={style["footer__nav-item"]}><a href="/">Home</a></li>
-                <li className={style["footer__nav-item"]}><a href="stories">Stories</a></li>
-                <li className={style["footer__nav-item"]}><a href="organization">Organizations</a></li>
-                <li className={style["footer__nav-item"]}><a href="about">About</a></li>
+                <li className={style["footer__nav-item"]}>
+                <BrowserRouter forceRefresh = {true}>
+                  <NavLink to="/" activeClassName="active">
+                      Home
+                    </NavLink>
+                  </BrowserRouter>
+                </li>
+                <li className={style["footer__nav-item"]}>
+                  <BrowserRouter forceRefresh={true} >
+                <NavLink to="/stories" activeClassName="selected" >
+                      Stories
+                    </NavLink>
+                  </BrowserRouter>
+                </li>
+                <li className={style["footer__nav-item"]}>
+                <BrowserRouter forceRefresh={true} >
+                <NavLink to="/organization" activeClassName="active">
+                      Organizations
+                  </NavLink>
+                  </BrowserRouter>
+                  </li>
+                <li className={style["footer__nav-item"]}>
+                  <BrowserRouter forceRefresh = {true}>
+                  <NavLink to="/about" activeClassName="active">
+                      About
+                    </NavLink>
+                  </BrowserRouter>
+                </li>
               </ul>
             </div>
 
             <div className="cell large-3 medium-3 small-6">
               <h6 className={style["footer__sub-title"]}>Resources</h6>
               <ul className={style["footer__nav-item-container"]}>
-                <li className={style["footer__nav-item"]}><a href="codeofconduct">Code of Conduct</a></li>  {/* after creating the code of conductpage just add the id of the same href name  */}
-                <li className={style["footer__nav-item"]}><a href="termsandconditions">Terms and Conditions</a></li>
+                <li className={style["footer__nav-item"]}>
+                <BrowserRouter forceRefresh={true} >
+                <NavLink to="/code-of-conduct" activeClassName="active">
+                      Code of Conduct
+                  </NavLink>
+                  </BrowserRouter>
+                </li>
+                {/* after creating the terms and conditions just add the id of the same href name  */}
+                <li className={style["footer__nav-item"]}>
+                <BrowserRouter forceRefresh={true} >
+                <NavLink to="/terms-and-conditions" activeClassName="active">
+                     Terms and Conditions
+                  </NavLink>
+                  </BrowserRouter>
+                </li>
               </ul>
             </div>
 
