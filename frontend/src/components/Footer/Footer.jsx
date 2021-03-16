@@ -80,8 +80,8 @@ export class Footer extends Component {
               <h6 className={style["footer__sub-title"]}>Connect</h6>
               <ul className={style["footer__nav-item-container"]}>
                 <li className={style["footer__nav-item"]}><a href="https://www.instagram.com/feminist_bible/?hl=en">Instagram</a></li>
-                <li className={style["footer__nav-item"]}><a href="facebook">Facebook</a></li>
-                <li className={style["footer__nav-item"]}><a href="linkedin">LinkedIn</a></li>
+                <li className={style["footer__nav-item"]}><a href="facebook">Facebook</a></li> //add fb link
+                <li className={style["footer__nav-item"]}><a href="linkedin">LinkedIn</a></li> //add linkedin profile link
               </ul>
             </div>
 
