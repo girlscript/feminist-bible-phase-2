@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import mp_rk_logo from "../../images/company-assets/mp_rk_logo.png";
-
+import { Link, NavLink ,BrowserRouter } from "react-router-dom";
 
 // css
 import style from "./footer.module.scss";
@@ -24,27 +24,64 @@ export class Footer extends Component {
             <div className="cell large-2 medium-2 small-6">
               <h6 className={style["footer__sub-title"]}>Navigate</h6>
               <ul className={style["footer__nav-item-container"]}>
-                <li className={style["footer__nav-item"]}><a href="placeholder">Home</a></li>
-                <li className={style["footer__nav-item"]}><a href="placeholder">Stories</a></li>
-                <li className={style["footer__nav-item"]}><a href="placeholder">Organizations</a></li>
-                <li className={style["footer__nav-item"]}><a href="placeholder">About</a></li>
+              <li className={style["footer__nav-item"]}>
+                <BrowserRouter forceRefresh = {true}>
+                  <NavLink to="/" activeClassName="active">
+                      Home
+                    </NavLink>
+                  </BrowserRouter>
+                </li>
+                <li className={style["footer__nav-item"]}>
+                  <BrowserRouter forceRefresh={true} >
+                <NavLink to="/stories" activeClassName="selected" >
+                      Stories
+                    </NavLink>
+                  </BrowserRouter>
+                </li>
+                <li className={style["footer__nav-item"]}>
+                <BrowserRouter forceRefresh={true} >
+                <NavLink to="/organization" activeClassName="active">
+                      Organizations
+                  </NavLink>
+                  </BrowserRouter>
+                  </li>
+                <li className={style["footer__nav-item"]}>
+                  <BrowserRouter forceRefresh = {true}>
+                  <NavLink to="/about" activeClassName="active">
+                      About
+                    </NavLink>
+                  </BrowserRouter>
+                </li>
               </ul>
             </div>
 
             <div className="cell large-3 medium-3 small-6">
               <h6 className={style["footer__sub-title"]}>Resources</h6>
               <ul className={style["footer__nav-item-container"]}>
-                <li className={style["footer__nav-item"]}><a href="placeholder">Code of Conduct</a></li>
-                <li className={style["footer__nav-item"]}><a href="placeholder">Terms and Conditions</a></li>
+                <li className={style["footer__nav-item"]}>
+                <BrowserRouter forceRefresh={true} >
+                <NavLink to="/code-of-conduct" activeClassName="active">
+                      Code of Conduct
+                  </NavLink>
+                  </BrowserRouter>
+                </li>
+                {/* after creating the code of conductpage just add the id of the same href name  */}
+                <li className={style["footer__nav-item"]}>
+                <BrowserRouter forceRefresh={true} >
+                <NavLink to="/terms-and-conditions" activeClassName="active">
+                     Terms and Conditions
+                  </NavLink>
+                  </BrowserRouter>
+                </li>
               </ul>
             </div>
 
             <div className="cell large-2 medium-2 small-6">
               <h6 className={style["footer__sub-title"]}>Connect</h6>
               <ul className={style["footer__nav-item-container"]}>
-                <li className={style["footer__nav-item"]}><a href="placeholder">Instagram</a></li>
-                <li className={style["footer__nav-item"]}><a href="placeholder">Facebook</a></li>
-                <li className={style["footer__nav-item"]}><a href="placeholder">LinkedIn</a></li>
+                <li className={style["footer__nav-item"]}><a href="https://www.instagram.com/feminist_bible/?hl=en">Instagram</a></li>
+                <li className={style["footer__nav-item"]}><a href="https://www.facebook.com/">Facebook</a></li>
+                <li className={style["footer__nav-item"]}><a href="https://www.linkedin.com/feed/">LinkedIn</a></li>
               </ul>
             </div>
 
