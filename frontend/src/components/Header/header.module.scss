@@ -11,6 +11,7 @@
     background-color:$yellow-bg;
     border-bottom:1px solid rgba(171, 29, 121, 0.3);
     width: 100%;
+    z-index: 9999;
   
     &__logo{
       height:46px; margin-top:17px;
