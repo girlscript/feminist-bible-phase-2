@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import mp_rk_logo from "../../images/company-assets/mp_rk_logo.png";
-import { Link, NavLink ,BrowserRouter } from "react-router-dom";
+import {BrowserRouter as Router, Link  } from "react-router-dom";
 
 // css
 import style from "./footer.module.scss";
@@ -8,6 +8,7 @@ import style from "./footer.module.scss";
 export class Footer extends Component {
   render() {
     return (
+      <Router forceRefresh = {true}>
       <div className={style["footer"]}>
         <div className="grid-container">
           <div className="grid-x grid-margin-x">
@@ -25,32 +26,27 @@ export class Footer extends Component {
               <h6 className={style["footer__sub-title"]}>Navigate</h6>
               <ul className={style["footer__nav-item-container"]}>
               <li className={style["footer__nav-item"]}>
-                <BrowserRouter forceRefresh = {true}>
-                  <NavLink to="/" activeClassName="active">
+                  <Link to="/" >
                       Home
-                    </NavLink>
-                  </BrowserRouter>
+                    </Link>
                 </li>
                 <li className={style["footer__nav-item"]}>
-                  <BrowserRouter forceRefresh={true} >
-                <NavLink to="/stories" activeClassName="selected" >
+                  
+                <Link to="/stories" activeClassName="selected" >
                       Stories
-                    </NavLink>
-                  </BrowserRouter>
+                    </Link>
+                 
                 </li>
                 <li className={style["footer__nav-item"]}>
-                <BrowserRouter forceRefresh={true} >
-                <NavLink to="/organization" activeClassName="active">
+                
+                <Link to="/organization" >
                       Organizations
-                  </NavLink>
-                  </BrowserRouter>
+                  </Link>
                   </li>
                 <li className={style["footer__nav-item"]}>
-                  <BrowserRouter forceRefresh = {true}>
-                  <NavLink to="/about" activeClassName="active">
+                  <Link to="/about" >
                       About
-                    </NavLink>
-                  </BrowserRouter>
+                    </Link>
                 </li>
               </ul>
             </div>
@@ -58,20 +54,18 @@ export class Footer extends Component {
             <div className="cell large-3 medium-3 small-6">
               <h6 className={style["footer__sub-title"]}>Resources</h6>
               <ul className={style["footer__nav-item-container"]}>
-                <li className={style["footer__nav-item"]}>
-                <BrowserRouter forceRefresh={true} >
-                <NavLink to="/code-of-conduct" activeClassName="active">
+               <li className={style["footer__nav-item"]}>
+                <Link to="/code-of-conduct" >
                       Code of Conduct
-                  </NavLink>
-                  </BrowserRouter>
+                  </Link>
+                
                 </li>
                 {/* after creating the code of conductpage just add the id of the same href name  */}
                 <li className={style["footer__nav-item"]}>
-                <BrowserRouter forceRefresh={true} >
-                <NavLink to="/terms-and-conditions" activeClassName="active">
+                
+                <Link to="/terms-and-conditions" >
                      Terms and Conditions
-                  </NavLink>
-                  </BrowserRouter>
+                 </Link>
                 </li>
               </ul>
             </div>
@@ -104,6 +98,7 @@ export class Footer extends Component {
           </div>
         </div>
       </div>
+     </Router>
     );
   }
 }
