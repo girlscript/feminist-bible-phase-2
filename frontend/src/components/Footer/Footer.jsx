@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import mp_rk_logo from "../../images/company-assets/mp_rk_logo.png";
-
+import {BrowserRouter as Router, Link  } from "react-router-dom";
 
 // css
 import style from "./footer.module.scss";
@@ -8,6 +8,7 @@ import style from "./footer.module.scss";
 export class Footer extends Component {
   render() {
     return (
+      <Router forceRefresh = {true}>
       <div className={style["footer"]}>
         <div className="grid-container">
           <div className="grid-x grid-margin-x">
@@ -24,27 +25,57 @@ export class Footer extends Component {
             <div className="cell large-2 medium-2 small-6">
               <h6 className={style["footer__sub-title"]}>Navigate</h6>
               <ul className={style["footer__nav-item-container"]}>
-                <li className={style["footer__nav-item"]}><a href="placeholder">Home</a></li>
-                <li className={style["footer__nav-item"]}><a href="placeholder">Stories</a></li>
-                <li className={style["footer__nav-item"]}><a href="placeholder">Organizations</a></li>
-                <li className={style["footer__nav-item"]}><a href="placeholder">About</a></li>
+              <li className={style["footer__nav-item"]}>
+                  <Link to="/" >
+                      Home
+                    </Link>
+                </li>
+                <li className={style["footer__nav-item"]}>
+                  
+                <Link to="/stories" activeClassName="selected" >
+                      Stories
+                    </Link>
+                 
+                </li>
+                <li className={style["footer__nav-item"]}>
+                
+                <Link to="/organization" >
+                      Organizations
+                  </Link>
+                  </li>
+                <li className={style["footer__nav-item"]}>
+                  <Link to="/about" >
+                      About
+                    </Link>
+                </li>
               </ul>
             </div>
 
             <div className="cell large-3 medium-3 small-6">
               <h6 className={style["footer__sub-title"]}>Resources</h6>
               <ul className={style["footer__nav-item-container"]}>
-                <li className={style["footer__nav-item"]}><a href="placeholder">Code of Conduct</a></li>
-                <li className={style["footer__nav-item"]}><a href="placeholder">Terms and Conditions</a></li>
+               <li className={style["footer__nav-item"]}>
+                <Link to="/code-of-conduct" >
+                      Code of Conduct
+                  </Link>
+                
+                </li>
+                {/* after creating the code of conductpage just add the id of the same href name  */}
+                <li className={style["footer__nav-item"]}>
+                
+                <Link to="/terms-and-conditions" >
+                     Terms and Conditions
+                 </Link>
+                </li>
               </ul>
             </div>
 
             <div className="cell large-2 medium-2 small-6">
               <h6 className={style["footer__sub-title"]}>Connect</h6>
               <ul className={style["footer__nav-item-container"]}>
-                <li className={style["footer__nav-item"]}><a href="placeholder">Instagram</a></li>
-                <li className={style["footer__nav-item"]}><a href="placeholder">Facebook</a></li>
-                <li className={style["footer__nav-item"]}><a href="placeholder">LinkedIn</a></li>
+                <li className={style["footer__nav-item"]}><a href="https://www.instagram.com/feminist_bible/?hl=en">Instagram</a></li>
+                <li className={style["footer__nav-item"]}><a href="https://www.facebook.com/">Facebook</a></li>
+                <li className={style["footer__nav-item"]}><a href="https://www.linkedin.com/feed/">LinkedIn</a></li>
               </ul>
             </div>
 
@@ -67,6 +98,7 @@ export class Footer extends Component {
           </div>
         </div>
       </div>
+     </Router>
     );
   }
 }
