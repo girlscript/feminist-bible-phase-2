@@ -123,14 +123,10 @@ export class Login extends Component {
                 </Link>
               </div>
               <div className="cell large-8">
-                <div className={style["login-page__illustration-wrapper"]}>
-                  <img
-                    src={womenImg}
-                    className={style["login-page__illustration"]}
-                    alt="Illustration of women"
-                  />
+                  <div className={style["registration-page__illustration-wrapper"]}>
+                  <img src={womenImg} className="registration-page__illustration" alt="Illustration of women"/>
                 </div>
-              </div>
+              </div>  
             </div>
           </div>
         </div>
@@ -138,3 +134,4 @@ export class Login extends Component {
     );
   }
 }
+
