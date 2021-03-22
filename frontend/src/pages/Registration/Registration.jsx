@@ -40,7 +40,7 @@ export class Registration extends Component {
       this.setState(prevState => ({ ...prevState, errors: { ...prevState.errors, email: 'Email is not valid.' } }));
       return;
     }
-    if(!phone || phone.length < 10) {
+    if(!phone || phone.length !== 10) {
       this.setState(prevState => ({ ...prevState, errors: { ...prevState.errors, phone: 'Mobile No. cannot be empty or less than 10 digits.' } }));
       return;
     }
