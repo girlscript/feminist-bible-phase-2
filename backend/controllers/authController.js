@@ -58,7 +58,7 @@ exports.signup = async (req, res) => {
       data: {
         ...newUser._doc,
         password: '',
-        token,
+        passwordConfirm: ""
       },
     });
   } catch (e) {
@@ -92,8 +92,8 @@ exports.signin = async (req, res) => {
       success: true,
       data: {
         ...existingUser._doc,
-        token,
         password: '',
+        passwordConfirm: ""
       },
     });
   } catch (err) {
