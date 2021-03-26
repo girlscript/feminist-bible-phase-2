@@ -53,7 +53,7 @@ exports.getStory = async (req, res) => {
       data: story,
     });
   } catch (error) {
-    console.log(error)
+    console.log(error);
     res.status(400).json({
       status: 'fail',
       message: error,
@@ -62,11 +62,11 @@ exports.getStory = async (req, res) => {
 };
 
 //get all stories
-exports.getAllStories = async (req, res)=>{
-  try{
-    const stories = await Story.find()
-    
-    if(!stories){
+exports.getAllStories = async (req, res) => {
+  try {
+    const stories = await Story.find();
+
+    if (!stories) {
       res.status(400).json({
         status: 'fail',
         message: 'No stories found',
@@ -74,18 +74,16 @@ exports.getAllStories = async (req, res)=>{
     }
 
     res.status(200).json({
-      status: "success",
-      message: stories
-    })
-
-  } catch(error){
-    
+      status: 'success',
+      message: stories,
+    });
+  } catch (error) {
     res.status(400).json({
-      status: "fail",
-      message: error
-    })
+      status: 'fail',
+      message: error,
+    });
   }
-}
+};
 
 exports.updateStory = async (req, res) => {
   try {
@@ -123,15 +121,12 @@ exports.deleteStory = async (req, res) => {
     }
     await Story.findOneAndDelete({ _id: story_id });
     res.json({
-      status:'success',
-      message:'Deleted Story Successfully'
-      
+      status: 'success',
+      message: 'Deleted Story Successfully',
     });
-
-  
   } catch (err) {
     res.json({
-      status:'fail', 
+      status: 'fail',
       message: err,
     });
   }

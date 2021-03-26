@@ -1,5 +1,4 @@
 const ForumPostComment = require('../database/models/forumPostCommentModel');
-require('../config/dotenv');
 
 exports.createComment = async (req, res) => {
   try {
