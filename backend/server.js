@@ -1,5 +1,6 @@
 const http = require('http');
 const app = require('./app');
+const db = require('./database/index');
 
 const port = process.env.PORT || 8080;
 
@@ -7,3 +8,5 @@ const port = process.env.PORT || 8080;
 http
   .createServer(app)
   .listen(port, () => console.log('HTTP server listening on ' + port));
+
+db();
