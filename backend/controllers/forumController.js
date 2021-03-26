@@ -1,4 +1,5 @@
 const ForumPostComment = require('../database/models/forumPostCommentModel');
+const ForumPost = require('../database/models/forumPostModel');
 
 exports.createComment = async (req, res) => {
   try {
@@ -26,7 +27,6 @@ exports.createComment = async (req, res) => {
   }
 };
 
-const ForumPost = require('../database/models/forumPostModel');
 exports.createForumPost = async (req, res) => {
   try {
     const { heading, author, description } = req.body;
@@ -50,7 +50,6 @@ exports.createForumPost = async (req, res) => {
   }
 };
 
-//like a post
 exports.likeForumPost = async (req, res) => {
   try {
     let forumPost = await ForumPost.findById(req.params.forumpostid);
