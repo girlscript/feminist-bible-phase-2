@@ -72,3 +72,33 @@ exports.likeForumPost = async (req, res) => {
     });
   }
 };
+
+
+exports.editForumPost = async(req, res) => {
+  try {
+    const { upadtedHeading, updatedAuthor, updatedDescription } = req.body;
+
+    if (!upadtedHeading || !updatedAuthor) {
+      return res.status(400).json({
+        status: 'fail',
+        message: 'Fields cannot be empty',
+      });
+    }
+    let forumPost = await ForumPost.findById(req.params.forumpostid);
+    forumPost.heading = upadtedHeading;
+    forumPost.author = updatedAuthor;
+    forumPost.description = updatedDescription;
+
+    forumPost.save();
+        
+    res.status(200).json({
+      status: 'success',
+      data: forumPost
+    });
+  } catch (err) {
+    res.status(400).json({
+      status:'fail',
+      message: err
+    });
+  }
+};

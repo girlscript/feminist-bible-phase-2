@@ -8,4 +8,7 @@ router.route('/new').post(forumController.createForumPost);
 
 router.route('/:forumpostid/comment').post(forumController.createComment);
 
+// to edit forum post
+router.route('/:forumpostid/edit-post', forumController.editForumPost);
+
 module.exports = router;
