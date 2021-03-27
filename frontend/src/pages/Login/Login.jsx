@@ -1,6 +1,11 @@
 import React, { Component } from "react";
 import { Input, /*WithPasswordStrength*/ } from "../../components/Input/index.js";
 import { Link } from "react-router-dom";
+import { InputGroup } from "react-bootstrap";
+import IconButton from "@material-ui/core/IconButton";
+import Visibility from "@material-ui/icons/Visibility";
+import VisibilityOff from "@material-ui/icons/VisibilityOff";
+
 //import Axios from "axios";
 
 import style from './login.module.scss'
@@ -15,6 +20,7 @@ export class Login extends Component {
       email: "",
       password: "",
     },
+    showPassword: false, // added for toggle password-visibility feature
   };
 
   registerHandler = (e) => {
@@ -85,6 +91,11 @@ export class Login extends Component {
       alert(`Something went wrong! \n ${error.response.data.msg}`);
     }
   };
+  togglePasswordVisiblity = () => { // to handle visibility of passsword 
+    this.setState({
+      showPassword: !(this.state.showPassword)
+    });
+  };
 
   render() {
     const { errors } = this.state;
@@ -107,14 +118,27 @@ export class Login extends Component {
                     onChange={this.changeHandler}
                     error={errors.email}
                   />
-                  <Input
-                    label="Create Password"
-                    type="password"
-                    placeholder="************"
-                    name="password"
-                    onChange={this.changeHandler}
-                    error={errors.password}
-                  />
+                  
+                  <InputGroup>
+                    <Input
+                      label="Create Password"
+                      type={this.state.showPassword?"text":"password"}
+                      placeholder="************"
+                      name="password"
+                      onChange={this.changeHandler}
+                      error={errors.password}
+                    />
+                    <InputGroup.Append style={{paddingTop: "20px"}}>
+                      <InputGroup.Text style={{borderColor: "#ffc107", height: "37px", width: "28px", paddingLeft:"1px",paddingRight:"1px" }}>
+                        <IconButton style={{width: "25px"}}
+                          onClick={this.togglePasswordVisiblity}
+                        >
+                          {this.state.showPassword ? <Visibility /> : <VisibilityOff />}
+                        </IconButton> 
+                      </InputGroup.Text>
+                    </InputGroup.Append>
+                  </InputGroup>
+                  
                   <button className={style["button__big"]}>Login</button>
                 </form>
                 <Link>

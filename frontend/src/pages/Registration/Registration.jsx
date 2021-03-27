@@ -1,6 +1,10 @@
 import React, { Component } from 'react'
 import { Input, WithPasswordStrength } from '../../components/Input/index';
 import { Link } from 'react-router-dom';
+import { InputGroup } from "react-bootstrap";
+import IconButton from "@material-ui/core/IconButton";
+import Visibility from "@material-ui/icons/Visibility";
+import VisibilityOff from "@material-ui/icons/VisibilityOff";
 //import Axios from "axios";
 
 import style from './registration.module.scss'
@@ -20,7 +24,8 @@ export class Registration extends Component {
       phone: '',
       password: '',
       cpassword: ''
-    }
+    },
+    showPassword: false
   };
 
 
@@ -86,7 +91,11 @@ export class Registration extends Component {
       alert(`Something went wrong! \n ${error.response.data.msg}`)
     }
   }
-
+  togglePasswordVisiblity = () => { // to handle visibility of passsword 
+    this.setState({
+      showPassword: !(this.state.showPassword)
+    });
+  };
 
   render() {
     const { errors } = this.state;
@@ -122,22 +131,44 @@ export class Registration extends Component {
                   onChange={this.changeHandler}
                   error={errors.phone}
                 />
-                <WithPasswordStrength
-                  label="Create Password"
-                  type="password"
-                  placeholder=""
-                  name="password"
-                  onChange={this.changeHandler}
-                  error={errors.password}
-                />
-                <Input
-                  label="Confirm Password"
-                  type="password"
-                  placeholder=""
-                  name="cpassword"
-                  onChange={this.changeHandler}
-                  error={errors.cpassword}
-                />
+                <InputGroup>
+                  <WithPasswordStrength
+                    label="Create Password"
+                    type={this.state.showPassword?"text":"password"}
+                    placeholder=""
+                    name="password"
+                    onChange={this.changeHandler}
+                    error={errors.password}
+                  />
+                  <InputGroup.Append style={{paddingTop: "20px"}}>
+                    <InputGroup.Text style={{borderColor: "#ffc107", height: "37px", width: "28px", paddingLeft:"1px",paddingRight:"1px" }}>
+                      <IconButton style={{width: "25px"}}
+                        onClick={this.togglePasswordVisiblity}
+                      >
+                        {this.state.showPassword ? <Visibility /> : <VisibilityOff />}
+                      </IconButton> 
+                    </InputGroup.Text>
+                  </InputGroup.Append>
+                </InputGroup>
+                <InputGroup>
+                  <Input
+                    label="Confirm Password"
+                    type={this.state.showPassword?"text":"password"}
+                    placeholder=""
+                    name="cpassword"
+                    onChange={this.changeHandler}
+                    error={errors.cpassword}
+                  />
+                  <InputGroup.Append style={{paddingTop: "20px"}}>
+                    <InputGroup.Text style={{borderColor: "#ffc107", height: "37px", width: "28px", paddingLeft:"1px",paddingRight:"1px" }}>
+                      <IconButton style={{width: "25px"}}
+                        onClick={this.togglePasswordVisiblity}
+                      >
+                        {this.state.showPassword ? <Visibility /> : <VisibilityOff />}
+                      </IconButton> 
+                    </InputGroup.Text>
+                  </InputGroup.Append>
+                </InputGroup>
                 <button className={style["button__big"]}>Register</button>
               </form>
               <Link>Already have an account? <span style={{color: '#2F80ED'}}><Link to="/login">Login here</Link></span>.</Link>
