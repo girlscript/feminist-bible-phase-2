@@ -85,9 +85,9 @@ exports.editForumPost = async(req, res) => {
     }
     const postId = req.params.forumpostid;
     let forumPost = await ForumPost.findByIdAndUpdate(postId, {
-      heading: upadtedHeading,
-      author: updatedAuthor,
-      description: updatedDescription,
+      heading: req.body.upadtedHeading,
+      author: req.body.updatedAuthor,
+      description: req.body.updatedDescription,
     });
             
     res.status(200).json({
