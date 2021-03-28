@@ -25,3 +25,5 @@ yarn-error.log*
 
 .eslintcache
 /frontend/.eslintcache
+
+package-lock.json
