@@ -58,11 +58,13 @@ export class ForumPost extends Component {
                         <img
                             src={comment_img}
                             alt="comments"
+                            className={style["social__comment"]}
                         />
                         <p>  10  </p>
                         <img
                             src={like_img}
                             alt="likes"
+                            className={style["social__like"]}
                         />
                         <p>  15  </p>
                     </div>
