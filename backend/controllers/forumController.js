@@ -84,11 +84,17 @@ exports.editForumPost = async(req, res) => {
       });
     }
     const postId = req.params.forumpostid;
-    let forumPost = await ForumPost.findByIdAndUpdate(postId, {
+    let forumPost = await ForumPost.findByIdAndUpdate
+    (
+      postId, {
       heading: req.body.upadtedHeading,
       author: req.body.updatedAuthor,
       description: req.body.updatedDescription,
-    });
+      }, {
+        new: true,
+        runValidators: true,
+      }
+    );
             
     res.status(200).json({
       status: 'success',
