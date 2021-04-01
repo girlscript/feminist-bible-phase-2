@@ -15,6 +15,11 @@ const transporter = nodemailer.createTransport(
   })
 );
 
+const getAuthCookie = (token) => {
+  const expiry = new Date(Date.now() + +process.env.JWT_COOKIE_EXPIRES_IN);
+  return `token=${token}; Domain=${process.env.JWT_COOKIE_DOMAIN}; Expires=${expiry.toGMTString()}; Path=/; HttpOnly=true; SameSite=Lax; Secure=true;`
+};
+
 exports.signup = async (req, res) => {
   const { name, email, phone, photo, password, passwordConfirm } = req.body;
   console.log(req.body);
@@ -52,13 +57,16 @@ exports.signup = async (req, res) => {
       expiresIn: '1h',
     });
 
+    //set cookie
+    res.set('Cookie', getAuthCookie(token));
+    
     // returning final response
     res.status(201).json({
       success: true,
       data: {
         ...newUser._doc,
         password: '',
-        token,
+        passwordConfirm: ""
       },
     });
   } catch (e) {
@@ -88,12 +96,15 @@ exports.signin = async (req, res) => {
       expiresIn: '1h',
     });
 
+    //set cookie
+    res.set('Cookie', getAuthCookie(token));
+
     res.status(200).json({
       success: true,
       data: {
         ...existingUser._doc,
-        token,
         password: '',
+        passwordConfirm: ""
       },
     });
   } catch (err) {
