@@ -5,6 +5,7 @@ const Org = require('../database/models/orgModel');
 //in that case, it must be updated after finding the document.
 //this should go in create org
 
+//get organizations
 exports.getOrgs = async (req, res) => {
   let orgs;
   try {
@@ -16,6 +17,7 @@ exports.getOrgs = async (req, res) => {
   return res.status(200).json({ orgs: orgs.map((e) => e.toObject()) });
 };
 
+//create an organization
 exports.createOrg = async (req, res) => {
   const { name, image, description, url } = req.body;
   let neworg;
@@ -39,6 +41,8 @@ exports.createOrg = async (req, res) => {
     },
   });
 };
+
+//update an organization
 exports.updateOrganisation = async (req, res) => {
   try {
     const org_id = req.param.OrgId;

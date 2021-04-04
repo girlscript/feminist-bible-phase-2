@@ -4,6 +4,7 @@ exports.signup = (req, res) => {
   //
 };
 
+//get the user profile
 exports.getUserProfile = async (req, res) => {
   try {
     const user = await User.findOne({ _id: req.params.userId });
@@ -25,6 +26,7 @@ exports.getUserProfile = async (req, res) => {
   }
 };
 
+//Update the user
 exports.updateUser = async (req, res) => {
   try {
     const user_id = req.param.userId;

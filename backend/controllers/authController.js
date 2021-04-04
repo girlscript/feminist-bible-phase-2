@@ -20,6 +20,8 @@ const getAuthCookie = (token) => {
   return `token=${token}; Domain=${process.env.JWT_COOKIE_DOMAIN}; Expires=${expiry.toGMTString()}; Path=/; HttpOnly=true; SameSite=Lax; Secure=true;`
 };
 
+//signup 
+
 exports.signup = async (req, res) => {
   const { name, email, phone, photo, password, passwordConfirm } = req.body;
   console.log(req.body);
@@ -75,6 +77,8 @@ exports.signup = async (req, res) => {
   }
 };
 
+//signin
+
 exports.signin = async (req, res) => {
   const { email, password } = req.body;
   if (!email || !password)
@@ -116,6 +120,8 @@ exports.signin = async (req, res) => {
 /* in the user schema we have to add two more attributes that is
  resetToken and resetTokenExpiration and sendgrid api key to send the mail!!!
 */
+
+//post reset
 exports.postReset = async (req, res) => {
   try {
     crypto.randomBytes(32, async (err, buffer) => {
@@ -145,6 +151,7 @@ exports.postReset = async (req, res) => {
   }
 };
 
+//get new password
 exports.getNewPassword = async (req, res) => {
   try {
     const token = req.params.token;
@@ -165,6 +172,7 @@ exports.getNewPassword = async (req, res) => {
   }
 };
 
+//post new password
 exports.postNewPassword = async (req, res) => {
   try {
     const newPassword = req.body.password;
@@ -196,6 +204,7 @@ exports.postNewPassword = async (req, res) => {
   }
 };
 
+//check if is signed in
 exports.isSignedIn = async (req, res, next) => {
   const token = req.header('Authorization').replace('Bearer ', '');
   const data = jwt.verify(token, process.env.JWT_SECRET);

@@ -38,6 +38,7 @@ exports.getAllProjects = async (req, res) => {
     });
   }
 };
+
 //get projects org wise
 exports.getProjectsOrgWise = async (req, res) => {
   try {
@@ -60,6 +61,7 @@ exports.getProjectsOrgWise = async (req, res) => {
     });
   }
 };
+
 //delete project
 exports.deleteProject = async (req, res) => {
   try {
@@ -86,7 +88,7 @@ exports.deleteProject = async (req, res) => {
   }
 };
 
-//Get a single project b project ID
+//Get a single project by project ID
 
 exports.getProject = async (req, res) => {
   try {

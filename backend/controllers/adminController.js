@@ -29,6 +29,7 @@ const createSendToken = (user, statusCode, req, res) => {
   });
 };
 
+//signup 
 exports.signup = async (req, res, next) => {
   const newAdmin = await Admin.create({
     name: req.body.name,
@@ -39,6 +40,7 @@ exports.signup = async (req, res, next) => {
   createSendToken(newAdmin, 201, req, res);
 };
 
+//login
 exports.login = async (req, res, next) => {
   const { email, password } = req.body;
 
@@ -60,6 +62,7 @@ exports.login = async (req, res, next) => {
   createSendToken(admin, 200, req, res);
 };
 
+//logout
 exports.logout = (req, res) => {
   res.cookie('jwt', 'loggedout', {
     expires: new Date(Date.now() + 10 * 1000),

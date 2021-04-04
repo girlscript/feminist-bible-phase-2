@@ -1,5 +1,6 @@
 const Story = require('../database/models/storyModel');
 
+//get all the stories
 exports.getAllStories = async (req, res) => {
   try {
     const stories = await Story.find();
@@ -15,6 +16,7 @@ exports.getAllStories = async (req, res) => {
   }
 };
 
+//creating a story
 exports.createStory = async (req, res) => {
   try {
     const { name, author, image, heading } = req.body;
@@ -85,6 +87,7 @@ exports.getAllStories = async (req, res) => {
   }
 };
 
+//updating a story
 exports.updateStory = async (req, res) => {
   try {
     const story = await Story.findOneAndUpdate(
@@ -113,6 +116,8 @@ exports.updateStory = async (req, res) => {
     });
   }
 };
+
+//deleting a story
 exports.deleteStory = async (req, res) => {
   try {
     const story_id = req.params.storyId;

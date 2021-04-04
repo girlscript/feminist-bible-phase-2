@@ -1,6 +1,7 @@
 const ForumPostComment = require('../database/models/forumPostCommentModel');
 const ForumPost = require('../database/models/forumPostModel');
 
+//create a comment on the post
 exports.createComment = async (req, res) => {
   try {
     let postId = req.params.forumpostid;
@@ -27,6 +28,7 @@ exports.createComment = async (req, res) => {
   }
 };
 
+//create a forum post
 exports.createForumPost = async (req, res) => {
   try {
     const { heading, author, description } = req.body;
@@ -50,6 +52,7 @@ exports.createForumPost = async (req, res) => {
   }
 };
 
+//like a forum post
 exports.likeForumPost = async (req, res) => {
   try {
     let forumPost = await ForumPost.findById(req.params.forumpostid);
@@ -73,6 +76,7 @@ exports.likeForumPost = async (req, res) => {
   }
 };
 
+//edit a forum post
 exports.editForumPost = async(req, res) => {
   try {
     const { upadtedHeading, updatedAuthor, updatedDescription } = req.body;
