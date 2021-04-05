@@ -1,6 +1,12 @@
 const Project = require('../database/models/projectModel');
 
 //create a project
+/**
+ * @param {String} title
+ * @param {String} description
+ * @param {String} postedBy
+ * @route api/project/
+ */
 exports.createProject = async (req, res) => {
   try {
     const { title, description, postedBy } = req.body;
@@ -24,6 +30,9 @@ exports.createProject = async (req, res) => {
 };
 
 //get all projects
+/**
+ * @route api/project/
+ */
 exports.getAllProjects = async (req, res) => {
   try {
     const projects = await Project.find();
@@ -40,6 +49,10 @@ exports.getAllProjects = async (req, res) => {
 };
 
 //get projects org wise
+/**
+ * @param {String} orgid
+ * @route api/project/:orgid
+ */
 exports.getProjectsOrgWise = async (req, res) => {
   try {
     const projects = await Project.find({ postedBy: req.params.orgid });
@@ -63,6 +76,11 @@ exports.getProjectsOrgWise = async (req, res) => {
 };
 
 //delete project
+//get projects org wise
+/**
+ * @param {String} projectid
+ * @route api/project/:projectid
+ */
 exports.deleteProject = async (req, res) => {
   try {
     const project = await Project.findOneAndDelete({
@@ -89,7 +107,10 @@ exports.deleteProject = async (req, res) => {
 };
 
 //Get a single project by project ID
-
+/**
+ * @param {String} projectId
+ * @route api/project/
+ */
 exports.getProject = async (req, res) => {
   try {
     const project = await Project.findOne({ _id: req.params.projectId });
@@ -119,6 +140,10 @@ exports.getProject = async (req, res) => {
 };
 
 //Update a project by _id
+/**
+ * @param {String} id
+ * @route api/project/:id
+ */
 exports.updateProject = async (req, res) => {
   try {
     const result = await Project.updateOne(

@@ -6,6 +6,9 @@ const Org = require('../database/models/orgModel');
 //this should go in create org
 
 //get organizations
+/**
+ * @route api/org/getOrgs
+ */
 exports.getOrgs = async (req, res) => {
   let orgs;
   try {
@@ -18,6 +21,12 @@ exports.getOrgs = async (req, res) => {
 };
 
 //create an organization
+/**
+ * @param {String} name
+ * @param {ImageBitmap} image
+ * @param {String} description
+ * @param {String} url
+ */
 exports.createOrg = async (req, res) => {
   const { name, image, description, url } = req.body;
   let neworg;
@@ -43,6 +52,9 @@ exports.createOrg = async (req, res) => {
 };
 
 //update an organization
+/**
+ * @param {String}  OrgId
+ */
 exports.updateOrganisation = async (req, res) => {
   try {
     const org_id = req.param.OrgId;
