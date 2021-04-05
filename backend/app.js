@@ -10,8 +10,8 @@ const adminRouter = require('./routes/adminRoutes');
 const userRouter = require('./routes/userRoutes');
 const projectRouter = require('./routes/projectRoutes');
 const forumRouter = require('./routes/forumRoutes');
-const jwt = require('jsonwebtoken');
 const cookieParser = require('cookie-parser');
+const { validateCookie } = require('./controllers/authController');
 
 const app = express();
 
@@ -38,20 +38,6 @@ app.use('/', limiter);
 
 // parse cookie
 app.use(cookieParser())
-
-const validateCookie = (req, res, next) => {
-  try {
-    const res = jwt.verify(req.cookies.token, process.env.JWT_SECRET)
-    if (res.id) { 
-      next();
-    } else {
-      throw new Error("Invalid USER ID");
-    }
-  } catch (err) {
-    res.status(401)
-    res.end("Unauthorized")
-  }
-}
 
 // routes
 app.use('/api/auth', authRouter);

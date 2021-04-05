@@ -219,3 +219,17 @@ exports.isSignedIn = async (req, res, next) => {
     });
   }
 };
+
+exports.validateCookie = (req, res, next) => {
+  try {
+    const res = jwt.verify(req.cookies.token, process.env.JWT_SECRET)
+    if (res.id) { 
+      next();
+    } else {
+      throw new Error("Invalid USER ID");
+    }
+  } catch (err) {
+    res.status(401)
+    res.end("Unauthorized")
+  }
+}
