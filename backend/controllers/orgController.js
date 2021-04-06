@@ -57,7 +57,7 @@ exports.createOrg = async (req, res) => {
  */
 exports.updateOrganisation = async (req, res) => {
   try {
-    const org_id = req.param.OrgId;
+    const org_id = req.params.OrgId;
     const org = await Org.findOneAndUpdate({ _id: org_id }, req.body, {
       new: true,
       runValidators: true,
