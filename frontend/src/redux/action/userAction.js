@@ -18,7 +18,7 @@ export const login = userData => async dispatch => {
 
 export const signup = userData => async dispatch => {
     try {
-        const res = await axios.post('/auth/signup', userData);
+        await axios.post('/auth/signup', userData);
         window.location.href = "/";
     } catch (e) {
         // we will handling this error in future with UI

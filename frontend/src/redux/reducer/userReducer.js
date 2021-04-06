@@ -10,7 +10,7 @@ const initialState = {
 
 const userReducer = (state = initialState, action) => {
     // we can create LOGIN_ACTION for getting user email and name
-    const { type, payload } = action;
+    const { type } = action;
     switch (type) {
         case IS_LOGGEDIN: {
             return {

@@ -1,5 +1,4 @@
 const mongoose = require('mongoose');
-require('../config/dotenv');
 
 const db = () => {
   return mongoose

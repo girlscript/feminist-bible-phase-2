@@ -3,6 +3,7 @@ const rateLimit = require('express-rate-limit');
 const helmet = require('helmet');
 const mongoSanitize = require('express-mongo-sanitize');
 const xss = require('xss-clean');
+const cors = require('cors');
 const authRouter = require('./routes/authRoutes');
 const storyRouter = require('./routes/storyRoutes');
 const orgRouter = require('./routes/orgRoutes');
@@ -17,6 +18,9 @@ const app = express();
 
 // Data sanitization against XSS
 app.use(xss());
+
+// for cross site request origin
+app.use(cors({ credentials: true, origin: 'http://localhost:3000' }));
 
 // Data sanitization against no-sql query injection
 app.use(mongoSanitize());
