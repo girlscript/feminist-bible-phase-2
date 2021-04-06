@@ -10,6 +10,8 @@ const adminRouter = require('./routes/adminRoutes');
 const userRouter = require('./routes/userRoutes');
 const projectRouter = require('./routes/projectRoutes');
 const forumRouter = require('./routes/forumRoutes');
+const cookieParser = require('cookie-parser');
+const { validateCookie } = require('./controllers/authController');
 
 const app = express();
 
@@ -34,13 +36,16 @@ const limiter = rateLimit({
 // using express rate limit to every request that hit "/"
 app.use('/', limiter);
 
+// parse cookie
+app.use(cookieParser())
+
 // routes
 app.use('/api/auth', authRouter);
-app.use('/api/story', storyRouter);
-app.use('/api/org', orgRouter);
-app.use('/api/admin', adminRouter);
-app.use('/api/user', userRouter);
-app.use('/api/project', projectRouter);
-app.use('/api/forum', forumRouter);
+app.use('/api/story', validateCookie, storyRouter);
+app.use('/api/org', validateCookie, orgRouter);
+app.use('/api/admin', validateCookie, adminRouter);
+app.use('/api/user', validateCookie, userRouter);
+app.use('/api/project', validateCookie, projectRouter);
+app.use('/api/forum', validateCookie, forumRouter);
 
 module.exports = app;
