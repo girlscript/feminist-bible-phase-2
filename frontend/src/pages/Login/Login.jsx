@@ -5,9 +5,11 @@ import { Link } from "react-router-dom";
 
 import style from './login.module.scss'
 
+import { connect } from "react-redux";
+import { login } from "../../redux/action/userAction";
 const womenImg = require("../../images/women.png").default;
 
-export class Login extends Component {
+class LoginCompoent extends Component {
   state = {
     email: "",
     password: "",
@@ -66,27 +68,13 @@ export class Login extends Component {
   };
 
   loginUser = async (user) => {
-    // add user to backend
-    try {
-      // const {
-      //   email,
-      //   password,
-      // } = this.state;
-      // const res = await Axios({
-      //   url: "/api/auth/signin",
-      //   method: "POST",
-      //   data: {
-      //     email,
-      //     password,
-      //   },
-      // });
-      alert("LoggedIN...");
-    } catch (error) {
-      alert(`Something went wrong! \n ${error.response.data.msg}`);
-    }
+    const { email, password } = this.state;
+    this.props.loginUser({ email, password })
+
   };
 
   render() {
+
     const { errors } = this.state;
     return (
       <>
@@ -123,10 +111,10 @@ export class Login extends Component {
                 </Link>
               </div>
               <div className="cell large-8">
-                  <div className={style["registration-page__illustration-wrapper"]}>
-                  <img src={womenImg} className="registration-page__illustration" alt="Illustration of women"/>
+                <div className={style["registration-page__illustration-wrapper"]}>
+                  <img src={womenImg} className="registration-page__illustration" alt="Illustration of women" />
                 </div>
-              </div>  
+              </div>
             </div>
           </div>
         </div>
@@ -135,3 +123,18 @@ export class Login extends Component {
   }
 }
 
+
+
+const mapStateToProps = (state) => {
+  return {
+    user: state.user
+  }
+}
+
+const mapDispatchToProps = (dispatch) => {
+  return {
+    loginUser: (userData) => dispatch(login(userData))
+  }
+}
+
+export const Login = connect(mapStateToProps, mapDispatchToProps)(LoginCompoent);
