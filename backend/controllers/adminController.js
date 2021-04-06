@@ -29,6 +29,13 @@ const createSendToken = (user, statusCode, req, res) => {
   });
 };
 
+//signup
+/**
+ * @param {String} name
+ * @param {String} email
+ * @param {String} password
+ * @param {String} passwordConfirm
+ */
 exports.signup = async (req, res, next) => {
   const newAdmin = await Admin.create({
     name: req.body.name,
@@ -39,6 +46,11 @@ exports.signup = async (req, res, next) => {
   createSendToken(newAdmin, 201, req, res);
 };
 
+//login
+/**
+ * @param {String} email
+ * @param {String} password
+ */
 exports.login = async (req, res, next) => {
   const { email, password } = req.body;
 
@@ -60,6 +72,7 @@ exports.login = async (req, res, next) => {
   createSendToken(admin, 200, req, res);
 };
 
+//logout
 exports.logout = (req, res) => {
   res.cookie('jwt', 'loggedout', {
     expires: new Date(Date.now() + 10 * 1000),
@@ -69,6 +82,9 @@ exports.logout = (req, res) => {
 
 //get all approval requests
 //all Orgs where Org model has approved:false and declined:false
+/**
+ * @route api/admin/declineRequests
+ */
 exports.approvalRequests = async (req, res) => {
   try {
     const orgs = await Org.find({ declined: false, approved: false });
@@ -90,6 +106,10 @@ exports.approvalRequests = async (req, res) => {
 
 //approve a request
 //update Org model for that particular Org approved:true and declined:false
+/**
+ * @param {Number} orgid
+ * @route api/admin/approveRequest/:orgid
+ */
 exports.approveRequest = async (req, res) => {
   try {
     let org = await Org.findById({ _id: req.params.orgid });
@@ -122,6 +142,10 @@ exports.approveRequest = async (req, res) => {
 
 //decline a request
 //update org model for that particular org approved:false and declined:true
+/**
+ * @param {Number} orgid
+ * @route api/admin/declineRequest/:orgid
+ */
 exports.declineRequest = async (req, res) => {
   try {
     let org = await Org.findById({ _id: req.params.orgid });
