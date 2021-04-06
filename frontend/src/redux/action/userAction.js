@@ -29,15 +29,20 @@ export const signup = userData => async dispatch => {
 export const isLoggedIn = () => async dispatch => {
 
     try {
-        const tokenData = jwt_decode(Cookies.get('token').split(' ')[1]);
-        const currentTime = Date.now();
-        const tokenExpireTime = new Date(0).setUTCSeconds(tokenData.exp);
+        if (Cookies.get('token')) {
+            const tokenData = jwt_decode(Cookies.get('token').split(' ')[1]);
+            const currentTime = Date.now();
+            const tokenExpireTime = new Date(0).setUTCSeconds(tokenData.exp);
 
-        // to check wheather token is valid or load
-        if (currentTime < tokenExpireTime)
-            dispatch({ type: IS_LOGGEDIN })
-        else
+            // to check wheather token is valid or load
+            if (currentTime < tokenExpireTime)
+                dispatch({ type: IS_LOGGEDIN })
+            else
+                dispatch({ type: LOGOUT_USER })
+        } else {
             dispatch({ type: LOGOUT_USER })
+        }
+
 
     } catch (e) {
         // we will handling this error in future with UI
