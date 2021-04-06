@@ -1,9 +1,17 @@
 const User = require('../database/models/userModel');
 
+/**
+ * @route api/user/signup
+ */
 exports.signup = (req, res) => {
   //
 };
 
+//get the user profile
+/**
+ * @param {String} userId
+ * @route api/user/:userId
+ */
 exports.getUserProfile = async (req, res) => {
   try {
     const user = await User.findOne({ _id: req.params.userId });
@@ -25,6 +33,11 @@ exports.getUserProfile = async (req, res) => {
   }
 };
 
+//Update the user
+/**
+ * @param {String} userId
+ * @route api/user/:userId
+ */
 exports.updateUser = async (req, res) => {
   try {
     const user_id = req.param.userId;
