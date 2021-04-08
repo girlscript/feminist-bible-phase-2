@@ -1,0 +1,28 @@
+### Get Organizations waiting for approval
+GET http://localhost:8080/api/admin/approvalRequests/ HTTP/1.1
+content-type: application/json
+cookie: token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYwNmY2Y2MwOTgyZWE3NTA3Y2ZkYjRlMCIsImlhdCI6MTYxNzkxNTE1MSwiZXhwIjoxNjE3OTE4NzUxfQ.wqJHnFEv7fL9VFTxH9jTkoIudKBeEwGuwj20a55pS64
+
+
+
+### Update User Profile
+
+# PATCH http://localhost:8080/api/admin/approveRequest/:orgid HTTP/1.1
+
+PATCH http://localhost:8080/api/admin/approveRequest/606f6d70982ea7507cfdb4e1 HTTP/1.1
+content-type: application/json
+cookie: token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYwNmY2Y2MwOTgyZWE3NTA3Y2ZkYjRlMCIsImlhdCI6MTYxNzkxNTE1MSwiZXhwIjoxNjE3OTE4NzUxfQ.wqJHnFEv7fL9VFTxH9jTkoIudKBeEwGuwj20a55pS64
+
+
+
+
+### Update User Profile
+PATCH http://localhost:8080/api/admin/declineRequest/606c2d8e431ce145e8027aab HTTP/1.1
+content-type: application/json
+cookie: token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYwNmY2Y2MwOTgyZWE3NTA3Y2ZkYjRlMCIsImlhdCI6MTYxNzkxNTE1MSwiZXhwIjoxNjE3OTE4NzUxfQ.wqJHnFEv7fL9VFTxH9jTkoIudKBeEwGuwj20a55pS64
+
+{
+    "email": "new@example.com",
+    "phone": "+918888888888",
+    "name": "New Name"
+}
