@@ -16,6 +16,16 @@ const orgSchema = new mongoose.Schema(
     image: {
       type: String,
     },
+    approved: {
+      type: Boolean,
+      required: true,
+      default: false
+    },
+    declined: {
+      type: Boolean,
+      required: true,
+      default: false
+    },
     admin: [
       {
         type: mongoose.Schema.Types.ObjectId,
