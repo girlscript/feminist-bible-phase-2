@@ -7,7 +7,7 @@ cookie: token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYwNmY2Y2MwOTgyZWE3N
 
 ### Approve Request
 
-# PATCH http://localhost:8080/api/admin/approveRequest/:orgid HTTP/1.1
+# PATCH http://localhost:8080/api/admin/approveRequest/:orgId HTTP/1.1
 
 PATCH http://localhost:8080/api/admin/approveRequest/606f6d70982ea7507cfdb4e1 HTTP/1.1
 content-type: application/json
@@ -18,7 +18,7 @@ cookie: token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYwNmY2Y2MwOTgyZWE3N
 
 ### Decline Request
 
-# PATCH http://localhost:8080/api/admin/declineRequest/:orgid HTTP/1.1
+# PATCH http://localhost:8080/api/admin/declineRequest/:orgId HTTP/1.1
 
 PATCH http://localhost:8080/api/admin/declineRequest/606c2d8e431ce145e8027aab HTTP/1.1
 content-type: application/json
