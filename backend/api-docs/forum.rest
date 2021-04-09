@@ -2,7 +2,7 @@
 
 POST http://localhost:8080/api/forum/new HTTP/1.1
 content-type: application/json
-cookie: token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYwNmY2Y2MwOTgyZWE3NTA3Y2ZkYjRlMCIsImlhdCI6MTYxNzkyMTc0MSwiZXhwIjoxNjE3OTI1MzQxfQ.OYqF7l669JIYq5j7Jb8W-TrElq-I7BY1LAb5L-Dnl_w
+cookie: token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYwNmY2Y2MwOTgyZWE3NTA3Y2ZkYjRlMCIsImlhdCI6MTYxNzk0NjUwNSwiZXhwIjoxNjE3OTUwMTA1fQ.QNN-XgY1sHrecmW9GjAQXIvZ2SwcCD-ySIulkVDz6es
 
 {
     "heading": "String",
@@ -18,7 +18,7 @@ cookie: token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYwNmY2Y2MwOTgyZWE3N
 
 POST http://localhost:8080/api/forum/606f8c3a6f5fa7615050e404/like HTTP/1.1
 content-type: application/json
-cookie: token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYwNmY2Y2MwOTgyZWE3NTA3Y2ZkYjRlMCIsImlhdCI6MTYxNzkyMTc0MSwiZXhwIjoxNjE3OTI1MzQxfQ.OYqF7l669JIYq5j7Jb8W-TrElq-I7BY1LAb5L-Dnl_w
+cookie: token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYwNmY2Y2MwOTgyZWE3NTA3Y2ZkYjRlMCIsImlhdCI6MTYxNzk0NjUwNSwiZXhwIjoxNjE3OTUwMTA1fQ.QNN-XgY1sHrecmW9GjAQXIvZ2SwcCD-ySIulkVDz6es
 
 
 
@@ -28,7 +28,7 @@ cookie: token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYwNmY2Y2MwOTgyZWE3N
 
 POST http://localhost:8080/api/forum/606f8c3a6f5fa7615050e404/comment HTTP/1.1
 content-type: application/json
-cookie: token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYwNmY2Y2MwOTgyZWE3NTA3Y2ZkYjRlMCIsImlhdCI6MTYxNzkyMTc0MSwiZXhwIjoxNjE3OTI1MzQxfQ.OYqF7l669JIYq5j7Jb8W-TrElq-I7BY1LAb5L-Dnl_w
+cookie: token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYwNmY2Y2MwOTgyZWE3NTA3Y2ZkYjRlMCIsImlhdCI6MTYxNzk0NjUwNSwiZXhwIjoxNjE3OTUwMTA1fQ.QNN-XgY1sHrecmW9GjAQXIvZ2SwcCD-ySIulkVDz6es
 
 {
     "userId": "605c55049d7d673a20202ed5",
@@ -43,7 +43,7 @@ cookie: token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYwNmY2Y2MwOTgyZWE3N
 
 POST http://localhost:8080/api/forum/606f8c3a6f5fa7615050e404/edit-post HTTP/1.1
 content-type: application/json
-cookie: token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYwNmY2Y2MwOTgyZWE3NTA3Y2ZkYjRlMCIsImlhdCI6MTYxNzkyMTc0MSwiZXhwIjoxNjE3OTI1MzQxfQ.OYqF7l669JIYq5j7Jb8W-TrElq-I7BY1LAb5L-Dnl_w
+cookie: token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYwNmY2Y2MwOTgyZWE3NTA3Y2ZkYjRlMCIsImlhdCI6MTYxNzk0NjUwNSwiZXhwIjoxNjE3OTUwMTA1fQ.QNN-XgY1sHrecmW9GjAQXIvZ2SwcCD-ySIulkVDz6es
 
 {
     "upadtedHeading": "New Heading",
