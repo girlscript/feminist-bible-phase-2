@@ -1,9 +1,8 @@
 ### Get Organization Details
 
 GET http://localhost:8080/api/org/ HTTP/1.1
-
 content-type: application/json
-cookie: token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYwNWM1NTA0OWQ3ZDY3M2EyMDIwMmVkNSIsImlhdCI6MTYxNzcwMTYzMSwiZXhwIjoxNjE3NzA1MjMxfQ.txTdjktGax6oDezdoehmCDjGCrkU2AH8rH_NQaZmadk
+cookie: token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYwNmY2Y2MwOTgyZWE3NTA3Y2ZkYjRlMCIsImlhdCI6MTYxNzkyMTA2NiwiZXhwIjoxNjE3OTI0NjY2fQ.iduB2X2-gGajFnkhieii5NtFepUQkgP3hDZ_hhBd2n4
 
 
 

@@ -58,6 +58,10 @@ exports.createOrg = async (req, res) => {
 exports.updateOrganisation = async (req, res) => {
   try {
     const org_id = req.params.OrgId;
+
+    delete req.body.approved; // remove these parameters
+    delete req.body.declined; // if passed with body
+
     const org = await Org.findOneAndUpdate({ _id: org_id }, req.body, {
       new: true,
       runValidators: true,

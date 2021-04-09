@@ -1,4 +1,5 @@
 ### Get Organizations waiting for approval
+
 GET http://localhost:8080/api/admin/approvalRequests/ HTTP/1.1
 content-type: application/json
 cookie: token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYwNmY2Y2MwOTgyZWE3NTA3Y2ZkYjRlMCIsImlhdCI6MTYxNzkxNTE1MSwiZXhwIjoxNjE3OTE4NzUxfQ.wqJHnFEv7fL9VFTxH9jTkoIudKBeEwGuwj20a55pS64
