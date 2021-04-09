@@ -22,7 +22,7 @@ const getAuthCookie = (token) => {
 
 //signup 
 /**
- * @param {String} orgid
+ * @param {String} orgId
  * @param {String} email
  * @param {String} phone
  * @param {ImageBitmap} photo

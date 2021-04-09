@@ -2,7 +2,7 @@
 
 POST http://localhost:8080/api/story/ HTTP/1.1
 content-type: application/json
-cookie: token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYwNmY2Y2MwOTgyZWE3NTA3Y2ZkYjRlMCIsImlhdCI6MTYxNzkyMTc0MSwiZXhwIjoxNjE3OTI1MzQxfQ.OYqF7l669JIYq5j7Jb8W-TrElq-I7BY1LAb5L-Dnl_w
+cookie: token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYwNmY2Y2MwOTgyZWE3NTA3Y2ZkYjRlMCIsImlhdCI6MTYxNzk0NjUwNSwiZXhwIjoxNjE3OTUwMTA1fQ.QNN-XgY1sHrecmW9GjAQXIvZ2SwcCD-ySIulkVDz6es
 
 {
     "name": "Bro",
@@ -22,9 +22,9 @@ cookie: token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYwNmY2Y2MwOTgyZWE3N
 
 # GET http://localhost:8080/api/story/:storyId HTTP/1.1
 
-GET http://localhost:8080/api/story/606f87f06f5fa7615050e403 HTTP/1.1
+GET http://localhost:8080/api/story/606fe8b2aad9182788c2b63a HTTP/1.1
 content-type: application/json
-cookie: token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYwNmY2Y2MwOTgyZWE3NTA3Y2ZkYjRlMCIsImlhdCI6MTYxNzkyMTc0MSwiZXhwIjoxNjE3OTI1MzQxfQ.OYqF7l669JIYq5j7Jb8W-TrElq-I7BY1LAb5L-Dnl_w
+cookie: token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYwNmY2Y2MwOTgyZWE3NTA3Y2ZkYjRlMCIsImlhdCI6MTYxNzk0NjUwNSwiZXhwIjoxNjE3OTUwMTA1fQ.QNN-XgY1sHrecmW9GjAQXIvZ2SwcCD-ySIulkVDz6es
 
 
 
@@ -32,9 +32,9 @@ cookie: token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYwNmY2Y2MwOTgyZWE3N
 
 # POST http://localhost:8080/api/story/:storyId HTTP/1.1
 
-POST http://localhost:8080/api/story/606f87f06f5fa7615050e403 HTTP/1.1
+POST http://localhost:8080/api/story/606fe8b2aad9182788c2b63a HTTP/1.1
 content-type: application/json
-cookie: token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYwNmY2Y2MwOTgyZWE3NTA3Y2ZkYjRlMCIsImlhdCI6MTYxNzkyMTc0MSwiZXhwIjoxNjE3OTI1MzQxfQ.OYqF7l669JIYq5j7Jb8W-TrElq-I7BY1LAb5L-Dnl_w
+cookie: token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYwNmY2Y2MwOTgyZWE3NTA3Y2ZkYjRlMCIsImlhdCI6MTYxNzk0NjUwNSwiZXhwIjoxNjE3OTUwMTA1fQ.QNN-XgY1sHrecmW9GjAQXIvZ2SwcCD-ySIulkVDz6es
 
 {
     "heading": "This is New Heading"
@@ -46,6 +46,6 @@ cookie: token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYwNmY2Y2MwOTgyZWE3N
 
 # DELETE http://localhost:8080/api/story/:storyId HTTP/1.1
 
-DELETE http://localhost:8080/api/story/606f87f06f5fa7615050e403 HTTP/1.1
+DELETE http://localhost:8080/api/story/606fe8b2aad9182788c2b63a HTTP/1.1
 content-type: application/json
-cookie: token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYwNmY2Y2MwOTgyZWE3NTA3Y2ZkYjRlMCIsImlhdCI6MTYxNzkyMTc0MSwiZXhwIjoxNjE3OTI1MzQxfQ.OYqF7l669JIYq5j7Jb8W-TrElq-I7BY1LAb5L-Dnl_w
+cookie: token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYwNmY2Y2MwOTgyZWE3NTA3Y2ZkYjRlMCIsImlhdCI6MTYxNzk0NjUwNSwiZXhwIjoxNjE3OTUwMTA1fQ.QNN-XgY1sHrecmW9GjAQXIvZ2SwcCD-ySIulkVDz6es

@@ -53,11 +53,11 @@ exports.createOrg = async (req, res) => {
 
 //update an organization
 /**
- * @param {String}  OrgId
+ * @param {String}  orgId
  */
 exports.updateOrganisation = async (req, res) => {
   try {
-    const org_id = req.params.OrgId;
+    const org_id = req.params.orgId;
 
     delete req.body.approved; // remove these parameters
     delete req.body.declined; // if passed with body

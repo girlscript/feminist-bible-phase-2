@@ -1,15 +1,17 @@
 ### Get User Profile
 GET http://localhost:8080/api/user/605c55049d7d673a20202ed5 HTTP/1.1
 content-type: application/json
-cookie: token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYwNWM1NTA0OWQ3ZDY3M2EyMDIwMmVkNSIsImlhdCI6MTYxNzc0MDY3OCwiZXhwIjoxNjE3NzQ0Mjc4fQ.7_rL72q1FD8DuAXL2MhD2BGtmEx58iRQ_wREbYa5ONU;
+cookie: token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYwNmY2Y2MwOTgyZWE3NTA3Y2ZkYjRlMCIsImlhdCI6MTYxNzk0NjUwNSwiZXhwIjoxNjE3OTUwMTA1fQ.QNN-XgY1sHrecmW9GjAQXIvZ2SwcCD-ySIulkVDz6es
+
+
 
 ### Update User Profile
 PUT http://localhost:8080/api/user/605c55049d7d673a20202ed5 HTTP/1.1
 content-type: application/json
-cookie: token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYwNWM1NTA0OWQ3ZDY3M2EyMDIwMmVkNSIsImlhdCI6MTYxNzc0MDY3OCwiZXhwIjoxNjE3NzQ0Mjc4fQ.7_rL72q1FD8DuAXL2MhD2BGtmEx58iRQ_wREbYa5ONU;
+cookie: token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYwNmY2Y2MwOTgyZWE3NTA3Y2ZkYjRlMCIsImlhdCI6MTYxNzk0NjUwNSwiZXhwIjoxNjE3OTUwMTA1fQ.QNN-XgY1sHrecmW9GjAQXIvZ2SwcCD-ySIulkVDz6es
 
 {
-    "email": "new@example.com",
+    "email": "new2@example.com",
     "phone": "+918888888888",
     "name": "New Name"
 }

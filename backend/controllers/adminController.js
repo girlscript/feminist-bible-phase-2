@@ -107,15 +107,15 @@ exports.approvalRequests = async (req, res) => {
 //approve a request
 //update Org model for that particular Org approved:true and declined:false
 /**
- * @param {Number} orgid
- * @route api/admin/approveRequest/:orgid
+ * @param {Number} orgId
+ * @route api/admin/approveRequest/:orgId
  */
 exports.approveRequest = async (req, res) => {
   try {
-    let org = await Org.findById(req.params.orgid);
-    if (org.approved != true && org.declined != true) {
+    let org = await Org.findById(req.params.orgId);
+    if (org.approved !== true && org.declined !== true) {
       org = await Org.findByIdAndUpdate(
-        { _id: req.params.orgid },
+        { _id: req.params.orgId },
         { approved: true },
         {
           new: true,
@@ -143,15 +143,15 @@ exports.approveRequest = async (req, res) => {
 //decline a request
 //update org model for that particular org approved:false and declined:true
 /**
- * @param {Number} orgid
- * @route api/admin/declineRequest/:orgid
+ * @param {Number} orgId
+ * @route api/admin/declineRequest/:orgId
  */
 exports.declineRequest = async (req, res) => {
   try {
-    let org = await Org.findById(req.params.orgid);
-    if (org.approved != true && org.declined != true) {
+    let org = await Org.findById(req.params.orgId);
+    if (org.approved !== true && org.declined !== true) {
       org = await Org.findByIdAndUpdate(
-        { _id: req.params.orgid },
+        { _id: req.params.orgId },
         { declined: true },
         {
           new: true,

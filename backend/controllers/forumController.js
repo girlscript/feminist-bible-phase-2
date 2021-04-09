@@ -3,13 +3,13 @@ const ForumPost = require('../database/models/forumPostModel');
 
 //create a comment on the post
 /**
- * @param {Number} forumpostid
+ * @param {Number} forumPostId
  * @param {String} comment
- * @route api/forum/:forumpostid/comment
+ * @route api/forum/:forumPostId/comment
  */
 exports.createComment = async (req, res) => {
   try {
-    let postId = req.params.forumpostid;
+    let postId = req.params.forumPostId;
     const { userId, comment } = req.body;
     const newComment = await ForumPostComment.create({
       post: postId,
@@ -65,14 +65,14 @@ exports.createForumPost = async (req, res) => {
 
 //like a forum post
 /**
- * @param {String} forumpostid
- * @route api/forum/:forumpostid/like
+ * @param {String} forumPostId
+ * @route api/forum/:forumPostId/like
  */
 exports.likeForumPost = async (req, res) => {
   try {
-    let forumPost = await ForumPost.findById(req.params.forumpostid);
+    let forumPost = await ForumPost.findById(req.params.forumPostId);
     forumPost = await ForumPost.findByIdAndUpdate(
-      req.params.forumpostid,
+      req.params.forumPostId,
       { likes: forumPost.likes + 1 },
       {
         new: true,
@@ -96,7 +96,7 @@ exports.likeForumPost = async (req, res) => {
  * @param {String} upadtedHeading
  * @param {String} updatedAuthor
  * @param {String} updatedDescription
- * @route api/forum//:forumpostid/edit-post
+ * @route api/forum//:forumPostId/edit-post
  */
 exports.editForumPost = async(req, res) => {
   try {
@@ -108,7 +108,7 @@ exports.editForumPost = async(req, res) => {
         message: 'Fields cannot be empty',
       });
     }
-    const postId = req.params.forumpostid;
+    const postId = req.params.forumPostId;
     let forumPost = await ForumPost.findByIdAndUpdate
     (
       postId, {

@@ -50,12 +50,12 @@ exports.getAllProjects = async (req, res) => {
 
 //get projects org wise
 /**
- * @param {String} orgid
- * @route api/project/:orgid
+ * @param {String} orgId
+ * @route api/project/:orgId
  */
 exports.getProjectsOrgWise = async (req, res) => {
   try {
-    const projects = await Project.find({ postedBy: req.params.orgid });
+    const projects = await Project.find({ postedBy: req.params.orgId });
     if (projects.length === 0) {
       res.status(400).json({
         status: 'fail',
@@ -78,13 +78,13 @@ exports.getProjectsOrgWise = async (req, res) => {
 //delete project
 //get projects org wise
 /**
- * @param {String} projectid
- * @route api/project/:projectid
+ * @param {String} projectId
+ * @route api/project/:projectId
  */
 exports.deleteProject = async (req, res) => {
   try {
     const project = await Project.findOneAndDelete({
-      _id: req.params.projectid,
+      _id: req.params.projectId,
     });
     if (!project) {
       //project not found
