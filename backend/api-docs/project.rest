@@ -12,7 +12,7 @@ cookie: token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYwNWM1NTA0OWQ3ZDY3M
 
 # title: String
 # description: String
-# postedBy: OrgId
+# postedBy: orgId
 
 
 ### Get all projects
@@ -25,7 +25,7 @@ cookie: token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYwNWM1NTA0OWQ3ZDY3M
 
 ### Get Projects Org Wise
 
-# http://localhost:8080/api/project/:OrgId
+# http://localhost:8080/api/project/:orgId
 
 GET http://localhost:8080/api/project/606c2d8e431ce145e8027aab HTTP/1.1
 content-type: application/json
@@ -35,7 +35,7 @@ cookie: token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYwNWM1NTA0OWQ3ZDY3M
 
 ### Update Project
 
-# http://localhost:8080/api/project/:projectid
+# http://localhost:8080/api/project/:projectId
 PUT http://localhost:8080/api/project/606c3f6be4f97e32680e0dfe HTTP/1.1
 content-type: application/json
 cookie: token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYwNWM1NTA0OWQ3ZDY3M2EyMDIwMmVkNSIsImlhdCI6MTYxNzcwMTYzMSwiZXhwIjoxNjE3NzA1MjMxfQ.txTdjktGax6oDezdoehmCDjGCrkU2AH8rH_NQaZmadk
@@ -48,7 +48,7 @@ cookie: token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYwNWM1NTA0OWQ3ZDY3M
 
 ### Delete Project
 
-# http://localhost:8080/api/project/:projectid
+# http://localhost:8080/api/project/:projectId
 DELETE http://localhost:8080/api/project/606c3f6be4f97e32680e0dfe HTTP/1.1
 content-type: application/json
 cookie: token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYwNWM1NTA0OWQ3ZDY3M2EyMDIwMmVkNSIsImlhdCI6MTYxNzcwMTYzMSwiZXhwIjoxNjE3NzA1MjMxfQ.txTdjktGax6oDezdoehmCDjGCrkU2AH8rH_NQaZmadk

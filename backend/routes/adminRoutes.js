@@ -6,10 +6,10 @@ const router = express.Router();
 router.route('/approvalRequests').get(adminController.approvalRequests);
 
 //Using organisation id as a parameter within this route to approve request from adminController.
-router.route('/approveRequest/:orgid').patch(adminController.approveRequest);
+router.route('/approveRequest/:orgId').patch(adminController.approveRequest);
 
 //Using organisation id as a parameter within this route to decline request from adminController.
-router.route('/declineRequest/:orgid').patch(adminController.declineRequest);
+router.route('/declineRequest/:orgId').patch(adminController.declineRequest);
 
 //export this router to use it in App.js
 module.exports = router;

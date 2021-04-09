@@ -24,7 +24,7 @@ cookie: token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYwNWM1NTA0OWQ3ZDY3M
 
 ### Update Organization
 
-# POST http://localhost:8080/api/org/:OrgId HTTP/1.1
+# POST http://localhost:8080/api/org/:orgId HTTP/1.1
 PUT http://localhost:8080/api/org/606c2da3431ce145e8027aac HTTP/1.1
 content-type: application/json
 cookie: token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYwNWM1NTA0OWQ3ZDY3M2EyMDIwMmVkNSIsImlhdCI6MTYxNzcwMTYzMSwiZXhwIjoxNjE3NzA1MjMxfQ.txTdjktGax6oDezdoehmCDjGCrkU2AH8rH_NQaZmadk
