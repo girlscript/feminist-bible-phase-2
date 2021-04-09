@@ -113,7 +113,7 @@ exports.approvalRequests = async (req, res) => {
 exports.approveRequest = async (req, res) => {
   try {
     let org = await Org.findById(req.params.orgid);
-    if (org.approved != true && org.declined != true) {
+    if (org.approved !== true && org.declined !== true) {
       org = await Org.findByIdAndUpdate(
         { _id: req.params.orgid },
         { approved: true },
@@ -149,7 +149,7 @@ exports.approveRequest = async (req, res) => {
 exports.declineRequest = async (req, res) => {
   try {
     let org = await Org.findById(req.params.orgid);
-    if (org.approved != true && org.declined != true) {
+    if (org.approved !== true && org.declined !== true) {
       org = await Org.findByIdAndUpdate(
         { _id: req.params.orgid },
         { declined: true },
