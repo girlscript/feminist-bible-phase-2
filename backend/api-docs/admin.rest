@@ -7,7 +7,7 @@ cookie: token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYwNmY2Y2MwOTgyZWE3N
 
 ### Update User Profile
 
-# PATCH http://localhost:8080/api/admin/approveRequest/:orgid HTTP/1.1
+# PATCH http://localhost:8080/api/admin/approveRequest/:orgId HTTP/1.1
 
 PATCH http://localhost:8080/api/admin/approveRequest/606f6d70982ea7507cfdb4e1 HTTP/1.1
 content-type: application/json

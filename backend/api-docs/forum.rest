@@ -14,7 +14,7 @@ cookie: token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYwNmY2Y2MwOTgyZWE3N
 
 ### Like a Forum Post
 
-# POST http://localhost:8080/api/forum/:forumpostid/like HTTP/1.1
+# POST http://localhost:8080/api/forum/:forumPostId/like HTTP/1.1
 
 POST http://localhost:8080/api/forum/606f8c3a6f5fa7615050e404/like HTTP/1.1
 content-type: application/json
@@ -24,7 +24,7 @@ cookie: token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYwNmY2Y2MwOTgyZWE3N
 
 ### Comment on Forum Post
 
-# POST http://localhost:8080/api/forum/:forumpostid/comment HTTP/1.1
+# POST http://localhost:8080/api/forum/:forumPostId/comment HTTP/1.1
 
 POST http://localhost:8080/api/forum/606f8c3a6f5fa7615050e404/comment HTTP/1.1
 content-type: application/json
@@ -39,7 +39,7 @@ cookie: token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYwNmY2Y2MwOTgyZWE3N
 
 ### Edit Forum Post
 
-# DELETE http://localhost:8080/api/forum/:forumpostid/edit-post HTTP/1.1
+# DELETE http://localhost:8080/api/forum/:forumPostId/edit-post HTTP/1.1
 
 POST http://localhost:8080/api/forum/606f8c3a6f5fa7615050e404/edit-post HTTP/1.1
 content-type: application/json
