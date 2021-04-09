@@ -1,0 +1,51 @@
+### Create New Story
+
+POST http://localhost:8080/api/story/ HTTP/1.1
+content-type: application/json
+cookie: token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYwNmY2Y2MwOTgyZWE3NTA3Y2ZkYjRlMCIsImlhdCI6MTYxNzkyMTc0MSwiZXhwIjoxNjE3OTI1MzQxfQ.OYqF7l669JIYq5j7Jb8W-TrElq-I7BY1LAb5L-Dnl_w
+
+{
+    "name": "Bro",
+    "author": "605c55049d7d673a20202ed5",
+    "image": "",
+    "heading": "This is My Cool Heading"
+}
+
+# name: String
+# author: User ID (Mongodb ObjectID)
+# image: String
+# heading: String
+
+
+
+### Get Story
+
+# GET http://localhost:8080/api/story/:storyId HTTP/1.1
+
+GET http://localhost:8080/api/story/606f87f06f5fa7615050e403 HTTP/1.1
+content-type: application/json
+cookie: token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYwNmY2Y2MwOTgyZWE3NTA3Y2ZkYjRlMCIsImlhdCI6MTYxNzkyMTc0MSwiZXhwIjoxNjE3OTI1MzQxfQ.OYqF7l669JIYq5j7Jb8W-TrElq-I7BY1LAb5L-Dnl_w
+
+
+
+### Update Story
+
+# POST http://localhost:8080/api/story/:storyId HTTP/1.1
+
+POST http://localhost:8080/api/story/606f87f06f5fa7615050e403 HTTP/1.1
+content-type: application/json
+cookie: token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYwNmY2Y2MwOTgyZWE3NTA3Y2ZkYjRlMCIsImlhdCI6MTYxNzkyMTc0MSwiZXhwIjoxNjE3OTI1MzQxfQ.OYqF7l669JIYq5j7Jb8W-TrElq-I7BY1LAb5L-Dnl_w
+
+{
+    "heading": "This is New Heading"
+}
+
+
+
+### Delete Story
+
+# DELETE http://localhost:8080/api/story/:storyId HTTP/1.1
+
+DELETE http://localhost:8080/api/story/606f87f06f5fa7615050e403 HTTP/1.1
+content-type: application/json
+cookie: token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYwNmY2Y2MwOTgyZWE3NTA3Y2ZkYjRlMCIsImlhdCI6MTYxNzkyMTc0MSwiZXhwIjoxNjE3OTI1MzQxfQ.OYqF7l669JIYq5j7Jb8W-TrElq-I7BY1LAb5L-Dnl_w

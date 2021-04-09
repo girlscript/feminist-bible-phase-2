@@ -1,0 +1,52 @@
+### Create New Forum Post
+
+POST http://localhost:8080/api/forum/new HTTP/1.1
+content-type: application/json
+cookie: token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYwNmY2Y2MwOTgyZWE3NTA3Y2ZkYjRlMCIsImlhdCI6MTYxNzkyMTc0MSwiZXhwIjoxNjE3OTI1MzQxfQ.OYqF7l669JIYq5j7Jb8W-TrElq-I7BY1LAb5L-Dnl_w
+
+{
+    "heading": "String",
+    "author": "String",
+    "description": "String"
+}
+
+
+
+### Like a Forum Post
+
+# POST http://localhost:8080/api/forum/:forumpostid/like HTTP/1.1
+
+POST http://localhost:8080/api/forum/606f8c3a6f5fa7615050e404/like HTTP/1.1
+content-type: application/json
+cookie: token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYwNmY2Y2MwOTgyZWE3NTA3Y2ZkYjRlMCIsImlhdCI6MTYxNzkyMTc0MSwiZXhwIjoxNjE3OTI1MzQxfQ.OYqF7l669JIYq5j7Jb8W-TrElq-I7BY1LAb5L-Dnl_w
+
+
+
+### Comment on Forum Post
+
+# POST http://localhost:8080/api/forum/:forumpostid/comment HTTP/1.1
+
+POST http://localhost:8080/api/forum/606f8c3a6f5fa7615050e404/comment HTTP/1.1
+content-type: application/json
+cookie: token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYwNmY2Y2MwOTgyZWE3NTA3Y2ZkYjRlMCIsImlhdCI6MTYxNzkyMTc0MSwiZXhwIjoxNjE3OTI1MzQxfQ.OYqF7l669JIYq5j7Jb8W-TrElq-I7BY1LAb5L-Dnl_w
+
+{
+    "userId": "605c55049d7d673a20202ed5",
+    "comment": "Your Beautiful Comment"
+}
+
+
+
+### Edit Forum Post
+
+# DELETE http://localhost:8080/api/forum/:forumpostid/edit-post HTTP/1.1
+
+POST http://localhost:8080/api/forum/606f8c3a6f5fa7615050e404/edit-post HTTP/1.1
+content-type: application/json
+cookie: token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYwNmY2Y2MwOTgyZWE3NTA3Y2ZkYjRlMCIsImlhdCI6MTYxNzkyMTc0MSwiZXhwIjoxNjE3OTI1MzQxfQ.OYqF7l669JIYq5j7Jb8W-TrElq-I7BY1LAb5L-Dnl_w
+
+{
+    "upadtedHeading": "New Heading",
+    "updatedAuthor": "New Author",
+    "updatedDescription": "New Description"
+}
