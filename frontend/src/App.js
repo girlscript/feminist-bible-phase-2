@@ -1,4 +1,4 @@
-import React from "react";
+import React , {useState,useEffect} from "react";
 import { BrowserRouter as Router, Switch } from "react-router-dom";
 
 // css
@@ -24,8 +24,24 @@ import { CodeOfConduct } from "./pages/CodeOfConduct/index";
 // images
 import avatar_image from "./images/placeholder-images/avatar.png";
 
+
+//Loader
+import Loader from "./components/Loader/Loader"
+
 function App() {
+  const [load, setload] = useState(true);
+  useEffect(() => {
+    
+    setload(!load)
+  }, [])
+
+  const loading = load;
+  if(loading) 
+  return(<Loader/>)
+  else
+
   return (
+     
     <Router>
       <Header isSignedIn={false} avatarSrc={avatar_image} />
       <Switch>
@@ -40,7 +56,6 @@ function App() {
         <BlogPage path="/stories/post" exact />
         <ProjectListing path="/projects" exact />
       </Switch>
-
       <Footer />
     </Router>
   );
