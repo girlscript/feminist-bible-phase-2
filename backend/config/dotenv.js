@@ -11,7 +11,7 @@ if (process.env.NODE_ENV === "development") {
     */
     // load the .env file (for development)
     require('dotenv').config({ path: path.resolve(`.env`) });
-} 
+}
 
 // default the environment to production
 else {

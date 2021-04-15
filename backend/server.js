@@ -5,7 +5,7 @@ const db = require('./database/index')
 const port = process.env.PORT || 8080;
 
 (async () => {
-  
+
   // Connect to DB
   await db();
 

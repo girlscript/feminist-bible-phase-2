@@ -3,7 +3,6 @@ const bcrypt = require('bcryptjs');
 const nodemailer = require('nodemailer');
 const jwt = require('jsonwebtoken');
 const sendgridTransport = require('nodemailer-sendgrid-transport');
-require('../config/dotenv');
 
 const User = require('../database/models/userModel');
 
@@ -15,10 +14,8 @@ const transporter = nodemailer.createTransport(
   })
 );
 
-const getAuthCookie = (token) => {
-  const expiry = new Date(Date.now() + +process.env.JWT_COOKIE_EXPIRES_IN);
-  return `token=${token}; Domain=${process.env.JWT_COOKIE_DOMAIN}; Expires=${expiry.toGMTString()}; Path=/; HttpOnly=true; SameSite=Lax; Secure=true;`
-};
+
+
 
 //signup 
 /**
@@ -32,7 +29,6 @@ const getAuthCookie = (token) => {
  */
 exports.signup = async (req, res) => {
   const { name, email, phone, photo, password, passwordConfirm } = req.body;
-  console.log(req.body);
   // checking all credentials are present or not
   if (!name || !email || !phone || !password)
     return res.status(400).json({ msg: 'fill up all the credentials' });
@@ -62,14 +58,18 @@ exports.signup = async (req, res) => {
 
     await newUser.save();
 
-    // generating auth token
-    let token = jwt.sign({ id: newUser._id }, process.env.JWT_SECRET, {
-      expiresIn: '1h',
-    });
 
-    //set cookie
-    res.set('Cookie', getAuthCookie(token));
-    
+    // if we want to login user directly when he register then we use this
+    // let token = jwt.sign({ id: existingUser._id }, process.env.JWT_SECRET, {
+    //   expiresIn: process.env.JWT_COOKIE_EXPIRES_IN,
+    // });
+
+    // res.cookie("jwt", `Bearer ${token}`, {
+    //   expiresIn: '1h',
+    //   secure: true,
+    //   httpOnly: true
+    // })
+
     // returning final response
     res.status(201).json({
       success: true,
@@ -80,7 +80,7 @@ exports.signup = async (req, res) => {
       },
     });
   } catch (e) {
-    console.log(e.message);
+    console.log(e);
     return res.status(400).json({ msg: 'cannot signup' });
   }
 };
@@ -92,6 +92,7 @@ exports.signup = async (req, res) => {
  * @route api/auth/signin
  */
 exports.signin = async (req, res) => {
+
   const { email, password } = req.body;
   if (!email || !password)
     return res.status(400).json({ msg: 'fill up all the credentials' });
@@ -108,19 +109,19 @@ exports.signin = async (req, res) => {
         .status(400)
         .json({ msg: 'invalid credentials,check your password' });
 
-    let token = jwt.sign({ id: existingUser._id }, process.env.JWT_SECRET, {
-      expiresIn: '1h',
+    // send token to frontend
+    let token = jwt.sign({ id: existingUser._id, email: existingUser.email }, process.env.JWT_SECRET, {
+      expiresIn: process.env.JWT_COOKIE_EXPIRES_IN,
     });
 
-    //set cookie
-    res.set('Cookie', getAuthCookie(token));
 
     res.status(200).json({
       success: true,
       data: {
         ...existingUser._doc,
         password: '',
-        passwordConfirm: ""
+        passwordConfirm: "",
+        token: `Bearer ${token}`
       },
     });
   } catch (err) {
@@ -234,11 +235,16 @@ exports.postNewPassword = async (req, res) => {
  * @param {Number} userId
  * @param {String} token
  */
+
+
+
 exports.isSignedIn = async (req, res, next) => {
-  const token = req.header('Authorization').replace('Bearer ', '');
-  const data = jwt.verify(token, process.env.JWT_SECRET);
+
+  const token = req.cookies.token.split(' ')[1];
+  const { id } = jwt.verify(token, process.env.JWT_SECRET);
   try {
-    const user = User.findOne({ _id: userId, token: token });
+    const user = await User.findOne({ _id: id });
+
     if (!user) {
       throw new NoUserFoundError('User is currently not logged in');
     }
@@ -246,6 +252,7 @@ exports.isSignedIn = async (req, res, next) => {
     req.token = token;
     next();
   } catch (error) {
+    console.log(error)
     const err_code = error.err_code
       ? err.code >= 100 && err.code <= 599
         ? err.code
@@ -253,7 +260,7 @@ exports.isSignedIn = async (req, res, next) => {
       : 500;
     res.status(err_code).json({
       status: 'fail',
-      message: err.message || 'Internal Server Error',
+      message: error.message || 'Internal Server Error',
     });
   }
 };
@@ -261,7 +268,7 @@ exports.isSignedIn = async (req, res, next) => {
 exports.validateCookie = (req, res, next) => {
   try {
     const res = jwt.verify(req.cookies.token, process.env.JWT_SECRET)
-    if (res.id) { 
+    if (res.id) {
       next();
     } else {
       throw new Error("Invalid USER ID");

@@ -1,29 +1,30 @@
 import React, { Component } from "react";
 import { Link, NavLink } from "react-router-dom";
-import {Avatar} from "../Avatar/index.js";
+import { Avatar } from "../Avatar/index.js";
 
 // images/
 import logo from "../../images/company-assets/feminist_bible_logo.png";
 
 // css
 import style from "./header.module.scss";
-
-export class Header extends Component {
-  constructor(props){
+import { connect } from "react-redux";
+import { logout } from "../../redux/action/userAction";
+class HeaderComponent extends Component {
+  constructor(props) {
     super(props);
     this.state = {
-      navHidden: window.innerWidth <= 640?true:false,
+      navHidden: window.innerWidth <= 640 ? true : false,
     }
   }
 
-  showHideNav = () =>{
+  showHideNav = () => {
     this.setState({
-      navHidden: this.state.navHidden?false:true,
+      navHidden: this.state.navHidden ? false : true,
     })
   }
 
-  hideNav = () =>{
-    if(window.innerWidth <= 640){
+  hideNav = () => {
+    if (window.innerWidth <= 640) {
       this.setState({
         navHidden: true,
       })
@@ -31,6 +32,7 @@ export class Header extends Component {
   }
 
   render() {
+
     return (
       <header className={style.header}>
         <div className="grid-container">
@@ -46,7 +48,7 @@ export class Header extends Component {
             </div>
             <div className="cell medium-9">
               <nav className={style.nav}>
-                <ul className={style["nav__item-container"]} style={{display: this.state.navHidden?'none':'flex'}}>
+                <ul className={style["nav__item-container"]} style={{ display: this.state.navHidden ? 'none' : 'flex' }}>
                   <li className={style["nav__item"]} onClick={this.hideNav}>
                     <NavLink to="/forum" activeClassName="active">
                       Forum
@@ -67,7 +69,7 @@ export class Header extends Component {
                       About
                     </NavLink>
                   </li>
-                  {this.props.isSignedIn ? (
+                  {this.props.user.isAuth ? (
                     <>
                       <li className={style["nav__item"]}>
                         <a
@@ -80,6 +82,9 @@ export class Header extends Component {
                       </li>
                       <li className={style["nav__item"]} data-testid="user-avatar">
                         <Avatar avatarSrc={this.props.avatarSrc} />
+                      </li>
+                      <li style={{ cursor: "pointer" }} onClick={() => this.props.signout()} className={style["nav__item"]} data-testid="user-avatar">
+                        Logout
                       </li>
                     </>
                   ) : (
@@ -111,3 +116,18 @@ export class Header extends Component {
     );
   }
 }
+
+const mapStateToProps = (state) => {
+  return {
+    user: state.user
+  }
+}
+
+const mapDispatchToProps = (dispatch) => {
+  return {
+    signout: () => dispatch(logout())
+  }
+}
+
+
+export const Header = connect(mapStateToProps, mapDispatchToProps)(HeaderComponent)
