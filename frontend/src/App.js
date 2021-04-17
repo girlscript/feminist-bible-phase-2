@@ -28,12 +28,6 @@ import avatar_image from "./images/placeholder-images/avatar.png";
 // //Loader
 // import Loader from "./components/Loader/Loader"
 
-const override = css`
-  display: block;
-  margin: 0 auto;
-  border-color: red;
-  color:purple;
-`; 
 
 function App() {
   let [loading, setLoading] = useState(false);
@@ -50,7 +44,7 @@ function App() {
      <>
      {
        loading?
-       <HashLoader loading={loading} size={150} css={override} />
+       <HashLoader loading={loading} size={150}  />
        :
     
     <Router>
