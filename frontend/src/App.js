@@ -31,7 +31,6 @@ import Loader from "./components/Loader/Loader"
 function App() {
   const [load, setload] = useState(true);
   useEffect(() => {
-    
     setload(!load)
   }, [])
 
