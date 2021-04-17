@@ -26,7 +26,7 @@ import avatar_image from "./images/placeholder-images/avatar.png";
 
 
 // //Loader
-// import Loader from "./components/Loader/Loader"
+ import Loader from "./components/Loader/Loader"
 
 
 function App() {
@@ -36,7 +36,7 @@ function App() {
     setLoading(true)
     setTimeout(()=>{
       setLoading(false)
-    },5000)
+    },2000)
   },[])
   
 
@@ -44,7 +44,7 @@ function App() {
      <>
      {
        loading?
-       <HashLoader loading={loading} size={150} style={{color:"#fff"}} />
+        <Loader />
        :
     
     <Router>
