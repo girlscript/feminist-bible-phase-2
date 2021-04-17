@@ -2,8 +2,9 @@ const express = require('express');
 const orgController = require('../controllers/orgController');
 const router = express.Router();
 
-router.route('/getOrgs').get(orgController.getOrgs);
+router.route('/').get(orgController.getOrgs);
+router.route('/').post(orgController.createOrg);
+router.route('/:orgId').put(orgController.updateOrganisation);
 
-// router.route('/addOrgs').post(orgController.createOrg);
-
+//export this router to use it in App.js
 module.exports = router;

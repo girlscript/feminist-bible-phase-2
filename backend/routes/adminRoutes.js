@@ -2,13 +2,14 @@ const express = require('express');
 const adminController = require('../controllers/adminController');
 const router = express.Router();
 
-//get all approval requests
+//Using approvalrequests as a parameter within this route to approve request from adminController.
 router.route('/approvalRequests').get(adminController.approvalRequests);
 
-//approve a request
-router.route('/approveRequest/:orgid').patch(adminController.approveRequest);
+//Using organisation id as a parameter within this route to approve request from adminController.
+router.route('/approveRequest/:orgId').patch(adminController.approveRequest);
 
-//decline a request
-router.route('/declineRequest/:orgid').patch(adminController.declineRequest);
+//Using organisation id as a parameter within this route to decline request from adminController.
+router.route('/declineRequest/:orgId').patch(adminController.declineRequest);
 
+//export this router to use it in App.js
 module.exports = router;

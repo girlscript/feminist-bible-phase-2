@@ -1,5 +1,9 @@
 const Story = require('../database/models/storyModel');
 
+//get all the stories
+/**
+ * @route api/story/all
+ */
 exports.getAllStories = async (req, res) => {
   try {
     const stories = await Story.find();
@@ -15,6 +19,14 @@ exports.getAllStories = async (req, res) => {
   }
 };
 
+//creating a story
+/**
+ * @param {String} name
+ * @param {String} author
+ * @param {ImageBitmap} image
+ * @param {String} heading
+ * @route api/story/
+ */
 exports.createStory = async (req, res) => {
   try {
     const { name, author, image, heading } = req.body;
@@ -39,6 +51,10 @@ exports.createStory = async (req, res) => {
 };
 
 //get story by id
+/**
+ * @param {String} storyId
+ * @route api/story/:storyId
+ */
 exports.getStory = async (req, res) => {
   try {
     const story = await Story.findOne({ _id: req.params.storyId });
@@ -53,7 +69,7 @@ exports.getStory = async (req, res) => {
       data: story,
     });
   } catch (error) {
-    console.log(error)
+    console.log(error);
     res.status(400).json({
       status: 'fail',
       message: error,
@@ -62,11 +78,14 @@ exports.getStory = async (req, res) => {
 };
 
 //get all stories
-exports.getAllStories = async (req, res)=>{
-  try{
-    const stories = await Story.find()
-    
-    if(!stories){
+/**
+ * @route api/story/all
+ */
+exports.getAllStories = async (req, res) => {
+  try {
+    const stories = await Story.find();
+
+    if (!stories) {
       res.status(400).json({
         status: 'fail',
         message: 'No stories found',
@@ -74,19 +93,22 @@ exports.getAllStories = async (req, res)=>{
     }
 
     res.status(200).json({
-      status: "success",
-      message: stories
-    })
-
-  } catch(error){
-    
+      status: 'success',
+      message: stories,
+    });
+  } catch (error) {
     res.status(400).json({
-      status: "fail",
-      message: error
-    })
+      status: 'fail',
+      message: error,
+    });
   }
-}
+};
 
+//updating a story
+/**
+ * @param {String} storyId
+ * @route api/story/:storyId
+ */
 exports.updateStory = async (req, res) => {
   try {
     const story = await Story.findOneAndUpdate(
@@ -115,6 +137,12 @@ exports.updateStory = async (req, res) => {
     });
   }
 };
+
+//deleting a story
+/**
+ * @param {String} storyId
+ * @route api/story/:storyId
+ */
 exports.deleteStory = async (req, res) => {
   try {
     const story_id = req.params.storyId;
@@ -123,15 +151,12 @@ exports.deleteStory = async (req, res) => {
     }
     await Story.findOneAndDelete({ _id: story_id });
     res.json({
-      status:'success',
-      message:'Deleted Story Successfully'
-      
+      status: 'success',
+      message: 'Deleted Story Successfully',
     });
-
-  
   } catch (err) {
     res.json({
-      status:'fail', 
+      status: 'fail',
       message: err,
     });
   }

@@ -15,6 +15,21 @@ const transporter = nodemailer.createTransport(
   })
 );
 
+const getAuthCookie = (token) => {
+  const expiry = new Date(Date.now() + +process.env.JWT_COOKIE_EXPIRES_IN);
+  return `token=${token}; Domain=${process.env.JWT_COOKIE_DOMAIN}; Expires=${expiry.toGMTString()}; Path=/; HttpOnly=true; SameSite=Lax; Secure=true;`
+};
+
+//signup 
+/**
+ * @param {String} orgId
+ * @param {String} email
+ * @param {String} phone
+ * @param {ImageBitmap} photo
+ * @param {String} password
+ * @param {String} passwordConfirm
+ * @route api/auth/signup
+ */
 exports.signup = async (req, res) => {
   const { name, email, phone, photo, password, passwordConfirm } = req.body;
   console.log(req.body);
@@ -52,13 +67,16 @@ exports.signup = async (req, res) => {
       expiresIn: '1h',
     });
 
+    //set cookie
+    res.set('Cookie', getAuthCookie(token));
+    
     // returning final response
     res.status(201).json({
       success: true,
       data: {
         ...newUser._doc,
         password: '',
-        token,
+        passwordConfirm: ""
       },
     });
   } catch (e) {
@@ -67,6 +85,12 @@ exports.signup = async (req, res) => {
   }
 };
 
+//signin
+/**
+ * @param {String} email
+ * @param {String} password
+ * @route api/auth/signin
+ */
 exports.signin = async (req, res) => {
   const { email, password } = req.body;
   if (!email || !password)
@@ -88,12 +112,15 @@ exports.signin = async (req, res) => {
       expiresIn: '1h',
     });
 
+    //set cookie
+    res.set('Cookie', getAuthCookie(token));
+
     res.status(200).json({
       success: true,
       data: {
         ...existingUser._doc,
-        token,
         password: '',
+        passwordConfirm: ""
       },
     });
   } catch (err) {
@@ -105,6 +132,11 @@ exports.signin = async (req, res) => {
 /* in the user schema we have to add two more attributes that is
  resetToken and resetTokenExpiration and sendgrid api key to send the mail!!!
 */
+
+//post reset
+/**
+ * @param {String} email
+ */
 exports.postReset = async (req, res) => {
   try {
     crypto.randomBytes(32, async (err, buffer) => {
@@ -134,6 +166,10 @@ exports.postReset = async (req, res) => {
   }
 };
 
+//get new password
+/**
+ * @param {String} token
+ */
 exports.getNewPassword = async (req, res) => {
   try {
     const token = req.params.token;
@@ -154,6 +190,14 @@ exports.getNewPassword = async (req, res) => {
   }
 };
 
+//post new password
+/**
+ * @param {String} password
+ * @param {String} confirmPassword
+ * @param {Number} userId
+ * @param {String} passwordToken
+ * @route api/auth/signup
+ */
 exports.postNewPassword = async (req, res) => {
   try {
     const newPassword = req.body.password;
@@ -185,6 +229,11 @@ exports.postNewPassword = async (req, res) => {
   }
 };
 
+//check if is signed in
+/**
+ * @param {Number} userId
+ * @param {String} token
+ */
 exports.isSignedIn = async (req, res, next) => {
   const token = req.header('Authorization').replace('Bearer ', '');
   const data = jwt.verify(token, process.env.JWT_SECRET);
@@ -208,3 +257,17 @@ exports.isSignedIn = async (req, res, next) => {
     });
   }
 };
+
+exports.validateCookie = (req, res, next) => {
+  try {
+    const res = jwt.verify(req.cookies.token, process.env.JWT_SECRET)
+    if (res.id) { 
+      next();
+    } else {
+      throw new Error("Invalid USER ID");
+    }
+  } catch (err) {
+    res.status(401)
+    res.end("Unauthorized")
+  }
+}

@@ -1,4 +1,5 @@
 const mongoose = require('mongoose');
+const validator = require('validator');
 
 const orgSchema = new mongoose.Schema(
   {
@@ -9,12 +10,23 @@ const orgSchema = new mongoose.Schema(
     },
     email: {
       type: String,
+      validate: [validator.isEmail, 'Please provide a valid email'],
     },
     phone: {
       type: Number,
     },
     image: {
       type: String,
+    },
+    approved: {
+      type: Boolean,
+      required: true,
+      default: false
+    },
+    declined: {
+      type: Boolean,
+      required: true,
+      default: false
     },
     admin: [
       {

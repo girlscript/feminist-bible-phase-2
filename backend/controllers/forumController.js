@@ -1,9 +1,15 @@
 const ForumPostComment = require('../database/models/forumPostCommentModel');
-require('../config/dotenv');
+const ForumPost = require('../database/models/forumPostModel');
 
+//create a comment on the post
+/**
+ * @param {Number} forumPostId
+ * @param {String} comment
+ * @route api/forum/:forumPostId/comment
+ */
 exports.createComment = async (req, res) => {
   try {
-    let postId = req.params.forumpostid;
+    let postId = req.params.forumPostId;
     const { userId, comment } = req.body;
     const newComment = await ForumPostComment.create({
       post: postId,
@@ -27,7 +33,13 @@ exports.createComment = async (req, res) => {
   }
 };
 
-const ForumPost = require('../database/models/forumPostModel');
+//create a forum post
+/**
+ * @param {String} heading
+ * @param {String} author
+ * @param {String} description
+ * @route api/forum/new
+ */
 exports.createForumPost = async (req, res) => {
   try {
     const { heading, author, description } = req.body;
@@ -51,12 +63,16 @@ exports.createForumPost = async (req, res) => {
   }
 };
 
-//like a post
+//like a forum post
+/**
+ * @param {String} forumPostId
+ * @route api/forum/:forumPostId/like
+ */
 exports.likeForumPost = async (req, res) => {
   try {
-    let forumPost = await ForumPost.findById(req.params.forumpostid);
+    let forumPost = await ForumPost.findById(req.params.forumPostId);
     forumPost = await ForumPost.findByIdAndUpdate(
-      req.params.forumpostid,
+      req.params.forumPostId,
       { likes: forumPost.likes + 1 },
       {
         new: true,
@@ -71,6 +87,48 @@ exports.likeForumPost = async (req, res) => {
     res.status(400).json({
       status: 'fail',
       error: error.message,
+    });
+  }
+};
+
+//edit a forum post
+/**
+ * @param {String} upadtedHeading
+ * @param {String} updatedAuthor
+ * @param {String} updatedDescription
+ * @route api/forum//:forumPostId/edit-post
+ */
+exports.editForumPost = async(req, res) => {
+  try {
+    const { upadtedHeading, updatedAuthor, updatedDescription } = req.body;
+
+    if (!upadtedHeading || !updatedAuthor) {
+      return res.status(400).json({
+        status: 'fail',
+        message: 'Fields cannot be empty',
+      });
+    }
+    const postId = req.params.forumPostId;
+    let forumPost = await ForumPost.findByIdAndUpdate
+    (
+      postId, {
+      heading: req.body.upadtedHeading,
+      author: req.body.updatedAuthor,
+      description: req.body.updatedDescription,
+      }, {
+        new: true,
+        runValidators: true,
+      }
+    );
+            
+    res.status(200).json({
+      status: 'success',
+      data: forumPost
+    });
+  } catch (err) {
+    res.status(400).json({
+      status:'fail',
+      message: err
     });
   }
 };

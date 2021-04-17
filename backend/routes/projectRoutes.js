@@ -2,21 +2,20 @@ const express = require('express');
 const projectController = require('../controllers/projectController');
 const router = express.Router();
 
-//create a project
+//Using this route to create project from projectController.
 router.route('/').post(projectController.createProject);
 
-//get all projects
+//Using this route to get all projects from projectController.
 router.route('/').get(projectController.getAllProjects);
 
-//get all projects org wise
-router.route('/:orgid').get(projectController.getProjectsOrgWise)
+//Using orgId as a parameter within this route to get Org wise project from projectController.
+router.route('/:orgId').get(projectController.getProjectsOrgWise);
 
-
-//update a project based on id
+//Using id as a parameter within this route to update project from projectController.
 router.route('/:id').put(projectController.updateProject);
 
-//delete a project
-router.route('/:projectid').delete(projectController.deleteProject)
+//Using projectId as a parameter within this route to delete project from projectController.
+router.route('/:projectId').delete(projectController.deleteProject);
 
-
-module.exports = router
+//export this router to use it in App.js
+module.exports = router;
