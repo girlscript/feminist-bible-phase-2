@@ -44,7 +44,7 @@ function App() {
      <>
      {
        loading?
-       <HashLoader loading={loading} size={150}  />
+       <HashLoader loading={loading} size={150} style={{color:"#fff"}} />
        :
     
     <Router>
