@@ -1,6 +1,5 @@
 import React , {useState,useEffect} from "react";
 import { BrowserRouter as Router, Switch } from "react-router-dom";
-import HashLoader from "react-spinners/HashLoader"
 // css
 import "./css/main.scss";
 
