@@ -1,6 +1,6 @@
 import React , {useState,useEffect} from "react";
 import { BrowserRouter as Router, Switch } from "react-router-dom";
-
+import HashLoader from "react-spinners/HashLoader"
 // css
 import "./css/main.scss";
 
@@ -29,7 +29,7 @@ import avatar_image from "./images/placeholder-images/avatar.png";
 import Loader from "./components/Loader/Loader"
 
 function App() {
-  const [load, setload] = useState(true);
+  let [load, setload] = useState(true);
   useEffect(() => {
     setload(!load)
   }, [])
