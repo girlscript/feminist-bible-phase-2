@@ -25,22 +25,34 @@ import { CodeOfConduct } from "./pages/CodeOfConduct/index";
 import avatar_image from "./images/placeholder-images/avatar.png";
 
 
-//Loader
-import Loader from "./components/Loader/Loader"
+// //Loader
+// import Loader from "./components/Loader/Loader"
+
+const override = css`
+  display: block;
+  margin: 0 auto;
+  border-color: red;
+  color:purple;
+`; 
 
 function App() {
-  let [load, setload] = useState(true);
-  useEffect(() => {
-    setload(!load)
-  }, [])
-
-  const loading = load;
-  if(loading) 
-  return(<Loader/>)
-  else
+  let [loading, setLoading] = useState(false);
+  
+  useEffect(()=>{
+    setLoading(true)
+    setTimeout(()=>{
+      setLoading(false)
+    },5000)
+  },[])
+  
 
   return (
-     
+     <>
+     {
+       loading?
+       <HashLoader loading={loading} size={150} css={override} />
+       :
+    
     <Router>
       <Header isSignedIn={false} avatarSrc={avatar_image} />
       <Switch>
@@ -57,6 +69,8 @@ function App() {
       </Switch>
       <Footer />
     </Router>
+}
+    </>
   );
 }
 
