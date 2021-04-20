@@ -115,7 +115,7 @@ export class Registration extends Component {
                   error={errors.email}
                 />
                 <Input
-                  label="Mpbile Number"
+                  label="Mobile Number"
                   type="tel"
                   name="phone"
                   placeholder="+91 8563214752"
