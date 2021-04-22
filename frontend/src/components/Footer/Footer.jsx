@@ -32,7 +32,7 @@ export class Footer extends Component {
                 </li>
                 <li className={style["footer__nav-item"]}>
                   
-                <Link to="/stories" activeClassName="selected" >
+                <Link to="/stories" >
                       Stories
                     </Link>
                  
