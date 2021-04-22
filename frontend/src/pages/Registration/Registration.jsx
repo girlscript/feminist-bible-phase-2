@@ -140,7 +140,8 @@ export class Registration extends Component {
                 />
                 <button className={style["button__big"]}>Register</button>
               </form>
-              <Link>Already have an account? <span style={{color: '#2F80ED'}}><Link to="/login">Login here</Link></span>.</Link>
+              Already have an account?<span style={{color: '#2F80ED'}}>
+                <Link to="/login"> Login here</Link></span>.
             </div>
             <div className="cell large-8">
               <div className={style["registration-page__illustration-wrapper"]}>
