@@ -102,7 +102,7 @@ export class CodeOfConduct extends Component {
           <div className="grid-container">
             <div className="grid-x grid-margin-x">
               <div className="cell large-4 medium-6">
-                <div class="style.guidelines-card">
+                <div className="style.guidelines-card">
                   <img
                     src={equity}
                     alt="equity"
@@ -116,7 +116,7 @@ export class CodeOfConduct extends Component {
               </div>
 
               <div className="cell large-4 medium-6">
-                <div class="style.guidelines-card">
+                <div className="style.guidelines-card">
                   <img
                     src={life_choices}
                     alt="life_choices"
@@ -130,7 +130,7 @@ export class CodeOfConduct extends Component {
               </div>
 
               <div className="cell large-4 medium-6">
-                <div class="style.guidelines-card">
+                <div className="style.guidelines-card">
                   <img
                     src={voice_matters}
                     alt="voice_matters"
