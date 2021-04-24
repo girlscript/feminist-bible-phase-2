@@ -12,20 +12,22 @@ export class Header extends Component {
   constructor(props){
     super(props);
     this.state = {
-      navHidden: window.innerWidth <= 640?true:false,
+      navHidden: false,
     }
   }
 
   showHideNav = () =>{
-    this.setState({
-      navHidden: this.state.navHidden?false:true,
-    })
+    
+      this.setState({
+      navHidden: this.state.navHidden ?false:true,
+      })
+    
   }
 
   hideNav = () =>{
     if(window.innerWidth <= 640){
       this.setState({
-        navHidden: true,
+        navHidden: false,
       })
     }
   }
@@ -45,8 +47,9 @@ export class Header extends Component {
               </Link>
             </div>
             <div className="cell medium-9">
-              <nav className={style.nav}>
-                <ul className={style["nav__item-container"]} style={{display: this.state.navHidden?'none':'flex'}}>
+              <nav className={style.nav}  >
+                <ul className={style["nav__item-container"]} style={{display: this.state.navHidden&&'flex'}}>
+
                   <li className={style["nav__item"]} onClick={this.hideNav}>
                     <NavLink to="/forum" activeClassName="active">
                       Forum
@@ -90,7 +93,7 @@ export class Header extends Component {
                     </li>
                   )}
                 </ul>
-                <button id={style["menu-icon"]} aria-label="menu icon" onClick={this.showHideNav}>
+                <button id={style["menu-icon"]} className={style["mobile-menu"]} aria-label="menu icon" onClick={this.showHideNav}>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 24 24"
