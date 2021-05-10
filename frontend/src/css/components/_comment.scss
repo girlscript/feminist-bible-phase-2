@@ -1,18 +1,25 @@
 .comment {
-    &__text{
-      font-size: 14px;
+
+    &__container{
+      display: flex;
+      border-radius: 4px;
+      padding :  10px 20px;
     }
 
-    &__time{
-        float: right;
-        font-size: 14px;
+    &__header{
+      display: flex;
+      justify-content: space-between;
+    }
+
+    &__text{
+      font-size: 14px;
     }
   
     &__title{
       font-size: 16px;
       font-weight: $font-weight-medium;
       color: $title-color;
-      float: left;
+      
     }
 
     &__text-container {
@@ -22,7 +29,7 @@
     }
 
     &__img-container {
-        padding: 20px;
+        padding-left: 20px;
         max-width: 100%;
         min-width: 80px;
     }

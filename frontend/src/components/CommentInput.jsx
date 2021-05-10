@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 
 //components
-import Avatar from "./Avatar.jsx";
+import { Avatar } from "./Avatar/index.js";
 
 //images
 import avatar_image from "../images/placeholder-images/avatar.png";
@@ -15,7 +15,7 @@ class Comment extends Component {
 
     render() {
         return(
-            <div className="flex-container">
+            <div className="comment-input__container">
                 <div className="comment-input__img-container">
                     <Avatar avatarSrc={avatar_image}/>
                 </div>

@@ -18,6 +18,7 @@ import { OrganizationList } from "./pages/OrganizationList/index";
 import { Stories } from "./pages/Stories/index";
 import { BlogPage } from "./pages/BlogPage/index";
 import { ProjectListing } from "./pages/ProjectListing/index";
+import { Forum } from "./pages/Forum/index";
 
 import { CodeOfConduct } from "./pages/CodeOfConduct/index";
 
@@ -39,6 +40,7 @@ function App() {
         <Stories path="/stories" exact />
         <BlogPage path="/stories/post" exact />
         <ProjectListing path="/projects" exact />
+        <Forum path="/forum" exact />
       </Switch>
 
       <Footer />
