@@ -20,7 +20,8 @@ import { BlogPage } from "./pages/BlogPage/index";
 import { ProjectListing } from "./pages/ProjectListing/index";
 
 import { CodeOfConduct } from "./pages/CodeOfConduct/index";
-
+import { NotFound} from "./pages/404NotFound/index";
+ 
 // images
 import avatar_image from "./images/placeholder-images/avatar.png";
 
@@ -39,6 +40,7 @@ function App() {
         <Stories path="/stories" exact />
         <BlogPage path="/stories/post" exact />
         <ProjectListing path="/projects" exact />
+        <NotFound path="/404-not-found"/>
       </Switch>
 
       <Footer />

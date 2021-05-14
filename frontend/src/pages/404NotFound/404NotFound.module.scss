@@ -1,0 +1,16 @@
+@import "../../css/settings/_global";
+
+.not-found-page{
+    &__main-image{
+        max-width:580px;
+        text-align: right;
+    }
+
+    &__image-wrapper{
+        display:flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: center;
+        
+    }
+}
