@@ -6,7 +6,7 @@
   "scripts": {
     "start": "cross-env NODE_ENV=production node server.js",
     "dev": "cross-env NODE_ENV=development nodemon server.js",
-    "test": "cross-env NODE_ENV=development nyc mocha --recursive test",
+    "test": "cross-env NODE_ENV=development nyc mocha --recursive test --timeout 10000",
     "preci": "rm -fr node_modules",
     "ci": "yarn install --frozen-lockfile"
   },
