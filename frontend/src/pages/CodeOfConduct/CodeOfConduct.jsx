@@ -56,7 +56,7 @@ export class CodeOfConduct extends Component {
               </div>
 
               <div className="cell large-5 medium-6">
-                <div className="style.coc-card">
+                <div className={style["coc-card"]}>
                   <h2 className={style["coc-card__number"]}>02</h2>
                   <h2 className={style["coc-card__title"]}>Be Kind</h2>
                   <p className={style["coc-card__para"]}>
@@ -67,7 +67,7 @@ export class CodeOfConduct extends Component {
               </div>
 
               <div className="cell large-5 medium-6 large-offset-1">
-                <div className="style.coc-card">
+                <div className={style["coc-card"]}>
                   <h2 className={style["coc-card__number"]}>03</h2>
                   <h2 className={style["coc-card__title"]}>No offense</h2>
                   <p className={style["coc-card__para"]}>
@@ -80,7 +80,7 @@ export class CodeOfConduct extends Component {
               </div>
 
               <div className="cell large-5 medium-6">
-                <div className="style.coc-card">
+                <div className={style["coc-card"]}>
                   <span className={style["coc-card__number"]}>04</span>
                   <h2 className={style["coc-card__title"]}>Report</h2>
                   <p className={style["coc-card__para"]}>
