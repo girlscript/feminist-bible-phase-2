@@ -16,14 +16,14 @@ This is an important step to mark your commits to your name and email.
 
 ### FORK A PROJECT -
 ***
-You can use github explore - https://github.com/explore to find a project that interests you and match your skills. Once you find your cool project to workon, you can make a copy of project to your account. This process is called forking a project to your Github account. On Upper right side of project page on Github, you can see -
+You can use github explore - https://github.com/explore to find a project that interests you and matches your skills. Once you find your cool project to work on, you can make a copy of the project to your account. This process is called forking a project to your Github account. On Upper right side of project page on Github, you can see -
 
 <p align="center">  <img  src="https://i.imgur.com/P0n6f97.png">  </p>
-Click on fork to create a copy of project to your account. This creates a separate copy for you to workon.
+Click on fork to create a copy of project to your account. This creates a separate copy for you to work on.
 
 ### FINDING A FEATURE OR BUG TO WORKON - 
 ***
-Open Source projects always have something to workon and improves with each new release. You can see the issues section to find something you can solve or report a bug. The project managers always welcome new contributors and can guide you to solve the problem. You can find issues in the right section of project page.
+Open Source projects always have something to work on and improve with each new release. You can see the issues section to find something you can solve or report a bug. The project managers always welcome new contributors and can guide you to solve the problem. You can find issues in the right section of project page.
 
 <p align="center">  <img  src="https://i.imgur.com/czVjpS7.png">  </p>
 
@@ -60,7 +60,7 @@ This will create a new branch out of master branch. Now start working on the pro
 
 ```$ git add --all```
 ```$ git commit -m "<commit message>"```
-The first command adds all the files or you can add specific files by removing -a and adding the file names. The second command gives a message to your changes so you can know in future what changes this commit makes. If you are solving an issue on original repository, you should add the issue number like #35 to your commit message. This will show the reference to commits in the issue.
+The first command adds all the files or you can add specific files by removing -a and adding the file names. The second command gives a message to your changes so you can know in future what changes this commit makes. If you are solving an issue on an original repository, you should add the issue number like #35 to your commit message. This will show the reference to commits in the issue.
 ### REBASE YOUR FEATURE BRANCH WITH UPSTREAM-
 ***
 It can happen that your feature takes time to complete and other contributors are constantly pushing code. After completing the feature your feature branch should be rebase on latest changes to upstream master branch.
@@ -80,7 +80,7 @@ This will open an editor which will allow you to squash the commits.
 Till this point you have a new branch with the feature or bugfix you want in the project you had forked. Now push your new branch to your remote fork on github.
 
 ```$ git push origin <feature-branch>```
-Now you are ready to help the project by opening a pull request means you now tell the project managers to add the feature or bugfix to original repository. You can open a pull request by clicking on green icon -
+Now you are ready to help the project by opening a pull request which means you now tell the project managers to add the feature or bugfix to original repository. You can open a pull request by clicking on green icon -
 
 <p align="center">  <img  src="https://i.imgur.com/aGaqAD5.png">  </p>
 
@@ -138,7 +138,7 @@ This is the list of _type_ of commits that we accept:
 - **style** : Changes that do not affect the meaning of the code (white-space, formatting, missing semi-colons, etc).
 - **test** : Adding missing tests or correcting existing tests.
 
-✔ Participant are requested to give regular updates regarding their progress to the project leads.
+✔ Participants are requested to give regular updates regarding their progress to the project leads.
 
 ✔ If the participant is not able to contribute to the assigned issue due to any reason, kindly let the project leads know so that the issue is assigned to some other participant.
 
