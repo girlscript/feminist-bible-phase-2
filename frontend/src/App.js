@@ -1,6 +1,5 @@
-import React from "react";
+import React , {useState,useEffect} from "react";
 import { BrowserRouter as Router, Switch } from "react-router-dom";
-
 // css
 import "./css/main.scss";
 
@@ -25,8 +24,29 @@ import { NotFound} from "./pages/404NotFound/index";
 // images
 import avatar_image from "./images/placeholder-images/avatar.png";
 
+
+// //Loader
+ import Loader from "./components/Loader/Loader"
+
+
 function App() {
+  let [loading, setLoading] = useState(false);
+  
+  useEffect(()=>{
+    setLoading(true)
+    setTimeout(()=>{
+      setLoading(false)
+    },2000)
+  },[])
+  
+
   return (
+     <>
+     {
+       loading?
+        <Loader />
+       :
+    
     <Router>
       <Header isSignedIn={false} avatarSrc={avatar_image} />
       <Switch>
@@ -42,9 +62,10 @@ function App() {
         <ProjectListing path="/projects" exact />
         <NotFound path="/404-not-found"/>
       </Switch>
-
       <Footer />
     </Router>
+}
+    </>
   );
 }
 
